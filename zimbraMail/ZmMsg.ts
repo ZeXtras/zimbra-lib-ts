@@ -58,6 +58,7 @@ export class ZmMsg {
   public static originalAppointment: string;
   public static preview: string;
   public static _name: string;
+  public static folders: string;
   public static permissions: string;
   public static type: string;
   public static icon: string;

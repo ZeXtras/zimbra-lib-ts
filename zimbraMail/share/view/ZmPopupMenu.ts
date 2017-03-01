@@ -41,6 +41,8 @@ export class ZmPopupMenu extends DwtMenu {
 
   public createMenuItem(id: string, params: CreateMenuItemParams): DwtMenuItem { return undefined; }
   public getMenuItem(id: string): DwtMenuItem { return undefined; }
+  public createSeparator(): void {}
+  public getMenuItems(): DwtMenuItem[] {  return undefined; }
 
   public createSeparator(): void {}
 

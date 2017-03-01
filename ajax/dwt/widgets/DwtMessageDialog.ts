@@ -18,11 +18,7 @@
  * along with ZeXtras' Zimbra API for Zimlet building. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import {
-  DwtDialog, DwtDialogParams,
-  DwtDialog_ButtonDescriptor
-} from "./DwtDialog";
-import {DwtComposite} from "./DwtComposite";
+import {DwtDialog, DwtDialogParams} from "./DwtDialog";
 
 export class DwtMessageDialog extends DwtDialog {
 
