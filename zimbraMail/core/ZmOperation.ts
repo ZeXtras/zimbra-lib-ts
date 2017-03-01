@@ -23,6 +23,7 @@ import {AjxCallback} from "../../ajax/boot/AjxCallback";
 
 export class ZmOperation {
   public static NEW_MENU: string;
+  public static NEW_MESSAGE: string;
   public static REQUEST_READ_RECEIPT: string;
   public static REPLY: string;
   public static REPLY_ALL: string;

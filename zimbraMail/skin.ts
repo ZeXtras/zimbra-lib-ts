@@ -20,4 +20,4 @@
 
 import {ZmSkin} from "./ZmSkin";
 
-export const skin: ZmSkin = void 0;
+export let skin: ZmSkin = void 0;

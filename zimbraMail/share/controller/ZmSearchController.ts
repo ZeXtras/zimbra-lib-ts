@@ -31,17 +31,20 @@ export class ZmSearchController extends ZmController {
   public search(params: ZmSearchControllerSearchParams): void {}
   public getSearchToolbar(): ZmMainSearchToolBar { return undefined; }
   public _handleResponseDoSearch(search: ZmSearch, noRender: boolean, callback: AjxCallback, noUpdateOverview: boolean, result: ZmCsfeResult): void {}
+
 }
 
 export interface ZmSearchControllerSearchParams extends ZmSearchParam {
   searchFor?: string;
-  userText?: boolean;
   noRender?: boolean;
   callback?: AjxCallback;
   errorCallback?: AjxCallback;
   skipUpdateSearchToolbar?: boolean;
   sessionId?: string;
   noGal?: boolean;
+  userText?: boolean;
   userInitiated?: boolean;
+  getHtml?: boolean;
+  isEmpty?: boolean;
   checkTypes?: boolean;
 }

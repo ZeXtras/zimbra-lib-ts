@@ -18,12 +18,15 @@
  * along with ZeXtras' Zimbra API for Zimlet building. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import {DwtDialog} from "./DwtDialog";
+import {
+  DwtDialog, DwtDialogParams,
+  DwtDialog_ButtonDescriptor
+} from "./DwtDialog";
 import {DwtComposite} from "./DwtComposite";
 
 export class DwtMessageDialog extends DwtDialog {
 
-  constructor(params: {parent: DwtComposite, buttons: number[], id?: string}) {
+  constructor(params: DwtMessageDialogParams) {
     super({parent: params.parent, standardButtons: params.buttons, id: params.id});
   }
 
@@ -35,4 +38,8 @@ export class DwtMessageDialog extends DwtDialog {
 
   public reset(): void {}
 
+}
+
+export interface DwtMessageDialogParams extends DwtDialogParams {
+  buttons?: number[];
 }

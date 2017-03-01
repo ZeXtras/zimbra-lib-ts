@@ -20,4 +20,4 @@
 
 import {ZmAppCtxt} from "./core/ZmAppCtxt";
 
-export const appCtxt: ZmAppCtxt = void 0;
+export let appCtxt: ZmAppCtxt = void 0;

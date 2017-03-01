@@ -25,6 +25,7 @@ import {AjxListener} from "../../events/AjxListener";
 
 export class DwtMenu extends DwtComposite {
   public static GENERIC_WIDGET_STYLE: string;
+
   public optRename: DwtMenuItem;
   public optSendInvitation: DwtMenuItem;
   public optAcceptInvitation: DwtMenuItem;
