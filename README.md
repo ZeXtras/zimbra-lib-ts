@@ -1,5 +1,5 @@
-# src/zimbra
-An **unofficial** [TypeScript][2] library to build awesome [Zimlets][1].
+# ZeXtras' `src/zimbra`
+An **unofficial** [TypeScript][2] library to build awesome [Zimlets][1], by [ZeXtras][5].
 
 This library is created ho help developers to use latest technologies (like [TypeScript][2]) to build [Zimlets][1] for 
 [Zimbra][0] easily.
@@ -43,7 +43,8 @@ If you need help We are happy to give You an hand in [ZeXtras IRC Channel][4]
 [1]: https://wiki.zimbra.com/index.php?title=Zimlet_Developers_Guide:Introduction
 [2]: http://www.typescriptlang.org/ 
 [3]: https://webpack.js.org/
-[4]: https://webchat.freenode.net/?channels=%23zextras%2C%23zimbra
+[4]: https://webchat.freenode.net/?channels=%23zextras
+[5]: https://www.zextras.com/
 
 ## Wall of fame
 - [Michele Olivo](https://github.com/bud-mo)
