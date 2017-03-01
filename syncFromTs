@@ -1,0 +1,48 @@
+#!/usr/bin/env bash
+
+#
+# ZeXtras' Zimbra API for Zimlet building
+# Copyright (C) 2017 ZeXtras S.r.l.
+#
+# This file is part of ZeXtras' Zimbra API for Zimlet building.
+#
+# This program is free software; you can redistribute it and/or
+# modify it under the terms of the GNU General Public License
+# as published by the Free Software Foundation, version 2 of
+# the License.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with ZeXtras' Zimbra API for Zimlet building. If not, see <http://www.gnu.org/licenses/>.
+#
+
+work_dir=`pwd`
+src_dir=`pwd`
+ts_file_list=`find . -name "*.ts"`
+cd ${work_dir}
+
+current_year=`date +"%Y"`
+
+for i in ${ts_file_list};
+do
+    class_name=`basename -s ".ts" ${i}`
+    file_path=`dirname ${i}`
+    file_name="${file_path}/${class_name}.js"
+    if [ ! -f "${file_name}" ]; then
+        exports=$( sed -rn -e 's/\/\*.*\*\///' -e '/^[[:blank:]]*\/\*/,/^[[:blank:]]*\*\//d' -e '/^[[:blank:]]*\/\//d' -e 's/.*export (class|let) ([a-zA-Z0-9_]*).*/  exports.\2 = \2;/p' ${src_dir}/${i} | LC_ALL=C sort -u | perl -p -e 's/\n/\\n/' )
+        echo "${file_name}"
+        mkdir -p "${file_path}"
+        cat "${work_dir}/MockTemplate.js" | \
+            sed \
+                -e "s/__YEAR__/${current_year}/g" \
+                -e "s/__CLASS_NAME__/${class_name}/g" \
+                -e "s/__EXPORTS__/${exports}/g" \
+            > "${file_name}"
+    fi
+done
+
+echo "File synced, please check and fix any required exports of the new files." 1>&2
