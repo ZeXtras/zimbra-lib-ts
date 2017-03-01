@@ -1,4 +1,4 @@
-# ZeXtras' `src/zimbra`
+# T4Z - TypeScript 4 Zimlet
 An **unofficial** [TypeScript][2] library to build awesome [Zimlets][1], by [ZeXtras][5].
 
 This library is created ho help developers to use latest technologies (like [TypeScript][2]) to build [Zimlets][1] for 
