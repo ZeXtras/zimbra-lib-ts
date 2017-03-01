@@ -34,6 +34,14 @@ export class ZmId {
   public static CMP_ATT_BTN: string;
   public static SEARCH: string;
 
+
+  // Advanced Docments for Zimbra operations
+  public static OP_NEW_DOC_LIBREOFFICE: string;
+  public static OP_NEW_DOC_SPREADSHEET: string;
+  public static OP_NEW_DOC_PRESENTATION: string;
+  // Advanced Docments for Zimbra Views
+  public static VIEW_LIBREOFFICE: string;
+
   public static getButtonId(context: string, op: string, tbType?: string): string { return undefined; }
   public static getViewId(viewId: string, component?: string, context?: string): string { return undefined; }
   public static getMenuItemId(context: string, op: string, menuType?: string): string { return undefined; }
