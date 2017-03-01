@@ -46,6 +46,7 @@ export class ZmMsg {
   public static COLUMN_WIDTH_FROM_CLV: string;
   public static folder: string;
   public static COLUMN_WIDTH_FOLDER: string;
+  public static newEmail: string;
   public static DASHES: string;
   public static originalAppointment: string;
   public static preview: string;

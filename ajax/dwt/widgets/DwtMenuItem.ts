@@ -18,17 +18,24 @@
  * along with ZeXtras' Zimbra API for Zimlet building. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import {DwtButton} from "./DwtButton";
+import {DwtButton, DwtButtonParams} from "./DwtButton";
 
 export class DwtMenuItem extends DwtButton {
+
+  constructor(params: DwtMenuItemParams) {
+    super(params);
+  }
+
   public static CHECK_STYLE: number;
   public static RADIO_STYLE: number;
   public static SEPARATOR_STYLE: number;
+  public static IMAGE_LEFT: number;
 
-  public _emulateSingleClick(): void {
-  };
+  public _emulateSingleClick(): void {}
+  public setChecked(checked: boolean, skipNotify: boolean): void {}
 
-  public setChecked(checked: boolean, skipNotify: boolean): void {
-  }
+}
 
+export interface DwtMenuItemParams extends DwtButtonParams {
+  style?: number;
 }
