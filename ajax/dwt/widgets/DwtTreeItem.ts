@@ -25,15 +25,15 @@ import {DwtSelectionEvent} from "../events/DwtSelectionEvent";
 export class DwtTreeItem extends DwtComposite {
 
   public actionMenu: DwtMenu;
+  public isDwtTreeItem: boolean;
 
   public enableSelection(enableSelection: boolean): void {}
   public setExpanded(expanded: boolean, recurse?: boolean, skipNotify?: boolean): void {}
   public _setSelected(selected: boolean, noFocus?: boolean): void {}
-  public getText(): string {return null; };
+  public getText(): string { return undefined; };
   public setText(text: string): void {};
   public onAction(event: DwtSelectionEvent): void {};
-  public getData(key: string): any { return undefined; }
 
-  public getChildren(): DwtTreeItem[] {return undefined; };
+  public getChildren(): DwtTreeItem[] { return undefined; };
 
 }
