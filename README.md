@@ -18,7 +18,7 @@ This allow you to write code easily and with the typed code, securely.
 3. Develop your [Zimlet][1]
 4. Deploy!
 
-### How to contribute
+## How to contribute
 Not all the classes are ported into the library, some are missing, other does not have all of the methods. 
 
 PR are suggested to let the library grow! You can use it, but any help is appreciated and your name will be put in the 
