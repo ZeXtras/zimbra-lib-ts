@@ -1,5 +1,3 @@
-#!/usr/bin/env bash
-
 #
 # T4Z - TypeScript 4 Zimlet
 # Copyright (C) 2017 ZeXtras S.r.l.
@@ -20,18 +18,6 @@
 # along with T4Z - TypeScript 4 Zimlet. If not, see <http://www.gnu.org/licenses/>.
 #
 
-work_dir=`mktemp -d`
-project_dir=`pwd`
-
-cd "${project_dir}/"
-find . -name "*.ts" | sed 's/\.ts/\.js/g' | sort > ${work_dir}/zimbra_sources.list
-
-cd "${project_dir}/"
-find . -name "*.js" ! -name "MockTemplate.js" | sort > ${work_dir}/zimbra_mocks.list
-
-diff -y --suppress-common-lines --suppress-blank-empty ${work_dir}/zimbra_sources.list ${work_dir}/zimbra_mocks.list
-diff_status=$?
-
-rm -rf ${work_dir}
-
-exit ${diff_status}
+check-exports:
+	./compareZimbraTS
+	./checkExports
