@@ -22,6 +22,6 @@ import {ZmApp} from "../core/ZmApp";
 
 export class ZmMailApp extends ZmApp {
 
-  public static getFoldersToOmit():{[id: number]: boolean} { return undefined; }
+  public static getFoldersToOmit(): {[id: number]: boolean} { return undefined; }
 
 }

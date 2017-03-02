@@ -20,16 +20,14 @@
 
 import {DwtComposite} from "../../ajax/dwt/widgets/DwtComposite";
 
-export class ZaActionStatusView
-{
-  public static LEVEL_INFO:number;
-  public static LEVEL_WARNING:number;
-  public static LEVEL_CRITICAL:number;
+export class ZaActionStatusView {
+  public static LEVEL_INFO: number;
+  public static LEVEL_WARNING: number;
+  public static LEVEL_CRITICAL: number;
 }
 
-export class ZaToast extends DwtComposite
-{
-  constructor(parent: DwtComposite, id?:string) {
+export class ZaToast extends DwtComposite {
+  constructor(parent: DwtComposite, id?: string) {
     super({parent: parent});
   }
 }

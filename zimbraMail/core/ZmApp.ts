@@ -150,7 +150,7 @@ export interface ZmAppRegisterAppParams {
   // searchResultsTab;
 
   searchTypes?: string[];
-  gotoActionCode?: string
+  gotoActionCode?: string;
   // actionCodes?;
   // newItemOps?;
   // newOrgOps?;

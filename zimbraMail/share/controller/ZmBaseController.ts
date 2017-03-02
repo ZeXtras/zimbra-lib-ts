@@ -43,7 +43,7 @@ export abstract class ZmBaseController extends ZmController {
   public supportsDnD(): boolean { return undefined; }
   public _setup(view: string): void {}
   public _setView(params: ZmBaseControllerSetViewParams): void {}
-  public _getSearchFolder(): ZmFolder { return undefined;}
+  public _getSearchFolder(): ZmFolder { return undefined; }
   public getCurrentToolbar(): ZmButtonToolBar { return undefined; }
   public _resetOperations(parent: DwtControl, itemSelectedCount: number): void {}
 

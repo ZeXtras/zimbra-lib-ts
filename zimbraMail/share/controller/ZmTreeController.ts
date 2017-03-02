@@ -44,7 +44,7 @@ export class ZmTreeController extends ZmController {
 
   public getDataTree(): ZmTree { return undefined; }
   public _treeViewListener(ev: DwtUiEvent): void {}
-  public _renameListener(ev:DwtUiEvent): void {}
+  public _renameListener(ev: DwtUiEvent): void {}
   public _getActionedOrganizer(ev: DwtUiEvent): ZmOrganizer { return undefined; }
   public _getActionMenu(ev: DwtEvent, item: any): DwtMenu { return undefined; }
 }
