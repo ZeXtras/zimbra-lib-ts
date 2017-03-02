@@ -22,8 +22,6 @@ import {ZmList} from "./ZmList";
 
 export class ZmSearchResult {
 
-  public getResults(type?: string): ZmList {
-    return undefined
-  }
+  public getResults(type?: string): ZmList { return undefined; }
 
 }

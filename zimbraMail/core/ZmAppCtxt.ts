@@ -91,7 +91,7 @@ export class ZmAppCtxt {
   public getCurrentController(): ZmController { return undefined; }
   public setTree(type: string, tree: ZmTree, account?: ZmZimbraAccount): void {}
   public cacheSet(id: string, value: any): void {}
-  public getOverviewController(): ZmOverviewController {return undefined;}
+  public getOverviewController(): ZmOverviewController { return undefined; }
   public getTree(appId: string): ZmTree { return undefined; }
   public getConfirmationDialog(): DwtConfirmDialog { return undefined; }
   public getCurrentSearch(): ZmSearch { return undefined; }
@@ -108,7 +108,7 @@ interface SetStatusMsgParams {
   toast?: {};                    //   the toast control (may be <code>null</code>)
   force?: boolean;               //   force any displayed toasts out of the way (dismiss them and run their dismissCallback). Enqueued messages that are not yet displayed will not be displayed
   dismissCallback?: AjxCallback; //   callback to run when the toast is dismissed (by another message using [force], or explicitly calling ZmStatusView.prototype.dismiss())
-  finishCallback?: AjxCallback;   //   callback to run when the toast finishes its transitions by itself (not when dismissed)
+  finishCallback?: AjxCallback;  //   callback to run when the toast finishes its transitions by itself (not when dismissed)
 }
 
 interface NotifyZimletsParams {

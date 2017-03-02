@@ -21,5 +21,4 @@
 import {ZmModel} from "./ZmModel";
 
 export class ZmTree extends ZmModel {
-  
 }

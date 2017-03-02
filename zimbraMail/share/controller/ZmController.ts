@@ -49,10 +49,10 @@ export class ZmController {
   public getSessionId(): string { return undefined; }
   public _clearDialog(dialog: DwtDialog): void {}
   public getViewElements(view: string, appContentView: DwtComposite, toolbar?: ZmButtonToolBar): {[name: string]: DwtControl} { return undefined; }
-  public static showDialog(renameDialog: DwtDialog, _renameCb: AjxCallback, params: any, account?:ZmAccount): void {}
+  public static showDialog(renameDialog: DwtDialog, _renameCb: AjxCallback, params: any, account?: ZmAccount): void {}
 
 }
 
 export interface ZmControllerToolBarMap {
-  [viewId: string]: ZmButtonToolBar
+  [viewId: string]: ZmButtonToolBar;
 }

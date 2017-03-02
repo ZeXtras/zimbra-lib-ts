@@ -30,7 +30,7 @@ import {ZmListView} from "../../share/view/ZmListView";
 export class ZmPreviewPaneView extends DwtComposite {
 
   constructor(parent: DwtComposite, controller: ZmBaseController, dropTgt: DwtDropTarget) {
-    super({parent: parent, posStyle: Dwt.ABSOLUTE_STYLE})
+    super({parent: parent, posStyle: Dwt.ABSOLUTE_STYLE});
   }
 
   public getListView(): ZmListView { return undefined; }

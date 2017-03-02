@@ -38,5 +38,5 @@ export interface ZmSearchToolbarAddMenuItemParam {
   shareIcon: any;
   setting: string;
   id: string;
-  disableOffline: boolean
+  disableOffline: boolean;
 }
