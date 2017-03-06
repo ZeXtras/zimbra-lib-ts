@@ -20,8 +20,11 @@
 
 import {DwtComposite} from "../../../ajax/dwt/widgets/DwtComposite";
 import {ZmTreeView} from "./ZmTreeView";
+import {ZmZimbraAccount} from "../model/ZmZimbraAccount";
 
 export class ZmOverview extends DwtComposite {
+
+  public account: ZmZimbraAccount;
 
   public clear(): void {}
 

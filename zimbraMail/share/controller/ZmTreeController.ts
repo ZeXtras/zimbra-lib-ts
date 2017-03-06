@@ -27,6 +27,7 @@ import {DwtMenu} from "../../../ajax/dwt/widgets/DwtMenu";
 import {DwtEvent} from "../../../ajax/dwt/events/DwtEvent";
 import {ZmOrganizer} from "../model/ZmOrganizer";
 import {ZmFolder} from "../model/ZmFolder";
+import {ZmChooseFolderDialog} from "../view/dialog/ZmChooseFolderDialog";
 
 export class ZmTreeController extends ZmController {
 
@@ -47,6 +48,8 @@ export class ZmTreeController extends ZmController {
   public _renameListener(ev:DwtUiEvent): void {}
   public _getActionedOrganizer(ev: DwtUiEvent): ZmOrganizer { return undefined; }
   public _getActionMenu(ev: DwtEvent, item: any): DwtMenu { return undefined; }
+  public _moveCallback(): void {}
+  public _getMoveParams(dialog: ZmChooseFolderDialog): any { return undefined; } 
 }
 
 export interface ZmTreeControllerShowParams {

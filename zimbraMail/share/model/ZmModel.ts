@@ -25,5 +25,6 @@ export class ZmModel {
   constructor(type: string) {}
 
   public addChangeListener?(listener: AjxListener): void {}
+  public removeChangeListener?(listener: AjxListener): void {}
 
 }
