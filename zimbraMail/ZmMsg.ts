@@ -1,12 +1,21 @@
 /*
- * ***** BEGIN LICENSE BLOCK *****
- * Copyright (C) 2011-2017 ZeXtras
+ * T4Z - TypeScript 4 Zimlet
+ * Copyright (C) 2017 ZeXtras S.r.l.
  *
- * The contents of this file are subject to the ZeXtras EULA;
- * you may not use this file except in compliance with the EULA.
- * You may obtain a copy of the EULA at
- * http://www.zextras.com/zextras-eula.html
- * ***** END LICENSE BLOCK *****
+ * This file is part of T4Z - TypeScript 4 Zimlet.
+ *
+ * This program is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU General Public License
+ * as published by the Free Software Foundation, version 2 of
+ * the License.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with T4Z - TypeScript 4 Zimlet. If not, see <http://www.gnu.org/licenses/>.
  */
 
 export class ZmMsg {
@@ -85,4 +94,5 @@ export class ZmMsg {
   public static unknownError: string;
   public static uploadNewFile: string;
   public static uploading: string;
+  public static importErrorUpload: string;
 }

@@ -1,8 +1,8 @@
 /*
- * ZeXtras' Zimbra API for Zimlet building
+ * T4Z - TypeScript 4 Zimlet
  * Copyright (C) 2017 ZeXtras S.r.l.
  *
- * This file is part of ZeXtras' Zimbra API for Zimlet building.
+ * This file is part of T4Z - TypeScript 4 Zimlet.
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License
@@ -15,7 +15,7 @@
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with ZeXtras' Zimbra API for Zimlet building. If not, see <http://www.gnu.org/licenses/>.
+ * along with T4Z - TypeScript 4 Zimlet. If not, see <http://www.gnu.org/licenses/>.
  */
 
 import {DwtDialog} from "../../../../ajax/dwt/widgets/DwtDialog";
@@ -24,6 +24,8 @@ import {DwtToolBarButton} from "../../../../ajax/dwt/widgets/DwtToolBar";
 import {ZmController} from "../../controller/ZmController";
 import {ZmFolder} from "../../model/ZmFolder";
 import {DwtPoint} from "../../../../ajax/dwt/graphics/DwtPoint";
+import {DwtButton} from "../../../../ajax/dwt/widgets/DwtButton";
+import {UploadParams} from "../../ZmUploadManager";
 
 export class ZmUploadDialog extends DwtDialog {
 
@@ -32,6 +34,7 @@ export class ZmUploadDialog extends DwtDialog {
   public _uploadForm: HTMLFormElement;
   public _tableEl: HTMLElement;
   public _supportsHTML5: boolean;
+  public _inprogress: boolean;
 
   public static UPLOAD_FIELD_NAME: string;
 
@@ -40,7 +43,7 @@ export class ZmUploadDialog extends DwtDialog {
 
   public _enableUpload(uploadButton: DwtToolBarButton): void {}
   public _finishUpload(uploadButton: DwtToolBarButton, docFiles: File[], uploadFolder: ZmFolder): void {}
-  public _uploadFileProgress(): void {}
+  public _uploadFileProgress(uploadButton: DwtButton, params: UploadParams, progress: ProgressEvent): void {}
   public _popupErrorDialog(message: string): void {}
 
   public popup(controller: ZmController, folder: ZmFolder, callback?: Function, title?: string, loc?: DwtPoint): void {}

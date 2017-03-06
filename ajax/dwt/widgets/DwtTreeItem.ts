@@ -1,8 +1,8 @@
 /*
- * ZeXtras' Zimbra API for Zimlet building
+ * T4Z - TypeScript 4 Zimlet
  * Copyright (C) 2017 ZeXtras S.r.l.
  *
- * This file is part of ZeXtras' Zimbra API for Zimlet building.
+ * This file is part of T4Z - TypeScript 4 Zimlet.
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License
@@ -15,7 +15,7 @@
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with ZeXtras' Zimbra API for Zimlet building. If not, see <http://www.gnu.org/licenses/>.
+ * along with T4Z - TypeScript 4 Zimlet. If not, see <http://www.gnu.org/licenses/>.
  */
 
 import {DwtComposite} from "./DwtComposite";
@@ -29,11 +29,13 @@ export class DwtTreeItem extends DwtComposite {
 
   public enableSelection(enableSelection: boolean): void {}
   public setExpanded(expanded: boolean, recurse?: boolean, skipNotify?: boolean): void {}
+  public setVisible(visible?: boolean, itemOnly?: boolean): void {}
   public _setSelected(selected: boolean, noFocus?: boolean): void {}
   public getText(): string { return undefined; };
   public setText(text: string): void {};
   public onAction(event: DwtSelectionEvent): void {};
-
+  public getData(key: string): any { return undefined; }
+  public setData(): void {};
   public getChildren(): DwtTreeItem[] { return undefined; };
 
 }
