@@ -54,6 +54,8 @@ export class ZmOperation {
   public static NEW_FOLDER: string;
   public static RENAME_FOLDER: string;
   public static SETUP: {[id: string]: ZmRegisterOperationParams};
+  public static DELETE_WITHOUT_SHORTCUT: string;
+  public static MOVE: string;
 
   public static addOperation(parent: DwtComposite, id: string, opHash: ZmAddOperationParams, index?: number, htmlElId?: string): void {}
   public static setOperation(parent: DwtComposite, oldOp: string, newOp: string, text?: string, image?: string, disImage?: string): void {}

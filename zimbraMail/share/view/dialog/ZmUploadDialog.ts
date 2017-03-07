@@ -24,6 +24,8 @@ import {DwtToolBarButton} from "../../../../ajax/dwt/widgets/DwtToolBar";
 import {ZmController} from "../../controller/ZmController";
 import {ZmFolder} from "../../model/ZmFolder";
 import {DwtPoint} from "../../../../ajax/dwt/graphics/DwtPoint";
+import {DwtButton} from "../../../../ajax/dwt/widgets/DwtButton";
+import {UploadParams} from "../../ZmUploadManager";
 
 export class ZmUploadDialog extends DwtDialog {
 
@@ -32,6 +34,7 @@ export class ZmUploadDialog extends DwtDialog {
   public _uploadForm: HTMLFormElement;
   public _tableEl: HTMLElement;
   public _supportsHTML5: boolean;
+  public _inprogress: boolean;
 
   public static UPLOAD_FIELD_NAME: string;
 
@@ -40,7 +43,7 @@ export class ZmUploadDialog extends DwtDialog {
 
   public _enableUpload(uploadButton: DwtToolBarButton): void {}
   public _finishUpload(uploadButton: DwtToolBarButton, docFiles: File[], uploadFolder: ZmFolder): void {}
-  public _uploadFileProgress(): void {}
+  public _uploadFileProgress(uploadButton: DwtButton, params: UploadParams, progress: ProgressEvent): void {}
   public _popupErrorDialog(message: string): void {}
 
   public popup(controller: ZmController, folder: ZmFolder, callback?: Function, title?: string, loc?: DwtPoint): void {}

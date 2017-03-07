@@ -28,12 +28,13 @@ export class DwtTreeItem extends DwtComposite {
 
   public enableSelection(enableSelection: boolean): void {}
   public setExpanded(expanded: boolean, recurse?: boolean, skipNotify?: boolean): void {}
+  public setVisible(visible?: boolean, itemOnly?: boolean): void {}
   public _setSelected(selected: boolean, noFocus?: boolean): void {}
   public getText(): string {return null; };
   public setText(text: string): void {};
   public onAction(event: DwtSelectionEvent): void {};
   public getData(key: string): any { return undefined; }
-
-  public getChildren(): DwtTreeItem[] {return undefined; };
+  public setData(): void {};
+  public getChildren(): DwtTreeItem[] { return undefined; };
 
 }

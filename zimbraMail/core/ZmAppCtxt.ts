@@ -47,6 +47,7 @@ import {ZmSearch} from "../share/model/ZmSearch";
 import {ZmRenameFolderDialog} from "../share/view/dialog/ZmRenameFolderDialog";
 import {ZmUploadManager} from "../share/ZmUploadManager";
 import {AjxPost} from "../../ajax/net/AjxPost";
+import {ZmChooseFolderDialog} from "../share/view/dialog/ZmChooseFolderDialog";
 
 export class ZmAppCtxt {
 
@@ -96,6 +97,7 @@ export class ZmAppCtxt {
   public getConfirmationDialog(): DwtConfirmDialog { return undefined; }
   public getCurrentSearch(): ZmSearch { return undefined; }
   public getRenameFolderDialog(): ZmRenameFolderDialog { return undefined; }
+  public getChooseFolderDialog(appName?: string): ZmChooseFolderDialog { return undefined }
   public getZmUploadManager(): ZmUploadManager { return undefined; }
   public getUploadManager(): AjxPost { return undefined; }
 }

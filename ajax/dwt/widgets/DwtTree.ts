@@ -19,6 +19,8 @@
  */
 
 import {DwtComposite, DwtCompositeParams} from "./DwtComposite";
+import {AjxListener} from "../../events/AjxListener";
+import {DwtTreeItem} from "./DwtTreeItem";
 
 export class DwtTree extends DwtComposite {
 
@@ -29,6 +31,10 @@ export class DwtTree extends DwtComposite {
   constructor(params: DwtTreeParams) {
     super(params);
   }
+
+  public addSelectionListener(listener: AjxListener): void {}
+  public removeSelectionListener(listener: AjxListener): void {}
+  public getTreeItemList(onlyVisible?: boolean): DwtTreeItem[] { return undefined; }
 
 }
 

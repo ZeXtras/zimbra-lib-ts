@@ -36,6 +36,12 @@ export class ZmFolderSearchFilter extends ZmSearchFilter {
 export interface ZmFolderSearchFilterGetMoveParamsValue {
   overviewId: string;
   treeIds: string[];
-  noRootSelect: boolean;
-  treeStyle: number;
+  noRootSelect?: boolean;
+  treeStyle?: number;
+  data?: any;
+  omit?: {[folderId: string]: boolean};
+  title?: string;
+  description?: string;
+  appName?: string;
+  hideNewButton?: boolean
 }

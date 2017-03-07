@@ -92,4 +92,5 @@ export class ZmMsg {
   public static unknownError: string;
   public static uploadNewFile: string;
   public static uploading: string;
+  public static importErrorUpload: string;
 }

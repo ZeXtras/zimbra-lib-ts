@@ -25,16 +25,16 @@ export class ZmUploadManager {
 }
 
 export interface UploadParams {
-  attachment: boolean;
-  files: File[];
-  allResponses: any;
-  start: number;
-  uploadFolder: ZmFolder;
+  attachment?: boolean;
+  files?: File[];
+  allResponses?: any;
+  start?: number;
+  uploadFolder?: ZmFolder;
   completeAllCallback?: Function;
-  preResolveConflictCallback: Function;
+  preResolveConflictCallback?: Function;
   errorCallback: Function;
-  completeDocSaveCallback: Function;
-  docFiles: {}[];
+  completeDocSaveCallback?: Function;
+  docFiles?: {}[];
   url: string;
   progressCallback?: Function
 }
