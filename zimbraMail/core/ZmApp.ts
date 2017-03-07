@@ -1,8 +1,8 @@
 /*
- * ZeXtras' Zimbra API for Zimlet building
+ * T4Z - TypeScript 4 Zimlet
  * Copyright (C) 2017 ZeXtras S.r.l.
  *
- * This file is part of ZeXtras' Zimbra API for Zimlet building.
+ * This file is part of T4Z - TypeScript 4 Zimlet.
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License
@@ -15,7 +15,7 @@
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with ZeXtras' Zimbra API for Zimlet building. If not, see <http://www.gnu.org/licenses/>.
+ * along with T4Z - TypeScript 4 Zimlet. If not, see <http://www.gnu.org/licenses/>.
  */
 
 import {ZmController} from "../share/controller/ZmController";
@@ -42,7 +42,7 @@ export class ZmApp {
   public static BRIEFCASE: string = "Briefcase";
   public static PORTAL: string = "Portal";
   public static MAIL: string = "Mail";
-  public static ENABLED_APPS: {} = {};
+  public static ENABLED_APPS: {[name: string]: boolean} = {};
 
   public static registerApp(name: string, params: ZmAppRegisterAppParams): void {}
 
@@ -150,7 +150,7 @@ export interface ZmAppRegisterAppParams {
   // searchResultsTab;
 
   searchTypes?: string[];
-  gotoActionCode?: string
+  gotoActionCode?: string;
   // actionCodes?;
   // newItemOps?;
   // newOrgOps?;

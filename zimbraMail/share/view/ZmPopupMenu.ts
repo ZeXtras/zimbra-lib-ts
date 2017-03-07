@@ -1,8 +1,8 @@
 /*
- * ZeXtras' Zimbra API for Zimlet building
+ * T4Z - TypeScript 4 Zimlet
  * Copyright (C) 2017 ZeXtras S.r.l.
  *
- * This file is part of ZeXtras' Zimbra API for Zimlet building.
+ * This file is part of T4Z - TypeScript 4 Zimlet.
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License
@@ -15,20 +15,19 @@
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with ZeXtras' Zimbra API for Zimlet building. If not, see <http://www.gnu.org/licenses/>.
+ * along with T4Z - TypeScript 4 Zimlet. If not, see <http://www.gnu.org/licenses/>.
  */
 
 import {DwtMenu} from "../../../ajax/dwt/widgets/DwtMenu";
-import {DwtControl} from "../../../ajax/dwt/widgets/DwtControl";
 import {ZmController} from "../controller/ZmController";
 import {DwtMenuItem} from "../../../ajax/dwt/widgets/DwtMenuItem";
-import {AjxListener} from "../../../ajax/events/AjxListener";
+import {DwtControl} from "../../../ajax/dwt/widgets/DwtControl";
 
 export class ZmPopupMenu extends DwtMenu {
 
   public menu: DwtMenu;
 
-  constructor(parent: any, className?: string, id?: string, controller?: ZmController) {
+  constructor(parent: DwtControl, className?: string, id?: string, controller?: ZmController) {
     super({
       parent: parent,
       className: className,
@@ -58,5 +57,4 @@ export interface CreateMenuItemParams {
 }
 
 export interface ZmPopupMenuParams {
-
 }

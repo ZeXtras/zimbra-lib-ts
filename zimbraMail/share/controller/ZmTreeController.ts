@@ -1,8 +1,8 @@
 /*
- * ZeXtras' Zimbra API for Zimlet building
+ * T4Z - TypeScript 4 Zimlet
  * Copyright (C) 2017 ZeXtras S.r.l.
  *
- * This file is part of ZeXtras' Zimbra API for Zimlet building.
+ * This file is part of T4Z - TypeScript 4 Zimlet.
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License
@@ -15,7 +15,7 @@
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with ZeXtras' Zimbra API for Zimlet building. If not, see <http://www.gnu.org/licenses/>.
+ * along with T4Z - TypeScript 4 Zimlet. If not, see <http://www.gnu.org/licenses/>.
  */
 
 import {ZmController} from "./ZmController";
@@ -27,6 +27,7 @@ import {DwtMenu} from "../../../ajax/dwt/widgets/DwtMenu";
 import {DwtEvent} from "../../../ajax/dwt/events/DwtEvent";
 import {ZmOrganizer} from "../model/ZmOrganizer";
 import {ZmFolder} from "../model/ZmFolder";
+import {ZmChooseFolderDialog} from "../view/dialog/ZmChooseFolderDialog";
 
 export class ZmTreeController extends ZmController {
 
@@ -44,9 +45,11 @@ export class ZmTreeController extends ZmController {
 
   public getDataTree(): ZmTree { return undefined; }
   public _treeViewListener(ev: DwtUiEvent): void {}
-  public _renameListener(ev:DwtUiEvent): void {}
+  public _renameListener(ev: DwtUiEvent): void {}
   public _getActionedOrganizer(ev: DwtUiEvent): ZmOrganizer { return undefined; }
   public _getActionMenu(ev: DwtEvent, item: any): DwtMenu { return undefined; }
+  public _moveCallback(): void {}
+  public _getMoveParams(dialog: ZmChooseFolderDialog): any { return undefined; } 
 }
 
 export interface ZmTreeControllerShowParams {

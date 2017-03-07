@@ -1,8 +1,8 @@
 /*
- * ZeXtras' Zimbra API for Zimlet building
+ * T4Z - TypeScript 4 Zimlet
  * Copyright (C) 2017 ZeXtras S.r.l.
  *
- * This file is part of ZeXtras' Zimbra API for Zimlet building.
+ * This file is part of T4Z - TypeScript 4 Zimlet.
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License
@@ -15,7 +15,7 @@
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with ZeXtras' Zimbra API for Zimlet building. If not, see <http://www.gnu.org/licenses/>.
+ * along with T4Z - TypeScript 4 Zimlet. If not, see <http://www.gnu.org/licenses/>.
  */
 
 import {
@@ -41,7 +41,7 @@ export class ZmListView extends DwtListView {
   public getList(): AjxVector<any> { return undefined; };
   public _restoreState(state?: ZmListViewStateObject): void {}
   public _saveState(state?: ZmListViewSaveStateObject): void {}
-  public _getImageHtml(htmlArr: string[], idx: number, image: string, id: string, classes: string[] = []): number { return undefined }
+  public _getImageHtml(htmlArr: string[], idx: number, image: string, id: string, classes: string[] = []): number { return undefined; }
   public _sortColumn(columnItem: DwtListHeaderItem, sortAsc: boolean, callback?: Function): void { return undefined; }
   public addSelectionListener(listener: AjxListener): void {}
   public renameFile(item: any) {}

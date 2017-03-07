@@ -1,8 +1,8 @@
 /*
- * ZeXtras' Zimbra API for Zimlet building
+ * T4Z - TypeScript 4 Zimlet
  * Copyright (C) 2017 ZeXtras S.r.l.
  *
- * This file is part of ZeXtras' Zimbra API for Zimlet building.
+ * This file is part of T4Z - TypeScript 4 Zimlet.
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License
@@ -15,7 +15,7 @@
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with ZeXtras' Zimbra API for Zimlet building. If not, see <http://www.gnu.org/licenses/>.
+ * along with T4Z - TypeScript 4 Zimlet. If not, see <http://www.gnu.org/licenses/>.
  */
 
 import {AjxCallback} from "../../ajax/boot/AjxCallback";
@@ -47,6 +47,7 @@ import {ZmSearch} from "../share/model/ZmSearch";
 import {ZmRenameFolderDialog} from "../share/view/dialog/ZmRenameFolderDialog";
 import {ZmUploadManager} from "../share/ZmUploadManager";
 import {AjxPost} from "../../ajax/net/AjxPost";
+import {ZmChooseFolderDialog} from "../share/view/dialog/ZmChooseFolderDialog";
 
 export class ZmAppCtxt {
 
@@ -91,11 +92,12 @@ export class ZmAppCtxt {
   public getCurrentController(): ZmController { return undefined; }
   public setTree(type: string, tree: ZmTree, account?: ZmZimbraAccount): void {}
   public cacheSet(id: string, value: any): void {}
-  public getOverviewController(): ZmOverviewController {return undefined;}
+  public getOverviewController(): ZmOverviewController { return undefined; }
   public getTree(appId: string): ZmTree { return undefined; }
   public getConfirmationDialog(): DwtConfirmDialog { return undefined; }
   public getCurrentSearch(): ZmSearch { return undefined; }
   public getRenameFolderDialog(): ZmRenameFolderDialog { return undefined; }
+  public getChooseFolderDialog(appName?: string): ZmChooseFolderDialog { return undefined }
   public getZmUploadManager(): ZmUploadManager { return undefined; }
   public getUploadManager(): AjxPost { return undefined; }
 }
@@ -108,7 +110,7 @@ interface SetStatusMsgParams {
   toast?: {};                    //   the toast control (may be <code>null</code>)
   force?: boolean;               //   force any displayed toasts out of the way (dismiss them and run their dismissCallback). Enqueued messages that are not yet displayed will not be displayed
   dismissCallback?: AjxCallback; //   callback to run when the toast is dismissed (by another message using [force], or explicitly calling ZmStatusView.prototype.dismiss())
-  finishCallback?: AjxCallback;   //   callback to run when the toast finishes its transitions by itself (not when dismissed)
+  finishCallback?: AjxCallback;  //   callback to run when the toast finishes its transitions by itself (not when dismissed)
 }
 
 interface NotifyZimletsParams {

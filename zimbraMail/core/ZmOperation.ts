@@ -1,8 +1,8 @@
 /*
- * ZeXtras' Zimbra API for Zimlet building
+ * T4Z - TypeScript 4 Zimlet
  * Copyright (C) 2017 ZeXtras S.r.l.
  *
- * This file is part of ZeXtras' Zimbra API for Zimlet building.
+ * This file is part of T4Z - TypeScript 4 Zimlet.
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License
@@ -15,7 +15,7 @@
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with ZeXtras' Zimbra API for Zimlet building. If not, see <http://www.gnu.org/licenses/>.
+ * along with T4Z - TypeScript 4 Zimlet. If not, see <http://www.gnu.org/licenses/>.
  */
 
 import {DwtComposite} from "../../ajax/dwt/widgets/DwtComposite";
@@ -54,6 +54,8 @@ export class ZmOperation {
   public static NEW_FOLDER: string;
   public static RENAME_FOLDER: string;
   public static SETUP: {[id: string]: ZmRegisterOperationParams};
+  public static DELETE_WITHOUT_SHORTCUT: string;
+  public static MOVE: string;
 
   public static addOperation(parent: DwtComposite, id: string, opHash: ZmAddOperationParams, index?: number, htmlElId?: string): void {}
   public static setOperation(parent: DwtComposite, oldOp: string, newOp: string, text?: string, image?: string, disImage?: string): void {}

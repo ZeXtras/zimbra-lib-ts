@@ -1,8 +1,8 @@
 /*
- * ZeXtras' Zimbra API for Zimlet building
+ * T4Z - TypeScript 4 Zimlet
  * Copyright (C) 2017 ZeXtras S.r.l.
  *
- * This file is part of ZeXtras' Zimbra API for Zimlet building.
+ * This file is part of T4Z - TypeScript 4 Zimlet.
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License
@@ -15,7 +15,7 @@
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with ZeXtras' Zimbra API for Zimlet building. If not, see <http://www.gnu.org/licenses/>.
+ * along with T4Z - TypeScript 4 Zimlet. If not, see <http://www.gnu.org/licenses/>.
  */
 
 import {ZaModel} from "./ZaModel";
@@ -43,21 +43,21 @@ export class ZaItem extends ZaModel {
   public static A_zimbraACE: string;
   public static A_zimbraCreateTimestamp: string;
 
-  public static loadMethods:{[name:string]:Function[]};
-  public static initMethods:{[name:string]:Function[]};
-  public static modifyMethods:{[name:string]:Function[]};
-  public static modifyMethodsExt:{[name:string]:Function[]};
-  public static createMethods:{[name:string]:Function[]};
-  public static removeMethods:{[name:string]:Function[]};
-  public static modelExtensions:{[name:string]:Function[]};
-  public static getRelatedMethods:{[name:string]:Function[]};
-  public static ObjectModifiers:{[name:string]:Function[]};
+  public static loadMethods: {[name: string]: Function[]};
+  public static initMethods: {[name: string]: Function[]};
+  public static modifyMethods: {[name: string]: Function[]};
+  public static modifyMethodsExt: {[name: string]: Function[]};
+  public static createMethods: {[name: string]: Function[]};
+  public static removeMethods: {[name: string]: Function[]};
+  public static modelExtensions: {[name: string]: Function[]};
+  public static getRelatedMethods: {[name: string]: Function[]};
+  public static ObjectModifiers: {[name: string]: Function[]};
 
-  private _iKeyName:string;
-  private _uuid:string;
-  public rightsLoaded:boolean;
-  public id:string; // TODO: Indagate
-  public attrs:{}; // TODO: Indagate
+  private _iKeyName: string;
+  private _uuid: string;
+  public rightsLoaded: boolean;
+  public id: string; // TODO: Investigate
+  public attrs: {}; // TODO: Investigate
   public type: string;
 
   constructor(iKeyName: string) {

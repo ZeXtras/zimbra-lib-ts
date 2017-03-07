@@ -1,8 +1,8 @@
 /*
- * ZeXtras' Zimbra API for Zimlet building
+ * T4Z - TypeScript 4 Zimlet
  * Copyright (C) 2017 ZeXtras S.r.l.
  *
- * This file is part of ZeXtras' Zimbra API for Zimlet building.
+ * This file is part of T4Z - TypeScript 4 Zimlet.
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License
@@ -15,7 +15,7 @@
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with ZeXtras' Zimbra API for Zimlet building. If not, see <http://www.gnu.org/licenses/>.
+ * along with T4Z - TypeScript 4 Zimlet. If not, see <http://www.gnu.org/licenses/>.
  */
 
 import {AjxVector} from "../../../ajax/util/AjxVector";
@@ -26,9 +26,8 @@ export class ZmSearch {
 
   constructor(params: ZmSearchParam) {}
 
-  public execute(params: {callback: AjxCallback; batchCmd?: ZmBatchCommand}) {
-    
-  }
+  public execute(params: {callback: AjxCallback; batchCmd?: ZmBatchCommand}) {}
+
 }
 
 export interface ZmSearchParam {
@@ -45,7 +44,7 @@ export interface ZmSearchParam {
   galType?: string; // The type of GAL autocomplete (account or resource)
   autocompleteType?: string; // The type of autocomplete (account or resource or all)
   lastId?: string; // The ID of last item displayed (for pagination)
-  lastSortVal?: string // The value of sort field for above item
+  lastSortVal?: string; // The value of sort field for above item
   fetch?: string; // Fetch first hit message
   searchId?: string; // The ID of owning search folder (if any)
   conds?: any[]; // The list of search conditions (<code><SearchCalendarResourcesRequest></code>)
@@ -66,5 +65,5 @@ export interface ZmSearchSoapInfoParams {
   method: string;
   response: string;
   namespace: string;
-  additional: {[key: string]: any}
+  additional: {[key: string]: any};
 }
