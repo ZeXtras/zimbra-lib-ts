@@ -18,13 +18,21 @@
  * along with T4Z - TypeScript 4 Zimlet. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import {DwtComposite} from "./DwtComposite";
+import {DwtComposite, DwtCompositeParams} from "./DwtComposite";
 
 export class DwtInputField extends DwtComposite {
+
+  constructor(params: DwtInputFieldParams) {
+    super(params);
+  }
 
   public setValue(value: string, noValidate?: boolean): void {}
   public setHandler(eventType: string, handler: Function): void {}
   public getValue(): string { return undefined; }
   public getInputElement(): HTMLInputElement { return undefined; }
 
+}
+
+interface DwtInputFieldParams extends DwtCompositeParams {
+  hint?: string;
 }
