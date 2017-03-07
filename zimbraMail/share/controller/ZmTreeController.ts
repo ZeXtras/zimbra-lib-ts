@@ -49,7 +49,8 @@ export class ZmTreeController extends ZmController {
   public _getActionedOrganizer(ev: DwtUiEvent): ZmOrganizer { return undefined; }
   public _getActionMenu(ev: DwtEvent, item: any): DwtMenu { return undefined; }
   public _moveCallback(): void {}
-  public _getMoveParams(dialog: ZmChooseFolderDialog): any { return undefined; } 
+  public _getMoveParams(dialog: ZmChooseFolderDialog): any { return undefined; }
+
 }
 
 export interface ZmTreeControllerShowParams {
