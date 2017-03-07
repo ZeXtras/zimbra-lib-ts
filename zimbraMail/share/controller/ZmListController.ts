@@ -57,7 +57,6 @@ export class ZmListController extends ZmBaseController {
   /** Visible in ZmMsgController */ public show(msg: ZmMailMsg, parentController: ZmListController, callback: AjxCallback, markRead: boolean, hidePagination: boolean, forceLoad: boolean, noTruncate: boolean): void;
   public show(msg: any, parentController?: ZmListController, callback?: AjxCallback, markRead?: boolean, hidePagination?: boolean, forceLoad?: boolean, noTruncate?: boolean): void {}
 
-  public _initializeToolBar(view: string): void {
-    
-  }
+  public _initializeToolBar(view: string): void {}
+
 }

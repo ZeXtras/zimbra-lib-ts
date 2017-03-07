@@ -41,7 +41,7 @@ export class ZmListView extends DwtListView {
   public getList(): AjxVector<any> { return undefined; };
   public _restoreState(state?: ZmListViewStateObject): void {}
   public _saveState(state?: ZmListViewSaveStateObject): void {}
-  public _getImageHtml(htmlArr: string[], idx: number, image: string, id: string, classes: string[] = []): number { return undefined }
+  public _getImageHtml(htmlArr: string[], idx: number, image: string, id: string, classes: string[] = []): number { return undefined; }
   public _sortColumn(columnItem: DwtListHeaderItem, sortAsc: boolean, callback?: Function): void { return undefined; }
   public addSelectionListener(listener: AjxListener): void {}
   public renameFile(item: any) {}

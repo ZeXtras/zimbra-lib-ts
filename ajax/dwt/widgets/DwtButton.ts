@@ -60,5 +60,5 @@ export interface DwtButtonSetMenuParams {
 
 export interface DwtButtonParams extends DwtLabelParams {
   actionTiming?: number;
-  listeners?: {[name: string]: AjxListener}
+  listeners?: {[name: string]: AjxListener};
 }

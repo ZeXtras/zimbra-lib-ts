@@ -97,5 +97,5 @@ export interface ZmContactDlInfo {
   subscriptionPolicy: any;
   unsubscriptionPolicy: any;
   displayName: string;
-  hideInGal: boolean
+  hideInGal: boolean;
 }

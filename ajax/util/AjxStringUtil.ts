@@ -32,7 +32,7 @@ export class AjxStringUtil {
   public static htmlEncode(str: string, includeSpaces?: boolean): string { return undefined; }
 
   // New line to <br>
-  public static nl2br(text: string): string { return undefined;}
+  public static nl2br(text: string): string { return undefined; }
 }
 
 export interface AjxStringUtilConvertHtml2TextConvertor {

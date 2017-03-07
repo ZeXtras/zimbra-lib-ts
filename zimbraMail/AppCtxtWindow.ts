@@ -21,5 +21,5 @@
 import {ZmAppCtxt} from "./core/ZmAppCtxt";
 
 export interface AppCtxtWindow extends Window {
-  appCtxt: ZmAppCtxt
+  appCtxt: ZmAppCtxt;
 }

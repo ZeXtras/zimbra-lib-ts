@@ -19,7 +19,7 @@
  */
 
 export class ZaId {
-  
+
   public static DLG_NEW_PWRSTR_VOLUME: string;
   public static PANEL_APP: string;
   public static PANEL_HOME: string;
