@@ -20,7 +20,6 @@
 
 export class ZaRequestMgr {
 
-  public static invoke(csfeParams: {}, params: {}) {
-  }
-  
+  public static invoke(csfeParams: {}, params: {}) {}
+
 }

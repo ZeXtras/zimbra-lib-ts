@@ -36,6 +36,6 @@ export interface UploadParams {
   completeDocSaveCallback?: Function;
   docFiles?: {}[];
   url: string;
-  progressCallback?: Function
+  progressCallback?: Function;
 }
 

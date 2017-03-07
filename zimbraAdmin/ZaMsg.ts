@@ -18,8 +18,7 @@
  * along with T4Z - TypeScript 4 Zimlet. If not, see <http://www.gnu.org/licenses/>.
  */
 
-export class ZaMsg
-{
+export class ZaMsg {
   public static Yes: string;
   public static NAD_ResetToCOS: string;
   public static No: string;

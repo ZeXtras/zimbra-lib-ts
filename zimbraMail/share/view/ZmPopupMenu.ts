@@ -19,16 +19,15 @@
  */
 
 import {DwtMenu} from "../../../ajax/dwt/widgets/DwtMenu";
-import {DwtControl} from "../../../ajax/dwt/widgets/DwtControl";
 import {ZmController} from "../controller/ZmController";
 import {DwtMenuItem} from "../../../ajax/dwt/widgets/DwtMenuItem";
-import {AjxListener} from "../../../ajax/events/AjxListener";
+import {DwtControl} from "../../../ajax/dwt/widgets/DwtControl";
 
 export class ZmPopupMenu extends DwtMenu {
 
   public menu: DwtMenu;
 
-  constructor(parent: any, className?: string, id?: string, controller?: ZmController) {
+  constructor(parent: DwtControl, className?: string, id?: string, controller?: ZmController) {
     super({
       parent: parent,
       className: className,
@@ -63,5 +62,4 @@ export interface CreateMenuItemParams {
 }
 
 export interface ZmPopupMenuParams {
-
 }

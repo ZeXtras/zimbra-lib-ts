@@ -42,7 +42,6 @@ export interface ZmSearchControllerSearchParams extends ZmSearchParam {
   skipUpdateSearchToolbar?: boolean;
   sessionId?: string;
   noGal?: boolean;
-  userText?: boolean;
   userInitiated?: boolean;
   getHtml?: boolean;
   isEmpty?: boolean;

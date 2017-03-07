@@ -57,7 +57,7 @@ export class ZmZimletBase extends ZmObjectHandler {
   public setUserProperty(propertyName: string, value: string|number|boolean, save: boolean, callback?: AjxCallback): void {}
   public xmlObj(name?: string): ZmZimletContext | string { return undefined; }
   public checkProperties(props: UserProperty[]): boolean { return undefined; }
-  public displayStatusMessage(param: {msg: string; level: number}): void {return undefined;};
+  public displayStatusMessage(param: {msg: string; level: number}): void { return undefined; }
   public displayErrorMessage(msg: string, data?: string, title?: string): void {}
   public saveUserProperties(callback: AjxCallback): string { return undefined; }
   public getShell(): DwtShell { return undefined; }
