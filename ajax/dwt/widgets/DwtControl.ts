@@ -82,6 +82,8 @@ export class DwtControl {
   public focus(): void {}
   public setDragSource(dragSource: DwtDragSource): void {}
   public setDropTarget(dragTarget: DwtDropTarget): void {}
+  public _setEventHdlrs(events: string[], clear?: boolean, element?: HTMLElement): void {}
+
 }
 
 export interface DwtControlParams {

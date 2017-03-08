@@ -36,6 +36,8 @@ export class AjxDateFormat extends AjxFormat {
   public static LONG: number;
   public static SHORT: number;
   public static _DATETIME_FORMATTERS: {[style: number]: AjxDateFormat};
+  public static FULL: number;
+  public static MEDIUM: number;
 
   public static getDateTimeInstance(dateStyle: number, timeStyle: number): AjxDateFormat {
     let style: number = dateStyle * 10 + timeStyle;
