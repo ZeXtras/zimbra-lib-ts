@@ -43,21 +43,21 @@ export class ZaItem extends ZaModel {
   public static A_zimbraACE: string;
   public static A_zimbraCreateTimestamp: string;
 
-  public static loadMethods:{[name:string]:Function[]};
-  public static initMethods:{[name:string]:Function[]};
-  public static modifyMethods:{[name:string]:Function[]};
-  public static modifyMethodsExt:{[name:string]:Function[]};
-  public static createMethods:{[name:string]:Function[]};
-  public static removeMethods:{[name:string]:Function[]};
-  public static modelExtensions:{[name:string]:Function[]};
-  public static getRelatedMethods:{[name:string]:Function[]};
-  public static ObjectModifiers:{[name:string]:Function[]};
+  public static loadMethods: {[name: string]: Function[]};
+  public static initMethods: {[name: string]: Function[]};
+  public static modifyMethods: {[name: string]: Function[]};
+  public static modifyMethodsExt: {[name: string]: Function[]};
+  public static createMethods: {[name: string]: Function[]};
+  public static removeMethods: {[name: string]: Function[]};
+  public static modelExtensions: {[name: string]: Function[]};
+  public static getRelatedMethods: {[name: string]: Function[]};
+  public static ObjectModifiers: {[name: string]: Function[]};
 
-  private _iKeyName:string;
-  private _uuid:string;
-  public rightsLoaded:boolean;
-  public id:string; // TODO: Indagate
-  public attrs:{}; // TODO: Indagate
+  private _iKeyName: string;
+  private _uuid: string;
+  public rightsLoaded: boolean;
+  public id: string; // TODO: Investigate
+  public attrs: {}; // TODO: Investigate
   public type: string;
 
   constructor(iKeyName: string) {

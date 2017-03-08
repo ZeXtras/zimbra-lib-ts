@@ -61,7 +61,7 @@ export class ZmZimbraMail extends ZmController {
   }
 
   public setNewButtonProps(params: SetNewButtonPropsParams): void {}
-  public getAppChooser(): ZmAppChooser { return undefined }
+  public getAppChooser(): ZmAppChooser { return undefined; }
   public addApp(app: ZmApp): void {}
   public getAppViewMgr(): ZmAppViewMgr { return undefined; }
 
@@ -69,7 +69,7 @@ export class ZmZimbraMail extends ZmController {
 
 export interface ZmZimbraMailSendRequestParams extends ZmRequestMgrSendRequestParams {
   soapDoc?: AjxSoapDoc;
-  jsonObj?: {[request: string]: any}
+  jsonObj?: {[request: string]: any};
   asyncMode?: boolean;
   busyMsg?: string;
   callback?: AjxCallback;

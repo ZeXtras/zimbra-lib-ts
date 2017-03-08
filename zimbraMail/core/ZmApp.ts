@@ -42,7 +42,7 @@ export class ZmApp {
   public static BRIEFCASE: string = "Briefcase";
   public static PORTAL: string = "Portal";
   public static MAIL: string = "Mail";
-  public static ENABLED_APPS: {} = {};
+  public static ENABLED_APPS: {[name: string]: boolean} = {};
 
   public static registerApp(name: string, params: ZmAppRegisterAppParams): void {}
 
@@ -150,7 +150,7 @@ export interface ZmAppRegisterAppParams {
   // searchResultsTab;
 
   searchTypes?: string[];
-  gotoActionCode?: string
+  gotoActionCode?: string;
   // actionCodes?;
   // newItemOps?;
   // newOrgOps?;

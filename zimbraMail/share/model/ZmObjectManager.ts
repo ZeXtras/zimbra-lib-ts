@@ -19,11 +19,22 @@
  */
 
 import {ZmMailMsgCapsuleView} from "../../mail/view/ZmConvView2";
+import {DwtComposite} from "../../../ajax/dwt/widgets/DwtComposite";
+import {AjxCallback} from "../../../ajax/boot/AjxCallback";
 
 export class ZmObjectManager {
+  public static DATE: string;
+  public static ATTR_CURRENT_DATE: string;
+  public __hasSmileysHandler?: boolean;
+  public _objectIdPrefix: string;
 
-  public static registerHandler(obj: Object, type: number, priority: number) {};
+  public static registerHandler(obj: Object, type: number, priority: number) {}
+
+  constructor(view: DwtComposite, selectCallback?: AjxCallback, skipHandlers?: boolean) {}
 
   public getView(): ZmMailMsgCapsuleView { return undefined; }
+  /** @deprecated Soon will be deprecated, use @see{ZmObjectManager.prototype.findObjectsInNode} */ public processObjectsInNode(doc: Document, node: HTMLElement): HTMLElement { return undefined; }
+  public findObjectsInNode(node: HTMLElement, re_discard?: RegExp, re_allow?: RegExp, callbacks?: AjxCallback[]): HTMLElement { return undefined; }
+  public setHandlerAttr(type: string, name: string, value: any): void {}
 
 }

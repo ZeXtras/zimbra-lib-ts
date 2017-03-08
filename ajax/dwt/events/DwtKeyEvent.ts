@@ -25,6 +25,8 @@ export class DwtKeyEvent extends DwtUiEvent {
   public static KEY_END_OF_TEXT: number;
   public static KEY_RETURN: number;
   public static KEY_ESCAPE: number;
+  public static KEY_DELETE: number;
+  public static KEY_BACKSPACE: number;
 
-  public static getCharCode(ev: DwtKeyEvent): number {return undefined;}
+  public static getCharCode(ev: DwtKeyEvent): number {return undefined; }
 }

@@ -45,9 +45,9 @@ export class ZmItem extends ZmModel {
   }
 
   public getAccount?(): ZmZimbraAccount { return undefined; }
-  public _parseTagNames?(str: string) : void {}
-  public _parseFlags?(str: string) : void {}
-  public getRestUrl(): string {return undefined;}
+  public _parseTagNames?(str: string): void {}
+  public _parseFlags?(str: string): void {}
+  public getRestUrl(): string {return undefined; }
 
 }
 

@@ -26,7 +26,7 @@ export class ZaAppCtxt {
   public getAppController(): ZaZimbraAdmin {
     return void 0;
   }
-  
+
   public getShell(): DwtShell {
     return void 0;
   }

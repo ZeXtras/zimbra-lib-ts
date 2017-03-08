@@ -22,9 +22,9 @@ import {ZaItem} from "../../common/ZaItem";
 import {XModelInt} from "../../../ajax/dwt/xforms/XModelInt";
 
 export class ZaAccount extends ZaItem {
-  public id:string;
-  public attrs:{
-    zimbraIsAdminAccount?:string
+  public id: string;
+  public attrs: {
+    zimbraIsAdminAccount?: string
   };
   public static myXModel: XModelInt;
 }
