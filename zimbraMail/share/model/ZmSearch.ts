@@ -26,9 +26,8 @@ export class ZmSearch {
 
   constructor(params: ZmSearchParam) {}
 
-  public execute(params: {callback: AjxCallback; batchCmd?: ZmBatchCommand}) {
-    
-  }
+  public execute(params: {callback: AjxCallback; batchCmd?: ZmBatchCommand}) {}
+
 }
 
 export interface ZmSearchParam {
@@ -45,7 +44,7 @@ export interface ZmSearchParam {
   galType?: string; // The type of GAL autocomplete (account or resource)
   autocompleteType?: string; // The type of autocomplete (account or resource or all)
   lastId?: string; // The ID of last item displayed (for pagination)
-  lastSortVal?: string // The value of sort field for above item
+  lastSortVal?: string; // The value of sort field for above item
   fetch?: string; // Fetch first hit message
   searchId?: string; // The ID of owning search folder (if any)
   conds?: any[]; // The list of search conditions (<code><SearchCalendarResourcesRequest></code>)
@@ -66,5 +65,5 @@ export interface ZmSearchSoapInfoParams {
   method: string;
   response: string;
   namespace: string;
-  additional: {[key: string]: any}
+  additional: {[key: string]: any};
 }

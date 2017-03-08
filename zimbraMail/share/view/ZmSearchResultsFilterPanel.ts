@@ -43,5 +43,5 @@ export interface ZmFolderSearchFilterGetMoveParamsValue {
   title?: string;
   description?: string;
   appName?: string;
-  hideNewButton?: boolean
+  hideNewButton?: boolean;
 }

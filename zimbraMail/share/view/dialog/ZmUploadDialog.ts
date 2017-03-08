@@ -47,5 +47,5 @@ export class ZmUploadDialog extends DwtDialog {
   public _popupErrorDialog(message: string): void {}
 
   public popup(controller: ZmController, folder: ZmFolder, callback?: Function, title?: string, loc?: DwtPoint): void {}
-  
+
 }
