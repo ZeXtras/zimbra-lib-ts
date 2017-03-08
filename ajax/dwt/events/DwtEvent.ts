@@ -33,6 +33,7 @@ export class DwtEvent {
 
   public static XFORMS_FORM_DIRTY_CHANGE: string;
   public static XFORMS_VALUE_ERROR: string;
+  public static MOUSE_EVENTS: string[];
 
   public dwtObj: DwtControl;
   public type: string;

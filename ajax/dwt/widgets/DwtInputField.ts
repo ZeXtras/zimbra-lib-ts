@@ -35,4 +35,6 @@ export class DwtInputField extends DwtComposite {
 
 interface DwtInputFieldParams extends DwtCompositeParams {
   hint?: string;
+  forceMultiRow?: boolean;
+  rows?: number;
 }
