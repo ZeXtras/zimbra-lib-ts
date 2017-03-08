@@ -97,7 +97,7 @@ export class ZmAppCtxt {
   public getConfirmationDialog(): DwtConfirmDialog { return undefined; }
   public getCurrentSearch(): ZmSearch { return undefined; }
   public getRenameFolderDialog(): ZmRenameFolderDialog { return undefined; }
-  public getChooseFolderDialog(appName?: string): ZmChooseFolderDialog { return undefined }
+  public getChooseFolderDialog(appName?: string): ZmChooseFolderDialog { return undefined; }
   public getZmUploadManager(): ZmUploadManager { return undefined; }
   public getUploadManager(): AjxPost { return undefined; }
 }

@@ -22,6 +22,7 @@ import {DwtLabel, DwtLabelParams} from "./DwtLabel";
 import {AjxListener} from "../../events/AjxListener";
 import {DwtMenu} from "./DwtMenu";
 import {AjxCallback} from "../../boot/AjxCallback";
+import {DwtEvent} from "../events/DwtEvent";
 
 export class DwtButton extends DwtLabel {
 
@@ -47,6 +48,7 @@ export class DwtButton extends DwtLabel {
   public popup(menu?: DwtMenu): void {}
   public removeDropDownSelectionListener(listener?: AjxListener): void {}
   public removePullDownMenuOptions(): void {}
+  public handleKeyAction(actionCode: string, ev: DwtEvent): boolean { return undefined; }
 
 }
 
