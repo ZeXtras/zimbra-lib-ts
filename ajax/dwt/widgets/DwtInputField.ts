@@ -27,7 +27,6 @@ export class DwtInputField extends DwtComposite {
   }
 
   public setValue(value: string, noValidate?: boolean): void {}
-  public setHandler(eventType: string, handler: Function): void {}
   public getValue(): string { return undefined; }
   public getInputElement(): HTMLInputElement { return undefined; }
 

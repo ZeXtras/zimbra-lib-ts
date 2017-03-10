@@ -47,6 +47,7 @@ export class ZmOverview extends DwtComposite {
   public itemSelected(treeItem?: DwtTreeItem): void {}
   public clearSelection(): void {}
   public set(treeIds: string[], omit?: {[id: string]: boolean}): void {}
+  public getTreeItemById(id: number, type?: string): DwtTreeItem { return undefined; }
 }
 
 export interface ZmOverviewParams extends DwtCompositeParams {

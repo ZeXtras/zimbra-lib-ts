@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+  },
+  "include": [
+  ],
+  "exclude": [
+    "ajax/",
+    "csfe",
+    "zimbraAdmin",
+    "zimbraMail",
+    "zimlets"
+  ]
+}
