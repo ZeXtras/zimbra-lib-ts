@@ -18,16 +18,55 @@
  * along with T4Z - TypeScript 4 Zimlet. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import {DwtComposite} from "../../../ajax/dwt/widgets/DwtComposite";
+import {
+  DwtComposite,
+  DwtCompositeParams
+} from "../../../ajax/dwt/widgets/DwtComposite";
 import {ZmTreeView} from "./ZmTreeView";
 import {ZmZimbraAccount} from "../model/ZmZimbraAccount";
+import {DwtTreeItem} from "../../../ajax/dwt/widgets/DwtTreeItem";
+import {ZmOverviewController} from "../controller/ZmOverviewController";
 
 export class ZmOverview extends DwtComposite {
 
   public account: ZmZimbraAccount;
 
+  constructor(params: ZmOverviewParams, controller: ZmOverviewController) {
+    super({
+      parent: params.parent,
+      className: params.overviewClass,
+      posStyle: params.posStyle,
+      id: params.id
+    });
+  }
+
   public clear(): void {}
 
   public setTreeView(treeId: string, omit?: {[treeId: string]: boolean}): void {}
   public getTreeView(treeId: string): ZmTreeView { return undefined; }
+  public itemSelected(treeItem?: DwtTreeItem): void {}
+  public clearSelection(): void {}
+  public set(treeIds: string[], omit?: {[id: string]: boolean}): void {}
+}
+
+export interface ZmOverviewParams extends DwtCompositeParams {
+  overviewId?: string;
+  containerId?: string;
+  treeIds: string[];
+  account: ZmZimbraAccount;
+  overviewClass?: string;
+  scroll?: string;
+  selectionSupported?: boolean;
+  actionSupported?: boolean;
+  dndSupported?: boolean;
+  headerClass?: string;
+  showUnread?: boolean;
+  showNewButtons?: boolean;
+  treeStyle?: string;
+  isCheckedByDefault?: boolean;
+  noTooltips?: boolean;
+  skipImplicit?: boolean;
+  dynamicWidth?: boolean;
+  isAppOverview: boolean;
+  appName: string;
 }

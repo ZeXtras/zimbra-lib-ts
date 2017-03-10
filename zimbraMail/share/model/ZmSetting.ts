@@ -44,6 +44,8 @@ export class ZmSetting extends ZmModel {
   public static RP_BOTTOM: string;
   public static RP_RIGHT: string;
   public static GAL_ENABLED: string;
+  public static T_COS: string;
+  public static D_BOOLEAN: string;
 
   public setValue(value: any, key?: string, setDefault?: boolean, skipNotify?: boolean, skipImplicit?: boolean): void {}
   public getValue(key?: string, serialize?: boolean): any { return undefined; }

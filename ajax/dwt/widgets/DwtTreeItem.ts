@@ -25,9 +25,11 @@ import {DwtSelectionEvent} from "../events/DwtSelectionEvent";
 export class DwtTreeItem extends DwtComposite {
 
   public actionMenu: DwtMenu;
+  public _nodeCell: HTMLElement;
   public isDwtTreeItem: boolean;
 
   public enableSelection(enableSelection: boolean): void {}
+  public enableAction(enableSelection: boolean): void {}
   public setExpanded(expanded: boolean, recurse?: boolean, skipNotify?: boolean): void {}
   public setVisible(visible?: boolean, itemOnly?: boolean): void {}
   public _setSelected(selected: boolean, noFocus?: boolean): void {}

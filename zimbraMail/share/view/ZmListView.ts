@@ -44,7 +44,6 @@ export class ZmListView extends DwtListView {
   public _getImageHtml(htmlArr: string[], idx: number, image: string, id: string, classes: string[] = []): number { return undefined; }
   public _sortColumn(columnItem: DwtListHeaderItem, sortAsc: boolean, callback?: Function): void { return undefined; }
   public addSelectionListener(listener: AjxListener): void {}
-  public renameFile(item: any) {}
   public _mouseDownAction(mouseEv: DwtMouseEvent, div: HTMLElement) {}
 
 }
