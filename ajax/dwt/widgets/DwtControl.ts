@@ -83,6 +83,7 @@ export class DwtControl {
   public setDragSource(dragSource: DwtDragSource): void {}
   public setDropTarget(dragTarget: DwtDropTarget): void {}
   public _setEventHdlrs(events: string[], clear?: boolean, element?: HTMLElement): void {}
+  public setHandler(eventType: string, hdlrFunc: (ev: DwtEvent) => boolean): void {}
 
 }
 

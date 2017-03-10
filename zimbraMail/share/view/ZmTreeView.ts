@@ -23,11 +23,13 @@ import {ZmTreeController} from "../controller/ZmTreeController";
 import {DwtHeaderTreeItem} from "../../../ajax/dwt/widgets/DwtHeaderTreeItem";
 import {DwtTreeItem} from "../../../ajax/dwt/widgets/DwtTreeItem";
 import {ZmOrganizer} from "../model/ZmOrganizer";
+import {ZmTree} from "../model/ZmTree";
 
 export class ZmTreeView extends DwtTree {
 
   public static COMPARE_FUNC: {[type: string]: string | Function};
 
+  public _dataTree: ZmTree;
   public _controller: ZmTreeController;
   public static KEY_ID: string;
   public static KEY_TYPE: string;
@@ -43,6 +45,7 @@ export class ZmTreeView extends DwtTree {
   public getTreeItemById(folderId: string): DwtTreeItem { return undefined; }
 
   public _addNew(parentNode: DwtTreeItem, organizer: ZmOrganizer, idx: number): DwtTreeItem { return undefined; }
+  public _getHeaderTreeItemImage(): string { return undefined; }
 }
 
 export interface ZmTreeViewParams extends DwtTreeParams {

@@ -35,6 +35,7 @@ export class DwtTree extends DwtComposite {
   public addSelectionListener(listener: AjxListener): void {}
   public removeSelectionListener(listener: AjxListener): void {}
   public getTreeItemList(onlyVisible?: boolean): DwtTreeItem[] { return undefined; }
+  public setSelection(treeItem?: DwtTreeItem, skipNotify?: boolean, kbNavEvent?: boolean, noFocus?: boolean): void {}
 
 }
 

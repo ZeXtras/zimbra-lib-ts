@@ -50,6 +50,7 @@ export class DwtListView extends DwtComposite {
   public _headerList: DwtListHeaderItem[];
   public _rowHeight: number;
   public _parentEl: HTMLDivElement;
+  public _view: string;
 
   // constructor(form: XForm, cssClass: string, unknown: any, headerList: DwtListHeaderItem[]);
   constructor(params: DwtListViewParams) {

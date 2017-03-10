@@ -23,8 +23,11 @@ import {AjxListener} from "../../events/AjxListener";
 import {DwtMenu} from "./DwtMenu";
 import {AjxCallback} from "../../boot/AjxCallback";
 import {DwtEvent} from "../events/DwtEvent";
+import {AjxEventMgr} from "../../events/AjxEventMgr";
 
 export class DwtButton extends DwtLabel {
+
+  public _dropDownEvtMgr: AjxEventMgr;
 
   public static ACTION_MOUSEUP: number;
 
@@ -49,6 +52,7 @@ export class DwtButton extends DwtLabel {
   public removeDropDownSelectionListener(listener?: AjxListener): void {}
   public removePullDownMenuOptions(): void {}
   public handleKeyAction(actionCode: string, ev: DwtEvent): boolean { return undefined; }
+  public setDropDownImages(enabledImg: string, disImg: string, hovImg: string, depImg: string): void {}
 
 }
 

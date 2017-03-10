@@ -19,9 +19,10 @@
  */
 
 export class ZmSkin {
-  public hints: ZmSkinHints;
+  public static hints: ZmSkinHints;
 }
 
 interface ZmSkinHints {
+  name: string;
   notificationBanner: string;
 }

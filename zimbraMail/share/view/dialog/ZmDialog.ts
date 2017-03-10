@@ -21,4 +21,5 @@
 import {DwtDialog} from "../../../../ajax/dwt/widgets/DwtDialog";
 
 export class ZmDialog extends DwtDialog {
+  public _getInputFields(): HTMLInputElement[] { return undefined; }
 }

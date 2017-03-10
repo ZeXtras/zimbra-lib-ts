@@ -23,15 +23,17 @@ import {ZmSearchResultsController} from "../share/controller/ZmSearchResultsCont
 import {DwtControl} from "../../ajax/dwt/widgets/DwtControl";
 import {AjxCallback} from "../../ajax/boot/AjxCallback";
 import {SetNewButtonPropsParams} from "./ZmZimbraMail";
-import {ZmOverview} from "../share/view/ZmOverview";
+import {ZmOverview, ZmOverviewParams} from "../share/view/ZmOverview";
 import {DwtShell} from "../../ajax/dwt/widgets/DwtShell";
 import {ZmSearchResult} from "../share/model/ZmSearchResult";
 import {ZmAppViewMgrCreateViewParams, ZmAppViewMgrCreatedViewDescriptor} from "./ZmAppViewMgr";
+import {ZmSettings} from "../share/model/ZmSettings";
 
 export class ZmApp {
 
   public static ACTION_CODES_R: {[name: string]: string};
   public static ACTION_CODES: {[name: string]: string};
+  public static CLASS: {[name: string]: string};
   public static OPS_R: {[name: string]: string};
   public static SETTING: {[name: string]: string};
   public static MAIN_SESSION: string;
@@ -43,10 +45,12 @@ export class ZmApp {
   public static PORTAL: string = "Portal";
   public static MAIL: string = "Mail";
   public static ENABLED_APPS: {[name: string]: boolean} = {};
+  public static APPS: string[];
 
   public static registerApp(name: string, params: ZmAppRegisterAppParams): void {}
 
   public _container: DwtShell;
+  public _overviewPanelContent: ZmOverview;
 
   constructor(name: string, container: DwtControl, parentController?: ZmController) {}
 
@@ -57,10 +61,14 @@ export class ZmApp {
 
   public launch(params: ZmAppLaunchParams, callback?: AjxCallback): void {}
   public getOverview(): ZmOverview { return undefined; }
+  public getOverviewId(): string { return undefined; }
+  public _getOverviewParams(): ZmOverviewParams { return undefined; }
+  public _getOverviewTrees(): string[] { return undefined; }
   public getName(): string { return undefined; }
   public _setLaunchTime(appName: string, date: Date): void {}
   public _setLoadedTime(appName: string, date: Date): void {}
   public setOverviewPanelContent(reset: boolean): void {}
+  public isActive(): boolean { return undefined; }
 
   // Functions called during construction
   // public _defineAPI(): void {};
@@ -70,6 +78,7 @@ export class ZmApp {
   public _registerOrganizers(): void {};
   // public _setupSearchToolbar(): void {};
   public _registerApp(): void {};
+  public _registerSettings(settings?: ZmSettings): void {};
   public _registerPrefs(): void {}; // called when Preferences pkg is loaded
 
   // Functions that apps can override in response to certain events
@@ -81,6 +90,7 @@ export class ZmApp {
   // public postNotify(notify) {}; // run after handling notifications
   // public refresh(refresh) {};	// run when a <refresh> block arrives
   public handleOp(op: string): void {}  // handle an operation
+  public _getOverviewTrees(): string[] { return undefined; }
 
 }
 
@@ -152,7 +162,7 @@ export interface ZmAppRegisterAppParams {
   searchTypes?: string[];
   gotoActionCode?: string;
   // actionCodes?;
-  // newItemOps?;
+  newItemOps?: {[opName: string]: string};
   // newOrgOps?;
 
   qsViews?: string[];
