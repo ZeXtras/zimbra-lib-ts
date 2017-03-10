@@ -23,8 +23,11 @@ import {AjxListener} from "../../events/AjxListener";
 import {DwtMenu} from "./DwtMenu";
 import {AjxCallback} from "../../boot/AjxCallback";
 import {DwtEvent} from "../events/DwtEvent";
+import {AjxEventMgr} from "../../events/AjxEventMgr";
 
 export class DwtButton extends DwtLabel {
+
+  public _dropDownEvtMgr: AjxEventMgr;
 
   public static ACTION_MOUSEUP: number;
 

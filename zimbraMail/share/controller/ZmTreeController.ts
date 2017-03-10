@@ -28,6 +28,7 @@ import {DwtEvent} from "../../../ajax/dwt/events/DwtEvent";
 import {ZmOrganizer} from "../model/ZmOrganizer";
 import {ZmFolder} from "../model/ZmFolder";
 import {ZmChooseFolderDialog} from "../view/dialog/ZmChooseFolderDialog";
+import {AjxCallback} from "../../../ajax/boot/AjxCallback";
 
 export class ZmTreeController extends ZmController {
 
@@ -50,7 +51,7 @@ export class ZmTreeController extends ZmController {
   public _getActionMenu(ev: DwtEvent, item: any): DwtMenu { return undefined; }
   public _moveCallback(): void {}
   public _getMoveParams(dialog: ZmChooseFolderDialog): any { return undefined; }
-
+  public _setupOptButton(params: ZmTreeControllerShowParams): void {}
 }
 
 export interface ZmTreeControllerShowParams {
@@ -62,4 +63,5 @@ export interface ZmTreeControllerShowParams {
   hideEmpty?: boolean;
   noTooltips?: boolean;
   app?: string;
+  optButton?: {image: string, tooltip: string, callback: AjxCallback};
 }

@@ -102,9 +102,9 @@ export class ZmAppCtxt {
   public getUploadManager(): AjxPost { return undefined; }
 }
 
-interface SetStatusMsgParams {
+export interface SetStatusMsgParams {
   msg: string;                   //   the status message
-  level?: string;                //   the status level {@link ZmStatusView}  (may be <code>null</code>)
+  level?: number;                //   the status level {@link ZmStatusView}  (may be <code>null</code>)
   detail?: string;               //   the details (may be <code>null</code>)
   transitions?: {};              //   the transitions (may be <code>null</code>)
   toast?: {};                    //   the toast control (may be <code>null</code>)

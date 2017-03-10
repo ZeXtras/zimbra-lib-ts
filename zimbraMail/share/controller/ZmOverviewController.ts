@@ -27,6 +27,8 @@ export class ZmOverviewController extends ZmController {
 
   public static CONTROLLER: {[appName: string]: string};
 
+  public _overview: {[overviewId: string]: ZmOverview};
+
   public getOverview(overviewId: string): ZmOverview { return undefined; }
   public getTreeView(overviewId: string, treeId: string): ZmTreeView { return undefined; }
 
