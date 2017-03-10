@@ -95,4 +95,5 @@ export class ZmMsg {
   public static importErrorUpload: string;
   public static name: string;
   public static arrangedBy: string;
+  public static search: string;
 }
