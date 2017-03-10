@@ -93,4 +93,5 @@ export class ZmMsg {
   public static uploadNewFile: string;
   public static uploading: string;
   public static importErrorUpload: string;
+  public static search: string;
 }

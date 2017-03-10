@@ -49,6 +49,7 @@ export class DwtButton extends DwtLabel {
   public removeDropDownSelectionListener(listener?: AjxListener): void {}
   public removePullDownMenuOptions(): void {}
   public handleKeyAction(actionCode: string, ev: DwtEvent): boolean { return undefined; }
+  public setDropDownImages(enabledImg: string, disImg: string, hovImg: string, depImg: string): void {}
 
 }
 

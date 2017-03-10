@@ -21,6 +21,7 @@
 import {DwtComposite} from "../../../ajax/dwt/widgets/DwtComposite";
 import {ZmTreeView} from "./ZmTreeView";
 import {ZmZimbraAccount} from "../model/ZmZimbraAccount";
+import {DwtTreeItem} from "../../../ajax/dwt/widgets/DwtTreeItem";
 
 export class ZmOverview extends DwtComposite {
 
@@ -30,4 +31,7 @@ export class ZmOverview extends DwtComposite {
 
   public setTreeView(treeId: string, omit?: {[treeId: string]: boolean}): void {}
   public getTreeView(treeId: string): ZmTreeView { return undefined; }
+  public set(treeIds: string[], omit?: boolean): void {}
+  public getTreeItemById(id: number, type?: string): DwtTreeItem { return undefined; }
+
 }
