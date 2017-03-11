@@ -93,7 +93,7 @@ export class ZmMsg {
   public static uploadNewFile: string;
   public static uploading: string;
   public static importErrorUpload: string;
-  public static name: string;
+  // public static name: string;
   public static arrangedBy: string;
   public static search: string;
 }
