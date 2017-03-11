@@ -20,6 +20,7 @@
 
 export class ZmSkin {
   public static hints: ZmSkinHints;
+  public hints: ZmSkinHints;
 }
 
 interface ZmSkinHints {

@@ -90,7 +90,6 @@ export class ZmApp {
   // public postNotify(notify) {}; // run after handling notifications
   // public refresh(refresh) {};	// run when a <refresh> block arrives
   public handleOp(op: string): void {}  // handle an operation
-  public _getOverviewTrees(): string[] { return undefined; }
 
 }
 
