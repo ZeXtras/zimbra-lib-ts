@@ -20,5 +20,6 @@
 
 export class AjxEnv {
   public static isIE: boolean;
+  public static isSafari: boolean;
   public static supportsHTML5File: boolean;
 }

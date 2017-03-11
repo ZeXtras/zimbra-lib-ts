@@ -22,6 +22,7 @@ import {DwtMenu} from "../../../ajax/dwt/widgets/DwtMenu";
 import {ZmController} from "../controller/ZmController";
 import {DwtMenuItem} from "../../../ajax/dwt/widgets/DwtMenuItem";
 import {DwtControl} from "../../../ajax/dwt/widgets/DwtControl";
+import {AjxListener} from "../../../ajax/events/AjxListener";
 
 export class ZmPopupMenu extends DwtMenu {
 
@@ -37,6 +38,7 @@ export class ZmPopupMenu extends DwtMenu {
   }
 
   public popup(delay: number, x: number, y: number, kbGenereated?: boolean): void {}
+  public addSelectionListener(menuItemId: string, listener: AjxListener|Function, index?: number): void {};
 
   public createMenuItem(id: string, params: CreateMenuItemParams): DwtMenuItem { return undefined; }
   public getMenuItem(id: string): DwtMenuItem { return undefined; }

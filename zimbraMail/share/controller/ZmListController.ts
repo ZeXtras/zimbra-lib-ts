@@ -50,6 +50,7 @@ export class ZmListController extends ZmBaseController {
   public _listSelectionListener(event: DwtSelectionEvent): void {}
   public _listActionListener(event: DwtListViewActionEvent): void {}
   public setList(list: ZmList): void {}
+  public getList(): ZmList { return undefined; }
   public _resetNavToolBarButtons(view?: string): void {}
   public getActionMenu(): DwtMenu { return undefined; }
 

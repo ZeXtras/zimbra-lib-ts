@@ -23,12 +23,14 @@ import {DwtPoint} from "../graphics/DwtPoint";
 import {DwtKeyboardMgr} from "../keyboard/DwtKeyboardMgr";
 import {DwtBaseDialog} from "./DwtBaseDialog";
 import {DwtControlEvent} from "../events/DwtControlEvent";
+import {DwtSelectionEvent} from "../events/DwtSelectionEvent";
 
 export class DwtShell extends DwtComposite {
 
   public _veilOverlay: VeilOverlay;
   public _currWinSize: DwtPoint;
   public static controlEvent: DwtControlEvent;
+  public static selectionEvent: DwtSelectionEvent;
 
   public getSize(incScroll?: boolean): DwtPoint {
     return new DwtPoint(0, 0);

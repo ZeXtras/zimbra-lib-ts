@@ -28,6 +28,7 @@ import {ZmAppChooser} from "../share/view/ZmAppChooser";
 import {ZmApp} from "./ZmApp";
 import {ZmRequestMgrSendRequestParams} from "./ZmRequestMgr";
 import {ZmAppViewMgr} from "./ZmAppViewMgr";
+import {ZmToolBar} from "../share/view/ZmToolBar";
 
 export class ZmZimbraMail extends ZmController {
 
@@ -79,10 +80,11 @@ export interface ZmZimbraMailSendRequestParams extends ZmRequestMgrSendRequestPa
 }
 
 export interface SetNewButtonPropsParams {
-  text: string;
-  tooltip: string;
-  icon: string;
+  text?: string;
+  tooltip?: string;
+  icon?: string;
   iconDis?: string;
-  defaultId: string;
-  disabled: boolean;
+  defaultId?: string;
+  disabled?: boolean;
+  hidden?: boolean;
 }
