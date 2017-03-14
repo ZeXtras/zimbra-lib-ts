@@ -46,6 +46,7 @@ export class ZmSetting extends ZmModel {
   public static GAL_ENABLED: string;
   public static T_COS: string;
   public static D_BOOLEAN: string;
+  public static DOCUMENT_SIZE_LIMIT: string;
 
   public setValue(value: any, key?: string, setDefault?: boolean, skipNotify?: boolean, skipImplicit?: boolean): void {}
   public getValue(key?: string, serialize?: boolean): any { return undefined; }
