@@ -95,7 +95,11 @@ export class ZmMsg {
   public static uploadNewFile: string;
   public static uploading: string;
   public static importErrorUpload: string;
-  public static name: string;
   public static arrangedBy: string;
   public static search: string;
+  public static uploadPercentComplete: string;
+  /** @deprecated
+   * public static name: string;
+   * Please use @see ZmMsg._name
+   */
 }

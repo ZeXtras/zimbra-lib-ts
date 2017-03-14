@@ -18,9 +18,13 @@
  * along with T4Z - TypeScript 4 Zimlet. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import {DwtControl} from "./DwtControl";
+import {DwtControl, DwtControlParams} from "./DwtControl";
 
 export class DwtIframe extends DwtControl {
+
+  public constructor(params: DwtIframeParams) {
+    super(params);
+  }
 
   public setSrc(url: string): void {}
 
@@ -36,4 +40,10 @@ export class DwtIframe extends DwtControl {
 
   public _resetEventHandlers(): void {}
 
+}
+
+export interface DwtIframeParams extends DwtControlParams {
+  hidden?: boolean;
+  html: string;
+  noscroll?: boolean;
 }
