@@ -20,6 +20,9 @@
 
 import {ZmController} from "../../share/controller/ZmController";
 import {ZmActionMenu} from "../../share/view/ZmActionMenu";
+import {ZmMailMsg} from "../model/ZmMailMsg";
+import {ZmCsfeResult} from "../../../csfe/ZmCsfeResult";
+import {AjxCallback} from "../../../ajax/boot/AjxCallback";
 
 export class ZmComposeController extends ZmController {
 
@@ -29,15 +32,38 @@ export class ZmComposeController extends ZmController {
   public static IS_FORWARD: {[name: string]: boolean};
   public static RADIO_GROUP: {[name: string]: number};
   public static OP_CHECK: {[name: string]: boolean};
+  public static DRAFT_TYPE_AUTO: string;
 
   public _action: string;
   public _optionsMenu: {[name: string]: ZmActionMenu};
   public _listeners: {[name: string]: Function};
 
+  public _setView(params: ZmComposeControllerSetViewParams): void {};
   public _setDependentOptions(incOptions: ZmComposeControllerSetDependentOptionsParams): void {}
   public _createOptionsMenu(action: string): ZmActionMenu { return undefined; }
+  public _handleResponseSaveDraftListener(draftType: string, callback: Function, results: ZmCsfeResult): void {};
+  public saveDraft(
+    draftType: string,
+    attId: string,
+    docIds: {id: string, ver: string, ct: string, s: number }[],
+    callback?: AjxCallback,
+    contactId?: string
+  ): void {}
 
 }
 
 export interface ZmComposeControllerSetDependentOptionsParams {
+}
+
+export interface ZmComposeControllerSetViewParams {
+  action: string;
+  msg: ZmMailMsg;
+  toOverride?: string;
+  subjOverride?: string;
+  extraBodyText?: string;
+  composeMode?: string;
+  accountName?: string;
+  msgIds?: number[];
+  readReceipt?: boolean;
+  inNewWindow?: boolean;
 }
