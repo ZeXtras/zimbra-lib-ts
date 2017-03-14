@@ -34,6 +34,7 @@ export class ZmUploadDialog extends DwtDialog {
   public _uploadForm: HTMLFormElement;
   public _tableEl: HTMLElement;
   public _supportsHTML5: boolean;
+  public _showLinkTitleText: boolean;
   public _inprogress: boolean;
 
   public static UPLOAD_FIELD_NAME: string;
@@ -46,6 +47,17 @@ export class ZmUploadDialog extends DwtDialog {
   public _uploadFileProgress(uploadButton: DwtButton, params: UploadParams, progress: ProgressEvent): void {}
   public _popupErrorDialog(message: string): void {}
 
-  public popup(controller: ZmController, folder: ZmFolder, callback?: Function, title?: string, loc?: DwtPoint): void {}
+  public popup(
+    controller: ZmController,
+    folder: ZmFolder,
+    callback?: Function,
+    title?: string,
+    loc?: DwtPoint,
+    oneFileOnly?: boolean,
+    noResolveAction?: boolean,
+    showNotes?: boolean,
+    isImage?: string,
+    conflictAction?: string
+  ): void {}
 
 }
