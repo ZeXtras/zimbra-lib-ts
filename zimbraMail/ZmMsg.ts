@@ -96,6 +96,7 @@ export class ZmMsg {
   public static arrangedBy: string;
   public static search: string;
   public static uploadPercentComplete: string;
+  public static preferences: string;
   /** @deprecated
    * public static name: string;
    * Please use @see ZmMsg._name
