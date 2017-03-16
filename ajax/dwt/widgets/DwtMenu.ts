@@ -53,6 +53,7 @@ export class DwtMenu extends DwtComposite {
   public getItemCount(): number {
     return undefined;
   }
+  public setWidth(width: string|number): void {}
 
 }
 
