@@ -20,12 +20,19 @@
 
 import {DwtDialog} from "../../../ajax/dwt/widgets/DwtDialog";
 import {AjxCallback} from "../../../ajax/boot/AjxCallback";
+import {DwtShell} from "../../../ajax/dwt/widgets/DwtShell";
 
 export class ZmAttachDialog extends DwtDialog {
+
+  constructor(shell: DwtShell, className?: string) {
+    super( {parent: shell, className: className, title: ""});
+  }
 
   public _uploadCallback: AjxCallback;
 
   public getUploadCallback(): AjxCallback { return undefined; }
   public setFooter(html: string): void {}
+  public setOkListener(callback: AjxCallback): void {};
+  public setCancelListener(callback: AjxCallback): void {};
 
 }

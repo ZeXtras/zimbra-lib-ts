@@ -44,12 +44,20 @@ export class ZmComposeController extends ZmController {
   public _handleResponseSaveDraftListener(draftType: string, callback: Function, results: ZmCsfeResult): void {};
   public saveDraft(
     draftType: string,
-    attId: string,
+    attId: {
+      ct: string;
+      id: string;
+      s: number;
+      ver: string;
+    }[],
     docIds: {id: string, ver: string, ct: string, s: number }[],
     callback?: AjxCallback,
     contactId?: string
   ): void {}
 
+  _completeAllUpload(filesArray: any[]): void {}
+
+  public _initAutoSave(): void {}
 }
 
 export interface ZmComposeControllerSetDependentOptionsParams {

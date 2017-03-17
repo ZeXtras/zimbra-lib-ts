@@ -100,6 +100,8 @@ export class ZmMsg {
   public static search: string;
   public static uploadPercentComplete: string;
   public static preferences: string;
+  public static attachFile: string;
+  public static attachmentSizeError: string;
   /** @deprecated
    * public static name: string;
    * Please use @see ZmMsg._name
