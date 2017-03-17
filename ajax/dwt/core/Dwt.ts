@@ -35,6 +35,7 @@ export class Dwt {
   public static KEY_ID: string;
   public static KEY_OBJECT: string;
   public static Z_VIEW: number;
+  public static SCROLL_Y: number;
 
   public static setSize(el: HTMLDivElement, newWidth: number, height: number): void {}
   public static getSize(el: HTMLElement): DwtPoint { return undefined; }

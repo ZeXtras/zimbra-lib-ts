@@ -18,10 +18,24 @@
  * along with T4Z - TypeScript 4 Zimlet. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import {DwtComposite} from "../../../ajax/dwt/widgets/DwtComposite";
+import {DwtComposite, DwtCompositeParams} from "../../../ajax/dwt/widgets/DwtComposite";
+import {ZmAutocomplete} from "../model/ZmAutocomplete";
+import {AjxCallback} from "../../../ajax/boot/AjxCallback";
 
 export class ZmAutocompleteListView extends DwtComposite {
 
-  public handle(inputElement: HTMLInputElement, addrInputId?: string): void {}
+  public static CB_COMPLETION: string;
 
+  constructor(params: ZmAutocompleteListViewParams) {
+    super(params);
+  }
+
+  public handle(inputElement: HTMLInputElement, addrInputId?: string): void {}
+  public addCallback(type: string, callback: AjxCallback|Function, inputId?: string): void {}
+
+}
+
+export interface ZmAutocompleteListViewParams extends DwtCompositeParams {
+  dataClass: ZmAutocomplete;
+  matchValue: string;
 }
