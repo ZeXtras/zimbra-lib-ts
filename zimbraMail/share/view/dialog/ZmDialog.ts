@@ -18,8 +18,17 @@
  * along with T4Z - TypeScript 4 Zimlet. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import {DwtDialog} from "../../../../ajax/dwt/widgets/DwtDialog";
+import {DwtDialog, DwtDialogParams} from "../../../../ajax/dwt/widgets/DwtDialog";
 
 export class ZmDialog extends DwtDialog {
+
+  constructor(params: ZmDialogParams) {
+    super(params);
+  }
+
   public _getInputFields(): HTMLInputElement[] { return undefined; }
+}
+
+export interface ZmDialogParams extends DwtDialogParams {
+  enableAutoComplete?: boolean;
 }
