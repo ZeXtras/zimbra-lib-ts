@@ -77,6 +77,8 @@ export class DwtBaseDialog extends DwtComposite {
 
   public setTitle(title: string): void {}
 
+  protected _getContentDiv(): HTMLElement { return undefined; }
+
 }
 
 export interface DwtBaseDialogParams extends DwtCompositeParams {

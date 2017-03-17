@@ -23,5 +23,6 @@ import {ZmList} from "./ZmList";
 export class ZmSearchResult {
 
   public getResults(type?: string): ZmList { return undefined; }
+  public getAttribute(name: string): any { return undefined; }
 
 }

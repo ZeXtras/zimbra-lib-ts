@@ -26,6 +26,8 @@ import {DwtEvent} from "../../../ajax/dwt/events/DwtEvent";
 import {AjxListener} from "../../../ajax/events/AjxListener";
 import {DwtButton} from "../../../ajax/dwt/widgets/DwtButton";
 import {ZmMailMsg} from "../model/ZmMailMsg";
+import {DwtMenu} from "../../../ajax/dwt/widgets/DwtMenu";
+import {DwtMenuItem} from "../../../ajax/dwt/widgets/DwtMenuItem";
 
 export class ZmComposeView extends DwtComposite {
 
@@ -62,4 +64,5 @@ export class ZmComposeView extends DwtComposite {
   public _generateCid(): string { return undefined; }
   public isDirty(incAddrs?: boolean, incSubject?: boolean): boolean { return undefined; }
 
+  public _createAttachMenuItem(attachMenu: DwtMenu, appName: string, listener: AjxListener): DwtMenuItem { return undefined; }
 }

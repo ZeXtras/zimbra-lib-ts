@@ -36,6 +36,7 @@ export class Dwt {
   public static KEY_OBJECT: string;
   public static Z_VIEW: number;
   public static SCROLL_Y: number;
+  public static STATIC_STYLE: string;
 
   public static setSize(el: HTMLDivElement, newWidth: number, height: number): void {}
   public static getSize(el: HTMLElement): DwtPoint { return undefined; }
@@ -51,4 +52,5 @@ export class Dwt {
   public static getWindowSize(point?: DwtPoint): DwtPoint { return undefined; }
   public static getVisible(textarea: HTMLElement): boolean { return undefined; }
 
+  public static setPosition(div: HTMLElement, style: string): void {}
 }
