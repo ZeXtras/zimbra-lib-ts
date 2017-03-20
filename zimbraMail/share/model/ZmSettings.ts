@@ -21,7 +21,7 @@
 import {ZmModel} from "./ZmModel";
 import {ZmSetting} from "./ZmSetting";
 import {ZmAccount} from "./ZmAccount";
-import {ZmBatchCommand} from "../../../csfe/ZmBatchCommand";
+import {ZmBatchCommand} from "../../../zimbra/csfe/ZmBatchCommand";
 import {AjxCallback} from "../../../ajax/boot/AjxCallback";
 
 export class ZmSettings extends ZmModel {

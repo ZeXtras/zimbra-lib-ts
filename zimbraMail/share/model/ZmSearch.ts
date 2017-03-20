@@ -20,7 +20,7 @@
 
 import {AjxVector} from "../../../ajax/util/AjxVector";
 import {AjxCallback} from "../../../ajax/boot/AjxCallback";
-import {ZmBatchCommand} from "../../../csfe/ZmBatchCommand";
+import {ZmBatchCommand} from "../../../zimbra/csfe/ZmBatchCommand";
 
 export class ZmSearch {
 

@@ -24,7 +24,7 @@ import {ZmMailMsg} from "../model/ZmMailMsg";
 import {ZmConv} from "../model/ZmConv";
 import {ZmListController} from "../../share/controller/ZmListController";
 import {AjxCallback} from "../../../ajax/boot/AjxCallback";
-import {ZmCsfeResult} from "../../../csfe/ZmCsfeResult";
+import {ZmCsfeResult} from "../../../zimbra/csfe/ZmCsfeResult";
 
 export class ZmMsgController extends ZmMailListController {
 
