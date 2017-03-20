@@ -23,7 +23,7 @@ import {ZmInvite} from "../../share/model/ZmInvite";
 import {AjxCallback} from "../../../ajax/boot/AjxCallback";
 import {ZmMimePart} from "./ZmMimePart";
 import {ZmMailList} from "./ZmMailList";
-import {ZmBatchCommand} from "../../../csfe/ZmBatchCommand";
+import {ZmBatchCommand} from "../../../zimbra/csfe/ZmBatchCommand";
 
 export class ZmMailMsg extends ZmMailItem {
 

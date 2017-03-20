@@ -22,7 +22,7 @@ import {ZmController} from "./ZmController";
 import {ZmMainSearchToolBar} from "../view/ZmSearchToolBar";
 import {AjxCallback} from "../../../ajax/boot/AjxCallback";
 import {ZmSearchParam, ZmSearch} from "../model/ZmSearch";
-import {ZmCsfeResult} from "../../../csfe/ZmCsfeResult";
+import {ZmCsfeResult} from "../../../zimbra/csfe/ZmCsfeResult";
 
 export class ZmSearchController extends ZmController {
 

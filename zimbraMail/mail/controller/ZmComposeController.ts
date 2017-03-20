@@ -21,7 +21,7 @@
 import {ZmController} from "../../share/controller/ZmController";
 import {ZmActionMenu} from "../../share/view/ZmActionMenu";
 import {ZmMailMsg} from "../model/ZmMailMsg";
-import {ZmCsfeResult} from "../../../csfe/ZmCsfeResult";
+import {ZmCsfeResult} from "../../../zimbra/csfe/ZmCsfeResult";
 import {AjxCallback} from "../../../ajax/boot/AjxCallback";
 
 export class ZmComposeController extends ZmController {

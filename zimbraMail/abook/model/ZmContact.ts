@@ -19,7 +19,7 @@
  */
 
 import {ZmItem, ZmItemAttrs} from "../../share/model/ZmItem";
-import {ZmCsfeResult} from "../../../csfe/ZmCsfeResult";
+import {ZmCsfeResult} from "../../../zimbra/csfe/ZmCsfeResult";
 import {AjxCallback} from "../../../ajax/boot/AjxCallback";
 import {AjxEmailAddressParseEmailStringReturnObj} from "../../../ajax/util/AjxEmailAddress";
 import {ZmAddrBook} from "./ZmAddrBook";
