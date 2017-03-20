@@ -18,9 +18,9 @@
  * along with T4Z - TypeScript 4 Zimlet. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import {DwtDialog} from "../../../ajax/dwt/widgets/DwtDialog";
-import {AjxCallback} from "../../../ajax/boot/AjxCallback";
-import {DwtShell} from "../../../ajax/dwt/widgets/DwtShell";
+import {DwtDialog} from "../../../../ajax/dwt/widgets/DwtDialog";
+import {AjxCallback} from "../../../../ajax/boot/AjxCallback";
+import {DwtShell} from "../../../../ajax/dwt/widgets/DwtShell";
 
 export class ZmAttachDialog extends DwtDialog {
 
