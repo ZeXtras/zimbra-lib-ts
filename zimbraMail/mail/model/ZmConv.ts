@@ -18,7 +18,7 @@
  * along with T4Z - TypeScript 4 Zimlet. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import {ZmMailItem} from "../../share/model/ZmMailItem";
+import {ZmMailItem} from "./ZmMailItem";
 import {ZmMailMsg} from "./ZmMailMsg";
 
 export class ZmConv extends ZmMailItem {

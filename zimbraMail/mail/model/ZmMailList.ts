@@ -20,8 +20,8 @@
 
 import {ZmList} from "../../share/model/ZmList";
 import {ZmItem} from "../../share/model/ZmItem";
-import {ZmMailItem} from "../../share/model/ZmMailItem";
 import {AjxCallback} from "../../../ajax/boot/AjxCallback";
+import {ZmMailItem} from "./ZmMailItem";
 
 export class ZmMailList extends ZmList {
 
