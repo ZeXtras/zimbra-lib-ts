@@ -18,12 +18,12 @@
  * along with T4Z - TypeScript 4 Zimlet. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import {ZmMailItem} from "../../share/model/ZmMailItem";
 import {ZmInvite} from "../../share/model/ZmInvite";
 import {AjxCallback} from "../../../ajax/boot/AjxCallback";
 import {ZmMimePart} from "./ZmMimePart";
 import {ZmMailList} from "./ZmMailList";
 import {ZmBatchCommand} from "../../../zimbra/csfe/ZmBatchCommand";
+import {ZmMailItem} from "./ZmMailItem";
 
 export class ZmMailMsg extends ZmMailItem {
 

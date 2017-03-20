@@ -18,7 +18,7 @@
  * along with T4Z - TypeScript 4 Zimlet. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import {ZmItem} from "./ZmItem";
+import {ZmItem} from "../../share/model/ZmItem";
 import {AjxVector} from "../../../ajax/util/AjxVector";
 import {AjxEmailAddress} from "../../../ajax/util/AjxEmailAddress";
 
