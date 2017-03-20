@@ -18,14 +18,27 @@
  * along with T4Z - TypeScript 4 Zimlet. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import {DwtDialog} from "../../../ajax/dwt/widgets/DwtDialog";
-import {AjxCallback} from "../../../ajax/boot/AjxCallback";
+import {ZmItem} from "../../share/model/ZmItem";
+import {AjxVector} from "../../../ajax/util/AjxVector";
+import {AjxEmailAddress} from "../../../ajax/util/AjxEmailAddress";
 
-export class ZmAttachDialog extends DwtDialog {
+export class ZmMailItem extends ZmItem {
 
-  public _uploadCallback: AjxCallback;
+  public readReceiptRequested?: boolean;
+  public _loaded: boolean;
+  public isUnread: boolean;
+  /** @deprecated Injected by @see ZmMailListController, ZmDoublePaneController*/ public _loadPending?: boolean;
+  public participants: AjxVector<AjxEmailAddress>;
 
-  public getUploadCallback(): AjxCallback { return undefined; }
-  public setFooter(html: string): void {}
+  public _parseParticipantNode(node: ZmMailItemPartecipantNode): void {}
 
+}
+
+export interface ZmMailItemPartecipantNode {
+  a: string;
+  d: string;
+  p: string;
+  t: "b"|"c"|"f"|"n"|"r"|"rf"|"s"|"t";
+  isGroup?: boolean;
+  exp?: boolean;
 }

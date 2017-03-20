@@ -34,7 +34,7 @@ import {ZmAutocomplete} from "../share/model/ZmAutocomplete";
 import {ZmCalMgr} from "../calendar/model/ZmCalMgr";
 import {DwtComposite} from "../../ajax/dwt/widgets/DwtComposite";
 import {ZmIdentityCollection} from "../mail/model/ZmIdentityCollection";
-import {ZmAttachDialog} from "../share/view/ZmAttachDialog";
+import {ZmAttachDialog} from "../share/view/dialog/ZmAttachDialog";
 import {ZmItem} from "../share/model/ZmItem";
 import {ZmAccountList} from "../share/model/ZmAccountList";
 import {ZmFolderTree} from "../share/model/ZmFolderTree";

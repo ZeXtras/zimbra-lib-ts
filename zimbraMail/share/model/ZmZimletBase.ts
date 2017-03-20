@@ -35,9 +35,11 @@ import {DwtMouseEvent} from "../../../ajax/dwt/events/DwtMouseEvent";
 import {ZmDialog} from "../view/dialog/ZmDialog";
 import {ZmMailMsg} from "../../mail/model/ZmMailMsg";
 import {ZmMailMsgView} from "../../mail/view/ZmMailMsgView";
-import {ZmCsfeResult} from "../../../csfe/ZmCsfeResult";
+import {ZmCsfeResult} from "../../../zimbra/csfe/ZmCsfeResult";
 import {AjxSoapDoc} from "../../../ajax/soap/AjxSoapDoc";
 import {AjxListener} from "../../../ajax/events/AjxListener";
+import {DwtMenu} from "../../../ajax/dwt/widgets/DwtMenu";
+import {ZmComposeView} from "../../mail/view/ZmComposeView";
 
 export class ZmZimletBase extends ZmObjectHandler {
 
@@ -93,7 +95,7 @@ export class ZmZimletBase extends ZmObjectHandler {
   public appendExtraSignature(): void {}
   public emailErrorCheck(): void {}
   public enableComposeToolbarButtons(): void {}
-  public initializeAttachPopup(): void {}
+  public initializeAttachPopup(menu: DwtMenu, composeView: ZmComposeView): void {}
   public onActionMenuInitialized(): void {}
   public onAppointmentDelete(): void {}
   public onApptDrag(): void {}

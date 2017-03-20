@@ -21,9 +21,9 @@
 import {ZmBaseController} from "../../share/controller/ZmBaseController";
 import {ZmApptClone} from "../model/ZmAppt";
 import {ZmApptComposeView} from "../view/ZmApptComposeView";
-import {ZmCsfeResult} from "../../../csfe/ZmCsfeResult";
+import {ZmCsfeResult} from "../../../zimbra/csfe/ZmCsfeResult";
 import {ZmCalItem} from "../model/ZmCalItem";
-import {ZmCsfeException} from "../../../csfe/ZmCsfeException";
+import {ZmCsfeException} from "../../../zimbra/csfe/ZmCsfeException";
 import {AjxCallback} from "../../../ajax/boot/AjxCallback";
 
 export class ZmCalItemComposeController extends ZmBaseController {

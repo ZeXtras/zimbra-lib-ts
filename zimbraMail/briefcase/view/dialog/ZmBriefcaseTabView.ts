@@ -19,7 +19,7 @@
  */
 
 import {DwtComposite} from "../../../../ajax/dwt/widgets/DwtComposite";
-import {ZmAttachDialog} from "../../../share/view/ZmAttachDialog";
+import {ZmAttachDialog} from "../../../share/view/dialog/ZmAttachDialog";
 import {ZmBriefcaseIconView} from "../ZmBriefcaseIconView";
 
 export class ZmBriefcaseTabView extends DwtComposite {

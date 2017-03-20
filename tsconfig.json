@@ -5,9 +5,9 @@
   ],
   "exclude": [
     "ajax/",
-    "csfe",
-    "zimbraAdmin",
-    "zimbraMail",
-    "zimlets"
+    "zimbra/",
+    "zimbraAdmin/",
+    "zimbraMail/",
+    "zimlets/"
   ]
 }

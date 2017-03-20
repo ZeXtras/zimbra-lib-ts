@@ -21,7 +21,7 @@
 import {ZmCalItemComposeController} from "./ZmCalItemComposeController";
 import {ZmApptComposeView} from "../view/ZmApptComposeView";
 import {ZmAppt} from "../model/ZmAppt";
-import {ZmCsfeResult} from "../../../csfe/ZmCsfeResult";
+import {ZmCsfeResult} from "../../../zimbra/csfe/ZmCsfeResult";
 
 export class ZmApptComposeController extends ZmCalItemComposeController {
 

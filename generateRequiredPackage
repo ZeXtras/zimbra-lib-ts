@@ -1,0 +1,103 @@
+#!/usr/bin/env bash
+
+#
+# T4Z - TypeScript 4 Zimlet
+# Copyright (C) 2017 ZeXtras S.r.l.
+#
+# This file is part of T4Z - TypeScript 4 Zimlet.
+#
+# This program is free software; you can redistribute it and/or
+# modify it under the terms of the GNU General Public License
+# as published by the Free Software Foundation, version 2 of
+# the License.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with T4Z - TypeScript 4 Zimlet. If not, see <http://www.gnu.org/licenses/>.
+#
+
+work_dir=$( pwd )
+#cd ${work_dir}
+my_path="$( dirname "$0" )"
+tmp_file="${work_dir}/${my_path}/iNotExists.tmp"
+echo -n > "${tmp_file}"
+
+function createImportRow {
+    imported_script=$( echo "${1}" | sed -e "s/\//./g" )
+#    echo "if (!AjxPackage.isDefined('${imported_script}')) AjxPackage.require({ name: '${imported_script}', extension: '.js' });"
+    echo "AjxPackage.require({ name: '${imported_script}', extension: '.js' });"
+}
+
+function getFileImports {
+    grep -e "import {.*} from \"[./]\+zimbra\/" "${1}" \
+    | sed -e "s/import {.*} from \"[./]\+zimbra\/\(.*\)\"\;/\1/" \
+    | grep -v \
+        -e "zimbraMail/appCtxt" \
+        -e "zimbraMail/ZmMsg" \
+    | cut -d " " -f 1
+}
+
+function getZimbraFileImports {
+    grep -e "import {.*} from \"" "${1}" \
+    | sed -e "s/import {.*} from \"\(.*\)\"\;/\1/" \
+    | grep -v \
+        -e "zimbraMail/appCtxt" \
+        -e "zimbraMail/ZmMsg" \
+    | cut -d " " -f 1
+}
+
+function processZimbraFileImports {
+    local import_row
+    for import_row in $( getZimbraFileImports "${work_dir}/${my_path}/${1}" );
+    do
+        local imported_file=$( realpath --relative-to="${work_dir}/${my_path}" "$( dirname "${work_dir}/${my_path}/${1}" )/${import_row}.ts" )
+        if ! fgrep "${imported_file}" "${tmp_file}" > /dev/null 2>&1;
+        then
+            echo "${imported_file}" >> "${tmp_file}"
+            processZimbraFileImports "${imported_file}"
+            createImportRow "$( echo ${imported_file} | sed -e "s/\(.*\).ts/\1/" )"
+        fi
+    done
+}
+
+function processFileImports {
+    local main_import_row
+    for main_import_row in $( getFileImports "$1" );
+    do
+        local main_imported_file=$( realpath --relative-to="${work_dir}/${my_path}" "${work_dir}/${my_path}/${main_import_row}.ts" )
+        if ! fgrep "${main_imported_file}" "${tmp_file}" > /dev/null 2>&1;
+        then
+            echo "${main_imported_file}" >> "${tmp_file}"
+            processZimbraFileImports "${main_imported_file}"
+            createImportRow "$( echo ${main_import_row} | sed -e "s/\(.*\).ts/\1/" )"
+        fi
+    done
+}
+
+# Print the license
+echo "/*"
+echo " * T4Z - TypeScript 4 Zimlet"
+echo " * Copyright (C) 2017 ZeXtras S.r.l."
+echo " *"
+echo " * This file is part of T4Z - TypeScript 4 Zimlet."
+echo " *"
+echo " * This program is free software; you can redistribute it and/or"
+echo " * modify it under the terms of the GNU General Public License"
+echo " * as published by the Free Software Foundation, version 2 of"
+echo " * the License."
+echo " *"
+echo " * This program is distributed in the hope that it will be useful,"
+echo " * but WITHOUT ANY WARRANTY; without even the implied warranty of"
+echo " * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the"
+echo " * GNU General Public License for more details."
+echo " *"
+echo " * You should have received a copy of the GNU General Public License"
+echo " * along with T4Z - TypeScript 4 Zimlet. If not, see <http://www.gnu.org/licenses/>."
+echo " */"
+
+processFileImports "${1}"
+rm -f ${tmp_file}

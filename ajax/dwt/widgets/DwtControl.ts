@@ -62,7 +62,7 @@ export class DwtControl {
   public setToolTipContent(toolTip: any, useBrowser?: boolean): void {}
   public isListenerRegistered(evType: string): boolean { return null; }
   public reparent(newParent: DwtComposite, index?: number): void {}
-  public reparentHtmlElement(newParent: string|HTMLElement, position?: number): void {}
+  public reparentHtmlElement(newParent: string|HTMLElement|Node, position?: number): void {}
   public getBounds(): {x: number, y: number, width: number, height: number} {
     return {x: 0, y: 0, width: 0, height: 0};
   }
@@ -84,6 +84,7 @@ export class DwtControl {
   public setDropTarget(dragTarget: DwtDropTarget): void {}
   public _setEventHdlrs(events: string[], clear?: boolean, element?: HTMLElement): void {}
   public setHandler(eventType: string, hdlrFunc: (ev: DwtEvent) => boolean): void {}
+  public setContent(html: string): void {}
 
 }
 

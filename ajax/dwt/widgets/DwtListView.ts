@@ -82,6 +82,7 @@ export class DwtListView extends DwtComposite {
   public getTargetItemDiv(ev: DwtEvent): any { return undefined; }
   public dragSelect(row: HTMLElement): void {}
   public dragDeselect(row: HTMLElement): void {}
+  public associateItemWithElement(item: any, element: Element, type?: string, id?: string, data?: {[id: string]: any}): void {}
 
 }
 

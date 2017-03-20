@@ -19,7 +19,7 @@
  */
 
 import {ZmController} from "./ZmController";
-import {ZmOverview} from "../view/ZmOverview";
+import {ZmOverview, ZmOverviewParams} from "../view/ZmOverview";
 import {ZmTreeView} from "../view/ZmTreeView";
 import {ZmTreeController} from "./ZmTreeController";
 
@@ -33,4 +33,6 @@ export class ZmOverviewController extends ZmController {
   public getTreeView(overviewId: string, treeId: string): ZmTreeView { return undefined; }
 
   public getTreeController(id: string): ZmTreeController { return undefined; }
+
+  public createOverview(ovParams: ZmOverviewParams): ZmOverview { return undefined; }
 }

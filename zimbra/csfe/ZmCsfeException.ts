@@ -18,27 +18,13 @@
  * along with T4Z - TypeScript 4 Zimlet. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import {ZmItem} from "./ZmItem";
-import {AjxVector} from "../../../ajax/util/AjxVector";
-import {AjxEmailAddress} from "../../../ajax/util/AjxEmailAddress";
+import {AjxException} from "../../ajax/core/AjxException";
 
-export class ZmMailItem extends ZmItem {
+export class ZmCsfeException extends AjxException {
 
-  public readReceiptRequested?: boolean;
-  public _loaded: boolean;
-  public isUnread: boolean;
-  /** @deprecated Injected by @see ZmMailListController, ZmDoublePaneController*/ public _loadPending?: boolean;
-  public participants: AjxVector<AjxEmailAddress>;
+  public static EMPTY_RESPONSE: string = "EMPTY_RESPONSE";
+  public static SVC_UNKNOWN_DOCUMENT: string = "service.UNKOWN_DOCUMENT";
 
-  public _parseParticipantNode(node: ZmMailItemPartecipantNode): void {}
+  public msg: string;
 
-}
-
-export interface ZmMailItemPartecipantNode {
-  a: string;
-  d: string;
-  p: string;
-  t: "b"|"c"|"f"|"n"|"r"|"rf"|"s"|"t";
-  isGroup?: boolean;
-  exp?: boolean;
 }

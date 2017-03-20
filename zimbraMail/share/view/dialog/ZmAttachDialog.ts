@@ -18,12 +18,21 @@
  * along with T4Z - TypeScript 4 Zimlet. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import {AjxCallback} from "../ajax/boot/AjxCallback";
-import {AjxSoapDoc} from "../ajax/soap/AjxSoapDoc";
-export class ZmBatchCommand {
-  public run(): void {}
+import {DwtDialog} from "../../../../ajax/dwt/widgets/DwtDialog";
+import {AjxCallback} from "../../../../ajax/boot/AjxCallback";
+import {DwtShell} from "../../../../ajax/dwt/widgets/DwtShell";
 
-  addRequestParams(ajxSoapDoc: AjxSoapDoc, callback: AjxCallback, errorCallback: AjxCallback): void {}
+export class ZmAttachDialog extends DwtDialog {
 
-  add(ajxCallback: AjxCallback): void {}
+  constructor(shell: DwtShell, className?: string) {
+    super( {parent: shell, className: className, title: ""});
+  }
+
+  public _uploadCallback: AjxCallback;
+
+  public getUploadCallback(): AjxCallback { return undefined; }
+  public setFooter(html: string): void {}
+  public setOkListener(callback: AjxCallback): void {};
+  public setCancelListener(callback: AjxCallback): void {};
+
 }
