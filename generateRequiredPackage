@@ -1,0 +1,56 @@
+#!/usr/bin/env bash
+
+#
+# T4Z - TypeScript 4 Zimlet
+# Copyright (C) 2017 ZeXtras S.r.l.
+#
+# This file is part of T4Z - TypeScript 4 Zimlet.
+#
+# This program is free software; you can redistribute it and/or
+# modify it under the terms of the GNU General Public License
+# as published by the Free Software Foundation, version 2 of
+# the License.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with T4Z - TypeScript 4 Zimlet. If not, see <http://www.gnu.org/licenses/>.
+#
+
+work_dir=$( pwd )
+cd ${work_dir}
+my_path="`dirname \"$0\"`"
+
+function createImportRow {
+    imported_script=`echo "$1" | sed -e "s/\//./g"`
+    echo "AjxPackage.require({ name: '${imported_script}', extension: '.js' });"
+}
+
+# Print the license
+echo "/*"
+echo " * T4Z - TypeScript 4 Zimlet"
+echo " * Copyright (C) 2017 ZeXtras S.r.l."
+echo " *"
+echo " * This file is part of T4Z - TypeScript 4 Zimlet."
+echo " *"
+echo " * This program is free software; you can redistribute it and/or"
+echo " * modify it under the terms of the GNU General Public License"
+echo " * as published by the Free Software Foundation, version 2 of"
+echo " * the License."
+echo " *"
+echo " * This program is distributed in the hope that it will be useful,"
+echo " * but WITHOUT ANY WARRANTY; without even the implied warranty of"
+echo " * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the"
+echo " * GNU General Public License for more details."
+echo " *"
+echo " * You should have received a copy of the GNU General Public License"
+echo " * along with T4Z - TypeScript 4 Zimlet. If not, see <http://www.gnu.org/licenses/>."
+echo " */"
+
+for used_import in `./${my_path}/findUsedImports $1 |cut -d" " -f 1`;
+do
+    createImportRow "${used_import}"
+done
