@@ -60,7 +60,7 @@ function processZimbraFileImports {
         then
             echo "${imported_file}" >> "${tmp_file}"
             processZimbraFileImports "${imported_file}"
-            createImportRow "$( echo ${imported_file} | sed -e "s/.*\/zimbra\/\(.*\).ts/\1/" )"
+            createImportRow "$( echo ${imported_file} | sed -e "s%.*/"${my_path#./}"/\(.*\).ts%\1%" )"
         fi
     done
 }
