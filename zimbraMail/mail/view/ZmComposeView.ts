@@ -28,6 +28,7 @@ import {DwtButton} from "../../../ajax/dwt/widgets/DwtButton";
 import {ZmMailMsg} from "../model/ZmMailMsg";
 import {DwtMenu} from "../../../ajax/dwt/widgets/DwtMenu";
 import {DwtMenuItem} from "../../../ajax/dwt/widgets/DwtMenuItem";
+import {ZmComposeController} from "../controller/ZmComposeController";
 
 export class ZmComposeView extends DwtComposite {
 
@@ -48,6 +49,7 @@ export class ZmComposeView extends DwtComposite {
   public _priorityButton: DwtButton;
   public _attButton: DwtButton;
   public _msg: ZmMailMsg;
+  public _controller: ZmComposeController;
 
   public _addSendAsAndSendOboAddresses(menu: DwtSelect): void {}
   public _addSendAsOrSendOboAddresses(menu: DwtSelect, emails: string|{addr: string}[], isObo: boolean, displayValueFunc: Function): void {}
