@@ -31,7 +31,7 @@ export class ZmButtonToolBar extends ZmToolBar {
     super(params);
   }
 
-  public getOp(id: string): DwtButton {
+  public getOp(id: string): DwtToolBarButton {
     return undefined;
   }
 
