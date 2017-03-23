@@ -23,6 +23,8 @@ import {AjxCallback} from "../../../ajax/boot/AjxCallback";
 import {ZmBatchCommand} from "../../../zimbra/csfe/ZmBatchCommand";
 
 export class ZmSearch {
+  public static TYPE: {[type: string]: string};
+  public query: string;
 
   constructor(params: ZmSearchParam) {}
 
