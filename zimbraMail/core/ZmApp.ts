@@ -28,6 +28,7 @@ import {DwtShell} from "../../ajax/dwt/widgets/DwtShell";
 import {ZmSearchResult} from "../share/model/ZmSearchResult";
 import {ZmAppViewMgrCreateViewParams, ZmAppViewMgrCreatedViewDescriptor} from "./ZmAppViewMgr";
 import {ZmSettings} from "../share/model/ZmSettings";
+import {ZmSearch} from "../share/model/ZmSearch";
 
 export class ZmApp {
 
@@ -46,11 +47,13 @@ export class ZmApp {
   public static MAIL: string = "Mail";
   public static ENABLED_APPS: {[name: string]: boolean} = {};
   public static APPS: string[];
+  public static SEARCH: string;
 
   public static registerApp(name: string, params: ZmAppRegisterAppParams): void {}
 
   public _container: DwtShell;
   public _overviewPanelContent: ZmOverview;
+  public currentSearch: ZmSearch;
 
   constructor(name: string, container: DwtControl, parentController?: ZmController) {}
 
@@ -156,7 +159,7 @@ export interface ZmAppRegisterAppParams {
   // trashViewOp?;
   // upsellUrl?;
   // // quickCommandType
-  // searchResultsTab;
+  searchResultsTab?: boolean;
 
   searchTypes?: string[];
   gotoActionCode?: string;
