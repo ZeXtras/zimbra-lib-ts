@@ -100,6 +100,7 @@ export class ZmAppCtxt {
   public getChooseFolderDialog(appName?: string): ZmChooseFolderDialog { return undefined; }
   public getZmUploadManager(): ZmUploadManager { return undefined; }
   public getUploadManager(): AjxPost { return undefined; }
+  public getCurrentViewId(): string { return undefined; }
 }
 
 export interface SetStatusMsgParams {

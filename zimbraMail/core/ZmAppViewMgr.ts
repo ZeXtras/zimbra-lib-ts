@@ -37,6 +37,7 @@ export class ZmAppViewMgr {
 
   public _toRemove: string[];
 
+  public _getView(viewId: string, app?: string): ZmAppViewMgrCreatedViewDescriptor { return undefined; }
   public getViewComponent(componentId: string, viewId?: string): DwtControl { return undefined; }
   public setViewComponents(viewId: string, components: {[name: string]: DwtControl}, show: boolean, app?: string): void {}
   public getCurrentView(viewId?: string): DwtControl { return undefined; }
