@@ -28,6 +28,7 @@ import {ZmListController} from "../controller/ZmListController";
 import {DwtDropTarget} from "../../../ajax/dwt/dnd/DwtDropTarget";
 import {AjxListener} from "../../../ajax/events/AjxListener";
 import {DwtMouseEvent} from "../../../ajax/dwt/events/DwtMouseEvent";
+import {ZmList} from "../model/ZmList";
 
 export class ZmListView extends DwtListView {
 
@@ -39,6 +40,7 @@ export class ZmListView extends DwtListView {
 
   constructor(params: ZmListViewParams) { super(params); }
   public getList(): AjxVector<any> { return undefined; };
+  public getItemList(): ZmList { return undefined; }
   public _restoreState(state?: ZmListViewStateObject): void {}
   public _saveState(state?: ZmListViewSaveStateObject): void {}
   public _getImageHtml(htmlArr: string[], idx: number, image: string, id: string, classes: string[] = []): number { return undefined; }
