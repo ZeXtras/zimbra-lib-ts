@@ -31,6 +31,7 @@ export class ZmList  extends ZmModel {
   public contains(element: ZmItem): boolean { return undefined; }
   public add(element: ZmItem, index?: number): void {}
   public remove(element: ZmItem): void {}
+  public getById(id: string): ZmItem { return undefined; }
 
   public controller: ZmListController;
 
