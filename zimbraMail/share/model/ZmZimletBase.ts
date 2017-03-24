@@ -71,7 +71,7 @@ export class ZmZimletBase extends ZmObjectHandler {
 
   public clicked(spanElement: HTMLSpanElement, contentObjText: string, matchContext: string[], event: DwtMouseEvent): void {}
   public toolTipPoppedUp(spanElement: any, contentObjText: string, matchContext: string[], canvas: HTMLDivElement): void {}
-  public addSearchDomainItem(icon: string, label: string, listener: AjxListener, id: string): ZmButtonToolBar { return undefined; }
+  public addSearchDomainItem(icon: string, label: string, listener: AjxListener, id: string): void {}
 
   public init(): void {};
 

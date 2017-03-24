@@ -48,6 +48,7 @@ export class ZmApp {
   public static ENABLED_APPS: {[name: string]: boolean} = {};
   public static APPS: string[];
   public static SEARCH: string;
+  public static DEFAULT_SEARCH: { [appName: string]: string };
 
   public static registerApp(name: string, params: ZmAppRegisterAppParams): void {}
 
@@ -118,6 +119,10 @@ export interface ShowSearchResultsApp {
 
 export interface SearchToolbarApp {
   _setupSearchToolbar(): void;
+}
+
+export interface GetInitialSearchTypeApp {
+  getInitialSearchType(): string;
 }
 
 export interface GetSessionControllerParams {

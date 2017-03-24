@@ -86,7 +86,7 @@ export class ZmAppCtxt {
   public getAttachDialog(): ZmAttachDialog { return undefined; }
   public getById(id: string|number): ZmItem|ZmOrganizer { return undefined; };
   public setIsExpandableDL(id: string, canExpand: boolean): void {};
-  public getFolderTree(acct: ZmZimbraAccount): ZmFolderTree { return undefined; }
+  public getFolderTree(acct?: ZmZimbraAccount): ZmFolderTree { return undefined; }
   public isExternalAccount(): boolean { return undefined; }
   public getCurrentViewType(): string { return undefined; }
   public getCurrentController(): ZmController { return undefined; }

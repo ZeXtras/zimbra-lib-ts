@@ -23,6 +23,6 @@ import {ZmOrganizer} from "./ZmOrganizer";
 
 export class ZmTree extends ZmModel {
 
-  protected root: ZmOrganizer;
+  public root: ZmOrganizer;
 
 }

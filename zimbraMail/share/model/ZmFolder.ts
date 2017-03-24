@@ -23,8 +23,10 @@ import {ZmOrganizer} from "./ZmOrganizer";
 export class ZmFolder extends ZmOrganizer {
 
   public static ID_CHATS: number = 14;
-  public static HIDE_ID: {} = {250: true};
+  public static HIDE_ID: {[id: string]: boolean};
   public static ID_TRASH: number;
   public static ID_SENT: number;
+
+  public createQuery(pathOnly: boolean): string { return undefined; }
 
 }
