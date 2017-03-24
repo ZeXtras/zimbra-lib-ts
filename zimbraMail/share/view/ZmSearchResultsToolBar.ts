@@ -15,11 +15,10 @@
  * If not, see <http://www.gnu.org/licenses/>.
  */
 
-import {ZmApp} from "../core/ZmApp";
-import {ZmSearchResultsController} from "./controller/ZmSearchResultsController";
+import {ZmSearchToolBar} from "./ZmSearchToolBar";
 
-export class ZmSearchApp extends ZmApp {
+export class ZmSearchResultsToolBar extends ZmSearchToolBar {
 
-  public getSearchResultsController(sessionId?: string, appName?: string): ZmSearchResultsController { return undefined; }
+  public getSearchFieldValue(): string { return undefined; }
 
 }
