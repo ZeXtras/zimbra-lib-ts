@@ -20,8 +20,11 @@
 
 import {ZmController} from "./ZmController";
 import {ZmSearchResult} from "../model/ZmSearchResult";
+import {ZmSearchResultsFilterPanel} from "../view/ZmSearchResultsFilterPanel";
 
 export class ZmSearchResultsController extends ZmController {
+
+  public _filterPanel: ZmSearchResultsFilterPanel;
 
   public show(results: ZmSearchResult, resultsCtrl?: ZmController): void {}
 
