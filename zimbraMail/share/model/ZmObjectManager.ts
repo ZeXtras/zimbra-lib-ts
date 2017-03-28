@@ -26,6 +26,7 @@ export class ZmObjectManager {
   public static DATE: string;
   public static ATTR_CURRENT_DATE: string;
   public __hasSmileysHandler?: boolean;
+  public __hasEmojiHandler?: boolean;
   public _objectIdPrefix: string;
 
   public static registerHandler(obj: Object, type: number, priority: number) {}
