@@ -18,5 +18,13 @@
  * along with T4Z - TypeScript 4 Zimlet. If not, see <http://www.gnu.org/licenses/>.
  */
 
+import {ZmObjectManager} from "./ZmObjectManager";
 export class ZmObjectHandler {
+
+  constructor(typeName: string, className?: string) {}
+  public getTypeName(): string { return undefined; }
+  public match(content: string, startIndex: number): RegExpExecArray { return undefined; }
+  public generateSpan(html: string[], idx: number, obj: any, spanId?: string, context?: string, options?: {}): number { return undefined; }
+  public findObject(content: string, startIndex: number, objectMgr: ZmObjectManager): RegExpExecArray { return undefined; }
+
 }

@@ -36,6 +36,7 @@ export class ZmOrganizer {
   public static LABEL: {[type: string]: string};
   public static ID_ROOT: string;
   public static APP: { [id: string]: string };
+  public static ID_CHATS: number;
 
   public static normalizeId(id: string|number, type?: string): string|number { return undefined; }
 
