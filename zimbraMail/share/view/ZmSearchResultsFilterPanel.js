@@ -8,6 +8,7 @@ define(["require", "exports", "../../../ajax/boot/AjxPackage", "../../../ajax/dw
       extension: ".js"
     });
   }
+  exports.ZmSearchResultsFilterPanel = ZmSearchResultsFilterPanel;
   exports.ZmFolderSearchFilter = ZmFolderSearchFilter;
   exports.ZmSearchFilter = ZmSearchFilter;
 });
