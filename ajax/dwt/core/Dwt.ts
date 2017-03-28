@@ -22,7 +22,6 @@ import {DwtRectangle} from "../graphics/DwtRectangle";
 import {DwtPoint} from "../graphics/DwtPoint";
 
 export class Dwt {
-
   public static DISPLAY_BLOCK: string = "block";
   public static DISPLAY_NONE: string = "none";
   public static DISPLAY_INLINE: string = "inline";
@@ -51,6 +50,6 @@ export class Dwt {
   public static getBounds(htmlElement: HTMLElement, rect?: DwtRectangle): DwtRectangle { return undefined; }
   public static getWindowSize(point?: DwtPoint): DwtPoint { return undefined; }
   public static getVisible(textarea: HTMLElement): boolean { return undefined; }
-
   public static setPosition(div: HTMLElement, style: string): void {}
+  public static getElement(el: string|HTMLElement): HTMLElement { return undefined; }
 }
