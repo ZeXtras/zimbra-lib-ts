@@ -52,6 +52,7 @@ export class ZmApp {
 
   public static registerApp(name: string, params: ZmAppRegisterAppParams): void {}
 
+  public _active: boolean;
   public _container: DwtShell;
   public _overviewPanelContent: ZmOverview;
   public currentSearch: ZmSearch;

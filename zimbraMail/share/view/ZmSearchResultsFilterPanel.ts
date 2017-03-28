@@ -19,6 +19,12 @@
  */
 
 import {ZmFolderChooser} from "./ZmFolderChooser";
+import {DwtComposite} from "../../../ajax/dwt/widgets/DwtComposite";
+
+export class ZmSearchResultsFilterPanel extends DwtComposite {
+  public _advancedPanel: HTMLElement;
+  public _conditionalsContainer: HTMLElement;
+}
 
 export class ZmSearchFilter {
 
