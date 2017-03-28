@@ -35,6 +35,8 @@ export class ZmOrganizer {
   public static TREE_TYPE: {[type: string]: string};
   public static LABEL: {[type: string]: string};
   public static ID_ROOT: string;
+  public static APP: { [id: string]: string };
+  public static ID_CHATS: number;
 
   public static normalizeId(id: string|number, type?: string): string|number { return undefined; }
 
@@ -47,6 +49,7 @@ export class ZmOrganizer {
   public parent?: ZmOrganizer;
   public tree?: ZmTree;
   public children: AjxVector<ZmOrganizer>;
+  public type: string;
 
   constructor(params: ZmOrganizerParams) {}
   public getAccount(): ZmZimbraAccount { return undefined; }

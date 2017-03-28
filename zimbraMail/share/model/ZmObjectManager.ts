@@ -21,6 +21,7 @@
 import {ZmMailMsgCapsuleView} from "../../mail/view/ZmConvView2";
 import {DwtComposite} from "../../../ajax/dwt/widgets/DwtComposite";
 import {AjxCallback} from "../../../ajax/boot/AjxCallback";
+import {ZmObjectHandler} from "./ZmObjectHandler";
 
 export class ZmObjectManager {
   public static DATE: string;
@@ -37,5 +38,8 @@ export class ZmObjectManager {
   /** @deprecated Soon will be deprecated, use @see{ZmObjectManager.prototype.findObjectsInNode} */ public processObjectsInNode(doc: Document, node: HTMLElement): HTMLElement { return undefined; }
   public findObjectsInNode(node: HTMLElement, re_discard?: RegExp, re_allow?: RegExp, callbacks?: AjxCallback[]): HTMLElement { return undefined; }
   public setHandlerAttr(type: string, name: string, value: any): void {}
+  public addHandler(h: ZmObjectHandler, type?: string, priority?: number): void {}
+  public removeHandler(h: ZmObjectHandler, type?: string): void {}
+  public sortHandlers(): void {}
 
 }

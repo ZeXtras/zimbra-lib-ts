@@ -32,7 +32,7 @@ function createImportRow {
     echo "AjxPackage.require({ name: '${imported_script}', extension: '.js' });"
 }
 
-function getFileImports {
+function getZimbraFileImports {
     grep -e "import {.*} from \"[./]\+zimbra\/" "${1}" \
     | sed -e "s/import {.*} from \"[./]\+zimbra\/\(.*\)\"\;/\1/" \
     | grep -v \
@@ -41,7 +41,7 @@ function getFileImports {
     | cut -d " " -f 1
 }
 
-function getZimbraFileImports {
+function getFileImports {
     grep -e "import {.*} from \"" "${1}" \
     | sed -e "s/import {.*} from \"\(.*\)\"\;/\1/" \
     | grep -v \
@@ -52,23 +52,24 @@ function getZimbraFileImports {
 
 function processZimbraFileImports {
     local import_row
-    for import_row in $( getZimbraFileImports "${work_dir}/${my_path}/${1}" );
+    for import_row in $( getFileImports "${1}" );
     do
-        local imported_file=$( realpath --relative-to="${work_dir}/${my_path}" "$( dirname "${work_dir}/${my_path}/${1}" )/${import_row}.ts" )
+        local tmp_raw_import_row="$( cd "$( dirname "${1}/" )"; pwd )/${import_row}.ts"
+        local imported_file="$( cd "$( dirname "${tmp_raw_import_row}" )"; pwd )/$( basename "${tmp_raw_import_row}" )"
         if ! fgrep "${imported_file}" "${tmp_file}" > /dev/null 2>&1;
         then
             echo "${imported_file}" >> "${tmp_file}"
             processZimbraFileImports "${imported_file}"
-            createImportRow "$( echo ${imported_file} | sed -e "s/\(.*\).ts/\1/" )"
+            createImportRow "$( echo ${imported_file} | sed -e "s%.*/"${my_path#./}"/\(.*\).ts%\1%" )"
         fi
     done
 }
 
 function processFileImports {
     local main_import_row
-    for main_import_row in $( getFileImports "$1" );
+    for main_import_row in $( getZimbraFileImports "$1" );
     do
-        local main_imported_file=$( realpath --relative-to="${work_dir}/${my_path}" "${work_dir}/${my_path}/${main_import_row}.ts" )
+        local main_imported_file="$( cd "${work_dir}/${my_path}"; pwd )/${main_import_row}.ts"
         if ! fgrep "${main_imported_file}" "${tmp_file}" > /dev/null 2>&1;
         then
             echo "${main_imported_file}" >> "${tmp_file}"

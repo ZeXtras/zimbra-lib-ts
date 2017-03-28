@@ -51,6 +51,7 @@ export class ZmZimletBase extends ZmObjectHandler {
   public name: string;
   public static PROXY: string;
 
+  constructor() { super(""); }
   public getUsername(): string { return undefined; }
   public getUserID(): string { return undefined; }
   public getResource(resourceName: string): string { return undefined; }
@@ -68,16 +69,11 @@ export class ZmZimletBase extends ZmObjectHandler {
   public createPropertyEditor(callback: AjxCallback): void {}
   public  _createDialog(dialog_args: {title: string; view: DwtComposite}): ZmDialog { return undefined; }
   public menuItemSelected(itemId: string): void {}
-
   public clicked(spanElement: HTMLSpanElement, contentObjText: string, matchContext: string[], event: DwtMouseEvent): void {}
   public toolTipPoppedUp(spanElement: any, contentObjText: string, matchContext: string[], canvas: HTMLDivElement): void {}
   public addSearchDomainItem(icon: string, label: string, listener: AjxListener, id: string): ZmButtonToolBar { return undefined; }
-
   public init(): void {};
-
   public getMessage(msg: string): string { return undefined; }
-
-  public match(content: string, startIndex: number, objectMgr: ZmObjectManager): RegExpMatchArray { return undefined; }
 
   // App Related functions
   // public createApp(label: string, image: string, tooltip: string, index?: number, style?: string): string { return undefined; }

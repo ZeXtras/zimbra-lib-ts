@@ -1,8 +1,5 @@
 /*
- * T4Z - TypeScript 4 Zimlet
  * Copyright (C) 2017 ZeXtras S.r.l.
- *
- * This file is part of T4Z - TypeScript 4 Zimlet.
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License
@@ -14,15 +11,15 @@
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  * GNU General Public License for more details.
  *
- * You should have received a copy of the GNU General Public License
- * along with T4Z - TypeScript 4 Zimlet. If not, see <http://www.gnu.org/licenses/>.
+ * You should have received a copy of the GNU General Public License.
+ * If not, see <http://www.gnu.org/licenses/>.
  */
 
-import {ZmModel} from "./ZmModel";
-import {ZmOrganizer} from "./ZmOrganizer";
+import {ZmApp} from "../core/ZmApp";
+import {ZmSearchResultsController} from "./controller/ZmSearchResultsController";
 
-export class ZmTree extends ZmModel {
+export class ZmSearchApp extends ZmApp {
 
-  public root: ZmOrganizer;
+  public getSearchResultsController(): ZmSearchResultsController { return undefined; }
 
 }

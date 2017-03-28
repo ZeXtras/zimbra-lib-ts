@@ -19,7 +19,10 @@
  */
 
 import {ZmController} from "./ZmController";
+import {ZmSearchResult} from "../model/ZmSearchResult";
 
 export class ZmSearchResultsController extends ZmController {
+
+  public show(results: ZmSearchResult, resultsCtrl?: ZmController): void {}
 
 }
