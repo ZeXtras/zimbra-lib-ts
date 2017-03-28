@@ -19,8 +19,9 @@
  */
 
 import {DwtButton} from "../../../ajax/dwt/widgets/DwtButton";
+import {DwtComposite} from "../../../ajax/dwt/widgets/DwtComposite";
 
-export class ZmSearchToolBar {
+export class ZmSearchToolBar extends DwtComposite {
   public static TYPES_BUTTON: string;
 
   public setSearchFieldValue(value: string): void {}

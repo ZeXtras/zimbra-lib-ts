@@ -47,6 +47,7 @@ export class DwtMenu extends DwtComposite {
   }
 
   public getItemById(key: string, value: any): DwtMenuItem { return undefined; }
+  public getItems(): DwtMenuItem[] { return undefined; }
 
   public addPopupListener(ajxListener: AjxListener): void { return undefined; }
 
