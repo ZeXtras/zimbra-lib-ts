@@ -49,6 +49,7 @@ export class ZmApp {
   public static APPS: string[];
   public static SEARCH: string;
   public static DEFAULT_SEARCH: { [appName: string]: string };
+  public static HIDE_ZIMLETS: { [appName: string]: boolean };
 
   public static registerApp(name: string, params: ZmAppRegisterAppParams): void {}
 

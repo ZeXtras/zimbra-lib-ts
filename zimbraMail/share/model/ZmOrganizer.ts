@@ -50,6 +50,7 @@ export class ZmOrganizer {
   public tree?: ZmTree;
   public children: AjxVector<ZmOrganizer>;
   public type: string;
+  public url?: string;
 
   constructor(params: ZmOrganizerParams) {}
   public getAccount(): ZmZimbraAccount { return undefined; }
@@ -73,6 +74,6 @@ interface ZmOrganizerItemOrganizer {
   [name: string]: string;
 }
 
-interface ZmOrganizerParams {
+export interface ZmOrganizerParams {
   type: string;
 }

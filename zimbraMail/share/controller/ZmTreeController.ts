@@ -29,6 +29,7 @@ import {ZmOrganizer} from "../model/ZmOrganizer";
 import {ZmFolder} from "../model/ZmFolder";
 import {ZmChooseFolderDialog} from "../view/dialog/ZmChooseFolderDialog";
 import {AjxCallback} from "../../../ajax/boot/AjxCallback";
+import {ZmZimbraAccount} from "../model/ZmZimbraAccount";
 
 export class ZmTreeController extends ZmController {
 
@@ -44,7 +45,7 @@ export class ZmTreeController extends ZmController {
   public _createTreeView(params: ZmTreeViewParams): ZmTreeView { return undefined; }
   public show(params: ZmTreeControllerShowParams): ZmTreeView { return undefined; }
 
-  public getDataTree(): ZmTree { return undefined; }
+  public getDataTree(account?: ZmZimbraAccount): ZmTree { return undefined; }
   public _treeViewListener(ev: DwtUiEvent): void {}
   public _renameListener(ev: DwtUiEvent): void {}
   public _getActionedOrganizer(ev: DwtUiEvent): ZmOrganizer { return undefined; }

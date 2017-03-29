@@ -54,9 +54,10 @@ export class ZmListController extends ZmBaseController {
   public _resetNavToolBarButtons(view?: string): void {}
   public getActionMenu(): DwtMenu { return undefined; }
 
-  public show(msg: ZmSearchResult): void;
+  public show(msg: ZmSearchResult, id?: string): void;
+  public show(msg: ZmSearchResult, parentController?: ZmListController): void;
   /** Visible in ZmMsgController */ public show(msg: ZmMailMsg, parentController: ZmListController, callback: AjxCallback, markRead: boolean, hidePagination: boolean, forceLoad: boolean, noTruncate: boolean): void;
-  public show(msg: any, parentController?: ZmListController, callback?: AjxCallback, markRead?: boolean, hidePagination?: boolean, forceLoad?: boolean, noTruncate?: boolean): void {}
+  public show(msg: any, parentController?: ZmListController|string, callback?: AjxCallback, markRead?: boolean, hidePagination?: boolean, forceLoad?: boolean, noTruncate?: boolean): void {}
 
   public _initializeToolBar(view: string): void {}
 
