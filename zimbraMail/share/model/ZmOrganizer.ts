@@ -64,6 +64,8 @@ export class ZmOrganizer {
   public getOwner(): string { return undefined; }
   public getName(showUnread?: boolean, maxLength?: number, noMarkup?: boolean, useSystemName?: boolean, useOwnerName?: boolean, defaultRootType?: string): string { return undefined; }
   public getChildByPath(path: string): ZmOrganizer { return undefined; }
+  public hasChild(name: string): boolean { return undefined; }
+  public getChild(name: string): ZmOrganizer { return undefined; }
 
 }
 
