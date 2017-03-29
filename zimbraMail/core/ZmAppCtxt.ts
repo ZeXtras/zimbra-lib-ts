@@ -93,7 +93,7 @@ export class ZmAppCtxt {
   public setTree(type: string, tree: ZmTree, account?: ZmZimbraAccount): void {}
   public cacheSet(id: string, value: any): void {}
   public getOverviewController(): ZmOverviewController { return undefined; }
-  public getTree(appId: string): ZmTree { return undefined; }
+  public getTree(type: string, account?: ZmZimbraAccount): ZmTree { return undefined; }
   public getConfirmationDialog(): DwtConfirmDialog { return undefined; }
   public getCurrentSearch(): ZmSearch { return undefined; }
   public getRenameFolderDialog(): ZmRenameFolderDialog { return undefined; }
