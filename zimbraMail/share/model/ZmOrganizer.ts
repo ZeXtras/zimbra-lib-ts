@@ -67,6 +67,7 @@ export class ZmOrganizer {
   public getChildByPath(path: string): ZmOrganizer { return undefined; }
   public hasChild(name: string): boolean { return undefined; }
   public getChild(name: string): ZmOrganizer { return undefined; }
+  public getById(id: string): ZmOrganizer { return undefined; }
 
 }
 
