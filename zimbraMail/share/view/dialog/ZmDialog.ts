@@ -19,6 +19,7 @@
  */
 
 import {DwtDialog, DwtDialogParams} from "../../../../ajax/dwt/widgets/DwtDialog";
+import {DwtPoint} from "../../../../ajax/dwt/graphics/DwtPoint";
 
 export class ZmDialog extends DwtDialog {
 
@@ -27,6 +28,7 @@ export class ZmDialog extends DwtDialog {
   }
 
   public _getInputFields(): HTMLInputElement[] { return undefined; }
+  public _showError(msg: string, loc?: DwtPoint): void {}
 }
 
 export interface ZmDialogParams extends DwtDialogParams {
