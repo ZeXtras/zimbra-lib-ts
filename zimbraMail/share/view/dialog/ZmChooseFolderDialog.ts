@@ -38,7 +38,7 @@ export class ZmChooseFolderDialog extends ZmDialog {
   public _folderDescDivId: string;
   public _folderTreeDivId: string;
 
-  constructor(parent: DwtControl, className: string) {
+  constructor(parent: DwtControl, className?: string) {
     super({
       parent: parent,
       className: className

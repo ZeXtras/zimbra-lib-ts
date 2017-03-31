@@ -37,6 +37,7 @@ export class ZmTreeController extends ZmController {
   public _listeners: {[id: string]: AjxListener};
   public _treeView: {[id: string]: ZmTreeView};
   public _actionedOrganizer: ZmFolder;
+  public _actionedOverviewId: string;
 
   constructor(type: string) {
     super(null);
@@ -45,6 +46,7 @@ export class ZmTreeController extends ZmController {
   public _createTreeView(params: ZmTreeViewParams): ZmTreeView { return undefined; }
   public show(params: ZmTreeControllerShowParams): ZmTreeView { return undefined; }
 
+  public getTreeView(overviewId: string, force?: boolean): ZmTreeView { return undefined; }
   public getDataTree(account?: ZmZimbraAccount): ZmTree { return undefined; }
   public _treeViewListener(ev: DwtUiEvent): void {}
   public _renameListener(ev: DwtUiEvent): void {}
