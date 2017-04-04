@@ -68,7 +68,10 @@ export class ZmOrganizer {
   public hasChild(name: string): boolean { return undefined; }
   public getChild(name: string): ZmOrganizer { return undefined; }
   public getById(id: string): ZmOrganizer { return undefined; }
-  public _notify(evType: string): void {}
+  public _notify(evType: string, details?: any): void {}
+  public notifyModify(details?: any): void {}
+  public getPath(includeRoot?: boolean, showUnread?: boolean, maxLength?: number, noMarkup?: boolean, useSystemName?: boolean): string { return undefined; }
+  public reparent(newParent?: ZmOrganizer): void {}
 
 }
 
