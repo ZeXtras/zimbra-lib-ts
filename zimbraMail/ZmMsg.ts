@@ -21,6 +21,7 @@
 export class ZmMsg {
   public static zimbraDriveFolders: string;
   public static downloadFolder: string;
+  public static zimbradrive_item: string;
 
   public static emoticons: string;
   public static document: string;
