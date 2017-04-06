@@ -21,18 +21,27 @@
 import {DwtDialog} from "../../../../ajax/dwt/widgets/DwtDialog";
 import {AjxCallback} from "../../../../ajax/boot/AjxCallback";
 import {DwtShell} from "../../../../ajax/dwt/widgets/DwtShell";
+import {ZmBriefcaseTabView} from "../../../briefcase/view/dialog/ZmBriefcaseTabView";
+import {DwtComposite} from "../../../../ajax/dwt/widgets/DwtComposite";
 
 export class ZmAttachDialog extends DwtDialog {
 
   constructor(shell: DwtShell, className?: string) {
-    super( {parent: shell, className: className, title: ""});
+    super({parent: shell, className: className, title: ""});
   }
 
   public _uploadCallback: AjxCallback;
 
   public getUploadCallback(): AjxCallback { return undefined; }
+  public setUploadCallback(callback: AjxCallback): void {}
   public setFooter(html: string): void {}
-  public setOkListener(callback: AjxCallback): void {};
-  public setCancelListener(callback: AjxCallback): void {};
+  public getBriefcaseView(): ZmBriefcaseTabView { return undefined; }
+  public getMyComputerView(): ZmMyComputerTabViewPage { return undefined; }
+  public enableInlineOption(enable: boolean): void {}
+  public setInline(isInline: boolean): void {}
 
 }
+
+export class ZmMyComputerTabViewPage extends DwtComposite {
+}
+

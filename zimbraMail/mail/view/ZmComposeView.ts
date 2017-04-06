@@ -29,7 +29,7 @@ import {ZmMailMsg} from "../model/ZmMailMsg";
 import {DwtMenu} from "../../../ajax/dwt/widgets/DwtMenu";
 import {DwtMenuItem} from "../../../ajax/dwt/widgets/DwtMenuItem";
 import {ZmComposeController} from "../controller/ZmComposeController";
-import {ZmAttachDialog} from "../../share/view/ZmAttachDialog";
+import {ZmAttachDialog} from "../../share/view/dialog/ZmAttachDialog";
 
 export class ZmComposeView extends DwtComposite {
 
