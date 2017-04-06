@@ -19,6 +19,9 @@
  */
 
 import {DwtUiEvent} from "./DwtUiEvent";
+import {AjxCallback} from "../../../ajax/boot/AjxCallback";
+import {ZmBriefcaseTabView} from "../../briefcase/view/dialog/ZmBriefcaseTabView";
+import {DwtComposite} from "../../../ajax/dwt/widgets/DwtComposite";
 
 export class DwtMouseEvent extends DwtUiEvent {
 
@@ -28,4 +31,15 @@ export class DwtMouseEvent extends DwtUiEvent {
   public elementX: number;
   public button: number;
 
+  public getUploadCallback(): AjxCallback { return undefined; }
+  public setUploadCallback(callback: AjxCallback): void {}
+  public setFooter(html: string): void {}
+  public getBriefcaseView(): ZmBriefcaseTabView { return undefined; }
+  public getMyComputerView(): ZmMyComputerTabViewPage { return undefined; }
+  public enableInlineOption(enable: boolean): void {}
+  public setInline(isInline: boolean): void {}
+
+}
+
+export class ZmMyComputerTabViewPage extends DwtComposite {
 }

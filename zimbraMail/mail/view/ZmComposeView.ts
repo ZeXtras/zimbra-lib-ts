@@ -29,8 +29,12 @@ import {ZmMailMsg} from "../model/ZmMailMsg";
 import {DwtMenu} from "../../../ajax/dwt/widgets/DwtMenu";
 import {DwtMenuItem} from "../../../ajax/dwt/widgets/DwtMenuItem";
 import {ZmComposeController} from "../controller/ZmComposeController";
+import {ZmAttachDialog} from "../../share/view/ZmAttachDialog";
 
 export class ZmComposeView extends DwtComposite {
+
+  public static UPLOAD_BRIEFCASE: string;
+  public static UPLOAD_INLINE: string;
 
   public _view: string;
   public _identityDivId: string;
@@ -50,6 +54,9 @@ export class ZmComposeView extends DwtComposite {
   public _attButton: DwtButton;
   public _msg: ZmMailMsg;
   public _controller: ZmComposeController;
+  public _disableAttachments: boolean;
+  public _attachDialog?: ZmAttachDialog;
+  public _composeMode: string;
 
   public _addSendAsAndSendOboAddresses(menu: DwtSelect): void {}
   public _addSendAsOrSendOboAddresses(menu: DwtSelect, emails: string|{addr: string}[], isObo: boolean, displayValueFunc: Function): void {}
@@ -65,6 +72,8 @@ export class ZmComposeView extends DwtComposite {
   public _restoreMultipartRelatedImages(idoc: HTMLIFrameElement): void {}
   public _generateCid(): string { return undefined; }
   public isDirty(incAddrs?: boolean, incSubject?: boolean): boolean { return undefined; }
+  public _submitMyComputerAttachments(files: FileList, node: HTMLInputElement, isInline: boolean): void {}
+  public _attsDoneCallback(isDraft: boolean, status: string, attId: string, docIds: string[], msgIds: string[]): void {}
 
   public _createAttachMenuItem(attachMenu: DwtMenu, appName: string, listener: AjxListener): DwtMenuItem { return undefined; }
 }
