@@ -72,6 +72,7 @@ export class ZmOrganizer {
   public notifyModify(details?: any): void {}
   public getPath(includeRoot?: boolean, showUnread?: boolean, maxLength?: number, noMarkup?: boolean, useSystemName?: boolean): string { return undefined; }
   public reparent(newParent?: ZmOrganizer): void {}
+  public deleteLocal(): void {}
 
 }
 
