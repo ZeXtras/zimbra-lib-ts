@@ -38,6 +38,7 @@ export class ZmTreeController extends ZmController {
   public _treeView: {[id: string]: ZmTreeView};
   public _actionedOrganizer: ZmFolder;
   public _actionedOverviewId: string;
+  public _actionMenu: AjxCallback;
 
   constructor(type: string) {
     super(null);
@@ -55,6 +56,7 @@ export class ZmTreeController extends ZmController {
   public _moveCallback(): void {}
   public _getMoveParams(dialog: ZmChooseFolderDialog): any { return undefined; }
   public _setupOptButton(params: ZmTreeControllerShowParams): void {}
+  public _initializeActionMenus(): void {}
 }
 
 export interface ZmTreeControllerShowParams {
