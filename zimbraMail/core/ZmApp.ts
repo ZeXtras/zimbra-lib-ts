@@ -73,7 +73,7 @@ export class ZmApp {
   public getName(): string { return undefined; }
   public _setLaunchTime(appName: string, date: Date): void {}
   public _setLoadedTime(appName: string, date: Date): void {}
-  public setOverviewPanelContent(reset: boolean): void {}
+  public setOverviewPanelContent(reset?: boolean): void {}
   public isActive(): boolean { return undefined; }
 
   // Functions called during construction
