@@ -34,6 +34,7 @@ export class ZmListView extends DwtListView {
 
   public static COL_WIDTH_ICON: number;
 
+  public _controller: ZmListController;
   public _listDiv: HTMLElement;
   public _folderId?: number;
   public _state: ZmListViewStateObject;

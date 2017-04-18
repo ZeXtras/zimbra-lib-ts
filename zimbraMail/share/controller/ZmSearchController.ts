@@ -23,6 +23,7 @@ import {ZmMainSearchToolBar} from "../view/ZmSearchToolBar";
 import {AjxCallback} from "../../../ajax/boot/AjxCallback";
 import {ZmSearchParam, ZmSearch} from "../model/ZmSearch";
 import {ZmCsfeResult} from "../../../zimbra/csfe/ZmCsfeResult";
+import {DwtUiEvent} from "../../../ajax/dwt/events/DwtUiEvent";
 
 export class ZmSearchController extends ZmController {
 
@@ -31,6 +32,7 @@ export class ZmSearchController extends ZmController {
   public search(params: ZmSearchControllerSearchParams): void {}
   public getSearchToolbar(): ZmMainSearchToolBar { return undefined; }
   public _handleResponseDoSearch(search: ZmSearch, noRender: boolean, callback: AjxCallback, noUpdateOverview: boolean, result: ZmCsfeResult): void {}
+  public _searchMenuListener(ev: DwtUiEvent, id: string, noFocus?: boolean): void {}
 }
 
 export interface ZmSearchControllerSearchParams extends ZmSearchParam {
