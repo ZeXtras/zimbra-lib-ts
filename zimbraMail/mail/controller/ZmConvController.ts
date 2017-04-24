@@ -18,22 +18,11 @@
  * along with T4Z - TypeScript 4 Zimlet. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import {ZmMailListController} from "./ZmMailListController";
+import {ZmConvListController} from "./ZmConvListController";
 import {DwtEvent} from "../../../ajax/dwt/events/DwtEvent";
-import {ZmMailMsg} from "../model/ZmMailMsg";
-import {ZmConv} from "../model/ZmConv";
-import {ZmListController} from "../../share/controller/ZmListController";
-import {AjxCallback} from "../../../ajax/boot/AjxCallback";
-import {ZmCsfeResult} from "../../../zimbra/csfe/ZmCsfeResult";
 
-export class ZmMsgController extends ZmMailListController {
+export class ZmConvController extends ZmConvListController {
 
-  public _msg: ZmMailMsg|ZmConv;
-  public _parentController: ZmListController;
-
-  public _printListener(ev: DwtEvent): void {}
-  public setMsg(msg: ZmMailMsg): void {}
-  public _handleResponseShow(callback: AjxCallback, hidePagination: boolean, result?: ZmCsfeResult): void {}
   public _backListener(ev: DwtEvent): void {}
 
 }
