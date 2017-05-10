@@ -19,9 +19,13 @@
  */
 
 import {ZmController} from "../share/controller/ZmController";
+import {ZmApp} from "./ZmApp";
 
 export class ZmNewWindow extends ZmController {
 
   public static _confirmExitMethod() {};
 
+  public _apps: {[appName: string]: ZmApp};
+
+  public getApp(appName: string): ZmApp { return undefined; }
 }
