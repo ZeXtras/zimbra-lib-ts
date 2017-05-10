@@ -75,6 +75,7 @@ export class ZmApp {
   public _setLoadedTime(appName: string, date: Date): void {}
   public setOverviewPanelContent(reset?: boolean): void {}
   public isActive(): boolean { return undefined; }
+  public popView(force?: boolean, viewId?: number, skipHistory?: boolean): void {}
 
   // Functions called during construction
   // public _defineAPI(): void {};

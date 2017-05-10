@@ -44,6 +44,7 @@ export class ZmAppViewMgr {
   public displayComponent(cid: string, show: boolean, doFit?: boolean, comp?: DwtControl, noReflow?: boolean): void {}
   public createView(params: ZmAppViewMgrCreateViewParams): ZmAppViewMgrCreatedViewDescriptor { return undefined; }
   public pushView(id: string): void {}
+  public popView(force: boolean, viewId: number, skipHistory?: boolean): void {}
   public getAppView(appName: string): string { return undefined; }
 
 }
