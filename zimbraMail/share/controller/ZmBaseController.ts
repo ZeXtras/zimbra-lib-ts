@@ -32,6 +32,7 @@ export abstract class ZmBaseController extends ZmController {
   public _listeners: {[action: string]: AjxListener};
   public isSearchResults?: boolean;
   public searchResultsController?: ZmSearchResultsController;
+  public _view: {[viewId: string]: DwtControl};
   /** @override */ public operationsToEnableOnZeroSelection: string[];
   /** @override */ public operationsToDisableOnSingleSelection: string[];
   /** @override */ public operationsToEnableOnMultiSelection: string[];

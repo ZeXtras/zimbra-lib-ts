@@ -49,6 +49,7 @@ export class ZmApp {
   public static APPS: string[];
   public static SEARCH: string;
   public static DEFAULT_SEARCH: { [appName: string]: string };
+  public static HIDE_ZIMLETS: { [appName: string]: boolean };
 
   public static registerApp(name: string, params: ZmAppRegisterAppParams): void {}
 
@@ -72,7 +73,7 @@ export class ZmApp {
   public getName(): string { return undefined; }
   public _setLaunchTime(appName: string, date: Date): void {}
   public _setLoadedTime(appName: string, date: Date): void {}
-  public setOverviewPanelContent(reset: boolean): void {}
+  public setOverviewPanelContent(reset?: boolean): void {}
   public isActive(): boolean { return undefined; }
 
   // Functions called during construction

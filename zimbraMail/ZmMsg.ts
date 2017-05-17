@@ -99,6 +99,8 @@ export class ZmMsg {
   public static preferences: string;
   public static attachFile: string;
   public static attachmentSizeError: string;
+  public static noTargetFolder: string;
+  public static zimbraTitle: string;
   /** @deprecated
    * public static name: string;
    * Please use @see ZmMsg._name

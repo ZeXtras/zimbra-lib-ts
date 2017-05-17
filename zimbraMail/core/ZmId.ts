@@ -33,6 +33,7 @@ export class ZmId {
   public static CMP_PRIORITY: string;
   public static CMP_ATT_BTN: string;
   public static SEARCH: string;
+  public static SEARCHRESULTS: string;
   public static SEARCH_CUSTOM: string;
 
   public static getButtonId(context: string, op: string, tbType?: string): string { return undefined; }

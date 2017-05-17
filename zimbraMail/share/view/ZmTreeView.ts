@@ -46,6 +46,7 @@ export class ZmTreeView extends DwtTree {
 
   public _addNew(parentNode: DwtTreeItem, organizer: ZmOrganizer, idx: number): DwtTreeItem { return undefined; }
   public _getHeaderTreeItemImage(): string { return undefined; }
+  public setSelected(organizer: ZmOrganizer|string|boolean, skipNotify?: boolean, noFocus?: boolean): void {}
 }
 
 export interface ZmTreeViewParams extends DwtTreeParams {

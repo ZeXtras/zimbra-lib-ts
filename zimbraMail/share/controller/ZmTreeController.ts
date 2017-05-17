@@ -29,6 +29,7 @@ import {ZmOrganizer} from "../model/ZmOrganizer";
 import {ZmFolder} from "../model/ZmFolder";
 import {ZmChooseFolderDialog} from "../view/dialog/ZmChooseFolderDialog";
 import {AjxCallback} from "../../../ajax/boot/AjxCallback";
+import {ZmZimbraAccount} from "../model/ZmZimbraAccount";
 
 export class ZmTreeController extends ZmController {
 
@@ -36,6 +37,8 @@ export class ZmTreeController extends ZmController {
   public _listeners: {[id: string]: AjxListener};
   public _treeView: {[id: string]: ZmTreeView};
   public _actionedOrganizer: ZmFolder;
+  public _actionedOverviewId: string;
+  public _actionMenu: AjxCallback;
 
   constructor(type: string) {
     super(null);
@@ -44,7 +47,8 @@ export class ZmTreeController extends ZmController {
   public _createTreeView(params: ZmTreeViewParams): ZmTreeView { return undefined; }
   public show(params: ZmTreeControllerShowParams): ZmTreeView { return undefined; }
 
-  public getDataTree(): ZmTree { return undefined; }
+  public getTreeView(overviewId: string, force?: boolean): ZmTreeView { return undefined; }
+  public getDataTree(account?: ZmZimbraAccount): ZmTree { return undefined; }
   public _treeViewListener(ev: DwtUiEvent): void {}
   public _renameListener(ev: DwtUiEvent): void {}
   public _getActionedOrganizer(ev: DwtUiEvent): ZmOrganizer { return undefined; }
@@ -52,6 +56,7 @@ export class ZmTreeController extends ZmController {
   public _moveCallback(): void {}
   public _getMoveParams(dialog: ZmChooseFolderDialog): any { return undefined; }
   public _setupOptButton(params: ZmTreeControllerShowParams): void {}
+  public _initializeActionMenus(): void {}
 }
 
 export interface ZmTreeControllerShowParams {
