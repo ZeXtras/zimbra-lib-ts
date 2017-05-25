@@ -20,7 +20,7 @@
 
 export class AjxTemplate {
 
-  static expand(templateId: string, data?: {[name: string]: string}, buffer?: string[]): string {
+  static expand(templateId: string, data?: {[name: string]: any}, buffer?: string[]): string {
     return undefined;
   }
 
