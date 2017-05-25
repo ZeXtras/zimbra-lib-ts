@@ -59,5 +59,5 @@ export class DwtMenu extends DwtComposite {
 }
 
 export interface DwtMenuParams extends DwtCompositeParams {
-  style: string|number;
+  style?: string|number;
 }
