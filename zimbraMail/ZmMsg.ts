@@ -101,6 +101,8 @@ export class ZmMsg {
   public static attachmentSizeError: string;
   public static noTargetFolder: string;
   public static zimbraTitle: string;
+  public static rename: string;
+  public static del: string;
   /** @deprecated
    * public static name: string;
    * Please use @see ZmMsg._name
