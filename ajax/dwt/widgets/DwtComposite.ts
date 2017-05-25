@@ -29,6 +29,7 @@ export class DwtComposite extends DwtControl {
   public dispose(): void {}
   public getChildren(): DwtComposite[] { return undefined; }
   public getChild(index: number): DwtComposite { return undefined; }
+  public removeChild(child: DwtControl): void {}
   public _setAllowSelection(): void {}
 
 }

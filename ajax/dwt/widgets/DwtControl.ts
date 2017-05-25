@@ -25,6 +25,7 @@ import {DwtComposite} from "./DwtComposite";
 import {AjxEventMgr} from "../../events/AjxEventMgr";
 import {DwtDragSource} from "../dnd/DwtDragSource";
 import {DwtDropTarget} from "../dnd/DwtDropTarget";
+import {AjxCallback} from "../../boot/AjxCallback";
 
 export class DwtControl {
 
@@ -39,6 +40,7 @@ export class DwtControl {
   public items: DwtControl[];
   public _data: {};
   public _htmlElId: string;
+  public _dndScrollId: string;
   public TEMPLATE: string;
   public _evtMgr: AjxEventMgr;
 
@@ -58,8 +60,11 @@ export class DwtControl {
   public getVisible(): boolean { return undefined; }
   public setEnabled(enabled: boolean): void {}
   public getEnabled(): boolean { return undefined; }
+
   public setToolTipContent(toolTip: string, useBrowser?: boolean): void;
+  public setToolTipContent(toolTip: AjxCallback): void;
   public setToolTipContent(toolTip: any, useBrowser?: boolean): void {}
+
   public isListenerRegistered(evType: string): boolean { return null; }
   public reparent(newParent: DwtComposite, index?: number): void {}
   public reparentHtmlElement(newParent: string|HTMLElement|Node, position?: number): void {}
@@ -85,6 +90,7 @@ export class DwtControl {
   public _setEventHdlrs(events: string[], clear?: boolean, element?: HTMLElement): void {}
   public setHandler(eventType: string, hdlrFunc: (ev: DwtEvent) => boolean): void {}
   public setContent(html: string): void {}
+  public _dndScrollCallback(params: DwtControl_DndScrollCallbackParams, ev: DwtEvent): void {}
 
 }
 
@@ -98,4 +104,12 @@ export interface DwtControlParams {
   index?: number;
   template?: string;
   tooltip?: string;
+}
+
+interface DwtControl_DndScrollCallbackParams {
+  container: Element;
+  threshold: number;
+  amount: number;
+  interval: number;
+  id: string;
 }
