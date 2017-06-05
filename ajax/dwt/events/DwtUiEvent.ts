@@ -27,4 +27,6 @@ export class DwtUiEvent extends DwtEvent {
 
   public static setBehaviour(ev: DwtUiEvent, stopPropagation: boolean, allowDefault: boolean, dontCallPreventDefault?: boolean): void {}
   public static getTargetWithProp(ev: Event, prop: string, useRelatedTarget?: boolean, value?: string): HTMLElement { return undefined; }
+
+  public static getEvent(ev: Event, target?: HTMLElement): Event { return undefined; }
 }

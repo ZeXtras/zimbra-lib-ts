@@ -19,4 +19,14 @@
  */
 
 export class DwtDraggable {
+
+  public static dragEl: HTMLElement;
+
+  public static setDragBoundaries(
+    dragEl: HTMLElement,
+    minX: number,
+    maxX: number,
+    minY: number,
+    maxY: number
+  ): void {}
 }
