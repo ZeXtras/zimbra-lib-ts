@@ -18,24 +18,11 @@
  * along with T4Z - TypeScript 4 Zimlet. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import {DwtComposite, DwtCompositeParams} from "./DwtComposite";
+import {ZmConvListController} from "./ZmConvListController";
+import {DwtEvent} from "../../../ajax/dwt/events/DwtEvent";
 
-export class DwtInputField extends DwtComposite {
+export class ZmConvController extends ZmConvListController {
 
-  constructor(params: DwtInputFieldParams) {
-    super(params);
-  }
+  public _backListener(ev: DwtEvent): void {}
 
-  public setValue(value: string, noValidate?: boolean): void {}
-  public getValue(): string { return undefined; }
-  public getInputElement(): HTMLInputElement { return undefined; }
-  public moveCursorToEnd(): void {}
-  public clear(): void {}
-
-}
-
-interface DwtInputFieldParams extends DwtCompositeParams {
-  hint?: string;
-  forceMultiRow?: boolean;
-  rows?: number;
 }
