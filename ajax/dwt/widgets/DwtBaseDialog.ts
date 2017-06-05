@@ -79,6 +79,10 @@ export class DwtBaseDialog extends DwtComposite {
 
   protected _getContentDiv(): HTMLElement { return undefined; }
 
+  protected _dragStart(x: number, y: number): void {}
+  protected _duringDrag(x: number, y: number): void {}
+  protected _dragEnd(x: number, y: number): void {}
+
 }
 
 export interface DwtBaseDialogParams extends DwtCompositeParams {
