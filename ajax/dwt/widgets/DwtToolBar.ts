@@ -42,6 +42,9 @@ export class DwtToolBarButton extends DwtButton {
 
 }
 
+export class DwtToolBarSpacer extends DwtComposite {
+}
+
 export interface DwtToolBarButtonParams extends DwtButtonParams {
   style?: string;
 }

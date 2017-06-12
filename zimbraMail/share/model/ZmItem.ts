@@ -37,6 +37,7 @@ export class ZmItem extends ZmModel {
   public id: string;
   public type: string;
   public list: ZmList;
+  public isMountpoint: boolean;
 
   public static registerItem(type: string, params: ZmItemRegisterItemParams): void {}
 
@@ -49,6 +50,7 @@ export class ZmItem extends ZmModel {
   public _parseFlags?(str: string): void {}
   public getRestUrl(): string {return undefined; }
   public _notify(event: string, details?: any): void {}
+  public getFolderId(): string { return undefined; }
 
 }
 

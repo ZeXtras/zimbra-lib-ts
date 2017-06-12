@@ -23,6 +23,7 @@ import {ZmInvite} from "../../share/model/ZmInvite";
 import {ZmButtonToolBar} from "../../share/view/ZmButtonToolBar";
 import {ZmMailMsgView} from "./ZmMailMsgView";
 import {DwtSelect} from "../../../ajax/dwt/widgets/DwtSelect";
+import {DwtToolBarSpacer} from "../../../ajax/dwt/widgets/DwtToolBar";
 
 export class ZmInviteMsgView {
 
@@ -31,7 +32,7 @@ export class ZmInviteMsgView {
   public _invite: ZmInvite;
   public _counterToolbar: ZmButtonToolBar;
   public _inviteToolbar: ZmButtonToolBar;
-  public _respondOnBehalfLabel: HTMLTableDataCellElement;
+  public _respondOnBehalfLabel: HTMLTableDataCellElement|DwtToolBarSpacer;
   public _inviteMoveSelect: DwtSelect;
   static PTST_MSG: {[name: string]: {msg: string, className: string}};
 
