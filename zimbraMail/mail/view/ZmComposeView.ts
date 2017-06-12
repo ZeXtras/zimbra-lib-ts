@@ -80,6 +80,7 @@ export class ZmComposeView extends DwtComposite {
   public getHtmlEditor(): ZmHtmlEditor { return undefined; }
   public getUserText(): string { return undefined; }
   public resetBody(params: ZmComposeView_resetBodyParams, noEditorUpdate?: boolean): void {}
+  public cleanupAttachments(all: boolean): void {}
 
 }
 
