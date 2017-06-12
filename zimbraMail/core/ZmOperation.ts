@@ -57,6 +57,8 @@ export class ZmOperation {
   public static DELETE_WITHOUT_SHORTCUT: string;
   public static MOVE: string;
   public static SEND_FILE_AS_ATT: string;
+  public static FORWARD_INLINE: string;
+  public static FORWARD_ATT: string;
 
   public static addOperation(parent: DwtComposite, id: string, opHash: ZmAddOperationParams, index?: number, htmlElId?: string): void {}
   public static setOperation(parent: DwtComposite, oldOp: string, newOp: string, text?: string, image?: string, disImage?: string): void {}
