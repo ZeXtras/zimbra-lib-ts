@@ -98,10 +98,10 @@ export type ZmComposeView_IncOptions = {
   prefix: boolean;
   headers: boolean;
   what: string;
-}
+};
 
 export type IncOptions = {
   prefix: true;
   headers: true;
   what: true;
-}
+};
