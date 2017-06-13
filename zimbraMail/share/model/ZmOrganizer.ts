@@ -53,6 +53,8 @@ export class ZmOrganizer {
   public url?: string;
 
   constructor(params: ZmOrganizerParams) {}
+  /** @since 8.7.7 */ public static parseId(id: string, result?: {}): {acctId: string, id: string, account: ZmZimbraAccount} { return undefined; }
+  /** @since 8.7.7 */ public isMountpoint: boolean;
   public getAccount(): ZmZimbraAccount { return undefined; }
   public isFeed(): boolean { return undefined; }
   public isReadOnly(): boolean { return undefined; }

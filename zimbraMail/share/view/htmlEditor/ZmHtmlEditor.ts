@@ -40,6 +40,7 @@ export class ZmHtmlEditor extends DwtControl {
   public initEditorManager(id: string, autoFocus?: boolean): void {}
   public getEditor(): TinyMCE|null { return undefined; }
   public onInit(ev: ZmHtmlEditorOnInitEv): void {}
+  public moveCaretToTop(num?: number): void {}
   public _setupTabGroup(mainTabGroup?: DwtTabGroup): void {}
   public _resetSize(): void {}
   public _convertHtml2Text(convertor: AjxStringUtilConvertHtml2TextConvertor): string { return undefined; }

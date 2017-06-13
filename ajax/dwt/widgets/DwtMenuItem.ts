@@ -33,6 +33,7 @@ export class DwtMenuItem extends DwtButton {
 
   public _emulateSingleClick(): void {}
   public setChecked(checked: boolean, skipNotify: boolean): void {}
+  public getChecked(): boolean { return undefined; }
 
 }
 
