@@ -75,10 +75,15 @@ export class DwtControl {
   public getHTMLElId(): string { return null; }
   public getZIndex(getFromStyle?: boolean): number { return undefined; }
   public setZIndex(idx: number): void {}
+  public getPosition(): string { return undefined; }
+  public setPosition(position: string): void {}
+  public getW(): number { return undefined; }
+  public getH(): number { return undefined; }
   public setLocation(x: number|string, y: number|string): DwtControl { return undefined; }
   public getLocation(): DwtPoint { return undefined; }
   public setDisplay(displayValue: string): void {}
   public getVisibility(): boolean { return undefined; }
+  public setVisibility(visibility: boolean): void {}
   public setSelected(selected: boolean): void {};
   public getClassName(): string { return undefined; }
   public removeAllListeners(type?: string): boolean { return undefined; }

@@ -22,6 +22,7 @@ import {DwtComposite, DwtCompositeParams} from "./DwtComposite";
 import {DwtButton, DwtButtonParams} from "./DwtButton";
 
 export class DwtToolBar extends DwtComposite {
+  static HORIZ_STYLE: string;
 
   constructor(params: DwtToolBarParams) {
     super(params);
