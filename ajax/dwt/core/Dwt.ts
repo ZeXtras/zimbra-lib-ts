@@ -38,7 +38,7 @@ export class Dwt {
   public static STATIC_STYLE: string;
   public static RELATIVE_STYLE: string;
 
-  public static setSize(el: HTMLDivElement, newWidth: number, height: number): void {}
+  public static setSize(el: HTMLElement, newWidth: number|string, height: number|string): void {}
   public static getSize(el: HTMLElement): DwtPoint { return undefined; }
 
   public static setVisible(el: HTMLElement, visible: boolean): void {}
@@ -53,4 +53,5 @@ export class Dwt {
   public static getVisible(textarea: HTMLElement): boolean { return undefined; }
   public static setPosition(div: HTMLElement, style: string): void {}
   public static getElement(el: string|HTMLElement): HTMLElement { return undefined; }
+  public static setVisibility(el: string|HTMLElement, visible: boolean): void {}
 }
