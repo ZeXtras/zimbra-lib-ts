@@ -43,6 +43,10 @@ export class DwtToolBarButton extends DwtButton {
 
 }
 
+/**
+ * @since Zimbra 8.5.0
+ * @deprecated
+ */
 export class DwtToolBarSpacer extends DwtComposite {
 }
 
