@@ -21,11 +21,14 @@
 import {DwtComposite, DwtCompositeParams} from "./DwtComposite";
 import {DwtMenu} from "./DwtMenu";
 import {DwtSelectionEvent} from "../events/DwtSelectionEvent";
+import {DwtEvent} from "../events/DwtEvent";
 
 export class DwtTreeItem extends DwtComposite {
 
   public actionMenu: DwtMenu;
   public _nodeCell: HTMLElement;
+  public _childDiv: HTMLElement;
+  public _extraCell: HTMLElement;
   public _treeItemExtraImgClass: string;
   public isDwtTreeItem: boolean;
 
@@ -36,6 +39,7 @@ export class DwtTreeItem extends DwtComposite {
   public enableSelection(enableSelection: boolean): void {}
   public enableAction(enableSelection: boolean): void {}
   public setExpanded(expanded: boolean, recurse?: boolean, skipNotify?: boolean): void {}
+  public getExpanded(): boolean { return undefined; }
   public setVisible(visible?: boolean, itemOnly?: boolean, childOnly?: boolean): void {}
   public _setSelected(selected: boolean, noFocus?: boolean): void {}
   public getText(): string { return null; };
@@ -43,9 +47,12 @@ export class DwtTreeItem extends DwtComposite {
   public setImage(image: string): void {};
   public onAction(event: DwtSelectionEvent): void {};
   public getData(key: string): any { return undefined; }
-  public setData(): void {};
   public getChildren(): DwtTreeItem[] { return undefined; };
   public _initialize(index?: number, realizeDeferred?: boolean, forceNode?: boolean): void {}
+  public showExpansionIcon(show: boolean): void {}
+  public _realizeDeferredChildren(): void {}
+  public _expand(expand: boolean, ev: DwtEvent, skipNotify: boolean): void {}
+  public sort(compareFunction: (a: any, b: any) => number): void {}
 
 }
 
@@ -54,4 +61,6 @@ export interface DwtTreeItemParams extends DwtCompositeParams {
   selectable?: boolean;
   dndScrollCallback?: Function;
   dndScrollId?: string;
+  arrowDisabled?: boolean;
+  imageInfo?: string;
 }

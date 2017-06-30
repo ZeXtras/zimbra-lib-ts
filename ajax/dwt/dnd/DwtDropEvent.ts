@@ -21,6 +21,7 @@
 import {DwtMouseEvent} from "../events/DwtMouseEvent";
 export class DwtDropEvent {
   public static DRAG_DROP: string;
+  public static DRAG_ENTER: string;
   public static DRAG_LEAVE: string;
   public static DRAG_OP_CHANGED: string;
 
@@ -28,4 +29,5 @@ export class DwtDropEvent {
   public srcData: any;
   public uiEvent: DwtMouseEvent;
   public targetControl: any;
+  public doIt: boolean;
 }

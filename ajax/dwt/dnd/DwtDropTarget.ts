@@ -26,5 +26,6 @@ export class DwtDropTarget {
   constructor(types: string|string[]) {}
   public addDropListener(listener: AjxListener): void {}
   public markAsMultiple(): void {}
+  public isValidTarget(items: {}|any[]): boolean { return undefined; }
 
 }
