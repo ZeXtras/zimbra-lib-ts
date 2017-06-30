@@ -26,12 +26,15 @@ import {AjxEventMgr} from "../../events/AjxEventMgr";
 import {DwtDragSource} from "../dnd/DwtDragSource";
 import {DwtDropTarget} from "../dnd/DwtDropTarget";
 import {AjxCallback} from "../../boot/AjxCallback";
+import {DwtFocusEvent} from "../events/DwtFocusEvent";
 
 export class DwtControl {
 
   public static ALL_BY_ID: {[id: string]: DwtControl}; // TODO: Should be Private.
   public static ABSOLUTE_STYLE: string;
   public static STATIC_STYLE: string;
+  public static _dndScrollCallback: Function;
+
 
   public static findControl(focusObj: HTMLElement): DwtControl { return undefined; }
 
@@ -96,7 +99,9 @@ export class DwtControl {
   public setHandler(eventType: string, hdlrFunc: (ev: DwtEvent) => boolean): void {}
   public setContent(html: string): void {}
   public _dndScrollCallback(params: DwtControl_DndScrollCallbackParams, ev: DwtEvent): void {}
-
+  public __doBlur(ev: DwtFocusEvent): void {};
+  public __doFocus(ev: DwtFocusEvent): void {};
+  public getDropTarget(): DwtDropTarget { return undefined; };
 }
 
 export interface DwtControlParams {

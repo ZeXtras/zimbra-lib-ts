@@ -37,6 +37,7 @@ export class Dwt {
   public static SCROLL_Y: number;
   public static STATIC_STYLE: string;
   public static RELATIVE_STYLE: string;
+  public static moveCursorToEnd: (input: HTMLInputElement) => void;
 
   public static setSize(el: HTMLElement, newWidth: number|string, height: number|string): void {}
   public static getSize(el: HTMLElement): DwtPoint { return undefined; }
