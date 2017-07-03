@@ -40,7 +40,7 @@ export class DwtSelect extends DwtButton {
 }
 
 export interface DwtSelectParams extends DwtButtonParams {
-  options?: DwtSelectOptionData[];
+  options?: (DwtSelectOptionData | DwtSelectOption)[];
 }
 
 export class DwtSelectOption {

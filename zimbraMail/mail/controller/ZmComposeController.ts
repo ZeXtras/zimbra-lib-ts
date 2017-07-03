@@ -62,7 +62,8 @@ export class ZmComposeController extends ZmController {
   public _completeAllUpload(filesArray: any[]): void {}
   public _switchInclude(op: string): void {}
   public _initAutoSave(): void {}
-
+  /** @deprecated from Zimbra >= 8.5 */ public _uploadMyComputerFile(files: File[], prevData?: string[], start?: number): void {}
+  public _initUploadMyComputerFile(files: File[]): void {}
 }
 
 export interface ZmComposeControllerSetDependentOptionsParams {

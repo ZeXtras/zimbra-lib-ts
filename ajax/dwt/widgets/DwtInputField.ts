@@ -38,4 +38,5 @@ interface DwtInputFieldParams extends DwtCompositeParams {
   hint?: string;
   forceMultiRow?: boolean;
   rows?: number;
+  initialValue?: string;
 }
