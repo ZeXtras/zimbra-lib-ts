@@ -36,6 +36,7 @@ export class DwtTabView extends DwtComposite {
   }
   public getTabButton(tabKey: string): DwtTabButton { return undefined; }
   public getTabGroupMember(): DwtTabGroup { return undefined; }
+  public switchToTab(tabKey: string): void {}
 
 }
 

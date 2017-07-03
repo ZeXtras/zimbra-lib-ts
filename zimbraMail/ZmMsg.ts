@@ -103,6 +103,12 @@ export class ZmMsg {
   public static zimbraTitle: string;
   public static rename: string;
   public static del: string;
+  public static minute: string;
+  public static minutes: string;
+  public static loading: string;
+  public static sendAsEmail: string;
+  public static download: string;
+  public static reset: string;
   /** @deprecated
    * public static name: string;
    * Please use @see ZmMsg._name
