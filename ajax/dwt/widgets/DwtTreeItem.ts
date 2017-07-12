@@ -22,6 +22,7 @@ import {DwtComposite, DwtCompositeParams} from "./DwtComposite";
 import {DwtMenu} from "./DwtMenu";
 import {DwtSelectionEvent} from "../events/DwtSelectionEvent";
 import {DwtEvent} from "../events/DwtEvent";
+import {DwtMouseEvent} from "../events/DwtMouseEvent";
 
 export class DwtTreeItem extends DwtComposite {
 
@@ -53,6 +54,10 @@ export class DwtTreeItem extends DwtComposite {
   public _realizeDeferredChildren(): void {}
   public _expand(expand: boolean, ev: DwtEvent, skipNotify: boolean): void {}
   public sort(compareFunction: (a: any, b: any) => number): void {}
+  public showCheckBox(show: boolean): void {}
+  public getChecked(): boolean { return undefined; }
+  public setChecked(check: boolean, force?: boolean): void {}
+  public _handleCheckboxOnclick(ev: DwtMouseEvent): void {}
 
 }
 
