@@ -25,12 +25,16 @@ import {DwtComposite} from "./DwtComposite";
 import {AjxEventMgr} from "../../events/AjxEventMgr";
 import {DwtDragSource} from "../dnd/DwtDragSource";
 import {DwtDropTarget} from "../dnd/DwtDropTarget";
+import {AjxCallback} from "../../boot/AjxCallback";
+import {DwtFocusEvent} from "../events/DwtFocusEvent";
 
 export class DwtControl {
 
   public static ALL_BY_ID: {[id: string]: DwtControl}; // TODO: Should be Private.
   public static ABSOLUTE_STYLE: string;
   public static STATIC_STYLE: string;
+  public static _dndScrollCallback: Function;
+
 
   public static findControl(focusObj: HTMLElement): DwtControl { return undefined; }
 
@@ -39,6 +43,7 @@ export class DwtControl {
   public items: DwtControl[];
   public _data: {};
   public _htmlElId: string;
+  public _dndScrollId: string;
   public TEMPLATE: string;
   public _evtMgr: AjxEventMgr;
 
@@ -59,8 +64,11 @@ export class DwtControl {
   public getVisible(): boolean { return undefined; }
   public setEnabled(enabled: boolean): void {}
   public getEnabled(): boolean { return undefined; }
+
   public setToolTipContent(toolTip: string, useBrowser?: boolean): void;
+  public setToolTipContent(toolTip: AjxCallback): void;
   public setToolTipContent(toolTip: any, useBrowser?: boolean): void {}
+
   public isListenerRegistered(evType: string): boolean { return null; }
   public reparent(newParent: DwtComposite, index?: number): void {}
   public reparentHtmlElement(newParent: string|HTMLElement|Node, position?: number): void {}
@@ -70,10 +78,15 @@ export class DwtControl {
   public setBounds(x: number, y: number, width: number, height: number): void {}
   public getHTMLElId(): string { return null; }
   public getZIndex(getFromStyle?: boolean): number { return undefined; }
+  public getPosition(): string { return undefined; }
+  public setPosition(position: string): void {}
+  public getW(): number { return undefined; }
+  public getH(): number { return undefined; }
   public setLocation(x: number|string, y: number|string): DwtControl { return undefined; }
   public getLocation(): DwtPoint { return undefined; }
   public setDisplay(displayValue: string): void {}
   public getVisibility(): boolean { return undefined; }
+  public setVisibility(visibility: boolean): void {}
   public setSelected(selected: boolean): void {};
   public getClassName(): string { return undefined; }
   public removeAllListeners(type?: string): boolean { return undefined; }
@@ -85,7 +98,10 @@ export class DwtControl {
   public _setEventHdlrs(events: string[], clear?: boolean, element?: HTMLElement): void {}
   public setHandler(eventType: string, hdlrFunc: (ev: DwtEvent) => boolean): void {}
   public setContent(html: string): void {}
-
+  public _dndScrollCallback(params: DwtControl_DndScrollCallbackParams, ev: DwtEvent): void {}
+  public __doBlur(ev: DwtFocusEvent): void {};
+  public __doFocus(ev: DwtFocusEvent): void {};
+  public getDropTarget(): DwtDropTarget { return undefined; };
 }
 
 export interface DwtControlParams {
@@ -98,4 +114,12 @@ export interface DwtControlParams {
   index?: number;
   template?: string;
   tooltip?: string;
+}
+
+interface DwtControl_DndScrollCallbackParams {
+  container: Element;
+  threshold: number;
+  amount: number;
+  interval: number;
+  id: string;
 }

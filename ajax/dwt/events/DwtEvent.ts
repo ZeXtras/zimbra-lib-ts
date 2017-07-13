@@ -22,6 +22,8 @@ import {DwtControl} from "../widgets/DwtControl";
 
 export class DwtEvent {
   public static ONKEYUP: string = "onkeyup";
+  public static ONBLUR: string;
+  public static ONFOCUS: string;
   public static ONCLICK: string = "onclick";
   public static ONMOUSEMOVE: string = "onmousemove";
   public static POPUP: string = "POPUP";

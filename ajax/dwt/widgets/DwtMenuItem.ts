@@ -19,6 +19,7 @@
  */
 
 import {DwtButton, DwtButtonParams} from "./DwtButton";
+import {DwtEvent} from "../events/DwtEvent";
 
 export class DwtMenuItem extends DwtButton {
 
@@ -33,6 +34,8 @@ export class DwtMenuItem extends DwtButton {
 
   public _emulateSingleClick(): void {}
   public setChecked(checked: boolean, skipNotify: boolean): void {}
+  public getChecked(): boolean { return undefined; }
+  public _setChecked(checked: boolean, ev: DwtEvent, skipNotify: boolean): void {}
 
 }
 

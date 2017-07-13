@@ -22,6 +22,7 @@ import {DwtComposite, DwtCompositeParams} from "./DwtComposite";
 import {DwtButton, DwtButtonParams} from "./DwtButton";
 
 export class DwtToolBar extends DwtComposite {
+  static HORIZ_STYLE: string;
 
   constructor(params: DwtToolBarParams) {
     super(params);
@@ -40,6 +41,13 @@ export class DwtToolBarButton extends DwtButton {
     super(params);
   }
 
+}
+
+/**
+ * @since Zimbra 8.5.0
+ * @deprecated
+ */
+export class DwtToolBarSpacer extends DwtComposite {
 }
 
 export interface DwtToolBarButtonParams extends DwtButtonParams {

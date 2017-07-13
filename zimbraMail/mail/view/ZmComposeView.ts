@@ -30,6 +30,7 @@ import {DwtMenu} from "../../../ajax/dwt/widgets/DwtMenu";
 import {DwtMenuItem} from "../../../ajax/dwt/widgets/DwtMenuItem";
 import {ZmComposeController} from "../controller/ZmComposeController";
 import {ZmAttachDialog} from "../../share/view/dialog/ZmAttachDialog";
+import {ZmHtmlEditor} from "../../share/view/htmlEditor/ZmHtmlEditor";
 
 export class ZmComposeView extends DwtComposite {
 
@@ -74,6 +75,33 @@ export class ZmComposeView extends DwtComposite {
   public isDirty(incAddrs?: boolean, incSubject?: boolean): boolean { return undefined; }
   public _submitMyComputerAttachments(files: FileList, node: HTMLInputElement, isInline: boolean): void {}
   public _attsDoneCallback(isDraft: boolean, status: string, attId: string, docIds: string[], msgIds: string[]): void {}
-
   public _createAttachMenuItem(attachMenu: DwtMenu, appName: string, listener: AjxListener): DwtMenuItem { return undefined; }
+  public removeOrigMsgAtt(): void {}
+  public getHtmlEditor(): ZmHtmlEditor { return undefined; }
+  public getUserText(): string { return undefined; }
+  public resetBody(params: ZmComposeView_resetBodyParams, noEditorUpdate?: boolean): void {}
+  public cleanupAttachments(all: boolean): void {}
+
 }
+
+export interface ZmComposeView_resetBodyParams {
+  op: string;
+  action: string;
+  msg: ZmMailMsg;
+  extraBodyText: string;
+  incOptions?: ZmComposeView_IncOptions;
+  keepAttachments: boolean;
+  noEditorUpdate?: boolean;
+}
+
+export type ZmComposeView_IncOptions = {
+  prefix: boolean;
+  headers: boolean;
+  what: string;
+};
+
+export type IncOptions = {
+  prefix: true;
+  headers: true;
+  what: true;
+};

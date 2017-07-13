@@ -24,6 +24,7 @@ export class DwtDragEvent {
   public action: string;
   public srcData: any;
   public srcControl: DwtControl;
+  public doIt: boolean;
 
   public static SET_DATA: string;
 }

@@ -19,6 +19,7 @@
  */
 
 export class AjxUtil {
+  static FULL_URL_RE: RegExp;
 
   public static toArray(obj: any|any[]): any[] { return undefined; }
   public static arraySize(arr: any[]|{[key: string]: any}): number { return undefined; }

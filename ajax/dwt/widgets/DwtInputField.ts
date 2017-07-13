@@ -29,6 +29,8 @@ export class DwtInputField extends DwtComposite {
   public setValue(value: string, noValidate?: boolean): void {}
   public getValue(): string { return undefined; }
   public getInputElement(): HTMLInputElement { return undefined; }
+  public moveCursorToEnd(): void {}
+  public clear(): void {}
 
 }
 
@@ -36,4 +38,5 @@ interface DwtInputFieldParams extends DwtCompositeParams {
   hint?: string;
   forceMultiRow?: boolean;
   rows?: number;
+  initialValue?: string;
 }

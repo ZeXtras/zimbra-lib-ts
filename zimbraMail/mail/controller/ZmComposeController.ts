@@ -23,6 +23,7 @@ import {ZmActionMenu} from "../../share/view/ZmActionMenu";
 import {ZmMailMsg} from "../model/ZmMailMsg";
 import {ZmCsfeResult} from "../../../zimbra/csfe/ZmCsfeResult";
 import {AjxCallback} from "../../../ajax/boot/AjxCallback";
+import {ZmComposeView, ZmComposeView_IncOptions} from "../view/ZmComposeView";
 
 export class ZmComposeController extends ZmController {
 
@@ -33,10 +34,14 @@ export class ZmComposeController extends ZmController {
   public static RADIO_GROUP: {[name: string]: number};
   public static OP_CHECK: {[name: string]: boolean};
   public static DRAFT_TYPE_AUTO: string;
+  public static INC_MAP: {[op: string]: string};
 
   public _action: string;
+  public _curIncOptions: ZmComposeView_IncOptions;
   public _optionsMenu: {[name: string]: ZmActionMenu};
   public _listeners: {[name: string]: Function};
+  public _composeView: ZmComposeView;
+  public _msg: ZmMailMsg;
 
   public _setView(params: ZmComposeControllerSetViewParams): void {};
   public _setDependentOptions(incOptions: ZmComposeControllerSetDependentOptionsParams): void {}
@@ -44,20 +49,21 @@ export class ZmComposeController extends ZmController {
   public _handleResponseSaveDraftListener(draftType: string, callback: Function, results: ZmCsfeResult): void {};
   public saveDraft(
     draftType: string,
-    attId: {
+    attId?: {
       ct: string;
       id: string;
       s: number;
       ver: string;
     }[],
-    docIds: {id: string, ver: string, ct: string, s: number }[],
+    docIds?: {id: string, ver: string, ct: string, s: number }[],
     callback?: AjxCallback,
     contactId?: string
   ): void {}
-
-  _completeAllUpload(filesArray: any[]): void {}
-
+  public _completeAllUpload(filesArray: any[]): void {}
+  public _switchInclude(op: string): void {}
   public _initAutoSave(): void {}
+  /** @deprecated from Zimbra >= 8.5 */ public _uploadMyComputerFile(files: File[], prevData?: string[], start?: number): void {}
+  public _initUploadMyComputerFile(files: File[]): void {}
 }
 
 export interface ZmComposeControllerSetDependentOptionsParams {
