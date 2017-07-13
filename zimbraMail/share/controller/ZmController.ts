@@ -45,6 +45,7 @@ export class ZmController {
    * @Override
    */
   public static getDefaultViewType(): string { return undefined; }
+  public _preHideCallback(): void {}
   public getCurrentViewId(): string { return undefined; }
   public getSessionId(): string { return undefined; }
   public _clearDialog(dialog: DwtDialog): void {}
