@@ -51,7 +51,8 @@ export class DwtControl {
   public addListener(eventType: string, listener: AjxListener, index?: number): boolean { return undefined; }
   public addControlListener(listener: AjxListener, index?: number): boolean { return undefined; }
   public notifyListeners(eventType: string, event?: DwtEvent): any {}
-  public _position(loc: DwtPoint): void {}
+  public setZIndex(idx: number): void {}
+  public _position(loc?: DwtPoint): void {}
   public _createHtmlFromTemplate(templateId: string, data?: {[name: string]: any}): void {}
   public getHtmlElement(): HTMLElement { return undefined; }
   public setScrollStyle(style: number): void {}
@@ -77,7 +78,6 @@ export class DwtControl {
   public setBounds(x: number, y: number, width: number, height: number): void {}
   public getHTMLElId(): string { return null; }
   public getZIndex(getFromStyle?: boolean): number { return undefined; }
-  public setZIndex(idx: number): void {}
   public getPosition(): string { return undefined; }
   public setPosition(position: string): void {}
   public getW(): number { return undefined; }
