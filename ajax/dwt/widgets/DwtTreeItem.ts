@@ -62,7 +62,7 @@ export class DwtTreeItem extends DwtComposite {
 }
 
 export interface DwtTreeItemParams extends DwtCompositeParams {
-  text: string;
+  text?: string;
   selectable?: boolean;
   dndScrollCallback?: Function;
   dndScrollId?: string;
