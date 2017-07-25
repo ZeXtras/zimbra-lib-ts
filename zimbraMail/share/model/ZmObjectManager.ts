@@ -41,5 +41,6 @@ export class ZmObjectManager {
   public addHandler(h: ZmObjectHandler, type?: string, priority?: number): void {}
   public removeHandler(h: ZmObjectHandler, type?: string): void {}
   public sortHandlers(): void {}
+  public getHandlers(): {[type: string]: ZmObjectHandler[]} { return undefined; }
 
 }
