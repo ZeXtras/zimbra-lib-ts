@@ -23,6 +23,10 @@ export class DwtDraggable {
 
   public static dragEl: HTMLElement;
 
+  public static __start(ev: MouseEvent): void {}
+  public static __drag(ev: MouseEvent): void {}
+  public static __end(): void {}
+
   public static setDragBoundaries(
     dragEl: HTMLElement,
     minX: number,

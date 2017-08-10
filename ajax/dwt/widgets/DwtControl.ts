@@ -46,6 +46,7 @@ export class DwtControl {
   public _dndScrollId: string;
   public TEMPLATE: string;
   public _evtMgr: AjxEventMgr;
+  public _propagateEvent: {[eventType: string]: boolean};
 
   public constructor(params: DwtControlParams) {}
   public addListener(eventType: string, listener: AjxListener, index?: number): boolean { return undefined; }
@@ -93,6 +94,7 @@ export class DwtControl {
   public replaceElement(oel: HTMLElement|string, nel?: HTMLElement|string, inheritClass?: boolean, inheritStyle?: boolean): void {}
   public hasFocus(): boolean { return undefined; }
   public focus(): void {}
+  public blur(): void {}
   public setDragSource(dragSource: DwtDragSource): void {}
   public setDropTarget(dragTarget: DwtDropTarget): void {}
   public _setEventHdlrs(events: string[], clear?: boolean, element?: HTMLElement): void {}
