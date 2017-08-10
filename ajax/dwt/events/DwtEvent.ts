@@ -25,6 +25,8 @@ export class DwtEvent {
   public static ONBLUR: string;
   public static ONFOCUS: string;
   public static ONCLICK: string = "onclick";
+  public static ONMOUSEDOWN: string;
+  public static ONMOUSEUP: string;
   public static ONMOUSEMOVE: string = "onmousemove";
   public static POPUP: string = "POPUP";
   public static CONTROL: string = "CONTROL";
