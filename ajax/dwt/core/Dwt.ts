@@ -41,6 +41,7 @@ export class Dwt {
   public static Z_HIDDEN: number;
   public static Z_DIALOG: number;
   public static LOC_NOWHERE: number;
+  public static CLEAR: number;
 
   public static setSize(el: HTMLElement, newWidth: number|string, height: number|string): void {}
   public static getSize(el: HTMLElement): DwtPoint { return undefined; }

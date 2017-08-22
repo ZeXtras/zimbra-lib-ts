@@ -31,6 +31,7 @@ export class DwtInputField extends DwtComposite {
   public getInputElement(): HTMLInputElement { return undefined; }
   public moveCursorToEnd(): void {}
   public clear(): void {}
+  public setHint(hint: string): void {}
 
 }
 
