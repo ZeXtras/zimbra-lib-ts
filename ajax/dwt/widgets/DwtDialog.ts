@@ -31,8 +31,8 @@ export class DwtDialog extends DwtBaseDialog {
   public static DISMISS_BUTTON: number;
   public static NO_BUTTON: number;
   public static YES_BUTTON: number;
-  public static ALL_BUTTONS: number[];
-  public static NO_BUTTONS: number[];
+  public static ALL_BUTTONS: number;
+  public static NO_BUTTONS: number;
 
   public static MODELESS: number;
   public static MODAL: number;

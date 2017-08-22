@@ -93,6 +93,7 @@ export class DwtControl {
   public removeAllListeners(type?: string): boolean { return undefined; }
   public replaceElement(oel: HTMLElement|string, nel?: HTMLElement|string, inheritClass?: boolean, inheritStyle?: boolean): void {}
   public hasFocus(): boolean { return undefined; }
+  public setFocusElement(el: any): void {}
   public focus(): void {}
   public blur(): void {}
   public setDragSource(dragSource: DwtDragSource): void {}
@@ -104,6 +105,8 @@ export class DwtControl {
   public __doBlur(ev: DwtFocusEvent): void {};
   public __doFocus(ev: DwtFocusEvent): void {};
   public getDropTarget(): DwtDropTarget { return undefined; };
+  public getCursor(): string { return undefined; }
+  public setCursor(cursor: string): void {}
 }
 
 export interface DwtControlParams {

@@ -19,6 +19,7 @@
  */
 
 import {DwtEvent} from "./DwtEvent";
+import {DwtControl} from "../widgets/DwtControl";
 
 export class DwtUiEvent extends DwtEvent {
   public shiftKey: boolean;
@@ -29,4 +30,5 @@ export class DwtUiEvent extends DwtEvent {
   public static getTargetWithProp(ev: Event, prop: string, useRelatedTarget?: boolean, value?: string): HTMLElement { return undefined; }
 
   public static getEvent(ev: Event, target?: HTMLElement): Event { return undefined; }
+  public setFromDhtmlEvent(event: Event, obj?: DwtControl|true): Event {return undefined; }
 }
