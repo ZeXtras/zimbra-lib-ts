@@ -21,8 +21,8 @@
 import {AjxCallback} from "./AjxCallback";
 
 export class AjxDispatcher {
-  public static require(pkg: string[], async?: boolean, callback?: AjxCallback, args?: any[], preLoadOk?: boolean): void
-  public static require(pkg: string, async?: boolean, callback?: AjxCallback, args?: any[], preLoadOk?: boolean): void
+  public static require(pkg: string[], async?: boolean, callback?: AjxCallback, args?: any[], preLoadOk?: boolean): void;
+  public static require(pkg: string, async?: boolean, callback?: AjxCallback, args?: any[], preLoadOk?: boolean): void;
   public static require(pkg: any, async?: boolean, callback?: AjxCallback, args?: any[], preLoadOk?: boolean): void {}
 
   public static run(pkg: string, ...args: any[]): any {}

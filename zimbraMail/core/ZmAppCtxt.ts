@@ -84,8 +84,8 @@ export class ZmAppCtxt {
   public getCurrentView(): DwtComposite { return undefined; }
   public getIdentityCollection(account?: ZmZimbraAccount): ZmIdentityCollection { return undefined; }
   public getAttachDialog(): ZmAttachDialog { return undefined; }
-  public getById(id: string|number): ZmItem|ZmOrganizer { return undefined; };
-  public setIsExpandableDL(id: string, canExpand: boolean): void {};
+  public getById(id: string|number): ZmItem|ZmOrganizer { return undefined; }
+  public setIsExpandableDL(id: string, canExpand: boolean): void {}
   public getFolderTree(acct?: ZmZimbraAccount): ZmFolderTree { return undefined; }
   public isExternalAccount(): boolean { return undefined; }
   public getCurrentViewType(): string { return undefined; }

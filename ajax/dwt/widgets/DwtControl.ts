@@ -88,7 +88,7 @@ export class DwtControl {
   public setDisplay(displayValue: string): void {}
   public getVisibility(): boolean { return undefined; }
   public setVisibility(visibility: boolean): void {}
-  public setSelected(selected: boolean): void {};
+  public setSelected(selected: boolean): void {}
   public getClassName(): string { return undefined; }
   public removeAllListeners(type?: string): boolean { return undefined; }
   public replaceElement(oel: HTMLElement|string, nel?: HTMLElement|string, inheritClass?: boolean, inheritStyle?: boolean): void {}
@@ -102,9 +102,9 @@ export class DwtControl {
   public setHandler(eventType: string, hdlrFunc: (ev: DwtEvent) => boolean): void {}
   public setContent(html: string): void {}
   public _dndScrollCallback(params: DwtControl_DndScrollCallbackParams, ev: DwtEvent): void {}
-  public __doBlur(ev: DwtFocusEvent): void {};
-  public __doFocus(ev: DwtFocusEvent): void {};
-  public getDropTarget(): DwtDropTarget { return undefined; };
+  public __doBlur(ev: DwtFocusEvent): void {}
+  public __doFocus(ev: DwtFocusEvent): void {}
+  public getDropTarget(): DwtDropTarget { return undefined; }
   public getCursor(): string { return undefined; }
   public setCursor(cursor: string): void {}
 }

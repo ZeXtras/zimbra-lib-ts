@@ -39,8 +39,8 @@ export class ZmAttachDialog extends DwtDialog {
   public getMyComputerView(): ZmMyComputerTabViewPage { return undefined; }
   public enableInlineOption(enable: boolean): void {}
   public setInline(isInline: boolean): void {}
-  public setOkListener(callback: AjxCallback): void {};
-  public setCancelListener(callback: AjxCallback): void {};
+  public setOkListener(callback: AjxCallback): void {}
+  public setCancelListener(callback: AjxCallback): void {}
 
 }
 

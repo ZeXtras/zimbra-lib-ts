@@ -78,24 +78,24 @@ export class ZmApp {
   public popView(force?: boolean, viewId?: number, skipHistory?: boolean): void {}
 
   // Functions called during construction
-  // public _defineAPI(): void {};
-  // public _registerSettings(): void {};
-  // public _registerOperations(): void {};
-  // public _registerItems(): void {};
-  public _registerOrganizers(): void {};
-  // public _setupSearchToolbar(): void {};
-  public _registerApp(): void {};
-  public _registerSettings(settings?: ZmSettings): void {};
-  public _registerPrefs(): void {}; // called when Preferences pkg is loaded
+  // public _defineAPI(): void {}
+  // public _registerSettings(): void {}
+  // public _registerOperations(): void {}
+  // public _registerItems(): void {}
+  public _registerOrganizers(): void {}
+  // public _setupSearchToolbar(): void {}
+  public _registerApp(): void {}
+  public _registerSettings(settings?: ZmSettings): void {}
+  public _registerPrefs(): void {} // called when Preferences pkg is loaded
 
   // Functions that apps can override in response to certain events
-  // public startup(result) {}; // run during startup
-  // public preNotify(notify) {}; // run before handling notifications
-  // public deleteNotify(ids) {}; // run on delete notifications
-  // public createNotify(list) {}; // run on create notifications
-  // public modifyNotify(list) {}; // run on modify notifications
-  // public postNotify(notify) {}; // run after handling notifications
-  // public refresh(refresh) {};	// run when a <refresh> block arrives
+  // public startup(result) {} // run during startup
+  // public preNotify(notify) {} // run before handling notifications
+  // public deleteNotify(ids) {} // run on delete notifications
+  // public createNotify(list) {} // run on create notifications
+  // public modifyNotify(list) {} // run on modify notifications
+  // public postNotify(notify) {} // run after handling notifications
+  // public refresh(refresh) {} // run when a <refresh> block arrives
   public handleOp(op: string): void {}  // handle an operation
 
 }

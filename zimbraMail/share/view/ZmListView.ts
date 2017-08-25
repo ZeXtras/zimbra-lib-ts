@@ -40,7 +40,7 @@ export class ZmListView extends DwtListView {
   public _state: ZmListViewStateObject;
 
   constructor(params: ZmListViewParams) { super(params); }
-  public getList(): AjxVector<any> { return undefined; };
+  public getList(): AjxVector<any> { return undefined; }
   public getItemList(): ZmList { return undefined; }
   public _restoreState(state?: ZmListViewStateObject): void {}
   public _saveState(state?: ZmListViewSaveStateObject): void {}
