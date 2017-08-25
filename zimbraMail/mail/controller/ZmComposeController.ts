@@ -43,10 +43,10 @@ export class ZmComposeController extends ZmController {
   public _composeView: ZmComposeView;
   public _msg: ZmMailMsg;
 
-  public _setView(params: ZmComposeControllerSetViewParams): void {};
+  public _setView(params: ZmComposeControllerSetViewParams): void {}
   public _setDependentOptions(incOptions: ZmComposeControllerSetDependentOptionsParams): void {}
   public _createOptionsMenu(action: string): ZmActionMenu { return undefined; }
-  public _handleResponseSaveDraftListener(draftType: string, callback: Function, results: ZmCsfeResult): void {};
+  public _handleResponseSaveDraftListener(draftType: string, callback: Function, results: ZmCsfeResult): void {}
   public saveDraft(
     draftType: string,
     attId?: {

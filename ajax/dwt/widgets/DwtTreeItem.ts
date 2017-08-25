@@ -43,12 +43,12 @@ export class DwtTreeItem extends DwtComposite {
   public getExpanded(): boolean { return undefined; }
   public setVisible(visible?: boolean, itemOnly?: boolean, childOnly?: boolean): void {}
   public _setSelected(selected: boolean, noFocus?: boolean): void {}
-  public getText(): string { return null; };
-  public setText(text: string): void {};
-  public setImage(image: string): void {};
-  public onAction(event: DwtSelectionEvent): void {};
+  public getText(): string { return null; }
+  public setText(text: string): void {}
+  public setImage(image: string): void {}
+  public onAction(event: DwtSelectionEvent): void {}
   public getData(key: string): any { return undefined; }
-  public getChildren(): DwtTreeItem[] { return undefined; };
+  public getChildren(): DwtTreeItem[] { return undefined; }
   public _initialize(index?: number, realizeDeferred?: boolean, forceNode?: boolean): void {}
   public showExpansionIcon(show: boolean): void {}
   public _realizeDeferredChildren(): void {}

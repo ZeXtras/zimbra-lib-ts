@@ -23,7 +23,7 @@ import {ZmZimletBase} from "./ZmZimletBase";
 export class ZmZimletContext {
   public handlerObject: ZmZimletBase;
   public userProperties: UserProperty[];
-  public setPropValue(name: string, val: any): void {};
+  public setPropValue(name: string, val: any): void {}
   public name: string;
   public version: string;
   public priority: number;

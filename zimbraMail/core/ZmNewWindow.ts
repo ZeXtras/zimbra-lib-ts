@@ -23,7 +23,7 @@ import {ZmApp} from "./ZmApp";
 
 export class ZmNewWindow extends ZmController {
 
-  public static _confirmExitMethod() {};
+  public static _confirmExitMethod() {}
 
   public _apps: {[appName: string]: ZmApp};
 

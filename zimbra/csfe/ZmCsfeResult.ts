@@ -38,7 +38,7 @@ export class ZmCsfeResult {
     this._data = data;
     this._isException = (isException === true);
     this._header = header;
-  };
+  }
 
   public getResponse(): ZmCsfeResultData {
     if (this._isException) {
@@ -46,7 +46,7 @@ export class ZmCsfeResult {
     } else {
       return this._data;
     }
-  };
+  }
 
 }
 

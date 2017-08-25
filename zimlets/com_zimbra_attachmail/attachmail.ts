@@ -26,7 +26,7 @@ export class AttachMailTabView extends DwtComposite {
 
   public attachDialog: ZmAttachDialog;
 
-  public uploadFiles(attachmentDlg: ZmAttachDialog, msgIds: string[]): void {};
+  public uploadFiles(attachmentDlg: ZmAttachDialog, msgIds: string[]): void {}
   public getSelectedMsgs(): ZmMailMsg[] { return undefined; }
 
 }

@@ -46,7 +46,7 @@ export class DwtButton extends DwtLabel {
   public getMenu(dontCreate?: boolean): DwtMenu { return undefined; }
   public setImage(imageInfo: string): void {}
   public _createHtmlFromTemplate(templateId: string, data: {[key: string]: any}): void {}
-  public _emulateSingleClick(): void {};
+  public _emulateSingleClick(): void {}
   public dontStealFocus(val: boolean = true): void {}
   public popup(menu?: DwtMenu): void {}
   public removeDropDownSelectionListener(listener?: AjxListener): void {}

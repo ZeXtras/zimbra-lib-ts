@@ -25,7 +25,7 @@ import {ZmItem} from "./ZmItem";
 
 export class ZmList  extends ZmModel {
 
-  public get(index: number): ZmItem {return undefined; };
+  public get(index: number): ZmItem {return undefined; }
   public getArray(): ZmItem[] { return undefined; }
   public size(): number { return undefined; }
   public contains(element: ZmItem): boolean { return undefined; }

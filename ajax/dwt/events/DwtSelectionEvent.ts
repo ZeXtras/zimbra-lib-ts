@@ -24,7 +24,7 @@ import {DwtUiEvent} from "./DwtUiEvent";
 export class DwtSelectionEvent extends DwtUiEvent {
   public kbNavEvent: boolean;
 
-  public reset(): void {};
+  public reset(): void {}
 
   public detail: number;
   public button: number;
