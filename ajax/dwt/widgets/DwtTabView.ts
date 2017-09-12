@@ -23,20 +23,21 @@ import {DwtPropertyPage} from "./DwtPropertyPage";
 import {DwtButton} from "./DwtButton";
 import {AjxCallback} from "../../boot/AjxCallback";
 import {DwtTabGroup} from "../keyboard/DwtTabGroup";
+import {AjxListener} from "../../events/AjxListener";
 
 export class DwtTabView extends DwtComposite {
 
   constructor(params: DwtTabViewParams) {
     super(params);
   }
-  public addTab(title: string, tabViewOrCallback: DwtTabViewPage, buttonId?: string, index?: number): string;
-  public addTab(title: string, tabViewOrCallback: AjxCallback, buttonId?: string, index?: number): string;
-  public addTab(title: string, tabViewOrCallback: any, buttonId?: string, index?: number): string {
+  public addTab(title: string, tabViewOrCallback: DwtTabViewPage|AjxCallback|any, buttonId?: string, index?: number): number {
     return undefined;
   }
-  public getTabButton(tabKey: string): DwtTabButton { return undefined; }
+  public getTabButton(tabKey: number): DwtTabButton { return undefined; }
   public getTabGroupMember(): DwtTabGroup { return undefined; }
-  public switchToTab(tabKey: string): void {}
+  public switchToTab(tabKey: number): void {}
+  public getCurrentTab(): number { return undefined; }
+  public addStateChangeListener(listener: AjxListener): void {}
 
 }
 
@@ -46,4 +47,7 @@ export class DwtTabButton extends DwtButton {
 }
 
 export class DwtTabViewPage extends DwtPropertyPage {
+
+  public _tabKey: number;
+
 }
