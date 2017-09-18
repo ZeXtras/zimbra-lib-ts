@@ -41,8 +41,7 @@ import {AjxListener} from "../../../ajax/events/AjxListener";
 import {DwtMenu} from "../../../ajax/dwt/widgets/DwtMenu";
 import {ZmComposeView} from "../../mail/view/ZmComposeView";
 
-export class ZmZimletBase extends ZmObjectHandler {
-
+export class ZmZimletBase extends ZmObjectHandler implements CreateAppZimlet {
   public _dlg_propertyEditor?: DwtDialog;
   public _propertyEditor?: DwtPropertyEditor;
 
@@ -76,10 +75,10 @@ export class ZmZimletBase extends ZmObjectHandler {
   public getMessage(msg: string): string { return undefined; }
 
   // App Related functions
-  // public createApp(label: string, image: string, tooltip: string, index?: number, style?: string): string { return undefined; }
-  // public appActive(appName: string, active: boolean): void {}
-  // public appLaunch(appName: string): void {}
-  // public onSelectApp(id: string): void {}
+  public createApp(label: string, image: string, tooltip: string, index?: number, style?: string): string { return undefined; }
+  public appActive(appName: string, active: boolean): void {}
+  public appLaunch(appName: string): void {}
+  public onSelectApp(id: string): void {}
   // public onAction(id: string, action: string, currentViewId: string, lastViewId: string): void {}
 
   public sendRequest(requestStr: string|AjxSoapDoc, serverURL: string, requestHeaders: {[key: string]: string}, callback?: AjxCallback, useGet?: boolean, passErrors?: boolean): void|ZmCsfeResult { return undefined; }
