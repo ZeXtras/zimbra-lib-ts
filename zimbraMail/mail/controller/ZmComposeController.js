@@ -9,7 +9,8 @@ define(["require", "exports", "../../../ajax/boot/AjxPackage", "../../share/cont
     });
   }
   // Patch to allow to load correctly `ZmComposeController` class
-  if (typeof ZmComposeController.SETTINGS === "undefined") {
+  var is809 = /^8\.0\.9/.test(appCtxt.get(ZmSetting.CLIENT_VERSION));
+  if (typeof ZmComposeController.SETTINGS === "undefined" && !is809) {
     ZmComposeController.SETTINGS = [];
   }
   exports.ZmComposeController = ZmComposeController;
