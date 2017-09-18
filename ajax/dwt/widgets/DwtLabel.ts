@@ -35,6 +35,7 @@ export class DwtLabel extends DwtComposite {
   }
 
   public setText(text: string): void {}
+  public getText(): string { return undefined; }
 
   public setImage(imageInfo: string): void {}
 

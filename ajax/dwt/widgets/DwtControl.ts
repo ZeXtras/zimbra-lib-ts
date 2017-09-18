@@ -34,6 +34,7 @@ export class DwtControl {
   public static ABSOLUTE_STYLE: string;
   public static STATIC_STYLE: string;
   public static _dndScrollCallback: Function;
+  public static __mouseUpHdlr: (ev: MouseEvent) => boolean;
 
 
   public static findControl(focusObj: HTMLElement): DwtControl { return undefined; }
