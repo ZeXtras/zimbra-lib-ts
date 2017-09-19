@@ -27,5 +27,8 @@ export class ZmObjectHandler {
   public generateSpan(html: string[], idx: number, obj: any, spanId?: string, context?: string, options?: {}): number { return undefined; }
   public findObject(content: string, startIndex: number, objectMgr: ZmObjectManager): RegExpExecArray { return undefined; }
   public clicked(spanElement: HTMLElement, contentObjText: string, matchContext?: any, canvas?: any): void {}
+  public getClassName(object: Object, context: Object, id: string): string { return undefined; }
+  public getHoveredClassName(object: Object, context: Object, id: string): string { return undefined; }
+  public getActiveClassName(object: Object, context: Object, id: string): string { return undefined; }
 
 }
