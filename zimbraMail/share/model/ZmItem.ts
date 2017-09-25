@@ -41,7 +41,7 @@ export class ZmItem extends ZmModel {
 
   public static registerItem(type: string, params: ZmItemRegisterItemParams): void {}
 
-  constructor(params: any, id?: string, list?: ZmList, noCache?: boolean) {
+  constructor(params?: any, id?: string, list?: ZmList, noCache?: boolean) {
     super((<ZmItemParam>params).type);
   }
 
