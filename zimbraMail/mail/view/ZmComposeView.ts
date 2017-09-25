@@ -81,7 +81,8 @@ export class ZmComposeView extends DwtComposite {
   public getUserText(): string { return undefined; }
   public resetBody(params: ZmComposeView_resetBodyParams, noEditorUpdate?: boolean): void {}
   public cleanupAttachments(all: boolean): void {}
-
+  public setDocAttachments(tempMsg: ZmMailMsg, docIds: string[]): void {}
+  public getMsg(attId: string[], isDraft: boolean, tempMsg: ZmMailMsg, isTimed: boolean, contactId: string[]): ZmMailMsg { return undefined; }
 }
 
 export interface ZmComposeView_resetBodyParams {
