@@ -58,6 +58,9 @@ export class ZmComposeView extends DwtComposite {
   public _disableAttachments: boolean;
   public _attachDialog?: ZmAttachDialog;
   public _composeMode: string;
+  public _bodyContent: {
+    "text/plain": string
+  };
 
   public _addSendAsAndSendOboAddresses(menu: DwtSelect): void {}
   public _addSendAsOrSendOboAddresses(menu: DwtSelect, emails: string|{addr: string}[], isObo: boolean, displayValueFunc: Function): void {}
