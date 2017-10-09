@@ -30,15 +30,15 @@ export class ZmCsfeResult {
     return "ZmCsfeResult";
   }
 
-  constructor(data: ZmCsfeResultData, isException: boolean, header: ZmCsfeResultHeader) {
+  constructor(data?: ZmCsfeResultData, isException?: boolean, header?: ZmCsfeResultHeader) {
     this.set(data, isException, header);
   }
 
-  public set(data: ZmCsfeResultData, isException: boolean, header: ZmCsfeResultHeader) {
+  public set(data?: ZmCsfeResultData, isException?: boolean, header?: ZmCsfeResultHeader) {
     this._data = data;
     this._isException = (isException === true);
     this._header = header;
-  };
+  }
 
   public getResponse(): ZmCsfeResultData {
     if (this._isException) {
@@ -46,7 +46,7 @@ export class ZmCsfeResult {
     } else {
       return this._data;
     }
-  };
+  }
 
 }
 

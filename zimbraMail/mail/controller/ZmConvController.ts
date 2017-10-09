@@ -18,28 +18,11 @@
  * along with T4Z - TypeScript 4 Zimlet. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import {DwtControl, DwtControlParams} from "./DwtControl";
-import {AjxListener} from "../../events/AjxListener";
+import {ZmConvListController} from "./ZmConvListController";
+import {DwtEvent} from "../../../ajax/dwt/events/DwtEvent";
 
-export class DwtCheckbox extends DwtControl {
+export class ZmConvController extends ZmConvListController {
 
-  public constructor(params: DwtCheckboxParams) {
-    super(params);
-  }
+  public _backListener(ev: DwtEvent): void {}
 
-  public isSelected(): boolean {
-    return null;
-  }
-
-  public setSelected(selected: boolean): void {}
-
-  public setText(text: string): void {}
-
-  public addSelectionListener(listener: AjxListener): void {}
-
-}
-
-export interface DwtCheckboxParams extends DwtControlParams {
-  name: string;
-  checked: boolean;
 }

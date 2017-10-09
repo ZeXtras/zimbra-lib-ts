@@ -21,15 +21,26 @@
 import {AjxVector} from "../../../ajax/util/AjxVector";
 import {AjxCallback} from "../../../ajax/boot/AjxCallback";
 import {ZmBatchCommand} from "../../../zimbra/csfe/ZmBatchCommand";
+import {AjxSoapDoc} from "../../../ajax/soap/AjxSoapDoc";
 
 export class ZmSearch {
   public static TYPE: {[type: string]: string};
   public query: string;
+  public soapInfo: ZmSearchSoapInfoParams;
 
   constructor(params: ZmSearchParam) {}
 
-  public execute(params: {callback: AjxCallback; batchCmd?: ZmBatchCommand}) {}
+  public execute(
+    params: {
+      callback: AjxCallback,
+      errorCallback?: AjxCallback,
+      batchCmd?: ZmBatchCommand,
+      timeout?: number,
+      noBusyOverlay?: boolean
+    }
+  ) {}
 
+  public _getStandardMethod(soapDoc: AjxSoapDoc): Element { return undefined; }
 }
 
 export interface ZmSearchParam {

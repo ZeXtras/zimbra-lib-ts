@@ -26,6 +26,7 @@ import {ZmTreeView} from "./ZmTreeView";
 import {ZmZimbraAccount} from "../model/ZmZimbraAccount";
 import {DwtTreeItem} from "../../../ajax/dwt/widgets/DwtTreeItem";
 import {ZmOverviewController} from "../controller/ZmOverviewController";
+import {ZmFolder} from "../model/ZmFolder";
 
 export class ZmOverview extends DwtComposite {
 
@@ -48,6 +49,7 @@ export class ZmOverview extends DwtComposite {
   public clearSelection(): void {}
   public set(treeIds: string[], omit?: {[id: string]: boolean}): void {}
   public getTreeItemById(id: number, type?: string): DwtTreeItem { return undefined; }
+  public getSelected(typeOnly?: boolean): any { return undefined; }
 }
 
 export interface ZmOverviewParams extends DwtCompositeParams {

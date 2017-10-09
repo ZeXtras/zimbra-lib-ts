@@ -33,16 +33,25 @@ export class ZmAppViewMgr {
   public static CB_PRE_SHOW: string;
   public static CB_POST_HIDE: string;
   public static LEFT_NAV: string[];
+  public static C_TREE: string;
   public static C_TREE_FOOTER: string;
+
+  public static APP: string;
+  public static GLOBAL: string;
 
   public _toRemove: string[];
 
+  public _getView(viewId: string, app?: string): ZmAppViewMgrCreatedViewDescriptor { return undefined; }
   public getViewComponent(componentId: string, viewId?: string): DwtControl { return undefined; }
   public setViewComponents(viewId: string, components: {[name: string]: DwtControl}, show: boolean, app?: string): void {}
   public getCurrentView(viewId?: string): DwtControl { return undefined; }
   public displayComponent(cid: string, show: boolean, doFit?: boolean, comp?: DwtControl, noReflow?: boolean): void {}
   public createView(params: ZmAppViewMgrCreateViewParams): ZmAppViewMgrCreatedViewDescriptor { return undefined; }
   public pushView(id: string): void {}
+  public popView(force: boolean, viewId: number, skipHistory?: boolean): void {}
+  public getAppView(appName: string): string { return undefined; }
+  public setHiddenComponents(viewId: string, cidList: string[], hide: boolean, app?: string): void {}
+  public showSkinElement(cid: string, show: boolean, noReflow?: boolean): void {}
 
 }
 

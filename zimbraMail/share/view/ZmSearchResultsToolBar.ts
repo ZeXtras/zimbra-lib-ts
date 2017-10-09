@@ -1,8 +1,5 @@
 /*
- * T4Z - TypeScript 4 Zimlet
  * Copyright (C) 2017 ZeXtras S.r.l.
- *
- * This file is part of T4Z - TypeScript 4 Zimlet.
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License
@@ -14,13 +11,14 @@
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  * GNU General Public License for more details.
  *
- * You should have received a copy of the GNU General Public License
- * along with T4Z - TypeScript 4 Zimlet. If not, see <http://www.gnu.org/licenses/>.
+ * You should have received a copy of the GNU General Public License.
+ * If not, see <http://www.gnu.org/licenses/>.
  */
 
-import {ZaListViewController} from "../../common/ZaListViewController";
-import {ZaAccount} from "../model/ZaAccount";
+import {ZmSearchToolBar} from "./ZmSearchToolBar";
 
-export class ZaAccountListController extends ZaListViewController {
-  static _viewMailListenerLauncher(account: ZaAccount): void {}
+export class ZmSearchResultsToolBar extends ZmSearchToolBar {
+
+  public getSearchFieldValue(): string { return undefined; }
+
 }

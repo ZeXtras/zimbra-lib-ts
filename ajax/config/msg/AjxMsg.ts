@@ -19,4 +19,7 @@
  */
 
 export class AjxMsg {
+  public static yes: string;
+  public static no: string;
+  public static _close: string;
 }

@@ -34,5 +34,6 @@ export class ZmMsgController extends ZmMailListController {
   public _printListener(ev: DwtEvent): void {}
   public setMsg(msg: ZmMailMsg): void {}
   public _handleResponseShow(callback: AjxCallback, hidePagination: boolean, result?: ZmCsfeResult): void {}
+  public _backListener(ev: DwtEvent): void {}
 
 }

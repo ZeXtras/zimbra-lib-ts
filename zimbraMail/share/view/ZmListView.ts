@@ -34,12 +34,13 @@ export class ZmListView extends DwtListView {
 
   public static COL_WIDTH_ICON: number;
 
+  public _controller: ZmListController;
   public _listDiv: HTMLElement;
   public _folderId?: number;
   public _state: ZmListViewStateObject;
 
   constructor(params: ZmListViewParams) { super(params); }
-  public getList(): AjxVector<any> { return undefined; };
+  public getList(): AjxVector<any> { return undefined; }
   public getItemList(): ZmList { return undefined; }
   public _restoreState(state?: ZmListViewStateObject): void {}
   public _saveState(state?: ZmListViewSaveStateObject): void {}

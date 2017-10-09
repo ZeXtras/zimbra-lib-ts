@@ -24,6 +24,8 @@ import {DwtKeyboardMgr} from "../keyboard/DwtKeyboardMgr";
 import {DwtBaseDialog} from "./DwtBaseDialog";
 import {DwtControlEvent} from "../events/DwtControlEvent";
 import {DwtSelectionEvent} from "../events/DwtSelectionEvent";
+import {DwtFocusEvent} from "../events/DwtFocusEvent";
+import {DwtMouseEvent} from "../events/DwtMouseEvent";
 
 export class DwtShell extends DwtComposite {
 
@@ -31,6 +33,8 @@ export class DwtShell extends DwtComposite {
   public _currWinSize: DwtPoint;
   public static controlEvent: DwtControlEvent;
   public static selectionEvent: DwtSelectionEvent;
+  public static focusEvent: DwtFocusEvent;
+  public static mouseEvent: DwtMouseEvent;
 
   public getSize(incScroll?: boolean): DwtPoint {
     return new DwtPoint(0, 0);

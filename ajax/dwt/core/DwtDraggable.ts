@@ -18,5 +18,22 @@
  * along with T4Z - TypeScript 4 Zimlet. If not, see <http://www.gnu.org/licenses/>.
  */
 
+import {AjxCallback} from "../../boot/AjxCallback";
 export class DwtDraggable {
+
+  public static dragEl: HTMLElement;
+
+  public static __start(ev: MouseEvent): void {}
+  public static __drag(ev: MouseEvent): void {}
+  public static __end(): void {}
+
+  public static setDragBoundaries(
+    dragEl: HTMLElement,
+    minX: number,
+    maxX: number,
+    minY: number,
+    maxY: number
+  ): void {}
+
+  static init(handleEl: HTMLDivElement, parentEl: HTMLElement, minX: number, maxX: number, minY: number, maxY: number, dragStartCb: AjxCallback, dragCb: AjxCallback, dragEndCb: AjxCallback): void {}
 }

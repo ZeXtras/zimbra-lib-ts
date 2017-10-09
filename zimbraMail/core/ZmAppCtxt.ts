@@ -84,8 +84,8 @@ export class ZmAppCtxt {
   public getCurrentView(): DwtComposite { return undefined; }
   public getIdentityCollection(account?: ZmZimbraAccount): ZmIdentityCollection { return undefined; }
   public getAttachDialog(): ZmAttachDialog { return undefined; }
-  public getById(id: string|number): ZmItem|ZmOrganizer { return undefined; };
-  public setIsExpandableDL(id: string, canExpand: boolean): void {};
+  public getById(id: string|number): ZmItem|ZmOrganizer { return undefined; }
+  public setIsExpandableDL(id: string, canExpand: boolean): void {}
   public getFolderTree(acct?: ZmZimbraAccount): ZmFolderTree { return undefined; }
   public isExternalAccount(): boolean { return undefined; }
   public getCurrentViewType(): string { return undefined; }
@@ -93,13 +93,15 @@ export class ZmAppCtxt {
   public setTree(type: string, tree: ZmTree, account?: ZmZimbraAccount): void {}
   public cacheSet(id: string, value: any): void {}
   public getOverviewController(): ZmOverviewController { return undefined; }
-  public getTree(appId: string): ZmTree { return undefined; }
+  public getTree(type: string, account?: ZmZimbraAccount): ZmTree { return undefined; }
   public getConfirmationDialog(): DwtConfirmDialog { return undefined; }
   public getCurrentSearch(): ZmSearch { return undefined; }
   public getRenameFolderDialog(): ZmRenameFolderDialog { return undefined; }
   public getChooseFolderDialog(appName?: string): ZmChooseFolderDialog { return undefined; }
   public getZmUploadManager(): ZmUploadManager { return undefined; }
   public getUploadManager(): AjxPost { return undefined; }
+  public getCurrentViewId(): string { return undefined; }
+
 }
 
 export interface SetStatusMsgParams {

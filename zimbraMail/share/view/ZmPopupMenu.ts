@@ -38,7 +38,7 @@ export class ZmPopupMenu extends DwtMenu {
   }
 
   public popup(delay: number, x: number, y: number, kbGenereated?: boolean): void {}
-  public addSelectionListener(menuItemId: string, listener: AjxListener|Function, index?: number): void {};
+  public addSelectionListener(menuItemId: string, listener: AjxListener|Function, index?: number): void {}
 
   public createMenuItem(id: string, params: CreateMenuItemParams): DwtMenuItem { return undefined; }
   public getMenuItem(id: string): DwtMenuItem { return undefined; }

@@ -25,6 +25,7 @@ import {AjxListener} from "../../../../ajax/events/AjxListener";
 import {DwtControl} from "../../../../ajax/dwt/widgets/DwtControl";
 import {ZmTreeView} from "../ZmTreeView";
 import {DwtInputField} from "../../../../ajax/dwt/widgets/DwtInputField";
+import {DwtButton} from "../../../../ajax/dwt/widgets/DwtButton";
 
 export class ZmChooseFolderDialog extends ZmDialog {
 
@@ -37,7 +38,7 @@ export class ZmChooseFolderDialog extends ZmDialog {
   public _folderDescDivId: string;
   public _folderTreeDivId: string;
 
-  constructor(parent: DwtControl, className: string) {
+  constructor(parent: DwtControl, className?: string) {
     super({
       parent: parent,
       className: className
@@ -50,5 +51,7 @@ export class ZmChooseFolderDialog extends ZmDialog {
   public getOverviewId(appName: string): string { return undefined; }
   public _contentHtml(): string { return undefined; }
   public _createControls(): void {}
+  public _getNewButton(): DwtButton { return undefined; }
+  public _getOverview(): ZmOverview { return undefined; }
 }
 

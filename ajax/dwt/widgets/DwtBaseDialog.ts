@@ -57,7 +57,7 @@ export class DwtBaseDialog extends DwtComposite {
     return void 0;
   }
 
-  public _initializeDragging(dragHandleId?: number): void {}
+  public _initializeDragging(dragHandleId?: string): void {}
 
   public _createHtmlFromTemplate(templateId: string, data?: {[name: string]: any}): void {}
 
@@ -78,6 +78,10 @@ export class DwtBaseDialog extends DwtComposite {
   public setTitle(title: string): void {}
 
   protected _getContentDiv(): HTMLElement { return undefined; }
+
+  protected _dragStart(point: number[]): void {}
+  protected _duringDrag(point: number[]): void {}
+  protected _dragEnd(point: number[]): void {}
 
 }
 
