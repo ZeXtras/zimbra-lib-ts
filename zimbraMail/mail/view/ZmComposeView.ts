@@ -58,6 +58,9 @@ export class ZmComposeView extends DwtComposite {
   public _disableAttachments: boolean;
   public _attachDialog?: ZmAttachDialog;
   public _composeMode: string;
+  public _bodyContent: {
+    "text/plain": string
+  };
 
   public _addSendAsAndSendOboAddresses(menu: DwtSelect): void {}
   public _addSendAsOrSendOboAddresses(menu: DwtSelect, emails: string|{addr: string}[], isObo: boolean, displayValueFunc: Function): void {}
@@ -81,7 +84,9 @@ export class ZmComposeView extends DwtComposite {
   public getUserText(): string { return undefined; }
   public resetBody(params: ZmComposeView_resetBodyParams, noEditorUpdate?: boolean): void {}
   public cleanupAttachments(all: boolean): void {}
-
+  public setDocAttachments(tempMsg: ZmMailMsg, docIds: string[]): void {}
+  public getMsg(attId: string[], isDraft: boolean, tempMsg: ZmMailMsg, isTimed: boolean, contactId: string[]): ZmMailMsg { return undefined; }
+  public _getEditorContent(leaveMarkers?: boolean): string { return undefined; }
 }
 
 export interface ZmComposeView_resetBodyParams {
