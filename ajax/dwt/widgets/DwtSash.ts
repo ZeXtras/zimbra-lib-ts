@@ -29,7 +29,7 @@ export class DwtSash extends DwtControl {
     super(params);
   }
 
-  public registerCallback(callbackFunc: (...args) => void, callbackObj: any): void {}
+  public registerCallback(callbackFunc: (...args: any[]) => void, callbackObj: any): void {}
 
 }
 

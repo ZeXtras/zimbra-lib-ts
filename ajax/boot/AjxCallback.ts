@@ -20,17 +20,17 @@
 
 export class AjxCallback {
 
-  public static simpleClosure(fcn: (...args) => void, obj: {}, ...args: any[]): (...args) => void {
+  public static simpleClosure(fcn: (...args: any[]) => void, obj: {}, ...args: any[]): (...args: any[]) => void {
     return void 0;
   }
 
   public isAjxCallback: boolean = true;
 
   private obj: {};
-  private func: (...args) => void;
+  private func: (...args: any[]) => void;
   private args: any[];
 
-  constructor(obj: {}, func: (...args) => void, args: any[] = []) {
+  constructor(obj: {}, func: (...args: any[]) => void, args: any[] = []) {
     if (arguments.length === 0) { return; }
 
     this.obj = obj;
