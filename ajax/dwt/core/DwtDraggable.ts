@@ -32,8 +32,18 @@ export class DwtDraggable {
     minX: number,
     maxX: number,
     minY: number,
-    maxY: number
+    maxY: number,
   ): void {}
 
-  static init(handleEl: HTMLDivElement, parentEl: HTMLElement, minX: number, maxX: number, minY: number, maxY: number, dragStartCb: AjxCallback, dragCb: AjxCallback, dragEndCb: AjxCallback): void {}
+  public static init(
+    handleEl: HTMLDivElement,
+    parentEl: HTMLElement,
+    minX: number,
+    maxX: number,
+    minY: number,
+    maxY: number,
+    dragStartCb: AjxCallback,
+    dragCb: AjxCallback,
+    dragEndCb: AjxCallback,
+  ): void {}
 }

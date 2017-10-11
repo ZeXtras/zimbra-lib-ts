@@ -18,12 +18,12 @@
  * along with T4Z - TypeScript 4 Zimlet. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import {ZaModel} from "./ZaModel";
 import {ZaItem} from "./ZaItem";
+import {ZaModel} from "./ZaModel";
 
 export class ZaItemList extends ZaModel {
 
-  constructor(itemClass: Function) {
+  constructor(itemClass: typeof ZaItem) {
     super(true);
   }
 

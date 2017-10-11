@@ -18,9 +18,9 @@
  * along with T4Z - TypeScript 4 Zimlet. If not, see <http://www.gnu.org/licenses/>.
  */
 
+import {DwtTabGroup} from "../keyboard/DwtTabGroup";
 import {DwtComposite} from "./DwtComposite";
 import {DwtControl} from "./DwtControl";
-import {DwtTabGroup} from "../keyboard/DwtTabGroup";
 
 export class DwtGrouper extends DwtComposite {
 

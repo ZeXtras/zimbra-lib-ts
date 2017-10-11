@@ -21,7 +21,7 @@
 import {AjxCallback} from "../boot/AjxCallback";
 
 export class AjxListener extends AjxCallback {
-  constructor(obj: Object, method: Function, ...args: any[]) {
+  constructor(obj: {}, method: (...args: any[]) => void, ...args: any[]) {
     super(obj, method, args);
   }
 }

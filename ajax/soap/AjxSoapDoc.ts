@@ -22,7 +22,12 @@ import {AjxCallback} from "../boot/AjxCallback";
 
 export class AjxSoapDoc {
 
-  public static create(method: string, nmspace: string, namespaceId?: string, soapURI?: string): AjxSoapDoc { return undefined; }
+  public static create(
+    method: string,
+    nmspace: string,
+    namespaceId?: string,
+    soapURI?: string,
+  ): AjxSoapDoc { return undefined; }
   public set(name: string, value: any, parent?: string, nmspace?: string): Element { return undefined; }
 
 }

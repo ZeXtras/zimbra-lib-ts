@@ -20,7 +20,7 @@
 
 export class AjxMessageFormat {
 
-  static format(origString: string, substitutions?: string[]|string): string { return undefined; }
+  public static format(origString: string, substitutions?: string[]|string): string { return undefined; }
 
   constructor(pattern: string) {}
 
@@ -40,7 +40,7 @@ export class AjxDateFormat extends AjxFormat {
   public static MEDIUM: number;
 
   public static getDateTimeInstance(dateStyle: number, timeStyle: number): AjxDateFormat {
-    let style: number = dateStyle * 10 + timeStyle;
+    const style: number = dateStyle * 10 + timeStyle;
     return AjxDateFormat._DATETIME_FORMATTERS[style];
   }
 }

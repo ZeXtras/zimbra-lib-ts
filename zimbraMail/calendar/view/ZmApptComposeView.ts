@@ -19,10 +19,10 @@
  */
 
 import {DwtComposite} from "../../../ajax/dwt/widgets/DwtComposite";
-import {ZmApptClone} from "../model/ZmAppt";
-import {ZmHtmlEditor} from "../../share/view/htmlEditor/ZmHtmlEditor";
-import {ZmContact} from "../../abook/model/ZmContact";
 import {AjxVector} from "../../../ajax/util/AjxVector";
+import {ZmContact} from "../../abook/model/ZmContact";
+import {ZmHtmlEditor} from "../../share/view/htmlEditor/ZmHtmlEditor";
+import {ZmApptClone} from "../model/ZmAppt";
 
 export class ZmApptComposeView extends DwtComposite {
 
@@ -33,7 +33,12 @@ export class ZmApptComposeView extends DwtComposite {
   public getAppt(attId?: number): ZmApptClone { return undefined; }
   public getHtmlEditor(): ZmHtmlEditor { return undefined; }
   public getComposeMode(): string { return undefined; }
-  public updateAttendees(attendees: ZmContact[]|AjxVector<ZmContact>, type: string, mode?: number, index?: number): void {}
+  public updateAttendees(
+    attendees: ZmContact[]|AjxVector<ZmContact>,
+    type: string,
+    mode?: number,
+    index?: number,
+  ): void {}
   public isReminderOnlyChanged(): boolean { return undefined; }
   public isDirty(): boolean { return undefined; }
   public cleanup(): void {}

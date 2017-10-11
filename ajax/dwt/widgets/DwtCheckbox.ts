@@ -18,8 +18,8 @@
  * along with T4Z - TypeScript 4 Zimlet. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import {DwtControl, DwtControlParams} from "./DwtControl";
 import {AjxListener} from "../../events/AjxListener";
+import {DwtControl, DwtControlParams} from "./DwtControl";
 
 export class DwtCheckbox extends DwtControl {
 

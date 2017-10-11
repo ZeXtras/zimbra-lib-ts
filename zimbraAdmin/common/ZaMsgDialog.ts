@@ -18,8 +18,8 @@
  * along with T4Z - TypeScript 4 Zimlet. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import {DwtMessageDialog} from "../../ajax/dwt/widgets/DwtMessageDialog";
 import {DwtDialog_ButtonDescriptor} from "../../ajax/dwt/widgets/DwtDialog";
+import {DwtMessageDialog} from "../../ajax/dwt/widgets/DwtMessageDialog";
 
 export class ZaMsgDialog extends DwtMessageDialog {
 

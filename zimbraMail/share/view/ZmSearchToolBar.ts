@@ -24,11 +24,11 @@ import {DwtComposite} from "../../../ajax/dwt/widgets/DwtComposite";
 export class ZmSearchToolBar extends DwtComposite {
   public static TYPES_BUTTON: string;
 
+  public static addMenuItem(id: string, param: ZmSearchToolbarAddMenuItemParam): void {}
+
   public setSearchFieldValue(value: string): void {}
   public _handleEnterKeyPress(event: {type: string, code: string}): void {}
   public getButton(buttonId: string): DwtButton { return undefined; }
-
-  static addMenuItem(id: string, param: ZmSearchToolbarAddMenuItemParam): void {}
 
 }
 

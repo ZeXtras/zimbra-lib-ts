@@ -18,17 +18,17 @@
  * along with T4Z - TypeScript 4 Zimlet. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import {ZmController} from "./ZmController";
+import {DwtShell} from "../../../ajax/dwt/widgets/DwtShell";
+import {ZmApp} from "../../core/ZmApp";
 import {ZmToolBar} from "../view/ZmToolBar";
 import {ZmZimletAppView} from "../view/ZmZimletAppView";
-import {ZmApp} from "../../core/ZmApp";
-import {DwtShell} from "../../../ajax/dwt/widgets/DwtShell";
+import {ZmController} from "./ZmController";
 
 export class ZmZimletAppController extends ZmController {
 
-  public isZmZimletAppController: boolean;
-
   public static getDefaultViewType(): string { return undefined; }
+
+  public isZmZimletAppController: boolean;
 
   constructor(name: string, container: DwtShell, app: ZmApp) {
     super(container, app);

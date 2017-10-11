@@ -18,11 +18,11 @@
  * along with T4Z - TypeScript 4 Zimlet. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import {ZaItem} from "../../common/ZaItem";
 import {XModelInt} from "../../../ajax/dwt/xforms/XModelInt";
+import {ZaItem} from "../../common/ZaItem";
 
 export class ZaGlobalConfig extends ZaItem {
+  public static myXModel: XModelInt;
   public id: string;
   public attrs: {};
-  public static myXModel: XModelInt;
 }

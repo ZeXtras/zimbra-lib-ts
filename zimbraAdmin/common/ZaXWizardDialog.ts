@@ -18,9 +18,9 @@
  * along with T4Z - TypeScript 4 Zimlet. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import {ZaXDialog} from "./ZaXDialog";
-import {DwtShell} from "../../ajax/dwt/widgets/DwtShell";
 import {DwtDialog_ButtonDescriptor} from "../../ajax/dwt/widgets/DwtDialog";
+import {DwtShell} from "../../ajax/dwt/widgets/DwtShell";
+import {ZaXDialog} from "./ZaXDialog";
 
 export class ZaXWizardDialog extends ZaXDialog {
 
@@ -44,7 +44,7 @@ export class ZaXWizardDialog extends ZaXDialog {
     h?: string,
     iKeyName?: string,
     extraButtons?: DwtDialog_ButtonDescriptor[],
-    contextId?: string
+    contextId?: string,
   ) {
     super(
       parent,
@@ -53,7 +53,7 @@ export class ZaXWizardDialog extends ZaXDialog {
       w,
       h,
       iKeyName,
-      contextId
+      contextId,
     );
   }
 

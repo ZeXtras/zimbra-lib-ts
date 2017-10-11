@@ -27,8 +27,8 @@ export class ZmCalBaseItem extends ZmItem {
   public static LOCATION: string;
   public static EQUIPMENT: string;
 
+  public static OPTIONAL_PERSON: string;
+  public static PERSON: string;
   public folderId: string;
-  static OPTIONAL_PERSON: string;
-  static PERSON: string;
 
 }

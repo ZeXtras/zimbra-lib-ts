@@ -18,8 +18,8 @@
  * along with T4Z - TypeScript 4 Zimlet. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import {ZmConvListController} from "./ZmConvListController";
 import {DwtEvent} from "../../../ajax/dwt/events/DwtEvent";
+import {ZmConvListController} from "./ZmConvListController";
 
 export class ZmConvController extends ZmConvListController {
 

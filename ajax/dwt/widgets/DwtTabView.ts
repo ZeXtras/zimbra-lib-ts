@@ -18,19 +18,24 @@
  * along with T4Z - TypeScript 4 Zimlet. If not, see <http://www.gnu.org/licenses/>.
  */
 
+import {AjxCallback} from "../../boot/AjxCallback";
+import {AjxListener} from "../../events/AjxListener";
+import {DwtTabGroup} from "../keyboard/DwtTabGroup";
+import {DwtButton} from "./DwtButton";
 import {DwtComposite, DwtCompositeParams} from "./DwtComposite";
 import {DwtPropertyPage} from "./DwtPropertyPage";
-import {DwtButton} from "./DwtButton";
-import {AjxCallback} from "../../boot/AjxCallback";
-import {DwtTabGroup} from "../keyboard/DwtTabGroup";
-import {AjxListener} from "../../events/AjxListener";
 
 export class DwtTabView extends DwtComposite {
 
   constructor(params: DwtTabViewParams) {
     super(params);
   }
-  public addTab(title: string, tabViewOrCallback: DwtTabViewPage|AjxCallback|any, buttonId?: string, index?: number): number {
+  public addTab(
+    title: string,
+    tabViewOrCallback: DwtTabViewPage|AjxCallback|any,
+    buttonId?: string,
+    index?: number,
+  ): number {
     return undefined;
   }
   public getTabButton(tabKey: number): DwtTabButton { return undefined; }

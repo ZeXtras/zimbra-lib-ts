@@ -21,8 +21,6 @@
 import {ZmAlert} from "./ZmAlert";
 
 export class ZmBrowserAlert extends ZmAlert {
-  private static INSTANCE: ZmBrowserAlert = void 0;
-
   public static getInstance(): ZmBrowserAlert {
     if (typeof ZmBrowserAlert.INSTANCE === "undefined") {
       ZmBrowserAlert.INSTANCE = new ZmBrowserAlert();
@@ -30,6 +28,8 @@ export class ZmBrowserAlert extends ZmAlert {
 
     return ZmBrowserAlert.INSTANCE;
   }
+
+  private static INSTANCE: ZmBrowserAlert = void 0;
 
   public start(altTitle: string): void {
   }
