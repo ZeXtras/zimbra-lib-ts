@@ -38,9 +38,8 @@ export class DwtButton extends DwtLabel {
   public addSelectionListener(listener: AjxListener|any, index?: number): void {}
   public setSelected(selected: boolean): void {}
 
-  public setMenu(params: DwtButtonSetMenuParams): void;
   public setMenu(
-    menu: AjxCallback|DwtMenu|DwtButtonSetMenuParams|any,
+    menuOrParams: AjxCallback|DwtMenu|DwtButtonSetMenuParams|any,
     shouldToggle?: boolean,
     followIconStyle?: boolean,
     popupAbove?: boolean,
