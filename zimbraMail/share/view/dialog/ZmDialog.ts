@@ -18,8 +18,8 @@
  * along with T4Z - TypeScript 4 Zimlet. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import {DwtDialog, DwtDialogParams} from "../../../../ajax/dwt/widgets/DwtDialog";
 import {DwtPoint} from "../../../../ajax/dwt/graphics/DwtPoint";
+import {DwtDialog, DwtDialogParams} from "../../../../ajax/dwt/widgets/DwtDialog";
 
 export class ZmDialog extends DwtDialog {
 

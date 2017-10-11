@@ -18,21 +18,27 @@
  * along with T4Z - TypeScript 4 Zimlet. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import {ZmCalItemComposeController} from "./ZmCalItemComposeController";
-import {ZmApptComposeView} from "../view/ZmApptComposeView";
-import {ZmAppt} from "../model/ZmAppt";
 import {ZmCsfeResult} from "../../../zimbra/csfe/ZmCsfeResult";
+import {ZmAppt} from "../model/ZmAppt";
+import {ZmApptComposeView} from "../view/ZmApptComposeView";
+import {ZmCalItemComposeController} from "./ZmCalItemComposeController";
 
 export class ZmApptComposeController extends ZmCalItemComposeController {
 
   public _composeView: ZmApptComposeView;
 
-  public handleCheckRightsResponse(appt: ZmAppt, attId: string, names: string[], notifyList: string[], response: ZmCsfeResult): void {}
+  public handleCheckRightsResponse(
+    appt: ZmAppt,
+    attId: string,
+    names: string[],
+    notifyList: string[],
+    response: ZmCsfeResult,
+  ): void {}
   public saveCalItemContinue(appt: ZmAppt, attId: string, notifyList: string[]): void {}
   public closeView(): void {}
 
 }
 
 export interface CheckRightResponse {
-  target: {allow: boolean}[];
+  target: Array<{allow: boolean}>;
 }

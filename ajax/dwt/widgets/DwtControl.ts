@@ -18,24 +18,23 @@
  * along with T4Z - TypeScript 4 Zimlet. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import {AjxListener} from "../../events/AjxListener";
-import {DwtEvent} from "../events/DwtEvent";
-import {DwtPoint} from "../graphics/DwtPoint";
-import {DwtComposite} from "./DwtComposite";
+import {AjxCallback} from "../../boot/AjxCallback";
 import {AjxEventMgr} from "../../events/AjxEventMgr";
+import {AjxListener} from "../../events/AjxListener";
 import {DwtDragSource} from "../dnd/DwtDragSource";
 import {DwtDropTarget} from "../dnd/DwtDropTarget";
-import {AjxCallback} from "../../boot/AjxCallback";
+import {DwtEvent} from "../events/DwtEvent";
 import {DwtFocusEvent} from "../events/DwtFocusEvent";
+import {DwtPoint} from "../graphics/DwtPoint";
+import {DwtComposite} from "./DwtComposite";
 
 export class DwtControl {
 
   public static ALL_BY_ID: {[id: string]: DwtControl}; // TODO: Should be Private.
   public static ABSOLUTE_STYLE: string;
   public static STATIC_STYLE: string;
-  public static _dndScrollCallback: Function;
+  public static _dndScrollCallback: (params: DwtControl_DndScrollCallbackParams, ev: DwtEvent) => void;
   public static __mouseUpHdlr: (ev: MouseEvent) => boolean;
-
 
   public static findControl(focusObj: HTMLElement): DwtControl { return undefined; }
 
@@ -92,7 +91,12 @@ export class DwtControl {
   public setSelected(selected: boolean): void {}
   public getClassName(): string { return undefined; }
   public removeAllListeners(type?: string): boolean { return undefined; }
-  public replaceElement(oel: HTMLElement|string, nel?: HTMLElement|string, inheritClass?: boolean, inheritStyle?: boolean): void {}
+  public replaceElement(
+    oel: HTMLElement|string,
+    nel?: HTMLElement|string,
+    inheritClass?: boolean,
+    inheritStyle?: boolean,
+  ): void {}
   public hasFocus(): boolean { return undefined; }
   public setFocusElement(el: any): void {}
   public focus(): void {}
@@ -122,7 +126,7 @@ export interface DwtControlParams {
   tooltip?: string;
 }
 
-interface DwtControl_DndScrollCallbackParams {
+export interface DwtControl_DndScrollCallbackParams {
   container: Element;
   threshold: number;
   amount: number;

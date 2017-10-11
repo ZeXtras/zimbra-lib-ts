@@ -18,8 +18,8 @@
  * along with T4Z - TypeScript 4 Zimlet. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import {ZmTreeView} from "./ZmTreeView";
 import {DwtComposite} from "../../../ajax/dwt/widgets/DwtComposite";
+import {ZmTreeView} from "./ZmTreeView";
 
 export class ZmDragAndDrop {
 

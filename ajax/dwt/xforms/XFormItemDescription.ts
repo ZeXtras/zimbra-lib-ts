@@ -29,7 +29,7 @@ export interface XFormItemDescription {
   items?: XFormItemDescription[];
   label?: string;
   icon?: string;
-  onActivate?: Function;
+  onActivate?: () => void;
   ref?: string;
   helpTooltipContent?: string;
   labelLocation?: string;
@@ -44,7 +44,7 @@ export interface XFormItemDescription {
   iconVisible?: boolean;
   alertCssClass?: string;
   visibilityChangeEventSources?: string[];
-  visibilityChecks?: Function[];
+  visibilityChecks?: Array<() => boolean>;
   value?: string;
   width?: string;
   caseKey?: number;

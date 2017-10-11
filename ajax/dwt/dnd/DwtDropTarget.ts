@@ -21,7 +21,7 @@
 import {AjxListener} from "../../events/AjxListener";
 export class DwtDropTarget {
 
-  public _types: {[name: string]: Function};
+  public _types: {[className: string]: typeof className};
 
   constructor(types: string|string[]) {}
   public addDropListener(listener: AjxListener): void {}

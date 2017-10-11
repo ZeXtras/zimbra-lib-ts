@@ -18,11 +18,12 @@
  * along with T4Z - TypeScript 4 Zimlet. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import {DwtComposite, DwtCompositeParams} from "./DwtComposite";
-import {DwtMenu} from "./DwtMenu";
-import {DwtSelectionEvent} from "../events/DwtSelectionEvent";
 import {DwtEvent} from "../events/DwtEvent";
 import {DwtMouseEvent} from "../events/DwtMouseEvent";
+import {DwtSelectionEvent} from "../events/DwtSelectionEvent";
+import {DwtComposite, DwtCompositeParams} from "./DwtComposite";
+import {DwtControl_DndScrollCallbackParams} from "./DwtControl";
+import {DwtMenu} from "./DwtMenu";
 
 export class DwtTreeItem extends DwtComposite {
 
@@ -64,7 +65,7 @@ export class DwtTreeItem extends DwtComposite {
 export interface DwtTreeItemParams extends DwtCompositeParams {
   text?: string;
   selectable?: boolean;
-  dndScrollCallback?: Function;
+  dndScrollCallback?: (params: DwtControl_DndScrollCallbackParams, ev: DwtEvent) => void;
   dndScrollId?: string;
   arrowDisabled?: boolean;
   imageInfo?: string;

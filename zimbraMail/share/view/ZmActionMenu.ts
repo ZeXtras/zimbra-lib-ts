@@ -18,10 +18,10 @@
  * along with T4Z - TypeScript 4 Zimlet. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import {ZmPopupMenu} from "./ZmPopupMenu";
-import {DwtMenuItem} from "../../../ajax/dwt/widgets/DwtMenuItem";
 import {DwtComposite} from "../../../ajax/dwt/widgets/DwtComposite";
+import {DwtMenuItem} from "../../../ajax/dwt/widgets/DwtMenuItem";
 import {ZmController} from "../controller/ZmController";
+import {ZmPopupMenu} from "./ZmPopupMenu";
 
 export class ZmActionMenu extends ZmPopupMenu {
 

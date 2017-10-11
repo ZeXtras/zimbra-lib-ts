@@ -18,10 +18,10 @@
  * along with T4Z - TypeScript 4 Zimlet. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import {DwtBaseDialog, DwtBaseDialogParams} from "./DwtBaseDialog";
-import {AjxListener} from "../../events/AjxListener";
 import {AjxCallback} from "../../boot/AjxCallback";
+import {AjxListener} from "../../events/AjxListener";
 import {DwtPoint} from "../graphics/DwtPoint";
+import {DwtBaseDialog, DwtBaseDialogParams} from "./DwtBaseDialog";
 import {DwtButton} from "./DwtButton";
 
 export class DwtDialog extends DwtBaseDialog {
@@ -49,13 +49,10 @@ export class DwtDialog extends DwtBaseDialog {
 
   public setButtonListener(buttonId: number, listener: AjxListener): void {}
 
-  /** The `any` type is added only to allow the class to be overrode*/
+  /** The `any` type is added only to allow the class to be override */
   public popup(loc?: DwtPoint | any, focusButtonId?: number | any): void {}
 
-  public registerCallback(buttonId: number, callback: AjxCallback): void;
-  public registerCallback(buttonId: number, func: Function, obj: Object, ...args: any[]): void;
-  public registerCallback(buttonId: number, func: any, obj?: Object, ...args: any[]): void {}
-
+  public registerCallback(buttonId: number, callback: AjxCallback|any, obj?: {}, ...args: any[]): void {}
 
   public getButton(id: number): DwtButton { return void 0; }
   public setButtonEnabled(id: number, enabled: boolean): void {}

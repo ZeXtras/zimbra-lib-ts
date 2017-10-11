@@ -39,7 +39,6 @@ export class AjxDebug {
   public static FOCUS: string;
 
   public println(msg: string): void;
-  public println(level: string, msg: string, linkName?: string): void;
   public println(level: string, msg?: string, linkName?: string): void {}
   public dumpObj(level: string, obj: any, linkName?: string): void {}
 }

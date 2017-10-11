@@ -19,11 +19,17 @@
  */
 
 import {ZmListController} from "../controller/ZmListController";
+import {ZmItem} from "./ZmItem";
 import {ZmModel} from "./ZmModel";
 import {ZmSearch} from "./ZmSearch";
-import {ZmItem} from "./ZmItem";
 
 export class ZmList  extends ZmModel {
+
+  public controller: ZmListController;
+
+  constructor(type: string, search?: ZmSearch) {
+    super(type);
+  }
 
   public get(index: number): ZmItem {return undefined; }
   public getArray(): ZmItem[] { return undefined; }
@@ -32,12 +38,6 @@ export class ZmList  extends ZmModel {
   public add(element: ZmItem, index?: number): void {}
   public remove(element: ZmItem): void {}
   public getById(id: string): ZmItem { return undefined; }
-
-  public controller: ZmListController;
-
-  constructor(type: string, search?: ZmSearch) {
-    super(type);
-  }
 
   public setHasMore(more: boolean): void {}
 

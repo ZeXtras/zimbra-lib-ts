@@ -18,8 +18,8 @@
  * along with T4Z - TypeScript 4 Zimlet. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import {DwtMouseEvent} from "./DwtMouseEvent";
 import {ZmItem} from "../../../zimbraMail/share/model/ZmItem";
+import {DwtMouseEvent} from "./DwtMouseEvent";
 
 export class DwtListViewActionEvent extends DwtMouseEvent {
   public item: ZmItem;

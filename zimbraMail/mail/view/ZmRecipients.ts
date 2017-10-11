@@ -18,15 +18,26 @@
  * along with T4Z - TypeScript 4 Zimlet. If not, see <http://www.gnu.org/licenses/>.
  */
 
+import {DwtSelect} from "../../../ajax/dwt/widgets/DwtSelect";
 import {ZmAutocompleteListView} from "../../share/view/ZmAutocompleteListView";
 import {ZmComposeView} from "./ZmComposeView";
-import {DwtSelect} from "../../../ajax/dwt/widgets/DwtSelect";
 
 export class ZmRecipients {
 
-  public createRecipientHtml(parent: ZmComposeView, viewId: string, htmlElId: string, fieldNames: string[]): void;
-  /** @deprecated */ public createRecipientHtml(parent: ZmComposeView, viewId: string, htmlElId: string, fieldNames: string[], bccToggleId?: string): void;
-  public createRecipientHtml(parent: ZmComposeView, viewId: string, htmlElId: string, fieldNames: string[], bccToggleId?: string): void {}
+  public createRecipientHtml(
+    parent: ZmComposeView,
+    viewId: string,
+    htmlElId: string,
+    fieldNames: string[],
+  ): void;
+  /** @deprecated */
+  public createRecipientHtml(
+    parent: ZmComposeView,
+    viewId: string,
+    htmlElId: string,
+    fieldNames: string[],
+    bccToggleId?: string,
+  ): void {}
   public getACAddrSelectList(): ZmAutocompleteListView { return undefined; }
   public attachFromSelect(fromSelect: DwtSelect): void {}
 }

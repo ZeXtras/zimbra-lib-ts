@@ -24,7 +24,7 @@ export class ZaId {
   public static PANEL_APP: string;
   public static PANEL_HOME: string;
 
-  static getTreeItemId(overviewId: string, organizerId: string, type: string, indexNo: string): string {
+  public static getTreeItemId(overviewId: string, organizerId: string, type: string, indexNo: string): string {
     return void 0;
   }
 }

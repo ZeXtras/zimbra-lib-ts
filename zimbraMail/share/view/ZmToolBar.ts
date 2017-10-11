@@ -19,14 +19,18 @@
  */
 
 import {
-  DwtToolBar, DwtToolBarButton, DwtToolBarButtonParams,
-  DwtToolBarParams
+  DwtToolBar,
+  DwtToolBarButton,
+  DwtToolBarButtonParams,
+  DwtToolBarParams,
 } from "../../../ajax/dwt/widgets/DwtToolBar";
 import {ZmAppButton} from "./ZmAppButton";
-import {AjxListener} from "../../../ajax/events/AjxListener";
 import {DwtButton} from "../../../ajax/dwt/widgets/DwtButton";
+import {AjxListener} from "../../../ajax/events/AjxListener";
 
 export class ZmToolBar extends DwtToolBar {
+
+  public static _setButtonStyle(uploadButton: DwtButton, hint: string, text: string, image: string): void {}
 
   constructor(params: ZmToolBarParams) {
     super(params);

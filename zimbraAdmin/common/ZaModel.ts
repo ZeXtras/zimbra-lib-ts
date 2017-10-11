@@ -21,7 +21,7 @@
 export class ZaModel {
 
   public static currentStep: string;
-  static BOOLEAN_CHOICES: Function;
+  public static BOOLEAN_CHOICES: () => Array<{value: string|null, label: string}>;
 
   constructor(init: boolean) {}
 }

@@ -18,11 +18,11 @@
  * along with T4Z - TypeScript 4 Zimlet. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import {DwtComposite, DwtCompositeParams} from "./DwtComposite";
 import {DwtButton, DwtButtonParams} from "./DwtButton";
+import {DwtComposite, DwtCompositeParams} from "./DwtComposite";
 
 export class DwtToolBar extends DwtComposite {
-  static HORIZ_STYLE: string;
+  public static HORIZ_STYLE: string;
 
   constructor(params: DwtToolBarParams) {
     super(params);

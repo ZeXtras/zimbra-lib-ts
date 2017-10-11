@@ -20,6 +20,9 @@ import {ZmSearchResultsController} from "./controller/ZmSearchResultsController"
 
 export class ZmSearchApp extends ZmApp {
 
-  public getSearchResultsController(sessionId?: string, appName?: string): ZmSearchResultsController { return undefined; }
+  public getSearchResultsController(
+    sessionId?: string,
+    appName?: string,
+  ): ZmSearchResultsController { return undefined; }
 
 }

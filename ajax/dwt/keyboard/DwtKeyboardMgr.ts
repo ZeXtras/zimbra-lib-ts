@@ -18,10 +18,10 @@
  * along with T4Z - TypeScript 4 Zimlet. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import {DwtTabGroup} from "./DwtTabGroup";
-import {DwtKeyMapMgr} from "./DwtKeyMapMgr";
 import {DwtEvent} from "../events/DwtEvent";
 import {DwtControl} from "../widgets/DwtControl";
+import {DwtKeyMapMgr} from "./DwtKeyMapMgr";
+import {DwtTabGroup} from "./DwtTabGroup";
 
 export class DwtKeyboardMgr {
 
