@@ -36,6 +36,7 @@ export class ZmMailMsg extends ZmMailItem {
   public folderId: number|string;
   public cif: string;
   public _attInfo: ZmMailMsgAttachmentInfo[];
+  public textBodyContent: string;
 
   public isHtmlMail(): boolean { return undefined; }
   public isInvite(): boolean { return undefined; }

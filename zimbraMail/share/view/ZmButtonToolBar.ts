@@ -42,6 +42,7 @@ export class ZmButtonToolBar extends ZmToolBar {
   public addOp(id: string, buttonIndex: number): void {}
 
   public enable(buttonsId: string[], enable: boolean): void {}
+  public enableAll(enable: boolean): void {}
 }
 
 export interface ZmButtonToolBarParams extends ZmToolBarParams {
