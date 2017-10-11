@@ -25,12 +25,23 @@ export class AjxEmailAddress {
   public static fromSoapType: AjxEmailAddressFromSoapType;
   public static READ_RECEIPT: string;
 
-  public static parseEmailString(emailStr: string, type?: string, strict?: boolean): AjxEmailAddressParseEmailStringReturnObj { return undefined; }
+  public static parseEmailString(
+    emailStr: string,
+    type?: string,
+    strict?: boolean,
+  ): AjxEmailAddressParseEmailStringReturnObj { return undefined; }
   public static parse(s: string): AjxEmailAddress { return undefined; }
 
   public canExpand: boolean;
 
-  public constructor(address: string, type: "BCC"|"CC"|"FROM"|"READ_RECEIPT"|"REPLY_TO"|"RESENT_FROM"|"SENDER"|"TO", name: string, dispName: string, isGroup: boolean, canExpand: boolean) {}
+  public constructor(
+    address: string,
+    type: "BCC"|"CC"|"FROM"|"READ_RECEIPT"|"REPLY_TO"|"RESENT_FROM"|"SENDER"|"TO",
+    name: string,
+    dispName: string,
+    isGroup: boolean,
+    canExpand: boolean,
+  ) {}
   public getAddress(): string { return undefined; }
 
 }
@@ -51,4 +62,3 @@ export interface AjxEmailAddressFromSoapType {
   s: "SENDER";
   t: "TO";
 }
-

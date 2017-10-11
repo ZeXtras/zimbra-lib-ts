@@ -18,16 +18,17 @@
  * along with T4Z - TypeScript 4 Zimlet. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import {
-  DwtListView, DwtListViewParams,
-  DwtListHeaderItem
-} from "../../../ajax/dwt/widgets/DwtListView";
-import {AjxVector} from "../../../ajax/util/AjxVector";
-import {ZmItem} from "../model/ZmItem";
-import {ZmListController} from "../controller/ZmListController";
+import {AjxCallback} from "../../../ajax/boot/AjxCallback";
 import {DwtDropTarget} from "../../../ajax/dwt/dnd/DwtDropTarget";
-import {AjxListener} from "../../../ajax/events/AjxListener";
 import {DwtMouseEvent} from "../../../ajax/dwt/events/DwtMouseEvent";
+import {
+  DwtListHeaderItem, DwtListView,
+  DwtListViewParams,
+} from "../../../ajax/dwt/widgets/DwtListView";
+import {AjxListener} from "../../../ajax/events/AjxListener";
+import {AjxVector} from "../../../ajax/util/AjxVector";
+import {ZmListController} from "../controller/ZmListController";
+import {ZmItem} from "../model/ZmItem";
 import {ZmList} from "../model/ZmList";
 
 export class ZmListView extends DwtListView {
@@ -44,8 +45,18 @@ export class ZmListView extends DwtListView {
   public getItemList(): ZmList { return undefined; }
   public _restoreState(state?: ZmListViewStateObject): void {}
   public _saveState(state?: ZmListViewSaveStateObject): void {}
-  public _getImageHtml(htmlArr: string[], idx: number, image: string, id: string, classes: string[] = []): number { return undefined; }
-  public _sortColumn(columnItem: DwtListHeaderItem, sortAsc: boolean, callback?: Function): void { return undefined; }
+  public _getImageHtml(
+    htmlArr: string[],
+    idx: number,
+    image: string,
+    id: string,
+    classes: string[] = [],
+  ): number { return undefined; }
+  public _sortColumn(
+    columnItem: DwtListHeaderItem,
+    sortAsc: boolean,
+    callback?: AjxCallback,
+  ): void { return undefined; }
   public addSelectionListener(listener: AjxListener): void {}
   public _mouseDownAction(mouseEv: DwtMouseEvent, div: HTMLElement) {}
 

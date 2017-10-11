@@ -19,12 +19,17 @@
  */
 
 import {DwtSelect} from "../../../ajax/dwt/widgets/DwtSelect";
-import {ZmCalItem} from "../model/ZmCalItem";
 import {ZmContact} from "../../abook/model/ZmContact";
+import {ZmCalItem} from "../model/ZmCalItem";
 
 export class ZmApptViewHelper {
 
-  public static populateFolderSelect(folderSelect: DwtSelect, folderRow: HTMLElement, calendarOrgs: {[name: string]: string}, calItem: ZmCalItem): void {}
+  public static populateFolderSelect(
+    folderSelect: DwtSelect,
+    folderRow: HTMLElement,
+    calendarOrgs: {[name: string]: string},
+    calItem: ZmCalItem,
+  ): void {}
   public static folderSelectResize(folderSelect: DwtSelect): void {}
   public static getAttendeesText(attendee: ZmContact, type?: string, shortForm?: boolean): string { return undefined; }
 

@@ -18,13 +18,13 @@
  * along with T4Z - TypeScript 4 Zimlet. If not, see <http://www.gnu.org/licenses/>.
  */
 
+import {AjxCallback} from "../../../ajax/boot/AjxCallback";
+import {DwtMessageDialog} from "../../../ajax/dwt/widgets/DwtMessageDialog";
+import {ZmCsfeResult} from "../../../zimbra/csfe/ZmCsfeResult";
 import {ZmController} from "../../share/controller/ZmController";
 import {ZmActionMenu} from "../../share/view/ZmActionMenu";
 import {ZmMailMsg} from "../model/ZmMailMsg";
-import {ZmCsfeResult} from "../../../zimbra/csfe/ZmCsfeResult";
-import {AjxCallback} from "../../../ajax/boot/AjxCallback";
 import {ZmComposeView, ZmComposeView_IncOptions} from "../view/ZmComposeView";
-import {DwtMessageDialog} from "../../../ajax/dwt/widgets/DwtMessageDialog";
 
 export class ZmComposeController extends ZmController {
 
@@ -45,7 +45,7 @@ export class ZmComposeController extends ZmController {
   public _action: string;
   public _curIncOptions: ZmComposeView_IncOptions;
   public _optionsMenu: {[name: string]: ZmActionMenu};
-  public _listeners: {[name: string]: Function};
+  public _listeners: {[name: string]: (...args: any[]) => void};
   public _composeView: ZmComposeView;
   public _msg: ZmMailMsg;
   public _sendTime: {date: Date, timezone: string};
@@ -55,25 +55,39 @@ export class ZmComposeController extends ZmController {
   public _setView(params: ZmComposeControllerSetViewParams): void {}
   public _setDependentOptions(incOptions: ZmComposeControllerSetDependentOptionsParams): void {}
   public _createOptionsMenu(action: string): ZmActionMenu { return undefined; }
-  public _handleResponseSaveDraftListener(draftType: string, callback: Function, results: ZmCsfeResult): void {}
+
+  public _handleResponseSaveDraftListener(
+    draftType: string,
+    callback: (result: ZmCsfeResult) => void,
+    result: ZmCsfeResult,
+  ): void {}
+
   public saveDraft(
     draftType: string,
-    attId?: {
+    attId?: Array<{
       ct: string;
       id: string;
       s: number;
       ver: string;
-    }[],
-    docIds?: {id: string, ver: string, ct: string, s: number }[],
+    }>,
+    docIds?: Array<{id: string, ver: string, ct: string, s: number }>,
     callback?: AjxCallback,
-    contactId?: string
+    contactId?: string,
   ): void {}
+
   public _completeAllUpload(filesArray: any[]): void {}
   public _switchInclude(op: string): void {}
   public _initAutoSave(): void {}
-  /** @deprecated from Zimbra >= 8.5 */ public _uploadMyComputerFile(files: File[], prevData?: string[], start?: number): void {}
+  /** @deprecated from Zimbra >= 8.5 */
+  public _uploadMyComputerFile(files: File[], prevData?: string[], start?: number): void {}
   public _initUploadMyComputerFile(files: File[]): void {}
-  public _sendMsg(attId: string[], docIds: string[], draftType: string, callback: AjxCallback , contactId: string[]): void {}
+  public _sendMsg(
+    attId: string[],
+    docIds: string[],
+    draftType: string,
+    callback: AjxCallback,
+    contactId: string[],
+  ): void {}
   public _showMsgDialog(dlgType: number, msg: string, style: number, callbacks?: {}): void {}
   public _getBodyContent(leaveMarkers?: boolean): string { return undefined; }
 }

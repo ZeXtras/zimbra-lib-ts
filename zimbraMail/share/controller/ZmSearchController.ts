@@ -18,12 +18,12 @@
  * along with T4Z - TypeScript 4 Zimlet. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import {ZmController} from "./ZmController";
-import {ZmMainSearchToolBar} from "../view/ZmSearchToolBar";
 import {AjxCallback} from "../../../ajax/boot/AjxCallback";
-import {ZmSearchParam, ZmSearch} from "../model/ZmSearch";
-import {ZmCsfeResult} from "../../../zimbra/csfe/ZmCsfeResult";
 import {DwtUiEvent} from "../../../ajax/dwt/events/DwtUiEvent";
+import {ZmCsfeResult} from "../../../zimbra/csfe/ZmCsfeResult";
+import {ZmSearch, ZmSearchParam} from "../model/ZmSearch";
+import {ZmMainSearchToolBar} from "../view/ZmSearchToolBar";
+import {ZmController} from "./ZmController";
 
 export class ZmSearchController extends ZmController {
 
@@ -31,7 +31,13 @@ export class ZmSearchController extends ZmController {
   public _searchToolBar: ZmMainSearchToolBar;
   public search(params: ZmSearchControllerSearchParams): void {}
   public getSearchToolbar(): ZmMainSearchToolBar { return undefined; }
-  public _handleResponseDoSearch(search: ZmSearch, noRender: boolean, callback: AjxCallback, noUpdateOverview: boolean, result: ZmCsfeResult): void {}
+  public _handleResponseDoSearch(
+    search: ZmSearch,
+    noRender: boolean,
+    callback: AjxCallback,
+    noUpdateOverview: boolean,
+    result: ZmCsfeResult,
+  ): void {}
   public _searchMenuListener(ev: DwtUiEvent, id: string, noFocus?: boolean): void {}
 
 }

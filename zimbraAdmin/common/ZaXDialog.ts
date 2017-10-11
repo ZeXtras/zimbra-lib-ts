@@ -18,16 +18,16 @@
  * along with T4Z - TypeScript 4 Zimlet. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import {DwtDialog, DwtDialog_ButtonDescriptor} from "../../ajax/dwt/widgets/DwtDialog";
-import {DwtComposite} from "../../ajax/dwt/widgets/DwtComposite";
 import {DwtPoint} from "../../ajax/dwt/graphics/DwtPoint";
-import {XFormObjectBase} from "../../ajax/dwt/xforms/XFormItem";
-import {XModelParams, XModel} from "../../ajax/dwt/xforms/XModel";
+import {DwtComposite} from "../../ajax/dwt/widgets/DwtComposite";
+import {DwtDialog, DwtDialog_ButtonDescriptor} from "../../ajax/dwt/widgets/DwtDialog";
 import {XForm} from "../../ajax/dwt/xforms/XForm";
+import {XFormObjectBase} from "../../ajax/dwt/xforms/XFormItem";
+import {XModel, XModelParams} from "../../ajax/dwt/xforms/XModel";
 
 export class ZaXDialog extends DwtDialog {
 
-  public static XFormModifiers: {[name: string]: Function[]};
+  public static XFormModifiers: {[name: string]: Array<(xFormObject: XFormObjectBase, entry?: any) => void>};
 
   public _standardButtons: number[];
   public _extraButtons: DwtDialog_ButtonDescriptor[];
@@ -37,14 +37,22 @@ export class ZaXDialog extends DwtDialog {
   public _localXForm: XForm;
   public _localXModel: XModel;
 
-  constructor(parent: DwtComposite, className: string, title: string, w?: string, h?: string, iKeyName?: string, contextId?: string) {
+  constructor(
+    parent: DwtComposite,
+    className: string,
+    title: string,
+    w?: string,
+    h?: string,
+    iKeyName?: string,
+    contextId?: string,
+  ) {
     super({
-      parent: parent,
       className: className,
-      title: title,
-      standardButtons: [DwtDialog.OK_BUTTON],
       extraButtons: [],
-      id: void 0
+      id: void 0,
+      parent: parent,
+      standardButtons: [DwtDialog.OK_BUTTON],
+      title: title,
     });
   }
 

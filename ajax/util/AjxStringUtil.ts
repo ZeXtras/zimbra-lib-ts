@@ -26,10 +26,21 @@ export class AjxStringUtil {
   public static clip(origString: string, pixelWidth: number, className?: string): string { return origString; }
   public static urlComponentEncode(extServerUrl: string|number|any): string { return undefined; }
   public static htmlDecode(str: string): string { return undefined; }
-  public static convertToHtml(str: string, quotePrefix?: boolean, openTag?: string, closeTag?: string): string { return undefined; }
-  public static convertHtml2Text(domRoot: string, convertor?: AjxStringUtilConvertHtml2TextConvertor, onlyOneNewLinePerP?: boolean): string { return undefined; }
-  public static defangHtmlContent(html: string): string { return undefined; }
   public static htmlEncode(str: string, includeSpaces?: boolean): string { return undefined; }
+  public static defangHtmlContent(html: string): string { return undefined; }
+
+  public static convertToHtml(
+    str: string,
+    quotePrefix?: boolean,
+    openTag?: string,
+    closeTag?: string,
+  ): string { return undefined; }
+
+  public static convertHtml2Text(
+    domRoot: string,
+    convertor?: AjxStringUtilConvertHtml2TextConvertor,
+    onlyOneNewLinePerP?: boolean,
+  ): string { return undefined; }
 
   // New line to <br>
   public static nl2br(text: string): string { return undefined; }

@@ -18,8 +18,8 @@
  * along with T4Z - TypeScript 4 Zimlet. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import {ZmFolderChooser} from "./ZmFolderChooser";
 import {DwtComposite} from "../../../ajax/dwt/widgets/DwtComposite";
+import {ZmFolderChooser} from "./ZmFolderChooser";
 
 export class ZmSearchResultsFilterPanel extends DwtComposite {
   public _advancedPanel: HTMLElement;

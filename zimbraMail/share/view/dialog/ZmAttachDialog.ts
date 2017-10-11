@@ -18,19 +18,19 @@
  * along with T4Z - TypeScript 4 Zimlet. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import {DwtDialog} from "../../../../ajax/dwt/widgets/DwtDialog";
 import {AjxCallback} from "../../../../ajax/boot/AjxCallback";
+import {DwtComposite} from "../../../../ajax/dwt/widgets/DwtComposite";
+import {DwtDialog} from "../../../../ajax/dwt/widgets/DwtDialog";
 import {DwtShell} from "../../../../ajax/dwt/widgets/DwtShell";
 import {ZmBriefcaseTabView} from "../../../briefcase/view/dialog/ZmBriefcaseTabView";
-import {DwtComposite} from "../../../../ajax/dwt/widgets/DwtComposite";
 
 export class ZmAttachDialog extends DwtDialog {
+
+  public _uploadCallback: AjxCallback;
 
   constructor(shell: DwtShell, className?: string) {
     super({parent: shell, className: className, title: ""});
   }
-
-  public _uploadCallback: AjxCallback;
 
   public getUploadCallback(): AjxCallback { return undefined; }
   public setUploadCallback(callback: AjxCallback): void {}
@@ -46,4 +46,3 @@ export class ZmAttachDialog extends DwtDialog {
 
 export class ZmMyComputerTabViewPage extends DwtComposite {
 }
-

@@ -18,10 +18,10 @@
  * along with T4Z - TypeScript 4 Zimlet. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import {ZmTreeController, ZmTreeControllerShowParams} from "./ZmTreeController";
 import {DwtDropTarget} from "../../../ajax/dwt/dnd/DwtDropTarget";
-import {ZmTreeView} from "../view/ZmTreeView";
 import {ZmAccount} from "../model/ZmAccount";
+import {ZmTreeView} from "../view/ZmTreeView";
+import {ZmTreeController, ZmTreeControllerShowParams} from "./ZmTreeController";
 
 export class ZmFolderTreeController extends ZmTreeController {
 

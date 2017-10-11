@@ -20,13 +20,13 @@
 
 import {
   DwtComposite,
-  DwtCompositeParams
+  DwtCompositeParams,
 } from "../../../ajax/dwt/widgets/DwtComposite";
-import {ZmTreeView} from "./ZmTreeView";
-import {ZmZimbraAccount} from "../model/ZmZimbraAccount";
 import {DwtTreeItem} from "../../../ajax/dwt/widgets/DwtTreeItem";
 import {ZmOverviewController} from "../controller/ZmOverviewController";
 import {ZmFolder} from "../model/ZmFolder";
+import {ZmZimbraAccount} from "../model/ZmZimbraAccount";
+import {ZmTreeView} from "./ZmTreeView";
 
 export class ZmOverview extends DwtComposite {
 
@@ -34,10 +34,10 @@ export class ZmOverview extends DwtComposite {
 
   constructor(params: ZmOverviewParams, controller: ZmOverviewController) {
     super({
-      parent: params.parent,
       className: params.overviewClass,
+      id: params.id,
+      parent: params.parent,
       posStyle: params.posStyle,
-      id: params.id
     });
   }
 

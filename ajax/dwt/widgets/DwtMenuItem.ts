@@ -18,19 +18,19 @@
  * along with T4Z - TypeScript 4 Zimlet. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import {DwtButton, DwtButtonParams} from "./DwtButton";
 import {DwtEvent} from "../events/DwtEvent";
+import {DwtButton, DwtButtonParams} from "./DwtButton";
 
 export class DwtMenuItem extends DwtButton {
-
-  constructor(params: DwtMenuItemParams) {
-    super(params);
-  }
 
   public static CHECK_STYLE: number;
   public static RADIO_STYLE: number;
   public static SEPARATOR_STYLE: number;
   public static IMAGE_LEFT: number;
+
+  constructor(params: DwtMenuItemParams) {
+    super(params);
+  }
 
   public _emulateSingleClick(): void {}
   public setChecked(checked: boolean, skipNotify: boolean): void {}

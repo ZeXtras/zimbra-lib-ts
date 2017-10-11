@@ -18,18 +18,18 @@
  * along with T4Z - TypeScript 4 Zimlet. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import {ZaController} from "./ZaController";
 import {ZaZimbraAdmin} from "../ZaZimbraAdmin";
 import {ZaAppCtxt} from "./ZaAppCtxt";
+import {ZaController} from "./ZaController";
 import {ZaXDialog} from "./ZaXDialog";
 
 export class ZaApp {
 
-  public dialogs: {[name: string]: ZaXDialog};
-
   public static getInstance(): ZaApp {
     return void 0;
   }
+
+  public dialogs: {[name: string]: ZaXDialog};
 
   public getCurrentController(): ZaController {
     return void 0;

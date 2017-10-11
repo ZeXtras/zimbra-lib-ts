@@ -18,37 +18,39 @@
  * along with T4Z - TypeScript 4 Zimlet. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import {ZmObjectHandler} from "./ZmObjectHandler";
-import {ZmZimletContext, UserProperty} from "./ZmZimletContext";
-import {DwtDialog} from "../../../ajax/dwt/widgets/DwtDialog";
-import {DwtPropertyEditor} from "../../../ajax/dwt/widgets/DwtPropertyEditor";
 import {AjxCallback} from "../../../ajax/boot/AjxCallback";
-import {ZmController} from "../controller/ZmController";
-import {ZmApp} from "../../core/ZmApp";
-import {ZmButtonToolBar} from "../view/ZmButtonToolBar";
-import {DwtShell} from "../../../ajax/dwt/widgets/DwtShell";
-import {ZmActionMenu} from "../view/ZmActionMenu";
-import {ZmObjectManager} from "./ZmObjectManager";
-import {ZmItem} from "./ZmItem";
-import {DwtComposite} from "../../../ajax/dwt/widgets/DwtComposite";
 import {DwtMouseEvent} from "../../../ajax/dwt/events/DwtMouseEvent";
-import {ZmDialog} from "../view/dialog/ZmDialog";
-import {ZmMailMsg} from "../../mail/model/ZmMailMsg";
-import {ZmMailMsgView} from "../../mail/view/ZmMailMsgView";
-import {ZmCsfeResult} from "../../../zimbra/csfe/ZmCsfeResult";
-import {AjxSoapDoc} from "../../../ajax/soap/AjxSoapDoc";
-import {AjxListener} from "../../../ajax/events/AjxListener";
+import {DwtComposite} from "../../../ajax/dwt/widgets/DwtComposite";
+import {DwtDialog} from "../../../ajax/dwt/widgets/DwtDialog";
 import {DwtMenu} from "../../../ajax/dwt/widgets/DwtMenu";
+import {DwtPropertyEditor} from "../../../ajax/dwt/widgets/DwtPropertyEditor";
+import {DwtShell} from "../../../ajax/dwt/widgets/DwtShell";
+import {AjxListener} from "../../../ajax/events/AjxListener";
+import {AjxSoapDoc} from "../../../ajax/soap/AjxSoapDoc";
+import {ZmCsfeResult} from "../../../zimbra/csfe/ZmCsfeResult";
+import {ZmApp} from "../../core/ZmApp";
+import {ZmMailMsg} from "../../mail/model/ZmMailMsg";
 import {ZmComposeView} from "../../mail/view/ZmComposeView";
+import {ZmMailMsgView} from "../../mail/view/ZmMailMsgView";
+import {ZmController} from "../controller/ZmController";
+import {ZmDialog} from "../view/dialog/ZmDialog";
+import {ZmActionMenu} from "../view/ZmActionMenu";
+import {ZmButtonToolBar} from "../view/ZmButtonToolBar";
+import {ZmItem} from "./ZmItem";
+import {ZmObjectHandler} from "./ZmObjectHandler";
+import {ZmObjectManager} from "./ZmObjectManager";
+import {UserProperty, ZmZimletContext} from "./ZmZimletContext";
 
 export class ZmZimletBase extends ZmObjectHandler implements CreateAppZimlet {
+
+  public static PROXY: string;
+
   public _dlg_propertyEditor?: DwtDialog;
   public _propertyEditor?: DwtPropertyEditor;
 
   public RE?: RegExp;
   public _zimletContext: ZmZimletContext;
   public name: string;
-  public static PROXY: string;
 
   constructor() { super(""); }
   public getUsername(): string { return undefined; }
@@ -56,7 +58,12 @@ export class ZmZimletBase extends ZmObjectHandler implements CreateAppZimlet {
   public getResource(resourceName: string): string { return undefined; }
   public getConfig(key: string): any { return undefined; }
   public getUserProperty(key: string): string { return undefined; }
-  public setUserProperty(propertyName: string, value: string|number|boolean, save: boolean, callback?: AjxCallback): void {}
+  public setUserProperty(
+    propertyName: string,
+    value: string|number|boolean,
+    save: boolean,
+    callback?: AjxCallback,
+  ): void {}
   public xmlObj(name?: string): ZmZimletContext | string { return undefined; }
   public checkProperties(props: UserProperty[]): boolean { return undefined; }
   public displayStatusMessage(param: {msg: string; level: number}): void { return undefined; }
@@ -68,20 +75,48 @@ export class ZmZimletBase extends ZmObjectHandler implements CreateAppZimlet {
   public createPropertyEditor(callback: AjxCallback): void {}
   public  _createDialog(dialog_args: {title: string; view: DwtComposite}): ZmDialog { return undefined; }
   public menuItemSelected(itemId: string): void {}
-  public clicked(spanElement: HTMLSpanElement, contentObjText: string, matchContext: string[], event: DwtMouseEvent): void {}
-  public toolTipPoppedUp(spanElement: any, contentObjText: string, matchContext: string[], canvas: HTMLDivElement): void {}
-  public addSearchDomainItem(icon: string, label: string, listener: AjxListener, id: string): ZmButtonToolBar { return undefined; }
+  public clicked(
+    spanElement: HTMLSpanElement,
+    contentObjText: string,
+    matchContext: string[],
+    event: DwtMouseEvent,
+  ): void {}
+  public toolTipPoppedUp(
+    spanElement: any,
+    contentObjText: string,
+    matchContext: string[],
+    canvas: HTMLDivElement,
+  ): void {}
+  public addSearchDomainItem(
+    icon: string,
+    label: string,
+    listener: AjxListener,
+    id: string,
+  ): ZmButtonToolBar { return undefined; }
   public init(): void {}
   public getMessage(msg: string): string { return undefined; }
 
   // App Related functions
-  public createApp(label: string, image: string, tooltip: string, index?: number, style?: string): string { return undefined; }
+  public createApp(
+    label: string,
+    image: string,
+    tooltip: string,
+    index?: number,
+    style?: string,
+  ): string { return undefined; }
   public appActive(appName: string, active: boolean): void {}
   public appLaunch(appName: string): void {}
   public onSelectApp(id: string): void {}
-  // public onAction(id: string, action: string, currentViewId: string, lastViewId: string): void {}
+  public onAction(id: string, action: string, currentViewId: string, lastViewId: string): void {}
 
-  public sendRequest(requestStr: string|AjxSoapDoc, serverURL: string, requestHeaders: {[key: string]: string}, callback?: AjxCallback, useGet?: boolean, passErrors?: boolean): void|ZmCsfeResult { return undefined; }
+  public sendRequest(
+    requestStr: string|AjxSoapDoc,
+    serverURL: string,
+    requestHeaders: {[key: string]: string},
+    callback?: AjxCallback,
+    useGet?: boolean,
+    passErrors?: boolean,
+  ): void|ZmCsfeResult { return undefined; }
 
   // Notifications from Zimbra
   // TODO: Migrate to interfaces

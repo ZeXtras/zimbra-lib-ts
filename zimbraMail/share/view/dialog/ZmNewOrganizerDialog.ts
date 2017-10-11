@@ -18,20 +18,20 @@
  * along with T4Z - TypeScript 4 Zimlet. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import {ZmDialog} from "./ZmDialog";
-import {DwtControl} from "../../../../ajax/dwt/widgets/DwtControl";
 import {DwtButton} from "../../../../ajax/dwt/widgets/DwtButton";
+import {DwtControl} from "../../../../ajax/dwt/widgets/DwtControl";
 import {ZmFolder} from "../../model/ZmFolder";
+import {ZmDialog} from "./ZmDialog";
 
 export class ZmNewOrganizerDialog extends ZmDialog {
 
   constructor(parent: DwtControl, className: string, title: string, type: string, extraButtons?: DwtButton[]) {
     super({
-      parent: parent,
       className: className,
-      title: title,
+      extraButtons: extraButtons,
       id: "CreateNewFolderDialog",
-      extraButtons: extraButtons
+      parent: parent,
+      title: title,
     });
   }
 
