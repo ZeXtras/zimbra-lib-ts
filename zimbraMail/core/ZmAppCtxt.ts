@@ -63,7 +63,7 @@ export class ZmAppCtxt {
 
   public setStatusMsg(params: SetStatusMsgParams): void {}
   public get(id: string, key?: string, account?: ZmZimbraAccount): any {}
-  public set(key: string, value: string): void {}
+  public set(id: string, value: any, key?: string, setDefault?: boolean, skipNotify?: boolean, account?: ZmZimbraAccount, skipImplicit?: boolean): void {}
   public getZimletMgr(): ZmZimletMgr { return undefined; }
   public getUsername(): string { return undefined; }
   public getAppController(): ZmController { return undefined; }
