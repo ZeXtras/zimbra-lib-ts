@@ -41,7 +41,7 @@ import {ZmObjectHandler} from "./ZmObjectHandler";
 import {ZmObjectManager} from "./ZmObjectManager";
 import {UserProperty, ZmZimletContext} from "./ZmZimletContext";
 
-export class ZmZimletBase extends ZmObjectHandler implements CreateAppZimlet {
+export class ZmZimletBase extends ZmObjectHandler {
 
   public static PROXY: string;
 
@@ -97,17 +97,17 @@ export class ZmZimletBase extends ZmObjectHandler implements CreateAppZimlet {
   public getMessage(msg: string): string { return undefined; }
 
   // App Related functions
-  public createApp(
-    label: string,
-    image: string,
-    tooltip: string,
-    index?: number,
-    style?: string,
-  ): string { return undefined; }
-  public appActive(appName: string, active: boolean): void {}
-  public appLaunch(appName: string): void {}
-  public onSelectApp(id: string): void {}
-  public onAction(id: string, action: string, currentViewId: string, lastViewId: string): void {}
+  // public createApp(
+  //   label: string,
+  //   image: string,
+  //   tooltip: string,
+  //   index?: number,
+  //   style?: string,
+  // ): string { return undefined; }
+  // public appActive(appName: string, active: boolean): void {}
+  // public appLaunch(appName: string): void {}
+  // public onSelectApp(id: string): void {}
+  // public onAction(id: string, action: string, currentViewId: string, lastViewId: string): void {}
 
   public sendRequest(
     requestStr: string|AjxSoapDoc,

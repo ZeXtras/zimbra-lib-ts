@@ -19,12 +19,7 @@
  */
 
 import {DwtButton} from "../../../ajax/dwt/widgets/DwtButton";
-import {
-  DwtToolBar,
-  DwtToolBarButton,
-  DwtToolBarButtonParams,
-  DwtToolBarParams,
-} from "../../../ajax/dwt/widgets/DwtToolBar";
+import {DwtToolBar, DwtToolBarParams} from "../../../ajax/dwt/widgets/DwtToolBar";
 import {AjxListener} from "../../../ajax/events/AjxListener";
 import {ZmAppButton} from "./ZmAppButton";
 
@@ -39,16 +34,8 @@ export class ZmToolBar extends DwtToolBar {
   public enableAll(enabled: boolean): void {}
   public getButton(id: string): ZmAppButton { return undefined; }
   public addSelectionListener(buttonId: string, listener: AjxListener): void {}
-  public createButton(id: string, params: ZmToolBarCreateButtonParams): DwtToolBarButton { return undefined; }
 }
 
 export interface ZmToolBarParams extends DwtToolBarParams {
 
-}
-
-export interface ZmToolBarCreateButtonParams extends DwtToolBarButtonParams {
-  image?: string;
-  text?: string;
-  tooltip?: string;
-  enabled?: boolean;
 }

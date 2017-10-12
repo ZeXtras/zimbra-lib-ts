@@ -49,6 +49,10 @@ export class ZmSetting extends ZmModel {
   public static DOCUMENT_SIZE_LIMIT: string;
   public static MESSAGE_SIZE_LIMIT: string;
   public static INC_ATTACH: string;
+  public static FILTERS_MAIL_FORWARDING_ENABLED: string;
+  public static POP_ACCOUNTS_ENABLED: string;
+  public static IMAP_ACCOUNTS_ENABLED: string;
+  public static IDENTITIES_ENABLED: string;
 
   public setValue(value: any, key?: string, setDefault?: boolean, skipNotify?: boolean, skipImplicit?: boolean): void {}
   public getValue(key?: string, serialize?: boolean): any { return undefined; }
