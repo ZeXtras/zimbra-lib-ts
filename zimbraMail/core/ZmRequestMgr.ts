@@ -18,9 +18,9 @@
  * along with T4Z - TypeScript 4 Zimlet. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import {AjxSoapDoc} from "../../ajax/soap/AjxSoapDoc";
 import {AjxCallback} from "../../ajax/boot/AjxCallback";
 import {AjxRpcResponse} from "../../ajax/net/AjxRpc";
+import {AjxSoapDoc} from "../../ajax/soap/AjxSoapDoc";
 export class ZmRequestMgr {
   public sendRequest(params: ZmRequestMgrSendRequestParams): void|AjxRpcResponse { return undefined; }
 }

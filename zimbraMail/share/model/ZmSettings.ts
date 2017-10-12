@@ -18,11 +18,11 @@
  * along with T4Z - TypeScript 4 Zimlet. If not, see <http://www.gnu.org/licenses/>.
  */
 
+import {AjxCallback} from "../../../ajax/boot/AjxCallback";
+import {ZmBatchCommand} from "../../../zimbra/csfe/ZmBatchCommand";
+import {ZmAccount} from "./ZmAccount";
 import {ZmModel} from "./ZmModel";
 import {ZmSetting} from "./ZmSetting";
-import {ZmAccount} from "./ZmAccount";
-import {ZmBatchCommand} from "../../../zimbra/csfe/ZmBatchCommand";
-import {AjxCallback} from "../../../ajax/boot/AjxCallback";
 
 export class ZmSettings extends ZmModel {
 
@@ -34,7 +34,13 @@ export class ZmSettings extends ZmModel {
 
   public getSetting(key: string): ZmSetting { return undefined; }
 
-  public save(list: ZmSetting[], callback: AjxCallback, batchCommand?: ZmBatchCommand, account?: ZmAccount, isImplicit?: boolean): void {}
+  public save(
+    list: ZmSetting[],
+    callback: AjxCallback,
+    batchCommand?: ZmBatchCommand,
+    account?: ZmAccount,
+    isImplicit?: boolean,
+  ): void {}
 
 }
 

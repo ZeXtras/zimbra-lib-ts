@@ -43,22 +43,22 @@ export class ZaItem extends ZaModel {
   public static A_zimbraACE: string;
   public static A_zimbraCreateTimestamp: string;
 
-  public static loadMethods: {[name: string]: Function[]};
-  public static initMethods: {[name: string]: Function[]};
-  public static modifyMethods: {[name: string]: Function[]};
-  public static modifyMethodsExt: {[name: string]: Function[]};
-  public static createMethods: {[name: string]: Function[]};
-  public static removeMethods: {[name: string]: Function[]};
-  public static modelExtensions: {[name: string]: Function[]};
-  public static getRelatedMethods: {[name: string]: Function[]};
-  public static ObjectModifiers: {[name: string]: Function[]};
+  public static loadMethods: {[className: string]: Array<new (...args: any[]) => any/*className*/>};
+  public static initMethods: {[className: string]: Array<new (...args: any[]) => any/*className*/>};
+  public static modifyMethods: {[className: string]: Array<new (...args: any[]) => any/*className*/>};
+  public static modifyMethodsExt: {[className: string]: Array<new (...args: any[]) => any/*className*/>};
+  public static createMethods: {[className: string]: Array<new (...args: any[]) => any/*className*/>};
+  public static removeMethods: {[className: string]: Array<new (...args: any[]) => any/*className*/>};
+  public static modelExtensions: {[className: string]: Array<new (...args: any[]) => any/*className*/>};
+  public static getRelatedMethods: {[className: string]: Array<new (...args: any[]) => any/*className*/>};
+  public static ObjectModifiers: {[className: string]: Array<new (...args: any[]) => any/*className*/>};
 
-  private _iKeyName: string;
-  private _uuid: string;
   public rightsLoaded: boolean;
   public id: string; // TODO: Investigate
   public attrs: {}; // TODO: Investigate
   public type: string;
+  private _iKeyName: string;
+  private _uuid: string;
 
   constructor(iKeyName: string) {
     super(true);

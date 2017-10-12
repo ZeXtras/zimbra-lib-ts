@@ -18,8 +18,8 @@
  * along with T4Z - TypeScript 4 Zimlet. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import {ZaZimbraAdmin} from "../ZaZimbraAdmin";
 import {DwtShell} from "../../ajax/dwt/widgets/DwtShell";
+import {ZaZimbraAdmin} from "../ZaZimbraAdmin";
 import {ZaMsgDialog} from "./ZaMsgDialog";
 
 export class ZaAppCtxt {

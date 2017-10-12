@@ -22,5 +22,5 @@ import {ZaListViewController} from "../../common/ZaListViewController";
 import {ZaAccount} from "../model/ZaAccount";
 
 export class ZaAccountListController extends ZaListViewController {
-  static _viewMailListenerLauncher(account: ZaAccount): void {}
+  public static _viewMailListenerLauncher(account: ZaAccount): void {}
 }

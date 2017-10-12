@@ -19,10 +19,10 @@
  */
 
 import {DwtComposite} from "../../../ajax/dwt/widgets/DwtComposite";
+import {ZmHtmlEditor} from "../../share/view/htmlEditor/ZmHtmlEditor";
+import {ZmCalItemComposeController} from "../controller/ZmCalItemComposeController";
 import {ZmApptClone} from "../model/ZmAppt";
 import {ZmCalItemMode} from "../model/ZmCalItem";
-import {ZmCalItemComposeController} from "../controller/ZmCalItemComposeController";
-import {ZmHtmlEditor} from "../../share/view/htmlEditor/ZmHtmlEditor";
 
 export class ZmCalItemEditView extends DwtComposite {
 

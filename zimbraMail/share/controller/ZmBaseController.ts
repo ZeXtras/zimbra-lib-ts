@@ -18,14 +18,14 @@
  * along with T4Z - TypeScript 4 Zimlet. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import {ZmController} from "./ZmController";
 import {DwtControl} from "../../../ajax/dwt/widgets/DwtControl";
-import {ZmApp} from "../../core/ZmApp";
-import {ZmSearchResultsController} from "./ZmSearchResultsController";
 import {AjxListener} from "../../../ajax/events/AjxListener";
+import {ZmApp} from "../../core/ZmApp";
 import {ZmAppViewMgrCreateViewParams} from "../../core/ZmAppViewMgr";
 import {ZmFolder} from "../model/ZmFolder";
 import {ZmButtonToolBar} from "../view/ZmButtonToolBar";
+import {ZmController} from "./ZmController";
+import {ZmSearchResultsController} from "./ZmSearchResultsController";
 
 export abstract class ZmBaseController extends ZmController {
 
@@ -37,8 +37,20 @@ export abstract class ZmBaseController extends ZmController {
   /** @override */ public operationsToDisableOnSingleSelection: string[];
   /** @override */ public operationsToEnableOnMultiSelection: string[];
 
-  constructor(container: DwtControl, app: ZmApp, type: string, sessionId: string, searchResultsController: ZmSearchResultsController) {
-    super(container, app, type, sessionId, searchResultsController);
+  constructor(
+    container: DwtControl,
+    app: ZmApp,
+    type: string,
+    sessionId: string,
+    searchResultsController: ZmSearchResultsController,
+  ) {
+    super(
+      container,
+      app,
+      type,
+      sessionId,
+      searchResultsController,
+    );
   }
 
   public supportsDnD(): boolean { return undefined; }

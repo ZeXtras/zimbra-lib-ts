@@ -18,11 +18,11 @@
  * along with T4Z - TypeScript 4 Zimlet. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import {ZmApp} from "../core/ZmApp";
-import {ZmBriefcaseController} from "./controller/ZmBriefcaseController";
 import {DwtControl} from "../../ajax/dwt/widgets/DwtControl";
+import {ZmApp} from "../core/ZmApp";
 import {ZmController} from "../share/controller/ZmController";
 import {ZmSearchResultsController} from "../share/controller/ZmSearchResultsController";
+import {ZmBriefcaseController} from "./controller/ZmBriefcaseController";
 
 export class ZmBriefcaseApp extends ZmApp {
 
@@ -30,7 +30,10 @@ export class ZmBriefcaseApp extends ZmApp {
     super(ZmApp.BRIEFCASE, container, parentController);
   }
 
-  public getBriefcaseController(sessionId?: string, searchResultController?: ZmSearchResultsController): ZmBriefcaseController {
+  public getBriefcaseController(
+    sessionId?: string,
+    searchResultController?: ZmSearchResultsController,
+  ): ZmBriefcaseController {
     return undefined;
   }
 

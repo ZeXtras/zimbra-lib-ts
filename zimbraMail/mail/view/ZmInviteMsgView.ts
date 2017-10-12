@@ -18,15 +18,16 @@
  * along with T4Z - TypeScript 4 Zimlet. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import {ZmMailMsg} from "../model/ZmMailMsg";
-import {ZmInvite} from "../../share/model/ZmInvite";
-import {ZmButtonToolBar} from "../../share/view/ZmButtonToolBar";
-import {ZmMailMsgView} from "./ZmMailMsgView";
 import {DwtSelect} from "../../../ajax/dwt/widgets/DwtSelect";
 import {DwtToolBarSpacer} from "../../../ajax/dwt/widgets/DwtToolBar";
+import {ZmInvite} from "../../share/model/ZmInvite";
+import {ZmButtonToolBar} from "../../share/view/ZmButtonToolBar";
+import {ZmMailMsg} from "../model/ZmMailMsg";
+import {ZmMailMsgView} from "./ZmMailMsgView";
 
 export class ZmInviteMsgView {
 
+  public static PTST_MSG: {[name: string]: {msg: string, className: string}};
   public parent: ZmMailMsgView;
   public _msg: ZmMailMsg;
   public _invite: ZmInvite;
@@ -34,7 +35,6 @@ export class ZmInviteMsgView {
   public _inviteToolbar: ZmButtonToolBar;
   public _respondOnBehalfLabel: HTMLTableDataCellElement|DwtToolBarSpacer;
   public _inviteMoveSelect: DwtSelect;
-  static PTST_MSG: {[name: string]: {msg: string, className: string}};
 
   public set(msg: ZmMailMsg): void {}
   public _getCounterToolbar(): ZmButtonToolBar { return undefined; }

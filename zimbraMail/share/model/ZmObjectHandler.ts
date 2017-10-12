@@ -24,8 +24,19 @@ export class ZmObjectHandler {
   constructor(typeName: string, className?: string) {}
   public getTypeName(): string { return undefined; }
   public match(content: string, startIndex: number): RegExpExecArray { return undefined; }
-  public generateSpan(html: string[], idx: number, obj: any, spanId?: string, context?: string, options?: {}): number { return undefined; }
-  public findObject(content: string, startIndex: number, objectMgr: ZmObjectManager): RegExpExecArray { return undefined; }
+  public generateSpan(
+    html: string[],
+    idx: number,
+    obj: any,
+    spanId?: string,
+    context?: string,
+    options?: {},
+    ): number { return undefined; }
+  public findObject(
+    content: string,
+    startIndex: number,
+    objectMgr: ZmObjectManager,
+  ): RegExpExecArray { return undefined; }
   public clicked(spanElement: HTMLElement, contentObjText: string, matchContext?: any, canvas?: any): void {}
 
 }

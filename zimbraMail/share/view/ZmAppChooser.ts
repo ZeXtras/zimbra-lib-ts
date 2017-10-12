@@ -18,8 +18,8 @@
  * along with T4Z - TypeScript 4 Zimlet. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import {ZmToolBar} from "./ZmToolBar";
 import {ZmAppButton, ZmAppButtonParams} from "./ZmAppButton";
+import {ZmToolBar} from "./ZmToolBar";
 
 export class ZmAppChooser extends ZmToolBar {
 

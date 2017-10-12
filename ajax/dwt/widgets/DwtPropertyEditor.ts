@@ -18,8 +18,8 @@
  * along with T4Z - TypeScript 4 Zimlet. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import {DwtComposite} from "./DwtComposite";
 import {UserProperty} from "../../../zimbraMail/share/model/ZmZimletContext";
+import {DwtComposite} from "./DwtComposite";
 
 export class DwtPropertyEditor extends DwtComposite {
 
@@ -28,13 +28,13 @@ export class DwtPropertyEditor extends DwtComposite {
     useDwtInputField: boolean,
     className?: string,
     posStyle?: string,
-    deferred?: boolean
+    deferred?: boolean,
   ) {
     super({
-      parent: parent,
       className: className,
+      deferred: deferred,
+      parent: parent,
       posStyle: posStyle,
-      deferred: deferred
     });
   }
 

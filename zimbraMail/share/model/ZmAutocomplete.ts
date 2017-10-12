@@ -28,7 +28,7 @@ export class ZmAutocomplete {
 }
 
 export class ZmAutocompleteMatch {
-  item?: ZmContact;
-  email?: string;
-  name?: string;
+  public item?: ZmContact;
+  public email?: string;
+  public name?: string;
 }

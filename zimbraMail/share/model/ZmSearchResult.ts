@@ -23,9 +23,9 @@ import {ZmSearch} from "./ZmSearch";
 
 export class ZmSearchResult {
 
-  constructor(search: ZmSearch) {}
-
   public search: ZmSearch;
+
+  constructor(search: ZmSearch) {}
 
   public getResults(type?: string): ZmList { return undefined; }
   public getAttribute(name: string): any { return undefined; }

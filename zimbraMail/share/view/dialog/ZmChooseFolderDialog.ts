@@ -18,21 +18,20 @@
  * along with ZeXtras' Zimbra API for Zimlet building. If not, see <http://www.gnu.org/licenses/>.
  */
 
-
-import {ZmDialog} from "./ZmDialog";
-import {ZmOverview} from "../ZmOverview";
-import {AjxListener} from "../../../../ajax/events/AjxListener";
-import {DwtControl} from "../../../../ajax/dwt/widgets/DwtControl";
-import {ZmTreeView} from "../ZmTreeView";
-import {DwtInputField} from "../../../../ajax/dwt/widgets/DwtInputField";
 import {DwtButton} from "../../../../ajax/dwt/widgets/DwtButton";
+import {DwtControl} from "../../../../ajax/dwt/widgets/DwtControl";
+import {DwtInputField} from "../../../../ajax/dwt/widgets/DwtInputField";
+import {AjxListener} from "../../../../ajax/events/AjxListener";
+import {ZmOverview} from "../ZmOverview";
+import {ZmTreeView} from "../ZmTreeView";
+import {ZmDialog} from "./ZmDialog";
 
 export class ZmChooseFolderDialog extends ZmDialog {
 
   public _treeViewListener: AjxListener;
   public _treeView: {[accountId: string]: {[treeViewId: string]: ZmTreeView}};
   public _changeListener: AjxListener;
-  public _folders: {id: string, type: string, name: string, path: string, accountId?: string}[];
+  public _folders: Array<{id: string, type: string, name: string, path: string, accountId?: string}>;
   public _inputField: DwtInputField;
   public _inputDivId: string;
   public _folderDescDivId: string;
@@ -40,8 +39,8 @@ export class ZmChooseFolderDialog extends ZmDialog {
 
   constructor(parent: DwtControl, className?: string) {
     super({
+      className: className,
       parent: parent,
-      className: className
     });
   }
 
@@ -54,4 +53,3 @@ export class ZmChooseFolderDialog extends ZmDialog {
   public _getNewButton(): DwtButton { return undefined; }
   public _getOverview(): ZmOverview { return undefined; }
 }
-

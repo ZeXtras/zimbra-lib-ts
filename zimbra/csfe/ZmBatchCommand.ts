@@ -23,7 +23,7 @@ import {AjxSoapDoc} from "../../ajax/soap/AjxSoapDoc";
 export class ZmBatchCommand {
   public run(): void {}
 
-  addRequestParams(ajxSoapDoc: AjxSoapDoc, callback: AjxCallback, errorCallback: AjxCallback): void {}
+  public addRequestParams(ajxSoapDoc: AjxSoapDoc, callback: AjxCallback, errorCallback: AjxCallback): void {}
 
-  add(ajxCallback: AjxCallback): void {}
+  public add(ajxCallback: AjxCallback): void {}
 }

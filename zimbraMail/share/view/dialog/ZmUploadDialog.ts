@@ -18,16 +18,19 @@
  * along with T4Z - TypeScript 4 Zimlet. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import {DwtDialog} from "../../../../ajax/dwt/widgets/DwtDialog";
-import {ZmBaseController} from "../../controller/ZmBaseController";
-import {DwtToolBarButton} from "../../../../ajax/dwt/widgets/DwtToolBar";
-import {ZmController} from "../../controller/ZmController";
-import {ZmFolder} from "../../model/ZmFolder";
+import {AjxCallback} from "../../../../ajax/boot/AjxCallback";
 import {DwtPoint} from "../../../../ajax/dwt/graphics/DwtPoint";
 import {DwtButton} from "../../../../ajax/dwt/widgets/DwtButton";
+import {DwtDialog} from "../../../../ajax/dwt/widgets/DwtDialog";
+import {DwtToolBarButton} from "../../../../ajax/dwt/widgets/DwtToolBar";
+import {ZmBaseController} from "../../controller/ZmBaseController";
+import {ZmController} from "../../controller/ZmController";
+import {ZmFolder} from "../../model/ZmFolder";
 import {UploadParams} from "../../ZmUploadManager";
 
 export class ZmUploadDialog extends DwtDialog {
+
+  public static UPLOAD_FIELD_NAME: string;
 
   public _controller: ZmBaseController;
   public _uploadFolder: ZmFolder;
@@ -36,8 +39,6 @@ export class ZmUploadDialog extends DwtDialog {
   public _supportsHTML5: boolean;
   public _showLinkTitleText: boolean;
   public _inprogress: boolean;
-
-  public static UPLOAD_FIELD_NAME: string;
 
   public _upload(): void {}
   public _createUploadHtml(): void {}
@@ -50,14 +51,14 @@ export class ZmUploadDialog extends DwtDialog {
   public popup(
     controller: ZmController,
     folder: ZmFolder,
-    callback?: Function,
+    callback?: AjxCallback,
     title?: string,
     loc?: DwtPoint,
     oneFileOnly?: boolean,
     noResolveAction?: boolean,
     showNotes?: boolean,
     isImage?: string,
-    conflictAction?: string
+    conflictAction?: string,
   ): void {}
 
 }

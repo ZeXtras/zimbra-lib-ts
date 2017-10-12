@@ -18,8 +18,8 @@
  * along with T4Z - TypeScript 4 Zimlet. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import {ZmModel} from "../../share/model/ZmModel";
 import {AjxVector} from "../../../ajax/util/AjxVector";
+import {ZmModel} from "../../share/model/ZmModel";
 
 export class ZmMimePart extends ZmModel {
 

@@ -18,10 +18,10 @@
  * along with T4Z - TypeScript 4 Zimlet. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import {ZmToolBar, ZmToolBarParams} from "./ZmToolBar";
-import {ZmOperation} from "../../core/ZmOperation";
-import {DwtToolBarButton} from "../../../ajax/dwt/widgets/DwtToolBar";
 import {DwtButton} from "../../../ajax/dwt/widgets/DwtButton";
+import {DwtToolBarButton} from "../../../ajax/dwt/widgets/DwtToolBar";
+import {ZmOperation} from "../../core/ZmOperation";
+import {ZmToolBar, ZmToolBarParams} from "./ZmToolBar";
 
 export class ZmButtonToolBar extends ZmToolBar {
 

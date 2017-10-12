@@ -22,13 +22,13 @@ import {DwtDialog, DwtDialogParams} from "./DwtDialog";
 
 export class DwtMessageDialog extends DwtDialog {
 
-  constructor(params: DwtMessageDialogParams) {
-    super({parent: params.parent, standardButtons: params.buttons, id: params.id});
-  }
-
   public static WARNING_STYLE: number;
   public static INFO_STYLE: number;
   public static CRITICAL_STYLE: number;
+
+  constructor(params: DwtMessageDialogParams) {
+    super({parent: params.parent, standardButtons: params.buttons, id: params.id});
+  }
 
   public setMessage(msgStr: string, style?: number, title?: string): void {}
 

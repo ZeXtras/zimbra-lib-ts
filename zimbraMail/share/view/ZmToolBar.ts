@@ -18,12 +18,14 @@
  * along with T4Z - TypeScript 4 Zimlet. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import {DwtToolBar, DwtToolBarParams} from "../../../ajax/dwt/widgets/DwtToolBar";
-import {ZmAppButton} from "./ZmAppButton";
-import {AjxListener} from "../../../ajax/events/AjxListener";
 import {DwtButton} from "../../../ajax/dwt/widgets/DwtButton";
+import {DwtToolBar, DwtToolBarParams} from "../../../ajax/dwt/widgets/DwtToolBar";
+import {AjxListener} from "../../../ajax/events/AjxListener";
+import {ZmAppButton} from "./ZmAppButton";
 
 export class ZmToolBar extends DwtToolBar {
+
+  public static _setButtonStyle(uploadButton: DwtButton, hint: string, text: string, image: string): void {}
 
   constructor(params: ZmToolBarParams) {
     super(params);
@@ -32,8 +34,6 @@ export class ZmToolBar extends DwtToolBar {
   public enableAll(enabled: boolean): void {}
   public getButton(id: string): ZmAppButton { return undefined; }
   public addSelectionListener(buttonId: string, listener: AjxListener): void {}
-
-  public static _setButtonStyle(uploadButton: DwtButton, hint: string, text: string, image: string): void {}
 }
 
 export interface ZmToolBarParams extends DwtToolBarParams {

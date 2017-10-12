@@ -18,9 +18,9 @@
  * along with T4Z - TypeScript 4 Zimlet. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import {DwtButton, DwtButtonParams} from "./DwtButton";
-import {AjxVector} from "../../util/AjxVector";
 import {AjxListener} from "../../events/AjxListener";
+import {AjxVector} from "../../util/AjxVector";
+import {DwtButton, DwtButtonParams} from "./DwtButton";
 
 export class DwtSelect extends DwtButton {
 
@@ -29,8 +29,7 @@ export class DwtSelect extends DwtButton {
   }
 
   public getValue(): any { return undefined; }
-  public addOption(option: DwtSelectOptionData, selected?: boolean): number;
-  public addOption(option: DwtSelectOption, selected?: boolean): number;
+  public addOption(option: DwtSelectOptionData|DwtSelectOption, selected?: boolean): number;
   public addOption(option: string, selected: boolean, value: any, image: string): number;
   public addOption(option: any, selected?: boolean, value?: any, image?: string): number { return undefined; }
   public getOptions(): AjxVector<DwtSelectOption> { return undefined; }
@@ -40,29 +39,42 @@ export class DwtSelect extends DwtButton {
 }
 
 export interface DwtSelectParams extends DwtButtonParams {
-  options?: (DwtSelectOptionData | DwtSelectOption)[];
+  options?: Array<DwtSelectOptionData | DwtSelectOption>;
 }
 
 export class DwtSelectOption {
-  constructor(value: string, selected: boolean, displayValue?: string, owner?: DwtSelect, optionalDOMId?: string, image?: string, selectedValue?: string, hr?: boolean, extraData?: {}, id?: string) {}
+  constructor(
+    value: string,
+    selected: boolean,
+    displayValue?: string,
+    owner?: DwtSelect,
+    optionalDOMId?: string,
+    image?: string,
+    selectedValue?: string,
+    hr?: boolean,
+    extraData?: {},
+    id?: string,
+  ) {}
   public getDisplayValue(): string { return undefined; }
 }
 
 export class DwtSelectOptionData {
-  value: string;
-  id: string;
-  extraData: any;
-  displayValue: string;
-  selectedValue: string;
-  isSelected: boolean;
-  image?: string;
-  obo?: boolean;
+  public value: string;
+  public id: string;
+  public extraData: any;
+  public displayValue: string;
+  public selectedValue: string;
+  public isSelected: boolean;
+  public image?: string;
+  public obo?: boolean;
 
-  constructor(value: string,
-              displayValue: string,
-              isSelected?: boolean,
-              selectedValue?: string,
-              image?: string,
-              id?: string,
-              extraData?: any) {}
+  constructor(
+    value: string,
+    displayValue: string,
+    isSelected?: boolean,
+    selectedValue?: string,
+    image?: string,
+    id?: string,
+    extraData?: any,
+  ) {}
 }

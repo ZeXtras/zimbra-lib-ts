@@ -18,10 +18,10 @@
  * along with T4Z - TypeScript 4 Zimlet. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import {ZmItem, ZmItemAttrs} from "../../share/model/ZmItem";
-import {ZmCsfeResult} from "../../../zimbra/csfe/ZmCsfeResult";
 import {AjxCallback} from "../../../ajax/boot/AjxCallback";
 import {AjxEmailAddressParseEmailStringReturnObj} from "../../../ajax/util/AjxEmailAddress";
+import {ZmCsfeResult} from "../../../zimbra/csfe/ZmCsfeResult";
+import {ZmItem, ZmItemAttrs} from "../../share/model/ZmItem";
 import {ZmAddrBook} from "./ZmAddrBook";
 
 export class ZmContact extends ZmItem {

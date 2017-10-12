@@ -23,11 +23,10 @@ import {ZmAlert} from "./ZmAlert";
 export class ZmDesktopAlert extends ZmAlert {
   public static requestedPermission: boolean;
   public static notificationArray: any[];
+  public static getInstance(): ZmDesktopAlert { return undefined; }
 
   public useWebkit: boolean;
 
-  public static getInstance(): ZmDesktopAlert { return undefined; }
-
-  public _checkWebkitPermission(allowedCallback: Function): void {}
+  public _checkWebkitPermission(allowedCallback: () => void): void {}
   public _showWebkitNotification(title: string, message: string, sticky: boolean): void {}
 }

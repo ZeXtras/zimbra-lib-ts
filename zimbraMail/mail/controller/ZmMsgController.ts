@@ -18,13 +18,13 @@
  * along with T4Z - TypeScript 4 Zimlet. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import {ZmMailListController} from "./ZmMailListController";
-import {DwtEvent} from "../../../ajax/dwt/events/DwtEvent";
-import {ZmMailMsg} from "../model/ZmMailMsg";
-import {ZmConv} from "../model/ZmConv";
-import {ZmListController} from "../../share/controller/ZmListController";
 import {AjxCallback} from "../../../ajax/boot/AjxCallback";
+import {DwtEvent} from "../../../ajax/dwt/events/DwtEvent";
 import {ZmCsfeResult} from "../../../zimbra/csfe/ZmCsfeResult";
+import {ZmListController} from "../../share/controller/ZmListController";
+import {ZmConv} from "../model/ZmConv";
+import {ZmMailMsg} from "../model/ZmMailMsg";
+import {ZmMailListController} from "./ZmMailListController";
 
 export class ZmMsgController extends ZmMailListController {
 

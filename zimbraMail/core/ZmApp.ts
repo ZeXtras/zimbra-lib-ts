@@ -18,17 +18,17 @@
  * along with T4Z - TypeScript 4 Zimlet. If not, see <http://www.gnu.org/licenses/>.
  */
 
+import {AjxCallback} from "../../ajax/boot/AjxCallback";
+import {DwtControl} from "../../ajax/dwt/widgets/DwtControl";
+import {DwtShell} from "../../ajax/dwt/widgets/DwtShell";
 import {ZmController} from "../share/controller/ZmController";
 import {ZmSearchResultsController} from "../share/controller/ZmSearchResultsController";
-import {DwtControl} from "../../ajax/dwt/widgets/DwtControl";
-import {AjxCallback} from "../../ajax/boot/AjxCallback";
-import {SetNewButtonPropsParams} from "./ZmZimbraMail";
-import {ZmOverview, ZmOverviewParams} from "../share/view/ZmOverview";
-import {DwtShell} from "../../ajax/dwt/widgets/DwtShell";
-import {ZmSearchResult} from "../share/model/ZmSearchResult";
-import {ZmAppViewMgrCreateViewParams, ZmAppViewMgrCreatedViewDescriptor} from "./ZmAppViewMgr";
-import {ZmSettings} from "../share/model/ZmSettings";
 import {ZmSearch} from "../share/model/ZmSearch";
+import {ZmSearchResult} from "../share/model/ZmSearchResult";
+import {ZmSettings} from "../share/model/ZmSettings";
+import {ZmOverview, ZmOverviewParams} from "../share/view/ZmOverview";
+import {ZmAppViewMgrCreatedViewDescriptor, ZmAppViewMgrCreateViewParams} from "./ZmAppViewMgr";
+import {SetNewButtonPropsParams} from "./ZmZimbraMail";
 
 export class ZmApp {
 
@@ -117,7 +117,11 @@ export interface RegisterItemsApp {
 }
 
 export interface ShowSearchResultsApp {
-  showSearchResults(results: ZmSearchResult, loadCallback: AjxCallback, searchResultsController?: ZmSearchResultsController): void;
+  showSearchResults(
+    results: ZmSearchResult,
+    loadCallback: AjxCallback,
+    searchResultsController?: ZmSearchResultsController,
+  ): void;
 }
 
 export interface SearchToolbarApp {

@@ -19,7 +19,6 @@
  */
 
 export class ZmSoundAlert {
-  private static INSTANCE: ZmSoundAlert = void 0;
 
   public static getInstance(): ZmSoundAlert {
     if (typeof ZmSoundAlert.INSTANCE === "undefined") {
@@ -28,6 +27,8 @@ export class ZmSoundAlert {
 
     return ZmSoundAlert.INSTANCE;
   }
+
+  private static INSTANCE: ZmSoundAlert = void 0;
 
   public start(soundFile?: string): void {
   }

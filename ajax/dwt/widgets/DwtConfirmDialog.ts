@@ -18,12 +18,18 @@
  * along with T4Z - TypeScript 4 Zimlet. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import {DwtDialog} from "./DwtDialog";
 import {AjxCallback} from "../../boot/AjxCallback";
 import {DwtPoint} from "../graphics/DwtPoint";
+import {DwtDialog} from "./DwtDialog";
 
 export class DwtConfirmDialog extends DwtDialog {
 
-  public popup(questionHtml: string, yesCallback: AjxCallback, noCallback?: AjxCallback, cancelCallback?: AjxCallback, loc?: DwtPoint): void {}
+  public popup(
+    questionHtml: string,
+    yesCallback: AjxCallback,
+    noCallback?: AjxCallback,
+    cancelCallback?: AjxCallback,
+    loc?: DwtPoint,
+  ): void {}
 
 }

@@ -19,35 +19,35 @@
  */
 
 import {AjxCallback} from "../../ajax/boot/AjxCallback";
+import {DwtKeyboardMgr} from "../../ajax/dwt/keyboard/DwtKeyboardMgr";
+import {DwtComposite} from "../../ajax/dwt/widgets/DwtComposite";
+import {DwtConfirmDialog} from "../../ajax/dwt/widgets/DwtConfirmDialog";
+import {DwtMessageDialog} from "../../ajax/dwt/widgets/DwtMessageDialog";
+import {DwtShell} from "../../ajax/dwt/widgets/DwtShell";
+import {AjxPost} from "../../ajax/net/AjxPost";
+import {ZmCalMgr} from "../calendar/model/ZmCalMgr";
+import {ZmIdentityCollection} from "../mail/model/ZmIdentityCollection";
+import {ZmController} from "../share/controller/ZmController";
+import {ZmOverviewController} from "../share/controller/ZmOverviewController";
+import {ZmSearchController} from "../share/controller/ZmSearchController";
+import {ZmAccountList} from "../share/model/ZmAccountList";
+import {ZmAutocomplete} from "../share/model/ZmAutocomplete";
+import {ZmFolderTree} from "../share/model/ZmFolderTree";
+import {ZmItem} from "../share/model/ZmItem";
+import {ZmList} from "../share/model/ZmList";
+import {ZmOrganizer} from "../share/model/ZmOrganizer";
+import {ZmSearch} from "../share/model/ZmSearch";
+import {ZmSettings} from "../share/model/ZmSettings";
+import {ZmTree} from "../share/model/ZmTree";
 import {ZmZimbraAccount} from "../share/model/ZmZimbraAccount";
 import {ZmZimletMgr} from "../share/model/ZmZimletMgr";
-import {ZmController} from "../share/controller/ZmController";
-import {ZmSettings} from "../share/model/ZmSettings";
-import {DwtMessageDialog} from "../../ajax/dwt/widgets/DwtMessageDialog";
-import {ZmSearchController} from "../share/controller/ZmSearchController";
-import {ZmList} from "../share/model/ZmList";
-import {DwtShell} from "../../ajax/dwt/widgets/DwtShell";
-import {ZmAppViewMgr} from "./ZmAppViewMgr";
-import {ZmApp} from "./ZmApp";
-import {DwtKeyboardMgr} from "../../ajax/dwt/keyboard/DwtKeyboardMgr";
-import {ZmAutocomplete} from "../share/model/ZmAutocomplete";
-import {ZmCalMgr} from "../calendar/model/ZmCalMgr";
-import {DwtComposite} from "../../ajax/dwt/widgets/DwtComposite";
-import {ZmIdentityCollection} from "../mail/model/ZmIdentityCollection";
 import {ZmAttachDialog} from "../share/view/dialog/ZmAttachDialog";
-import {ZmItem} from "../share/model/ZmItem";
-import {ZmAccountList} from "../share/model/ZmAccountList";
-import {ZmFolderTree} from "../share/model/ZmFolderTree";
-import {ZmOrganizer} from "../share/model/ZmOrganizer";
-import {ZmZimletApp} from "../share/view/ZmZimletApp";
-import {ZmTree} from "../share/model/ZmTree";
-import {ZmOverviewController} from "../share/controller/ZmOverviewController";
-import {DwtConfirmDialog} from "../../ajax/dwt/widgets/DwtConfirmDialog";
-import {ZmSearch} from "../share/model/ZmSearch";
-import {ZmRenameFolderDialog} from "../share/view/dialog/ZmRenameFolderDialog";
-import {ZmUploadManager} from "../share/ZmUploadManager";
-import {AjxPost} from "../../ajax/net/AjxPost";
 import {ZmChooseFolderDialog} from "../share/view/dialog/ZmChooseFolderDialog";
+import {ZmRenameFolderDialog} from "../share/view/dialog/ZmRenameFolderDialog";
+import {ZmZimletApp} from "../share/view/ZmZimletApp";
+import {ZmUploadManager} from "../share/ZmUploadManager";
+import {ZmApp} from "./ZmApp";
+import {ZmAppViewMgr} from "./ZmAppViewMgr";
 
 export class ZmAppCtxt {
 
@@ -55,8 +55,8 @@ export class ZmAppCtxt {
   public static handleWindowOpener(): ZmAppCtxt { return undefined; }
 
   public isChildWindow: boolean;
-  public sendAsEmails: string|{addr: string}[];
-  public sendOboEmails: string|{addr: string}[];
+  public sendAsEmails: string|Array<{addr: string}>;
+  public sendOboEmails: string|Array<{addr: string}>;
   public isOffline: boolean;
   public multiAccounts: boolean;
   public accountList: ZmAccountList;
@@ -104,14 +104,20 @@ export class ZmAppCtxt {
 }
 
 export interface SetStatusMsgParams {
-  msg: string;                   //   the status message
-  level?: number;                //   the status level {@link ZmStatusView}  (may be <code>null</code>)
-  detail?: string;               //   the details (may be <code>null</code>)
-  transitions?: {};              //   the transitions (may be <code>null</code>)
-  toast?: {};                    //   the toast control (may be <code>null</code>)
-  force?: boolean;               //   force any displayed toasts out of the way (dismiss them and run their dismissCallback). Enqueued messages that are not yet displayed will not be displayed
-  dismissCallback?: AjxCallback; //   callback to run when the toast is dismissed (by another message using [force], or explicitly calling ZmStatusView.prototype.dismiss())
-  finishCallback?: AjxCallback;  //   callback to run when the toast finishes its transitions by itself (not when dismissed)
+  msg: string;                   // the status message
+  level?: number;                // the status level {@link ZmStatusView}  (may be <code>null</code>)
+  detail?: string;               // the details (may be <code>null</code>)
+  transitions?: {};              // the transitions (may be <code>null</code>)
+  toast?: {};                    // the toast control (may be <code>null</code>)
+  force?: boolean;               // force any displayed toasts out of the way (dismiss them and run their
+                                 // dismissCallback). Enqueued messages that aren't yet displayed will not be displayed
+
+  dismissCallback?: AjxCallback; // callback to run when the toast is dismissed (by another message using [force],
+                                 // or explicitly calling ZmStatusView.prototype.dismiss())
+
+  finishCallback?: AjxCallback;  // callback to run when the toast finishes its
+                                 // transitions by itself (not when dismissed)
+
 }
 
 interface NotifyZimletsParams {
