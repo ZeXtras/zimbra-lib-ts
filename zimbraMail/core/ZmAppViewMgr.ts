@@ -33,7 +33,11 @@ export class ZmAppViewMgr {
   public static CB_PRE_SHOW: string;
   public static CB_POST_HIDE: string;
   public static LEFT_NAV: string[];
+  public static C_TREE: string;
   public static C_TREE_FOOTER: string;
+
+  public static APP: string;
+  public static GLOBAL: string;
 
   public _toRemove: string[];
 
@@ -51,6 +55,8 @@ export class ZmAppViewMgr {
   public pushView(id: string): void {}
   public popView(force: boolean, viewId: number, skipHistory?: boolean): void {}
   public getAppView(appName: string): string { return undefined; }
+  public setHiddenComponents(viewId: string, cidList: string[], hide: boolean, app?: string): void {}
+  public showSkinElement(cid: string, show: boolean, noReflow?: boolean): void {}
 
 }
 

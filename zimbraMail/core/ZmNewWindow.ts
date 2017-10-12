@@ -18,12 +18,13 @@
  * along with T4Z - TypeScript 4 Zimlet. If not, see <http://www.gnu.org/licenses/>.
  */
 
+/* tslint:disable */
 import {ZmController} from "../share/controller/ZmController";
 import {ZmApp} from "./ZmApp";
 
 export class ZmNewWindow extends ZmController {
 
-  public static _confirmExitMethod() {}
+  public static _confirmExitMethod(ev: BeforeUnloadEvent) { return; }
 
   public _apps: {[appName: string]: ZmApp};
 
