@@ -18,8 +18,8 @@
  * along with T4Z - TypeScript 4 Zimlet. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import {ZaTabView} from "./ZaTabView";
 import {ZaController} from "./ZaController";
+import {ZaTabView} from "./ZaTabView";
 
 export class ZaXFormViewController extends ZaController {
   public _view: ZaTabView; // FIXME: Should be private

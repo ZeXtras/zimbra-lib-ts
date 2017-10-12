@@ -18,6 +18,7 @@
  * along with T4Z - TypeScript 4 Zimlet. If not, see <http://www.gnu.org/licenses/>.
  */
 
+import {AjxCallback} from "../../ajax/boot/AjxCallback";
 import {ZmFolder} from "./model/ZmFolder";
 
 export class ZmUploadManager {
@@ -30,12 +31,11 @@ export interface UploadParams {
   allResponses?: any;
   start?: number;
   uploadFolder?: ZmFolder;
-  completeAllCallback?: Function;
-  preResolveConflictCallback?: Function;
-  errorCallback: Function;
-  completeDocSaveCallback?: Function;
-  docFiles?: {}[];
+  completeAllCallback?: AjxCallback;
+  preResolveConflictCallback?: AjxCallback;
+  errorCallback: AjxCallback;
+  completeDocSaveCallback?: AjxCallback;
+  docFiles?: Array<{}>;
   url: string;
-  progressCallback?: Function;
+  progressCallback?: AjxCallback;
 }
-

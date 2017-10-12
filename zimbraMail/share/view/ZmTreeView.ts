@@ -18,21 +18,21 @@
  * along with T4Z - TypeScript 4 Zimlet. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import {DwtTree, DwtTreeParams} from "../../../ajax/dwt/widgets/DwtTree";
-import {ZmTreeController} from "../controller/ZmTreeController";
 import {DwtHeaderTreeItem} from "../../../ajax/dwt/widgets/DwtHeaderTreeItem";
+import {DwtTree, DwtTreeParams} from "../../../ajax/dwt/widgets/DwtTree";
 import {DwtTreeItem} from "../../../ajax/dwt/widgets/DwtTreeItem";
+import {ZmTreeController} from "../controller/ZmTreeController";
 import {ZmOrganizer} from "../model/ZmOrganizer";
 import {ZmTree} from "../model/ZmTree";
 
 export class ZmTreeView extends DwtTree {
 
-  public static COMPARE_FUNC: {[type: string]: string | Function};
+  public static COMPARE_FUNC: {[type: string]: string | ((itemA: any, itemB: any) => number)};
+  public static KEY_ID: string;
+  public static KEY_TYPE: string;
 
   public _dataTree: ZmTree;
   public _controller: ZmTreeController;
-  public static KEY_ID: string;
-  public static KEY_TYPE: string;
 
   constructor(params: ZmTreeViewParams) {
     super(params);

@@ -18,12 +18,12 @@
  * along with T4Z - TypeScript 4 Zimlet. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import {DwtComposite} from "../widgets/DwtComposite";
-import {XFormItem, Dwt_Adaptor_XFormItem, XFormObjectBase} from "./XFormItem";
-import {DwtEvent} from "../events/DwtEvent";
-import {XModel} from "./XModel";
-import {ZaItem} from "../../../zimbraAdmin/common/ZaItem";
 import {ZaController} from "../../../zimbraAdmin/common/ZaController";
+import {ZaItem} from "../../../zimbraAdmin/common/ZaItem";
+import {DwtEvent} from "../events/DwtEvent";
+import {DwtComposite} from "../widgets/DwtComposite";
+import {Dwt_Adaptor_XFormItem, XFormItem, XFormObjectBase} from "./XFormItem";
+import {XModel} from "./XModel";
 
 export class XForm extends DwtComposite {
   public xmodel: XModel;
@@ -34,19 +34,18 @@ export class XForm extends DwtComposite {
     model: XModel,
     instance: any,
     dwtContainer: DwtComposite,
-    contextId: string
+    contextId: string,
   ) {
     super({
+      className: "DWTXForm",
       parent: dwtContainer,
-      className: "DWTXForm"
     });
   }
 
   public setInstanceValue(val: any, refPath: string): void {}
   public getInstanceValue(refPath: string): any {}
   public setIsDirty(dirty: boolean, item?: XFormItem): void {}
-  public itemChanged(id: XFormItem, value: any, event: DwtEvent, quite?: boolean): void;
-  public itemChanged(id: string, value: any, event: DwtEvent, quite?: boolean): void;
+  public itemChanged(id: XFormItem|string, value: any, event: DwtEvent, quite?: boolean): void;
   public itemChanged(id: any, value: any, event: DwtEvent, quite?: boolean): void {}
   public refresh(): void {}
   public getId(): string {
@@ -80,7 +79,6 @@ export let _BOTTOM_: string;
 export let _CENTER_: string;
 export let _MIDDLE_: string;
 export let _INLINE_: string;
-
 
 // values for "relevantBehavior"
 export let _HIDE_: string;

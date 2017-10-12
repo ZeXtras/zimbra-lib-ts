@@ -18,31 +18,34 @@
  * along with T4Z - TypeScript 4 Zimlet. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import {DwtLabel, DwtLabelParams} from "./DwtLabel";
-import {AjxListener} from "../../events/AjxListener";
-import {DwtMenu} from "./DwtMenu";
 import {AjxCallback} from "../../boot/AjxCallback";
-import {DwtEvent} from "../events/DwtEvent";
 import {AjxEventMgr} from "../../events/AjxEventMgr";
+import {AjxListener} from "../../events/AjxListener";
+import {DwtEvent} from "../events/DwtEvent";
+import {DwtLabel, DwtLabelParams} from "./DwtLabel";
+import {DwtMenu} from "./DwtMenu";
 
 export class DwtButton extends DwtLabel {
 
-  public _dropDownEvtMgr: AjxEventMgr;
-
   public static ACTION_MOUSEUP: number;
+
+  public _dropDownEvtMgr: AjxEventMgr;
 
   constructor(params: DwtButtonParams) {
     super(params);
   }
   public setText(text: string): void {}
-  public addSelectionListener(listener: Function, index?: number): void; // TODO: Investigate on this usage
-  public addSelectionListener(listener: AjxListener, index?: number): void;
-  public addSelectionListener(listener: any, index?: number): void {}
+  public addSelectionListener(listener: AjxListener|any, index?: number): void {}
   public setSelected(selected: boolean): void {}
-  public setMenu(menu: AjxCallback, shouldToggle?: boolean, followIconStyle?: boolean, popupAbove?: boolean, popupRight?: boolean): void;
-  public setMenu(menu: DwtMenu, shouldToggle?: boolean, followIconStyle?: boolean, popupAbove?: boolean, popupRight?: boolean): void;
-  public setMenu(params: DwtButtonSetMenuParams): void;
-  public setMenu(params: any, shouldToggle?: boolean, followIconStyle?: boolean, popupAbove?: boolean, popupRight?: boolean): void {}
+
+  public setMenu(
+    menuOrParams: AjxCallback|DwtMenu|DwtButtonSetMenuParams|any,
+    shouldToggle?: boolean,
+    followIconStyle?: boolean,
+    popupAbove?: boolean,
+    popupRight?: boolean,
+  ): void {}
+
   public getMenu(dontCreate?: boolean): DwtMenu { return undefined; }
   public setImage(imageInfo: string): void {}
   public _createHtmlFromTemplate(templateId: string, data: {[key: string]: any}): void {}

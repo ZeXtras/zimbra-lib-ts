@@ -18,10 +18,10 @@
  * along with T4Z - TypeScript 4 Zimlet. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import {AjxVector} from "../../../ajax/util/AjxVector";
 import {AjxCallback} from "../../../ajax/boot/AjxCallback";
-import {ZmBatchCommand} from "../../../zimbra/csfe/ZmBatchCommand";
 import {AjxSoapDoc} from "../../../ajax/soap/AjxSoapDoc";
+import {AjxVector} from "../../../ajax/util/AjxVector";
+import {ZmBatchCommand} from "../../../zimbra/csfe/ZmBatchCommand";
 
 export class ZmSearch {
   public static TYPE: {[type: string]: string};
@@ -36,8 +36,8 @@ export class ZmSearch {
       errorCallback?: AjxCallback,
       batchCmd?: ZmBatchCommand,
       timeout?: number,
-      noBusyOverlay?: boolean
-    }
+      noBusyOverlay?: boolean,
+    },
   ) {}
 
   public _getStandardMethod(soapDoc: AjxSoapDoc): Element { return undefined; }
@@ -47,7 +47,8 @@ export interface ZmSearchParam {
   query?: string; // The query string
   queryHint?: string; // The query string that gets appended to the query but not something the user needs to know about
   types?: AjxVector<string>|string[]; // The item types to search for
-  forceTypes?: boolean; // Use the types we pass, do not override (in case of mail) to the current user's view pref (MSG vs. CONV).
+  forceTypes?: boolean; // Use the types we pass, do not override (in case of mail)
+                        // to the current user's view pref (MSG vs. CONV).
   sortBy?: string; // The sort order
   offset?: number; // The starting point within result set
   limit?: number; // The number of results to return
@@ -63,10 +64,12 @@ export interface ZmSearchParam {
   conds?: any[]; // The list of search conditions (<code><SearchCalendarResourcesRequest></code>)
   attrs?: string[]; // The list of attributes to return (<code><SearchCalendarResourcesRequest></code>)
   field?: string; // The field to search within (instead of default)
-  soapInfo?: ZmSearchSoapInfoParams; // The object with method, namespace, response, and additional attribute fields for creating soap doc
+  soapInfo?: ZmSearchSoapInfoParams; // The object with method, namespace, response,
+                                     // and additional attribute fields for creating soap doc
   response?: {}; // The canned JSON response (no request will be made)
   folders?: string[]; // The list of folders for autocomplete
-  allowableTaskStatus?: string[]; // The list of task status types to return (assuming one of the values for "types" is "task")
+  allowableTaskStatus?: string[]; // The list of task status types to return
+                                  // (assuming one of the values for "types" is "task")
   accountName?: string; // The account name to run this search against
   idsOnly?: boolean; // Response returns item IDs only
   inDumpster?: boolean; // Search in the dumpster

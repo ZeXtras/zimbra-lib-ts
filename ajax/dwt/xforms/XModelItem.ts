@@ -49,12 +49,19 @@ export interface XModelItemEnumChoice {
 }
 
 export class XModelItemFactory {
-  public static createItem(attributes: {[name: string]: any}, parentItem: XModelItem, xmodel: XModel): ZaItem {
+  public static createItem(
+    attributes: {[name: string]: any},
+    parentItem: XModelItem,
+    xmodel: XModel,
+  ): ZaItem {
     return void 0;
   }
-  public static createItemType(typeConstant: string, typeName: string, constructor: ObjectConstructor, superClassConstructor?: ObjectConstructor): ObjectConstructor {
+  public static createItemType(
+    typeConstant: string,
+    typeName: string,
+    constructor: ObjectConstructor,
+    superClassConstructor?: ObjectConstructor,
+  ): ObjectConstructor {
     return void 0;
   }
 }
-
-

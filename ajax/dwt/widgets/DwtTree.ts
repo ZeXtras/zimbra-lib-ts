@@ -18,8 +18,8 @@
  * along with T4Z - TypeScript 4 Zimlet. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import {DwtComposite, DwtCompositeParams} from "./DwtComposite";
 import {AjxListener} from "../../events/AjxListener";
+import {DwtComposite, DwtCompositeParams} from "./DwtComposite";
 import {DwtTreeItem} from "./DwtTreeItem";
 
 export class DwtTree extends DwtComposite {

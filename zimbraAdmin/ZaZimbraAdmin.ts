@@ -18,10 +18,10 @@
  * along with T4Z - TypeScript 4 Zimlet. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import {ZaController} from "./common/ZaController";
+import {AjxCallback} from "../ajax/boot/AjxCallback";
 import {ZaAccount} from "./accounts/model/ZaAccount";
 import {ZaToast} from "./common/ZaActionStatusView";
-import {AjxCallback} from "../ajax/boot/AjxCallback";
+import {ZaController} from "./common/ZaController";
 import {ZaCurrentAppBar} from "./common/ZaCurrentAppBar";
 
 export class ZaZimbraAdmin extends ZaController {
@@ -29,22 +29,20 @@ export class ZaZimbraAdmin extends ZaController {
   public static currentAdminAccount: ZaAccount;
   public static _ZEXTRAS_GROUP_VIEW: number;
   public static _ZEXTRAS_GROUP_LIST: string;
-
-  public setActionStatusMsg(msg: string): void;
-  public setActionStatusMsg(params: SetActionStatusMsgParams): void;
-  public setActionStatusMsg(params: any): void {}
-
-  public getCurrentAppBar(): ZaCurrentAppBar {
+  public static getInstance(): ZaZimbraAdmin {
     return void 0;
   }
-  public static getInstance(): ZaZimbraAdmin {
+
+  public setActionStatusMsg(params: string|SetActionStatusMsgParams|any): void {}
+
+  public getCurrentAppBar(): ZaCurrentAppBar {
     return void 0;
   }
 }
 
 interface SetActionStatusMsgParams {
   msg: string;
-  level?: number; // ZaActionStatusView.LEVEL_INFO, ZaActionStatusView.LEVEL_WARNING, or ZaActionStatusView.LEVEL_CRITICAL
+  level?: number; // ZaActionStatusView.LEVEL_INFO, ZaActionStatusView.LEVEL_WARNING, ZaActionStatusView.LEVEL_CRITICAL
   details?: string;
   transitions?: string[];
   toast?: ZaToast;

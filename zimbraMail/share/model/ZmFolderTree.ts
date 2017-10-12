@@ -18,8 +18,8 @@
  * along with T4Z - TypeScript 4 Zimlet. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import {ZmTree} from "./ZmTree";
 import {ZmOrganizer} from "./ZmOrganizer";
+import {ZmTree} from "./ZmTree";
 
 export class ZmFolderTree extends ZmTree {
 

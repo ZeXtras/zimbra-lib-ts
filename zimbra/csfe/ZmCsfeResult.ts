@@ -26,12 +26,12 @@ export class ZmCsfeResult {
   public _isException: boolean;
   public _header: ZmCsfeResultHeader;
 
-  public toString(): string {
-    return "ZmCsfeResult";
-  }
-
   constructor(data?: ZmCsfeResultData, isException?: boolean, header?: ZmCsfeResultHeader) {
     this.set(data, isException, header);
+  }
+
+  public toString(): string {
+    return "ZmCsfeResult";
   }
 
   public set(data?: ZmCsfeResultData, isException?: boolean, header?: ZmCsfeResultHeader) {

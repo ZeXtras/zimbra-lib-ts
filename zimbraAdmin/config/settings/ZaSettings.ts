@@ -19,7 +19,7 @@
  */
 
 export class ZaSettings {
-  public static initMethods: Function[];
+  public static initMethods: Array<() => void>;
 
   public static ENABLED_UI_COMPONENTS: {[name: string]: boolean};
 

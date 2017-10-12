@@ -18,13 +18,13 @@
  * along with T4Z - TypeScript 4 Zimlet. If not, see <http://www.gnu.org/licenses/>.
  */
 
+import {AjxCallback} from "../../../ajax/boot/AjxCallback";
+import {DwtComposite} from "../../../ajax/dwt/widgets/DwtComposite";
+import {DwtControl} from "../../../ajax/dwt/widgets/DwtControl";
 import {ZmApp, ZmAppLaunchParams} from "../../core/ZmApp";
 import {ZmZimletAppController} from "../controller/ZmZimletAppController";
-import {ZmToolBar} from "./ZmToolBar";
-import {DwtComposite} from "../../../ajax/dwt/widgets/DwtComposite";
-import {AjxCallback} from "../../../ajax/boot/AjxCallback";
-import {DwtControl} from "../../../ajax/dwt/widgets/DwtControl";
 import {ZmZimletBase} from "../model/ZmZimletBase";
+import {ZmToolBar} from "./ZmToolBar";
 
 export class ZmZimletApp extends ZmApp {
 
@@ -45,4 +45,3 @@ export class ZmZimletApp extends ZmApp {
 
 export interface ZmZimletAppLaunchParams extends ZmAppLaunchParams {
 }
-

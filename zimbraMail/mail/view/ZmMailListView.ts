@@ -18,8 +18,8 @@
  * along with T4Z - TypeScript 4 Zimlet. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import {ZmListView} from "../../share/view/ZmListView";
 import {DwtListHeaderItemParams} from "../../../ajax/dwt/widgets/DwtListView";
+import {ZmListView} from "../../share/view/ZmListView";
 
 export class ZmMailListView extends ZmListView {
 

@@ -18,14 +18,14 @@
  * along with T4Z - TypeScript 4 Zimlet. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import {DwtComposite} from "../../../ajax/dwt/widgets/DwtComposite";
-import {ZmItem} from "../../share/model/ZmItem";
-import {DwtIframe} from "../../../ajax/dwt/widgets/DwtIframe";
-import {ZmBriefcaseItem} from "../model/ZmBriefcaseItem";
-import {ZmBaseController} from "../../share/controller/ZmBaseController";
-import {DwtDropTarget} from "../../../ajax/dwt/dnd/DwtDropTarget";
 import {Dwt} from "../../../ajax/dwt/core/Dwt";
+import {DwtDropTarget} from "../../../ajax/dwt/dnd/DwtDropTarget";
+import {DwtComposite} from "../../../ajax/dwt/widgets/DwtComposite";
+import {DwtIframe} from "../../../ajax/dwt/widgets/DwtIframe";
+import {ZmBaseController} from "../../share/controller/ZmBaseController";
+import {ZmItem} from "../../share/model/ZmItem";
 import {ZmListView} from "../../share/view/ZmListView";
+import {ZmBriefcaseItem} from "../model/ZmBriefcaseItem";
 
 export class ZmPreviewPaneView extends DwtComposite {
 

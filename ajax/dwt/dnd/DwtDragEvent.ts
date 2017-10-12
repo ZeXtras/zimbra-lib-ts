@@ -21,10 +21,10 @@
 import {DwtControl} from "../widgets/DwtControl";
 
 export class DwtDragEvent {
+  public static SET_DATA: string;
+
   public action: string;
   public srcData: any;
   public srcControl: DwtControl;
   public doIt: boolean;
-
-  public static SET_DATA: string;
 }

@@ -18,20 +18,25 @@
  * along with T4Z - TypeScript 4 Zimlet. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import {ZmListController} from "../../share/controller/ZmListController";
 import {DwtControl} from "../../../ajax/dwt/widgets/DwtControl";
 import {ZmApp} from "../../core/ZmApp";
+import {ZmListController} from "../../share/controller/ZmListController";
 import {ZmSearchResultsController} from "../../share/controller/ZmSearchResultsController";
 import {ZmBriefcaseItem} from "../model/ZmBriefcaseItem";
 
 export class ZmBriefcaseController extends ZmListController {
 
-  constructor(container: DwtControl, app: ZmApp, type: string, sessionId: string, searchResultsController: ZmSearchResultsController) {
+  constructor(
+    container: DwtControl,
+    app: ZmApp,
+    type: string,
+    sessionId: string,
+    searchResultsController: ZmSearchResultsController,
+  ) {
     super(container, app, type, sessionId, searchResultsController);
   }
 
-  public editFile(items: ZmBriefcaseItem[]): void;
-  public editFile(items: ZmBriefcaseItem): void;
+  public editFile(items: ZmBriefcaseItem[]|ZmBriefcaseItem): void;
   public editFile(items: any): void {
   }
 

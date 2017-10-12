@@ -18,11 +18,11 @@
  * along with T4Z - TypeScript 4 Zimlet. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import {DwtMenu} from "../../../ajax/dwt/widgets/DwtMenu";
-import {ZmController} from "../controller/ZmController";
-import {DwtMenuItem} from "../../../ajax/dwt/widgets/DwtMenuItem";
 import {DwtControl} from "../../../ajax/dwt/widgets/DwtControl";
+import {DwtMenu} from "../../../ajax/dwt/widgets/DwtMenu";
+import {DwtMenuItem} from "../../../ajax/dwt/widgets/DwtMenuItem";
 import {AjxListener} from "../../../ajax/events/AjxListener";
+import {ZmController} from "../controller/ZmController";
 
 export class ZmPopupMenu extends DwtMenu {
 
@@ -30,15 +30,15 @@ export class ZmPopupMenu extends DwtMenu {
 
   constructor(parent: DwtControl, className?: string, id?: string, controller?: ZmController) {
     super({
-      parent: parent,
       className: className,
       id: id,
-      style: undefined
+      parent: parent,
+      style: undefined,
     });
   }
 
   public popup(delay: number, x: number, y: number, kbGenereated?: boolean): void {}
-  public addSelectionListener(menuItemId: string, listener: AjxListener|Function, index?: number): void {}
+  public addSelectionListener(menuItemId: string, listener: AjxListener, index?: number): void {}
 
   public createMenuItem(id: string, params: CreateMenuItemParams): DwtMenuItem { return undefined; }
   public getMenuItem(id: string): DwtMenuItem { return undefined; }

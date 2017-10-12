@@ -19,18 +19,17 @@
  */
 
 import {ZaItem} from "../../../zimbraAdmin/common/ZaItem";
-import {XForm} from "./XForm";
-import {DwtComposite} from "../widgets/DwtComposite";
 import {ZaXFormViewController} from "../../../zimbraAdmin/common/ZaXFormViewController";
 import {DwtEvent} from "../events/DwtEvent";
 import {DwtButton} from "../widgets/DwtButton";
+import {DwtComposite} from "../widgets/DwtComposite";
+import {XForm} from "./XForm";
 import {XFormItemDescription} from "./XFormItemDescription";
 
 export class XFormItem {
   public static ERROR_STATE_ERROR: number;
   public static ERROR_STATE_VALID: number;
-  private _isXFormItem: boolean;
-  /* Private */ public __attributes:  {[name: string]: any};
+  /* Private */ public __attributes: {[name: string]: any};
   public writeElementDiv: boolean;
   public id: string;
 
@@ -50,8 +49,8 @@ export class XFormItem {
   public bmolsnr: boolean; // Be My Own Listener
   public forceUpdate: boolean;
   public isBlockElement: boolean;
-  public visibilityChecks: Function[];
-  public enableDisableChecks: Function[];
+  public visibilityChecks: Array<() => boolean>;
+  public enableDisableChecks: Array<() => boolean>;
   public visibilityChangeEventSources: string[];
   public enableDisableChangeEventSources: string[];
   public valueChangeEventSources: string[];
@@ -66,6 +65,7 @@ export class XFormItem {
   // Added to keep a basic compatibility.
   public type: string;
   public items: XFormItem[];
+  private _isXFormItem: boolean;
 
   public getInstance(): ZaItem {
     return void 0;
@@ -119,7 +119,7 @@ export class Composite_XFormItem extends Group_XFormItem {
 export class Case_XFormItem extends Group_XFormItem {}
 
 export class Dwt_TabBar_XFormItem extends Dwt_Adaptor_XFormItem {
-  public choices: {value: number, label: string}[];
+  public choices: Array<{value: number, label: string}>;
 }
 
 export class Checkbox_XFormItem extends XFormItem {
@@ -147,5 +147,5 @@ export class Cell_Spacer_XFormItem extends Spacer_XFormItem {}
 export class Step_Choices_XFormItem extends Group_XFormItem {}
 
 export class Select1_XFormItem extends XFormItem {
-  public setChoices(newChoices: {label: string, value: any}[]): void {}
+  public setChoices(newChoices: Array<{label: string, value: any}>): void {}
 }

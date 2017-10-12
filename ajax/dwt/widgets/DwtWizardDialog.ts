@@ -29,9 +29,9 @@ export class DwtWizardDialog extends DwtDialog {
 
   constructor(parent: DwtShell, className: string, title: string, w?: string, h?: string) {
     super({
-      parent: parent,
       className: className,
-      title: title
+      parent: parent,
+      title: title,
     });
   }
 }
