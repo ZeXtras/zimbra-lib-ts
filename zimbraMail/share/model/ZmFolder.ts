@@ -19,6 +19,7 @@
  */
 
 import {ZmOrganizer, ZmOrganizerParams} from "./ZmOrganizer";
+import {ZmBatchCommand} from "../../../zimbra/csfe/ZmBatchCommand";
 
 export class ZmFolder extends ZmOrganizer {
 
@@ -26,9 +27,14 @@ export class ZmFolder extends ZmOrganizer {
   public static HIDE_ID: {[id: string]: boolean};
   public static ID_TRASH: number;
   public static ID_SENT: number;
+  public static QUERY_NAME: {[folderId: string]: string};
+
+  public oname?: string;
 
   constructor(params: ZmFolderParams) { super(params); }
   public createQuery(pathOnly: boolean): string { return undefined; }
+  public mayContain(what: any, folderType: string, ignoreExisting: boolean): boolean { return undefined; }
+  public move(newParent: ZmFolder, noUndo: boolean, actionText: string, batchCmd: ZmBatchCommand): void {}
 
 }
 

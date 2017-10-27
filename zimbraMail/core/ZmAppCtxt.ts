@@ -101,6 +101,7 @@ export class ZmAppCtxt {
   public getZmUploadManager(): ZmUploadManager { return undefined; }
   public getUploadManager(): AjxPost { return undefined; }
   public getCurrentViewId(): string { return undefined; }
+  public getCurrentAppName(): string { return undefined; }
 
 }
 

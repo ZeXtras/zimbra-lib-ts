@@ -24,5 +24,6 @@ import {ZmTree} from "./ZmTree";
 export class ZmFolderTree extends ZmTree {
 
   public getByType(type: string): ZmOrganizer[] { return undefined; }
+  public handleDeleteNoSuchFolder(organizer: ZmOrganizer): void {}
 
 }
