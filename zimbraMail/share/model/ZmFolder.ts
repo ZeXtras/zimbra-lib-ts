@@ -30,6 +30,7 @@ export class ZmFolder extends ZmOrganizer {
   public static QUERY_NAME: {[folderId: string]: string};
 
   public oname?: string;
+  public _systemName: string;
 
   constructor(params: ZmFolderParams) { super(params); }
   public createQuery(pathOnly: boolean): string { return undefined; }
