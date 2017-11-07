@@ -145,7 +145,7 @@ export interface AppTabParams {
   text: string;
   textPrecedence: number;
   tooltip: string;
-  style: string;
+  style: string | number;
 }
 
 export interface ZmAppLaunchParams {}

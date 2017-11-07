@@ -18,6 +18,7 @@
  * along with T4Z - TypeScript 4 Zimlet. If not, see <http://www.gnu.org/licenses/>.
  */
 
+import {ZmActionMenu} from "../view/ZmActionMenu";
 import {ZmZimletBase} from "./ZmZimletBase";
 
 export class ZmZimletContext {
@@ -27,6 +28,7 @@ export class ZmZimletContext {
   public version: string;
   public priority: number;
   public setPropValue(name: string, val: any): void {}
+  public getPanelActionMenu(): ZmActionMenu { return undefined; }
 
   public processMessage(label: string): string { return undefined; }
 }

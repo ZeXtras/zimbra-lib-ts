@@ -58,6 +58,7 @@ export class ZmZimletBase extends ZmObjectHandler {
   public getResource(resourceName: string): string { return undefined; }
   public getConfig(key: string): any { return undefined; }
   public getUserProperty(key: string): string { return undefined; }
+  public getZimletContext(): ZmZimletContext { return undefined; }
   public setUserProperty(
     propertyName: string,
     value: string|number|boolean,
