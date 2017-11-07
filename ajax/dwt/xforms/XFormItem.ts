@@ -94,6 +94,7 @@ export let _OUTPUT_: string;
 export let _SEPARATOR_: string;
 export let _SPACER_: string;
 export let _SWITCH_: string;
+export let _ZATABCASE_: string;
 
 export interface XFormObjectBase {
   colSizes?: string[];
