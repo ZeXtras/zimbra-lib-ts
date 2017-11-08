@@ -19,6 +19,7 @@
  */
 
 import {ZaXWizardStepChoice} from "../../../zimbraAdmin/common/ZaXWizardDialog";
+import {XForm} from "./XForm";
 /**
  * This class is introduced to define the XFormItem JSON description.
  * Zimbra does not use this class, neither You should instantiate this class.
@@ -51,4 +52,7 @@ export interface XFormItemDescription {
   tabGroupKey?: number;
   colSpan?: number;
   choices?: ZaXWizardStepChoice[];
+  onChange?: (value: string, event: Event, form: XForm) => void;
+  getDisplayValue?: (value: string) => void;
+  valueChangeEventSources?: string[];
 }
