@@ -53,6 +53,7 @@ export interface XFormItemDescription {
   colSpan?: number;
   choices?: ZaXWizardStepChoice[];
   onChange?: (value: string, event: Event, form: XForm) => void;
-  getDisplayValue?: (value: string) => void;
+  getDisplayValue?: (value: any) => string;
   valueChangeEventSources?: string[];
+  bmolsnr?: boolean;
 }
