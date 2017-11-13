@@ -19,11 +19,15 @@
  */
 
 import {DwtComposite} from "../../ajax/dwt/widgets/DwtComposite";
+import {XForm} from "../../ajax/dwt/xforms/XForm";
 import {XFormObjectBase} from "../../ajax/dwt/xforms/XFormItem";
+import {XModel} from "../../ajax/dwt/xforms/XModel";
 import {ZaItem} from "./ZaItem";
 
 export class ZaTabView extends DwtComposite {
   public static XFormModifiers: {[name: string]: Array<(xFormObject: XFormObjectBase, entry?: ZaItem) => void>};
   public TAB_INDEX: number;
+  public _localXForm: XForm;
+  public _localXModel: XModel;
   public setObject(entry: ZaItem): void {}
 }

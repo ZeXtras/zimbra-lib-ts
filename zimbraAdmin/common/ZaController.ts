@@ -23,8 +23,8 @@ import {ZaAccountViewController} from "../accounts/controller/ZaAccountViewContr
 import {ZaResourceController} from "../resource/controller/ZaResourceController";
 import {ZaSearchListController} from "../search/controller/ZaSearchListController";
 import {ZaItem} from "./ZaItem";
-import {ZaListView} from "./ZaListView";
 import {ZaOperation} from "./ZaOperation";
+import {ZaTabView} from "./ZaTabView";
 
 export class ZaController {
   public static initPopupMenuMethods: {
@@ -66,7 +66,7 @@ export class ZaController {
   public _toolbarOrder: number[];
 
   public _currentObject?: ZaItem;
-  public _contentView?: ZaListView;
+  public _contentView?: ZaTabView;
   public _toolbar?: any;
 
   public popupMsgDialog(msg: string, noExecReset?: boolean): void {}
