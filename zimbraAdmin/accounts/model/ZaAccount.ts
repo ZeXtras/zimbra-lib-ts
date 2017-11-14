@@ -27,4 +27,7 @@ export class ZaAccount extends ZaItem {
   public attrs: {
     zimbraIsAdminAccount?: string,
   };
+  public setAttrs: {
+    [name: string]: boolean;
+  };
 }

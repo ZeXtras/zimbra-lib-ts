@@ -56,4 +56,7 @@ export interface XFormItemDescription {
   getDisplayValue?: (value: any) => string;
   valueChangeEventSources?: string[];
   bmolsnr?: boolean;
+  editable?: boolean;
+  enableDisableChecks?: Array<() => boolean>;
+  enableDisableChangeEventSources?: string[];
 }

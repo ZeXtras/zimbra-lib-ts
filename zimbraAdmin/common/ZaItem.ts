@@ -58,6 +58,7 @@ export class ZaItem extends ZaModel {
   public rightsLoaded: boolean;
   public id: string; // TODO: Investigate
   public attrs: {}; // TODO: Investigate
+  public setAttrs: {}; // TODO: Investigate
   public type: string;
   private _iKeyName: string;
   private _uuid: string;
