@@ -53,6 +53,8 @@ export class DwtTabButton extends DwtButton {
 
 export class DwtTabViewPage extends DwtPropertyPage {
 
+  public _contentEl: HTMLElement;
   public _tabKey: number;
+  public showMe(): void {}
 
 }
