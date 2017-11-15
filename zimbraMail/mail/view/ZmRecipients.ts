@@ -24,13 +24,14 @@ import {ZmComposeView} from "./ZmComposeView";
 
 export class ZmRecipients {
 
-  public createRecipientHtml(
-    parent: ZmComposeView,
-    viewId: string,
-    htmlElId: string,
-    fieldNames: string[],
-  ): void;
-  /** @deprecated */
+  /**
+   * Attention to the modifications introduced in Zimbra 8.6
+   * @param {ZmComposeView} parent
+   * @param {string} viewId
+   * @param {string} htmlElId
+   * @param {string[]} fieldNames
+   * @param {string} bccToggleId @deprecated in Zimbra 8.6
+   */
   public createRecipientHtml(
     parent: ZmComposeView,
     viewId: string,

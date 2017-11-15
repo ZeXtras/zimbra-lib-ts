@@ -18,24 +18,11 @@
  * along with T4Z - TypeScript 4 Zimlet. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import {ZmActionMenu} from "../view/ZmActionMenu";
-import {ZmZimletBase} from "./ZmZimletBase";
+import {XForm} from "../../../ajax/dwt/xforms/XForm";
+import {ZaTabView} from "../../common/ZaTabView";
 
-export class ZmZimletContext {
-  public handlerObject: ZmZimletBase;
-  public userProperties: UserProperty[];
-  public name: string;
-  public version: string;
-  public priority: number;
-  public setPropValue(name: string, val: any): void {}
-  public getPanelActionMenu(): ZmActionMenu { return undefined; }
+export class ZaAccountXFormView extends ZaTabView {
 
-  public processMessage(label: string): string { return undefined; }
-}
+  public getMyForm(): XForm { return undefined; }
 
-export interface UserProperty {
-  label: string;
-  name: string;
-  type: string;
-  value: any;
 }

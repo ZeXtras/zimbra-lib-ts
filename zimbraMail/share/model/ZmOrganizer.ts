@@ -57,6 +57,9 @@ export class ZmOrganizer {
   public type: string;
   public url?: string;
   /** @since 8.7.7 */ public isMountpoint: boolean;
+  public _isRemote?: boolean;
+  public rid: string;
+  public zid: string;
 
   constructor(params: ZmOrganizerParams) {}
   public getAccount(): ZmZimbraAccount { return undefined; }
@@ -92,6 +95,7 @@ export class ZmOrganizer {
   ): string { return undefined; }
   public reparent(newParent?: ZmOrganizer): void {}
   public deleteLocal(): void {}
+  public isSystem(): boolean { return undefined; }
 
 }
 

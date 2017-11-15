@@ -31,6 +31,6 @@ export interface XModelItemDescription extends XModelItemInt {
   setterScope?: string;
   getter?: string;
   getterScope?: string;
-  choices?: any[];
+  choices?: () => Array<{value: any, label: string}>;
   defaultValue?: any;
 }

@@ -20,4 +20,5 @@ define(["require", "exports"], function (require, exports) {
   exports._SEPARATOR_ = _SEPARATOR_;
   exports._SPACER_ = _SPACER_;
   exports._SWITCH_ = _SWITCH_;
+  exports._ZATABCASE_ = _ZATABCASE_;
 });

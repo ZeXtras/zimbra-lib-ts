@@ -22,4 +22,6 @@ export interface XModelItemInt {
   id: string;
   type?: string;
   ref?: string;
+  choices?: () => Array<{value: any, label: string}>;
+  defaultValue?: any;
 }

@@ -48,6 +48,7 @@ import {ZmZimletApp} from "../share/view/ZmZimletApp";
 import {ZmUploadManager} from "../share/ZmUploadManager";
 import {ZmApp} from "./ZmApp";
 import {ZmAppViewMgr} from "./ZmAppViewMgr";
+import {ZmRequestMgr} from "./ZmRequestMgr";
 
 export class ZmAppCtxt {
 
@@ -101,6 +102,8 @@ export class ZmAppCtxt {
   public getZmUploadManager(): ZmUploadManager { return undefined; }
   public getUploadManager(): AjxPost { return undefined; }
   public getCurrentViewId(): string { return undefined; }
+  public getCurrentAppName(): string { return undefined; }
+  public getRequestMgr(): ZmRequestMgr { return undefined; }
 
 }
 
