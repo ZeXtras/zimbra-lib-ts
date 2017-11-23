@@ -25,6 +25,7 @@ import {DwtButton} from "../widgets/DwtButton";
 import {DwtComposite} from "../widgets/DwtComposite";
 import {XForm} from "./XForm";
 import {XFormItemDescription} from "./XFormItemDescription";
+import {BSelectorOption} from "../../../../graphic/descriptor/BSelectorOption";
 
 export class XFormItem {
   public static ERROR_STATE_ERROR: number;
@@ -90,6 +91,7 @@ export class XFormItem {
   }
 }
 
+export let _GROUP_: string;
 export let _OUTPUT_: string;
 export let _SEPARATOR_: string;
 export let _SPACER_: string;
@@ -97,6 +99,7 @@ export let _SWITCH_: string;
 
 export interface XFormObjectBase {
   colSizes?: string[];
+  cssStyle?: string;
   numCols?: number;
   items: XFormItemDescription[];
 }
@@ -147,5 +150,5 @@ export class Cell_Spacer_XFormItem extends Spacer_XFormItem {}
 export class Step_Choices_XFormItem extends Group_XFormItem {}
 
 export class Select1_XFormItem extends XFormItem {
-  public setChoices(newChoices: Array<{label: string, value: any}>): void {}
+  public setChoices(newChoices: BSelectorOption[]): void {}
 }

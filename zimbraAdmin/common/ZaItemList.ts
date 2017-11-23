@@ -21,14 +21,13 @@
 import {ZaItem} from "./ZaItem";
 import {ZaModel} from "./ZaModel";
 
-export class ZaItemList extends ZaModel {
+export class ZaItemList<T extends ZaItem> extends ZaModel {
 
   constructor(itemClass: typeof ZaItem) {
     super(true);
   }
 
-  public getArray(): ZaItem[] {
-    return void 0;
-  }
+  public loadFromJS(resp: {}): void {}
+  public getArray(): T[] { return undefined; }
 
 }

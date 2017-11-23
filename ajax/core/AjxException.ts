@@ -20,4 +20,7 @@
 
 export class AjxException {
   public static CANCELED: string;
+
+  public code: string;
+  public msg: string;
 }
