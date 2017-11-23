@@ -33,9 +33,14 @@ export class ZaTabView extends DwtComposite {
 
   public TAB_INDEX: number;
 
-  // Params for 6 and 7 (container: DwtShell, ikeyName: string),
+  // Params for 6 and 7 (container: DwtShell, ikeyName: string, cssClassName: string, contextId: string),
   // Params for 8 (params: DwtControlParams & {ikeyname: string, contextId: string})
-  constructor(containerOrParams: DwtShell|ZaTabViewParams, ikeyName?: string) {
+  constructor(
+    containerOrParams: DwtShell|ZaTabViewParams,
+    ikeyName?: string,
+    cssClassName?: string,
+    contextId?: string,
+  ) {
     super(containerOrParams);
   }
 
