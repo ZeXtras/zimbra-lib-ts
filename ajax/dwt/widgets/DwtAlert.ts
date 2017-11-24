@@ -18,32 +18,10 @@
  * along with T4Z - TypeScript 4 Zimlet. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import {ZaZimbraAdmin} from "../ZaZimbraAdmin";
-import {ZaAppCtxt} from "./ZaAppCtxt";
-import {ZaController} from "./ZaController";
-import {ZaItem} from "./ZaItem";
-import {ZaItemList} from "./ZaItemList";
-import {ZaXDialog} from "./ZaXDialog";
+import {DwtControl} from "./DwtControl";
 
-export class ZaApp {
+export class DwtAlert extends DwtControl {
 
-  public static getInstance(): ZaApp {
-    return void 0;
-  }
+  public static WARNING: string;
 
-  public dialogs: {[name: string]: ZaXDialog};
-
-  public getCurrentController(): ZaController {
-    return void 0;
-  }
-
-  public getAppController(): ZaZimbraAdmin {
-    return void 0;
-  }
-
-  public getAppCtxt(): ZaAppCtxt {
-    return void 0;
-  }
-
-  public getMbsList(): ZaItemList<ZaItem> { return undefined; }
 }

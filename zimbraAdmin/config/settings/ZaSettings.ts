@@ -25,4 +25,6 @@ export class ZaSettings {
 
   public static ZEXTRAS_GROUP_LIST_VIEW: string;
   public static CARTE_BLANCHE_UI: string;
+
+  public static isNetworkVersion(): boolean { return undefined; }
 }

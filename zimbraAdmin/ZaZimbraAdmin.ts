@@ -25,6 +25,7 @@ import {ZaController} from "./common/ZaController";
 import {ZaCurrentAppBar} from "./common/ZaCurrentAppBar";
 
 export class ZaZimbraAdmin extends ZaController {
+  public static VIEW_INDEX: number;
   public static URN: string;
   public static currentAdminAccount: ZaAccount;
   public static _ZEXTRAS_GROUP_VIEW: number;

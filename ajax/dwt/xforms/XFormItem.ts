@@ -18,6 +18,7 @@
  * along with T4Z - TypeScript 4 Zimlet. If not, see <http://www.gnu.org/licenses/>.
  */
 
+import {BSelectorOption} from "../../../../graphic/descriptor/BSelectorOption";
 import {ZaItem} from "../../../zimbraAdmin/common/ZaItem";
 import {ZaXFormViewController} from "../../../zimbraAdmin/common/ZaXFormViewController";
 import {DwtEvent} from "../events/DwtEvent";
@@ -25,7 +26,6 @@ import {DwtButton} from "../widgets/DwtButton";
 import {DwtComposite} from "../widgets/DwtComposite";
 import {XForm} from "./XForm";
 import {XFormItemDescription} from "./XFormItemDescription";
-import {BSelectorOption} from "../../../../graphic/descriptor/BSelectorOption";
 
 export class XFormItem {
   public static ERROR_STATE_ERROR: number;
@@ -91,6 +91,7 @@ export class XFormItem {
   }
 }
 
+export let _DWT_BUTTON_: string;
 export let _GROUP_: string;
 export let _OUTPUT_: string;
 export let _SEPARATOR_: string;
