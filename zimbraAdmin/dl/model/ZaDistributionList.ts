@@ -13,7 +13,7 @@ import {ZaItem} from "../../common/ZaItem";
 import {XModelInt} from "../../../ajax/dwt/xforms/XModelInt";
 
 export class ZaDistributionList extends ZaItem {
+  public static myXModel: XModelInt;
   public id: string;
   public attrs: {};
-  public static myXModel: XModelInt;
 }
