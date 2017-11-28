@@ -29,7 +29,6 @@ import {ZaAppCtxt} from "./ZaAppCtxt";
 import {DwtShell} from "../../ajax/dwt/widgets/DwtShell";
 import {DwtComposite} from "../../ajax/dwt/widgets/DwtComposite";
 import {ZaListView} from "./ZaListView";
-import {AjxException} from "../../ajax/core/AjxException";
 
 export class ZaController {
   public static initPopupMenuMethods: {

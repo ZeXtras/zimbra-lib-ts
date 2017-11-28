@@ -25,8 +25,6 @@ import {ZaItem} from "./ZaItem";
 import {ZaItemList} from "./ZaItemList";
 import {ZaXDialog} from "./ZaXDialog";
 import {DwtShell} from "../../ajax/dwt/widgets/DwtShell";
-import {ZaItemList} from "./ZaItemList";
-import {ZaItem} from "./ZaItem";
 
 export class ZaApp {
 
