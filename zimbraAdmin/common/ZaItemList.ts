@@ -23,11 +23,13 @@ import {ZaModel} from "./ZaModel";
 
 export class ZaItemList<T extends ZaItem> extends ZaModel {
 
-  constructor(itemClass: typeof ZaItem) {
+  constructor(itemClass?: typeof ZaItem) {
     super(true);
   }
 
   public loadFromJS(resp: {}): void {}
   public getArray(): T[] { return undefined; }
+  public add(item: T, index?: number): void {}
+  public size(): number { return undefined; }
 
 }
