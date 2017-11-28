@@ -24,8 +24,12 @@ import {ZaAccountViewController} from "../accounts/controller/ZaAccountViewContr
 import {ZaResourceController} from "../resource/controller/ZaResourceController";
 import {ZaSearchListController} from "../search/controller/ZaSearchListController";
 import {ZaItem} from "./ZaItem";
-import {ZaListView} from "./ZaListView";
 import {ZaOperation} from "./ZaOperation";
+import {ZaAppCtxt} from "./ZaAppCtxt";
+import {DwtShell} from "../../ajax/dwt/widgets/DwtShell";
+import {DwtComposite} from "../../ajax/dwt/widgets/DwtComposite";
+import {ZaListView} from "./ZaListView";
+import {AjxException} from "../../ajax/core/AjxException";
 
 export class ZaController {
   public static initPopupMenuMethods: {
@@ -67,12 +71,16 @@ export class ZaController {
   public _toolbarOrder: number[];
 
   public _currentObject?: ZaItem;
-  public _contentView?: ZaListView;
+  public _contentView?: ZaListView | DwtComposite;
   public _toolbar?: any;
+  public _container: DwtShell;
+
+  constructor(appContext: ZaAppCtxt, container: DwtShell, ikeyName: string) {
+  }
 
   public popupMsgDialog(msg: string, noExecReset?: boolean): void {}
   public popupWarningDialog(msg: string, noExecReset?: boolean): void {}
   public popupErrorDialog(msg: string, ex?: AjxException, style?: number): void {}
-  public switchToNextView(nextViewCtrlr: ZaController, func: (...args) => any, params: any): void {}
+  public switchToNextView(nextViewCtrlr: ZaController, func: (...args) => any, params?: any): void {}
 
 }
