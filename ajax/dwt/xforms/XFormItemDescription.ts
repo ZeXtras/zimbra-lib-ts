@@ -51,4 +51,33 @@ export interface XFormItemDescription {
   tabGroupKey?: number;
   colSpan?: number;
   choices?: ZaXWizardStepChoice[];
+  cssClass?: string;
+  valign?: string;
+  toolTipContent?: string;
+}
+
+export interface Base_XFormItemDescription {
+  cssClass?: string;
+}
+
+export type XformItemDescriptionClasses = _GROUP_XformItemDescription | _CELL_SPACER_XformItemDescription | _OUTPUT_XformItemDescription;
+
+export interface _OUTPUT_XformItemDescription extends Base_XFormItemDescription {
+  type: "output";
+  ref: string;
+  valign?: string;
+}
+
+export interface _GROUP_XformItemDescription extends Base_XFormItemDescription {
+  type: "group";
+  colSpan?: string;
+  id?: string;
+  numCols?: number;
+  colSizes?: string[];
+  width?: string;
+  items: XformItemDescriptionClasses[];
+}
+
+export interface _CELL_SPACER_XformItemDescription extends Base_XFormItemDescription {
+  type: "cell_spacer";
 }

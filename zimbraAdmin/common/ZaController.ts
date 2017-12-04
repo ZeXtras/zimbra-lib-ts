@@ -56,6 +56,8 @@ export class ZaController {
     ZaSearchListController: Array<typeof ZaSearchListController>;
   };
 
+  public static setViewMethods: {[controllerIKeyName: string]: Array<(entry: ZaItem) => void>};
+
   public _popupOperations: ZaOperation[];
   public _defaultType: string;
 
@@ -73,6 +75,7 @@ export class ZaController {
   public _contentView?: ZaListView | DwtComposite;
   public _toolbar?: any;
   public _container: DwtShell;
+  public _iKeyName: string;
 
   constructor(appContext: ZaAppCtxt, container: DwtShell, ikeyName: string) {
   }
@@ -81,5 +84,7 @@ export class ZaController {
   public popupWarningDialog(msg: string, noExecReset?: boolean): void {}
   public popupErrorDialog(msg: string, ex?: AjxException, style?: number): void {}
   public switchToNextView(nextViewCtrlr: ZaController, func: (...args) => any, params?: any): void {}
-
+  public _setView(entry: ZaItem, openInNewTab: boolean, skipRefresh: boolean): void {}
+  public getMainTab(): any { return undefined; }
+  public getContentViewId(): string { return undefined; }
 }

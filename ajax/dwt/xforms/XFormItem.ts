@@ -25,7 +25,7 @@ import {DwtEvent} from "../events/DwtEvent";
 import {DwtButton} from "../widgets/DwtButton";
 import {DwtComposite} from "../widgets/DwtComposite";
 import {XForm} from "./XForm";
-import {XFormItemDescription} from "./XFormItemDescription";
+import {XFormItemDescription, XformItemDescriptionClasses} from "./XFormItemDescription";
 
 export class XFormItem {
   public static ERROR_STATE_ERROR: number;
@@ -91,18 +91,25 @@ export class XFormItem {
   }
 }
 
+export let _DWT_ALERT_: string;
 export let _DWT_BUTTON_: string;
-export let _GROUP_: string;
-export let _OUTPUT_: string;
+export let _GROUP_: "group";
+export let _OUTPUT_: "output";
 export let _SEPARATOR_: string;
 export let _SPACER_: string;
 export let _SWITCH_: string;
+export let _CELL_SPACER_: "cell_spacer";
+export let _TOP_GROUPER_: string;
+export let _CHECKBOX_: string;
+export let _GROUPER_: string;
+export let _TEXTFIELD_: string;
 
 export interface XFormObjectBase {
   colSizes?: string[];
   cssStyle?: string;
   numCols?: number;
-  items: XFormItemDescription[];
+  items: XFormItemDescription[] | XformItemDescriptionClasses[];
+  /* TODO: All `XFormItemDescription[]` should be migrated to `XformItemDescriptionClasses[]` */
 }
 
 export class WidgetAdaptor_XFormItem extends XFormItem {}

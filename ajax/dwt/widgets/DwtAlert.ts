@@ -24,4 +24,6 @@ export class DwtAlert extends DwtControl {
 
   public static WARNING: string;
 
+  public static CRITICAL: number;
+
 }

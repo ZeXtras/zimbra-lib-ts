@@ -18,15 +18,8 @@
  * along with T4Z - TypeScript 4 Zimlet. If not, see <http://www.gnu.org/licenses/>.
  */
 
-export class ZaMsg {
-  public static Yes: string;
-  public static NAD_ResetToCOS: string;
-  public static No: string;
-  public static TBB_Save: string;
-  public static NAD_Add: string;
-  public static TBB_Edit: string;
-  public static TBB_Delete: string;
-  public static OVP_home: string;
-  public static MSG_WorkingTask: string;
-  public static splashScreenLoading: string;
-}
+import {Select1_XFormItem} from "./XFormItem";
+
+export class OSelect1_XFormItem extends Select1_XFormItem {}
+
+export let _OSELECT1_: string;

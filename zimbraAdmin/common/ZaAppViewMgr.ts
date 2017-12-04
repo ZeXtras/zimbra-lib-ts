@@ -18,7 +18,17 @@
  * along with T4Z - TypeScript 4 Zimlet. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import {Case_XFormItem} from "../../ajax/dwt/xforms/XFormItem";
+import {DwtComposite} from "../../ajax/dwt/widgets/DwtComposite";
+import {ZaTabView} from "./ZaTabView";
 
-export class ZATabCase_XFormItem extends Case_XFormItem {
+export class ZaAppViewMgr {
+
+  public static C_APP_CONTENT: "APP CONTENT";
+
+  public createView(viewId: string|number, elements: ZaAppViewMgr_createViewElements): void {}
+
+}
+
+export interface ZaAppViewMgr_createViewElements {
+  "APP CONTENT"?: ZaTabView |DwtComposite;
 }

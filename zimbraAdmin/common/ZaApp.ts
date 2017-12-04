@@ -25,6 +25,7 @@ import {ZaItem} from "./ZaItem";
 import {ZaItemList} from "./ZaItemList";
 import {ZaXDialog} from "./ZaXDialog";
 import {DwtShell} from "../../ajax/dwt/widgets/DwtShell";
+import {ZaAppViewMgr} from "./ZaAppViewMgr";
 
 export class ZaApp {
 
@@ -40,5 +41,5 @@ export class ZaApp {
   public getAppCtxt(): ZaAppCtxt { return undefined; }
   public getMbsList(): ZaItemList<ZaItem> { return undefined; }
   public pushView(name: string|number, openInNewTab?: boolean, openInSearchTab?: boolean): void {}
-
+  public getAppViewMgr(): ZaAppViewMgr { return undefined; }
 }
