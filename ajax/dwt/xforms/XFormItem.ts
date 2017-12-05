@@ -68,10 +68,10 @@ export class XFormItem {
   public items: XFormItem[];
   private _isXFormItem: boolean;
 
-  public getInstance(): ZaItem {
+  public getInstance<T extends ZaItem>(): T {
     return void 0;
   }
-  public getInstanceValue(): any {
+  public getInstanceValue(path?: string): any {
     return void 0;
   }
   public getForm(): XForm {
@@ -91,16 +91,16 @@ export class XFormItem {
   }
 }
 
-export let _DWT_ALERT_: string;
-export let _DWT_BUTTON_: string;
+export let _DWT_ALERT_: "dwt_alert";
+export let _DWT_BUTTON_: "dwt_button";
 export let _GROUP_: "group";
 export let _OUTPUT_: "output";
 export let _SEPARATOR_: string;
 export let _SPACER_: string;
 export let _SWITCH_: string;
 export let _CELL_SPACER_: "cell_spacer";
-export let _TOP_GROUPER_: string;
-export let _CHECKBOX_: string;
+export let _TOP_GROUPER_: "top_grouper";
+export let _CHECKBOX_: "checkbox";
 export let _GROUPER_: string;
 export let _TEXTFIELD_: string;
 

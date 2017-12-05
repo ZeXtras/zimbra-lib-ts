@@ -58,27 +58,84 @@ export interface XFormItemDescription {
 
 export interface Base_XFormItemDescription {
   cssClass?: string;
+  colSpan?: "*" | number;
+  valueChangeEventSources?: string[];
+  getDisplayValue?: (newValue: string) => string;
+  visibilityChecks?: Array<() => boolean>;
+  visibilityChangeEventSources?: string[];
 }
 
-export type XformItemDescriptionClasses = _GROUP_XformItemDescription | _CELL_SPACER_XformItemDescription | _OUTPUT_XformItemDescription;
+export type XformItemDescriptionClasses =
+  _OUTPUT_XformItemDescription |
+  _GROUP_XformItemDescription |
+  _CELL_SPACER_XformItemDescription |
+  _CHECKBOX_XformItemDescription |
+  _TOP_GROUPER_XformItemDescription |
+  _ZAWIZ_TOP_GROUPER_XformItemDescription |
+  _DWT_BUTTON_XformItemDescription |
+  _DWT_ALERT_XformItemDescription;
 
 export interface _OUTPUT_XformItemDescription extends Base_XFormItemDescription {
   type: "output";
   ref: string;
+  value?: string;
+  cssStyle?: string;
+  align?: string;
   valign?: string;
-  getDisplayValue?: () => string;
+  labelLocation?: string;
 }
 
 export interface _GROUP_XformItemDescription extends Base_XFormItemDescription {
   type: "group";
-  colSpan?: string;
   id?: string;
   numCols?: number;
   colSizes?: string[];
-  width?: string;
+  width?: string|number;
   items: XformItemDescriptionClasses[];
 }
 
 export interface _CELL_SPACER_XformItemDescription extends Base_XFormItemDescription {
   type: "cell_spacer";
+}
+
+export interface _CHECKBOX_XformItemDescription extends Base_XFormItemDescription {
+  type: "checkbox";
+  ref: string;
+  label?: string;
+  bmolsnr?: boolean;
+  labelLocation?: string;
+  onChange: () => void;
+}
+
+export interface _TOP_GROUPER_XformItemDescription extends Base_XFormItemDescription {
+  type: "top_grouper";
+  id?: string;
+  label?: string;
+  numCols?: number;
+  colSizes?: string[];
+  items: XformItemDescriptionClasses[];
+}
+
+export interface _ZAWIZ_TOP_GROUPER_XformItemDescription extends Base_XFormItemDescription {
+  type: "zawiz_top_grouper";
+  id?: string;
+  label?: string;
+  numCols?: number;
+  colSizes?: string[];
+  items: XformItemDescriptionClasses[];
+}
+
+export interface _DWT_BUTTON_XformItemDescription extends Base_XFormItemDescription {
+  type: "dwt_button";
+  label?: string;
+  icon?: string;
+  width?: string | number;
+  onActivate: () => void;
+}
+
+export interface _DWT_ALERT_XformItemDescription extends Base_XFormItemDescription {
+  type: "dwt_alert";
+  containerCssStyle?: string;
+  style?: string;
+  iconVisible?: boolean;
 }
