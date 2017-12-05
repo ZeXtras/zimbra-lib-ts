@@ -66,6 +66,7 @@ export interface _OUTPUT_XformItemDescription extends Base_XFormItemDescription 
   type: "output";
   ref: string;
   valign?: string;
+  getDisplayValue?: () => string;
 }
 
 export interface _GROUP_XformItemDescription extends Base_XFormItemDescription {

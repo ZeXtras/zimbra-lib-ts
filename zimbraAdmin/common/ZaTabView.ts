@@ -25,13 +25,18 @@ import {
 import {XFormObjectBase} from "../../ajax/dwt/xforms/XFormItem";
 import {ZaItem} from "./ZaItem";
 import {DwtShell} from "../../ajax/dwt/widgets/DwtShell";
-import {XModelParams} from "../../ajax/dwt/xforms/XModel";
+import {XModel, XModelParams} from "../../ajax/dwt/xforms/XModel";
+import {XForm} from "../../ajax/dwt/xforms/XForm";
+import {AjxListener} from "../../ajax/events/AjxListener";
 
 export class ZaTabView extends DwtComposite {
 
   public static XFormModifiers: {[name: string]: Array<(xFormObject: XFormObjectBase, entry?: any) => void>};
 
   public TAB_INDEX: number;
+  public _localXModel: XModel;
+  public _localXForm: XForm;
+  public formChangeListener: AjxListener;
 
   // Params for 6 and 7 (container: DwtShell, ikeyName: string, cssClassName: string, contextId: string),
   // Params for 8 (params: DwtControlParams & {ikeyname: string, contextId: string})
@@ -47,6 +52,7 @@ export class ZaTabView extends DwtComposite {
   public setObject(entry: ZaItem): void {}
   public initForm(xModelMetaData: XModelParams, xFormMetaData: XFormObjectBase, defaultInstance?: any): void {}
   public setDirty(dirty: boolean): void {}
+  public isDirty(): boolean;
 }
 
 export interface ZaTabViewParams extends DwtCompositeParams {

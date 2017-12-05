@@ -55,9 +55,10 @@ export class ZaItem extends ZaModel {
 
   public rightsLoaded: boolean;
   public id: string; // TODO: Investigate
+  public name: string;
   public attrs: {}; // TODO: Investigate
   public type: string;
-  private _iKeyName: string;
+  public _iKeyName: string;
   private _uuid: string;
 
   constructor(iKeyName: string) {
@@ -65,4 +66,6 @@ export class ZaItem extends ZaModel {
   }
 
   public _init(): void {} // Should be private...
+  public refresh(skipRights: boolean, expandDefaults: boolean): void {}
+  public load(by: string, val: string, skipRights: boolean, expandDefaults: boolean): void {}
 }
