@@ -19,16 +19,16 @@
  */
 
 import {AjxException} from "../../ajax/core/AjxException";
+import {DwtShell} from "../../ajax/dwt/widgets/DwtShell";
 import {ZaAccountListController} from "../accounts/controller/ZaAccountListController";
 import {ZaAccountViewController} from "../accounts/controller/ZaAccountViewController";
 import {ZaResourceController} from "../resource/controller/ZaResourceController";
 import {ZaSearchListController} from "../search/controller/ZaSearchListController";
-import {ZaItem} from "./ZaItem";
-import {ZaOperation} from "./ZaOperation";
 import {ZaAppCtxt} from "./ZaAppCtxt";
-import {DwtShell} from "../../ajax/dwt/widgets/DwtShell";
-import {DwtComposite} from "../../ajax/dwt/widgets/DwtComposite";
+import {ZaItem} from "./ZaItem";
 import {ZaListView} from "./ZaListView";
+import {ZaOperation} from "./ZaOperation";
+import {ZaTabView} from "./ZaTabView";
 
 export class ZaController {
   public static initPopupMenuMethods: {
@@ -72,7 +72,7 @@ export class ZaController {
   public _toolbarOrder: number[];
 
   public _currentObject?: ZaItem;
-  public _contentView?: ZaListView | DwtComposite;
+  public _contentView?: ZaListView | ZaTabView;
   public _toolbar?: any;
   public _container: DwtShell;
   public _iKeyName: string;

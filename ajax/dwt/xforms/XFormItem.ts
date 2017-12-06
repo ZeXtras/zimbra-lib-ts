@@ -27,6 +27,15 @@ import {DwtComposite} from "../widgets/DwtComposite";
 import {XForm} from "./XForm";
 import {XFormItemDescription, XformItemDescriptionClasses} from "./XFormItemDescription";
 
+export class XFormItemFactory {
+  public static createItemType(
+    typeConstant: string,
+    typeName: string,
+    constructor: typeof XFormItem,
+    superClassConstructor: typeof XFormItem
+  ): void {}
+}
+
 export class XFormItem {
   public static ERROR_STATE_ERROR: number;
   public static ERROR_STATE_VALID: number;
@@ -74,7 +83,7 @@ export class XFormItem {
   public getInstanceValue(path?: string): any {
     return void 0;
   }
-  public getForm(): XForm {
+  public getForm<T extends XForm>(): T {
     return void 0;
   }
   public getParentItem(): XFormItem {

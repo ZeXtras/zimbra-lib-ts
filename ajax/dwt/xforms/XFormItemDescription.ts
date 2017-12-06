@@ -66,6 +66,7 @@ export interface Base_XFormItemDescription {
 }
 
 export type XformItemDescriptionClasses =
+  Base_XFormItemDescription |
   _OUTPUT_XformItemDescription |
   _GROUP_XformItemDescription |
   _CELL_SPACER_XformItemDescription |
@@ -136,6 +137,6 @@ export interface _DWT_BUTTON_XformItemDescription extends Base_XFormItemDescript
 export interface _DWT_ALERT_XformItemDescription extends Base_XFormItemDescription {
   type: "dwt_alert";
   containerCssStyle?: string;
-  style?: string;
+  style?: number;
   iconVisible?: boolean;
 }

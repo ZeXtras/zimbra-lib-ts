@@ -29,4 +29,5 @@ export class ZaMsg {
   public static OVP_home: string;
   public static MSG_WorkingTask: string;
   public static splashScreenLoading: string;
+  public static ERROR_METADATA_NOT_DEFINED: string;
 }

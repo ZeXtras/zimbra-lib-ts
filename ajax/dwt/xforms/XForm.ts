@@ -18,6 +18,7 @@
  * along with T4Z - TypeScript 4 Zimlet. If not, see <http://www.gnu.org/licenses/>.
  */
 
+import {ZaApp} from "../../../zimbraAdmin/common/ZaApp";
 import {ZaController} from "../../../zimbraAdmin/common/ZaController";
 import {ZaItem} from "../../../zimbraAdmin/common/ZaItem";
 import {DwtEvent} from "../events/DwtEvent";
@@ -61,13 +62,15 @@ export class XForm extends DwtComposite {
     return void 0;
   }
 
-  public setController(controller?: ZaController): void {}
+  public setController(controller?: ZaController | ZaApp): void {}
 
   public hasErrors(): boolean {
     return void 0;
   }
 
   public setInstance(instance: any): void {}
+
+  public draw(parentElement?: HTMLElement): void {}
 }
 
 // possible values for "labelDirection", "align" and "valign"

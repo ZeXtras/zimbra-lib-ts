@@ -18,13 +18,16 @@
  * along with T4Z - TypeScript 4 Zimlet. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import {BSelectorOption} from "../../../../graphic/descriptor/BSelectorOption";
-
 export interface XModelItemInt {
   id: string;
   type?: string;
   ref?: string;
   getter?: string;
   setter?: string;
-  choices?: BSelectorOption[];
+  choices?: (() => XModelItemInt_option[]) | XModelItemInt_option[];
+}
+
+export interface XModelItemInt_option {
+  value: any;
+  label: string;
 }

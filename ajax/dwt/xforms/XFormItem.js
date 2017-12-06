@@ -1,5 +1,8 @@
 define(["require", "exports"], function (require, exports) {
   "use strict";
+  exports.XFormItemFactory = XFormItemFactory;
+  exports.XFormItem = XFormItem;
+
   exports.Case_XFormItem = Case_XFormItem;
   exports.Cell_Spacer_XFormItem = Cell_Spacer_XFormItem;
   exports.Checkbox_XFormItem = Checkbox_XFormItem;
@@ -14,7 +17,6 @@ define(["require", "exports"], function (require, exports) {
   exports.WidgetAdaptor_XFormItem = WidgetAdaptor_XFormItem;
   exports.Select1_XFormItem = Select1_XFormItem;
   exports.Step_Choices_XFormItem = Step_Choices_XFormItem;
-  exports.XFormItem = XFormItem;
 
   exports._DWT_ALERT_ = _DWT_ALERT_;
   exports._DWT_BUTTON_ = _DWT_BUTTON_;

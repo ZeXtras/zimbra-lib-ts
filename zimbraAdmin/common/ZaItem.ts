@@ -59,6 +59,10 @@ export class ZaItem extends ZaModel {
   public attrs: {}; // TODO: Investigate
   public type: string;
   public _iKeyName: string;
+  public rights: {};
+  public setAttrs: {};
+  public getAttrs: {};
+  public _defaultValues: {attrs: {}};
   private _uuid: string;
 
   constructor(iKeyName: string) {
