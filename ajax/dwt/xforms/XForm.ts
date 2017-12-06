@@ -33,7 +33,7 @@ export class XForm extends DwtComposite {
   constructor(
     attributes: XFormObjectBase,
     model: XModel,
-    instance: any,
+    instance: ZaItem,
     dwtContainer: DwtComposite,
     contextId: string,
   ) {

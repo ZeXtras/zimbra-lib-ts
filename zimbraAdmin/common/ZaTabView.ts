@@ -64,7 +64,7 @@ export class ZaTabView extends DwtComposite {
   }
 
   public setObject(entry: ZaItem): void {}
-  public initForm(xModelMetaData: XModelParams, xFormMetaData: XFormObjectBase, defaultInstance?: any): void {}
+  public initForm(xModelMetaData: XModelParams, xFormMetaData: XFormObjectBase, defaultInstance?: ZaItem): void {}
   public setDirty(dirty: boolean): void {}
   public isDirty(): boolean { return undefined; }
   public handleXFormChange() {}

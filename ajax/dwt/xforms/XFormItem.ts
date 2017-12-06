@@ -105,7 +105,7 @@ export let _DWT_BUTTON_: "dwt_button";
 export let _GROUP_: "group";
 export let _OUTPUT_: "output";
 export let _SEPARATOR_: string;
-export let _SPACER_: string;
+export let _SPACER_: "spacer";
 export let _SWITCH_: string;
 export let _CELL_SPACER_: "cell_spacer";
 export let _TOP_GROUPER_: "top_grouper";

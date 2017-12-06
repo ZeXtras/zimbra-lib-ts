@@ -60,9 +60,17 @@ export interface Base_XFormItemDescription {
   cssClass?: string;
   colSpan?: "*" | number;
   valueChangeEventSources?: string[];
-  getDisplayValue?: (newValue: string) => string;
+  getDisplayValue?: (newValue?: string|boolean) => string|boolean;
   visibilityChecks?: Array<() => boolean>;
   visibilityChangeEventSources?: string[];
+}
+
+export interface GroupBase_XFormItemDescription extends Base_XFormItemDescription {
+  colSizes?: Array<string|number>;
+  id?: string;
+  numCols?: number;
+  label?: string;
+  items: XformItemDescriptionClasses[];
 }
 
 export type XformItemDescriptionClasses =
@@ -74,7 +82,9 @@ export type XformItemDescriptionClasses =
   _TOP_GROUPER_XformItemDescription |
   _ZAWIZ_TOP_GROUPER_XformItemDescription |
   _DWT_BUTTON_XformItemDescription |
-  _DWT_ALERT_XformItemDescription;
+  _DWT_ALERT_XformItemDescription |
+  _SPACER_XformItemDescription |
+  _GROUPER_XformItemDescription;
 
 export interface _OUTPUT_XformItemDescription extends Base_XFormItemDescription {
   type: "output";
@@ -86,13 +96,10 @@ export interface _OUTPUT_XformItemDescription extends Base_XFormItemDescription 
   labelLocation?: string;
 }
 
-export interface _GROUP_XformItemDescription extends Base_XFormItemDescription {
+export interface _GROUP_XformItemDescription extends GroupBase_XFormItemDescription {
   type: "group";
-  id?: string;
-  numCols?: number;
-  colSizes?: string[];
+  bmolsnr?: boolean;
   width?: string|number;
-  items: XformItemDescriptionClasses[];
 }
 
 export interface _CELL_SPACER_XformItemDescription extends Base_XFormItemDescription {
@@ -108,22 +115,12 @@ export interface _CHECKBOX_XformItemDescription extends Base_XFormItemDescriptio
   onChange: () => void;
 }
 
-export interface _TOP_GROUPER_XformItemDescription extends Base_XFormItemDescription {
+export interface _TOP_GROUPER_XformItemDescription extends GroupBase_XFormItemDescription {
   type: "top_grouper";
-  id?: string;
-  label?: string;
-  numCols?: number;
-  colSizes?: string[];
-  items: XformItemDescriptionClasses[];
 }
 
-export interface _ZAWIZ_TOP_GROUPER_XformItemDescription extends Base_XFormItemDescription {
+export interface _ZAWIZ_TOP_GROUPER_XformItemDescription extends GroupBase_XFormItemDescription {
   type: "zawiz_top_grouper";
-  id?: string;
-  label?: string;
-  numCols?: number;
-  colSizes?: string[];
-  items: XformItemDescriptionClasses[];
 }
 
 export interface _DWT_BUTTON_XformItemDescription extends Base_XFormItemDescription {
@@ -139,4 +136,15 @@ export interface _DWT_ALERT_XformItemDescription extends Base_XFormItemDescripti
   containerCssStyle?: string;
   style?: number;
   iconVisible?: boolean;
+}
+
+export interface _SPACER_XformItemDescription extends Base_XFormItemDescription {
+  type: "spacer";
+  height?: string;
+}
+
+export interface _GROUPER_XformItemDescription extends GroupBase_XFormItemDescription {
+  type: "grouper";
+  cssStyle?: string;
+  width?: string|number;
 }
