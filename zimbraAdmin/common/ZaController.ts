@@ -19,6 +19,7 @@
  */
 
 import {AjxException} from "../../ajax/core/AjxException";
+import {DwtComposite} from "../../ajax/dwt/widgets/DwtComposite";
 import {DwtShell} from "../../ajax/dwt/widgets/DwtShell";
 import {ZaAccountListController} from "../accounts/controller/ZaAccountListController";
 import {ZaAccountViewController} from "../accounts/controller/ZaAccountViewController";
@@ -72,7 +73,7 @@ export class ZaController {
   public _toolbarOrder: number[];
 
   public _currentObject?: ZaItem;
-  public _contentView?: ZaListView | ZaTabView;
+  public _contentView?: ZaListView | DwtComposite;
   public _toolbar?: any;
   public _container: DwtShell;
   public _iKeyName: string;

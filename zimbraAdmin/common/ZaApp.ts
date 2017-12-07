@@ -18,14 +18,14 @@
  * along with T4Z - TypeScript 4 Zimlet. If not, see <http://www.gnu.org/licenses/>.
  */
 
+import {DwtShell} from "../../ajax/dwt/widgets/DwtShell";
 import {ZaZimbraAdmin} from "../ZaZimbraAdmin";
 import {ZaAppCtxt} from "./ZaAppCtxt";
+import {ZaAppViewMgr} from "./ZaAppViewMgr";
 import {ZaController} from "./ZaController";
 import {ZaItem} from "./ZaItem";
 import {ZaItemList} from "./ZaItemList";
 import {ZaXDialog} from "./ZaXDialog";
-import {DwtShell} from "../../ajax/dwt/widgets/DwtShell";
-import {ZaAppViewMgr} from "./ZaAppViewMgr";
 
 export class ZaApp {
 
