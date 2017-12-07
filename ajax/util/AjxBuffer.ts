@@ -18,8 +18,8 @@
  * along with T4Z - TypeScript 4 Zimlet. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import {Select1_XFormItem} from "./XFormItem";
+export class AjxBuffer {
 
-export class OSelect1_XFormItem extends Select1_XFormItem {}
+  public append(...args): void {}
 
-export let _OSELECT1_: "oselect1";
+}

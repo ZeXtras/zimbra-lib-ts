@@ -112,7 +112,7 @@ export interface _CHECKBOX_XformItemDescription extends Base_XFormItemDescriptio
   label?: string;
   bmolsnr?: boolean;
   labelLocation?: string;
-  onChange: () => void;
+  onChange?: () => void;
 }
 
 export interface _TOP_GROUPER_XformItemDescription extends GroupBase_XFormItemDescription {
@@ -147,4 +147,24 @@ export interface _GROUPER_XformItemDescription extends GroupBase_XFormItemDescri
   type: "grouper";
   cssStyle?: string;
   width?: string|number;
+}
+
+export interface _TEXTFIELD_XformItemDescription extends Base_XFormItemDescription {
+  type: "textfield";
+  ref: string;
+  align?: string;
+  labelLocation?: string;
+  width?: string|number;
+  label?: string;
+  bmolsnr?: boolean;
+}
+
+export interface _OSELECT1_XformItemDescription extends Base_XFormItemDescription {
+  type: "oselect1";
+  ref: string;
+  align?: string;
+  labelLocation?: string;
+  width?: string|number;
+  label?: string;
+  bmolsnr?: boolean;
 }

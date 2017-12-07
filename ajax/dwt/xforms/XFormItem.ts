@@ -98,6 +98,7 @@ export class XFormItem {
   public getId(): string {
     return void 0;
   }
+  public _setAttributes(params): void {}
 }
 
 export let _DWT_ALERT_: "dwt_alert";
