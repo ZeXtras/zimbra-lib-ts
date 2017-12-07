@@ -140,7 +140,7 @@ export interface _DWT_ALERT_XformItemDescription extends Base_XFormItemDescripti
 
 export interface _SPACER_XformItemDescription extends Base_XFormItemDescription {
   type: "spacer";
-  height?: string;
+  height?: string|number;
 }
 
 export interface _GROUPER_XformItemDescription extends GroupBase_XFormItemDescription {

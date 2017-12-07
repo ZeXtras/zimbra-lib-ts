@@ -30,4 +30,5 @@ export class ZaMsg {
   public static MSG_WorkingTask: string;
   public static splashScreenLoading: string;
   public static ERROR_METADATA_NOT_DEFINED: string;
+  public static TBB_Close: string;
 }
