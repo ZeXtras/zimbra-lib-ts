@@ -33,28 +33,28 @@ import {ZaTabView} from "./ZaTabView";
 
 export class ZaController {
   public static initPopupMenuMethods: {
-    ZaAccountListController: Array<typeof ZaAccountListController>;
-    ZaAccountViewController: Array<typeof ZaAccountViewController>;
-    ZaResourceController: Array<typeof ZaResourceController>;
-    ZaSearchListController: Array<typeof ZaSearchListController>;
+    ZaAccountListController: Array<() => void>;
+    ZaAccountViewController: Array<() => void>;
+    ZaResourceController: Array<() => void>;
+    ZaSearchListController: Array<() => void>;
   };
 
   /**
    * @deprecated in zimbra 8+
    */
   public static initToolbarMethods: {
-    ZaResourceController: Array<typeof ZaResourceController>;
-    ZaSearchListController: Array<typeof ZaSearchListController>;
-    ZaAccountViewController: Array<typeof ZaAccountViewController>;
-    ZaAccountListController: Array<typeof ZaAccountListController>;
+    ZaResourceController: Array<() => void>;
+    ZaSearchListController: Array<() => void>;
+    ZaAccountViewController: Array<() => void>;
+    ZaAccountListController: Array<() => void>;
   };
 
   /**
    * @deprecated in zimbra 8+
    */
   public static changeActionsStateMethods: {
-    ZaAccountListController: Array<typeof ZaAccountListController>;
-    ZaSearchListController: Array<typeof ZaSearchListController>;
+    ZaAccountListController: Array<() => void>;
+    ZaSearchListController: Array<() => void>;
   };
 
   public static setViewMethods: {[controllerIKeyName: string]: Array<(entry: ZaItem) => void>};
