@@ -57,7 +57,7 @@ export class ZaController {
     ZaSearchListController: Array<() => void>;
   };
 
-  public static setViewMethods: {[controllerIKeyName: string]: Array<(entry: ZaItem) => void>};
+  public static setViewMethods: {[controllerIKeyName: string]: Array<(entry: ZaItem, openInNewTab: boolean, skipRefresh: boolean) => void>};
 
   public _popupOperations: ZaOperation[];
   public _defaultType: string;
@@ -88,4 +88,5 @@ export class ZaController {
   public _setView(entry: ZaItem, openInNewTab: boolean, skipRefresh: boolean): void {}
   public getMainTab(): any { return undefined; }
   public getContentViewId(): string { return undefined; }
+  public _initPopupMenu(): void{}
 }

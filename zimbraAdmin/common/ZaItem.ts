@@ -71,5 +71,5 @@ export class ZaItem extends ZaModel {
 
   public _init(): void {} // Should be private...
   public refresh(skipRights: boolean, expandDefaults: boolean): void {}
-  public load(by: string, val: string, skipRights: boolean, expandDefaults: boolean): void {}
+  public load(by: string, val: string, skipRights: boolean, expandDefaults?: boolean): void {}
 }

@@ -42,4 +42,5 @@ export class ZaApp {
   public getMbsList(): ZaItemList<ZaItem> { return undefined; }
   public pushView(name: string|number, openInNewTab?: boolean, openInSearchTab?: boolean): void {}
   public getAppViewMgr(): ZaAppViewMgr { return undefined; }
+  public createView(viewName, elements, tabParams): void{}
 }
