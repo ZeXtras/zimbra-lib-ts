@@ -27,10 +27,8 @@ export interface XModelItemDescription extends XModelItemInt {
   id: string;
   ref?: string;
   type?: string;
-  setter?: string;
   setterScope?: string;
-  getter?: string;
   getterScope?: string;
-  choices?: () => Array<{value: any, label: string}>;
   defaultValue?: any;
+  managedByZeXtras?: boolean;
 }

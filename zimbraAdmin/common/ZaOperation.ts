@@ -18,6 +18,8 @@
  * along with T4Z - TypeScript 4 Zimlet. If not, see <http://www.gnu.org/licenses/>.
  */
 
+import {AjxListener} from "../../ajax/events/AjxListener";
+
 export class ZaOperation {
 // types
   public static TYPE_BUTTON: number;
@@ -91,4 +93,17 @@ export class ZaOperation {
 // For Appliance
   public static LEFT_BRACKET: number;
   public static RIGHT_BRACKET: number;
+
+  constructor(
+    id: number,
+    caption: string,
+    tooltip: string,
+    imgId: string,
+    disImgId: string,
+    lsnr: AjxListener,
+    type?: number,
+    menuOpList?,
+    className?: string,
+    labelId?: string,
+  ) {}
 }

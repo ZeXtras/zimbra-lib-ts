@@ -69,4 +69,5 @@ export interface DwtTreeItemParams extends DwtCompositeParams {
   dndScrollId?: string;
   arrowDisabled?: boolean;
   imageInfo?: string;
+  mappingId?: number;
 }

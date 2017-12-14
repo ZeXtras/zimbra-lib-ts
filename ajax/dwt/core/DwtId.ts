@@ -19,7 +19,7 @@
  */
 
 export class DwtId {
-  public _makeId(): string {
+  public static _makeId(...args: any[]): string {
     return void 0;
   }
 }

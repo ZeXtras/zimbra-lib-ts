@@ -23,6 +23,7 @@ import {ZaItem} from "../../common/ZaItem";
 
 export class ZaServer extends ZaItem {
 
+  public static A_zimbraServiceEnabled: string;
   public static myXModel: XModelInt;
   public attrs: {};
 

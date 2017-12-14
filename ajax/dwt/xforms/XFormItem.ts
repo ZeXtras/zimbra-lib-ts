@@ -18,6 +18,7 @@
  * along with T4Z - TypeScript 4 Zimlet. If not, see <http://www.gnu.org/licenses/>.
  */
 
+import {BSelectorOption} from "../../../../graphic/descriptor/BSelectorOption";
 import {ZaItem} from "../../../zimbraAdmin/common/ZaItem";
 import {ZaXFormViewController} from "../../../zimbraAdmin/common/ZaXFormViewController";
 import {DwtEvent} from "../events/DwtEvent";
@@ -90,6 +91,8 @@ export class XFormItem {
   }
 }
 
+export let _DWT_BUTTON_: string;
+export let _GROUP_: string;
 export let _OUTPUT_: string;
 export let _SEPARATOR_: string;
 export let _SPACER_: string;
@@ -98,6 +101,7 @@ export let _ZATABCASE_: string;
 
 export interface XFormObjectBase {
   colSizes?: string[];
+  cssStyle?: string;
   numCols?: number;
   items: XFormItemDescription[];
 }
@@ -148,5 +152,5 @@ export class Cell_Spacer_XFormItem extends Spacer_XFormItem {}
 export class Step_Choices_XFormItem extends Group_XFormItem {}
 
 export class Select1_XFormItem extends XFormItem {
-  public setChoices(newChoices: Array<{label: string, value: any}>): void {}
+  public setChoices(newChoices: BSelectorOption[]): void {}
 }

@@ -20,6 +20,11 @@
 
 export class ZaRequestMgr {
 
-  public static invoke(csfeParams: {}, params: {}) {}
+  public static invoke(csfeParams: {}, params: {}): any {}
 
+}
+
+export interface ZaRequestResponseObj {
+  Body: {};
+  Header: {};
 }

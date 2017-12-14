@@ -18,6 +18,7 @@
  * along with T4Z - TypeScript 4 Zimlet. If not, see <http://www.gnu.org/licenses/>.
  */
 
+import {AjxException} from "../../ajax/core/AjxException";
 import {ZaAccountListController} from "../accounts/controller/ZaAccountListController";
 import {ZaAccountViewController} from "../accounts/controller/ZaAccountViewController";
 import {ZaResourceController} from "../resource/controller/ZaResourceController";
@@ -70,5 +71,8 @@ export class ZaController {
   public _toolbar?: any;
 
   public popupMsgDialog(msg: string, noExecReset?: boolean): void {}
+  public popupWarningDialog(msg: string, noExecReset?: boolean): void {}
+  public popupErrorDialog(msg: string, ex?: AjxException, style?: number): void {}
+  public switchToNextView(nextViewCtrlr: ZaController, func: (...args) => any, params: any): void {}
 
 }

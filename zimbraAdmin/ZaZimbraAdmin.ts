@@ -25,10 +25,11 @@ import {ZaController} from "./common/ZaController";
 import {ZaCurrentAppBar} from "./common/ZaCurrentAppBar";
 
 export class ZaZimbraAdmin extends ZaController {
+  public static VIEW_INDEX: number;
   public static URN: string;
   public static currentAdminAccount: ZaAccount;
   public static _ZEXTRAS_GROUP_VIEW: number;
-  public static _ZEXTRAS_GROUP_LIST: string;
+  public static _ZEXTRAS_GROUP_LIST: number;
   public static getInstance(): ZaZimbraAdmin {
     return void 0;
   }

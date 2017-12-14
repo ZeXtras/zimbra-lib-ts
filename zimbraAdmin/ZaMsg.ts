@@ -27,4 +27,5 @@ export class ZaMsg {
   public static TBB_Edit: string;
   public static TBB_Delete: string;
   public static OVP_home: string;
+  public static MSG_WorkingTask: string;
 }

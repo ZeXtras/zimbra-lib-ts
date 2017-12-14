@@ -18,8 +18,6 @@
  * along with T4Z - TypeScript 4 Zimlet. If not, see <http://www.gnu.org/licenses/>.
  */
 
-// tslint:disable:max-line-length
-
 import {ZaModel} from "./ZaModel";
 
 export class ZaItem extends ZaModel {
@@ -45,20 +43,19 @@ export class ZaItem extends ZaModel {
   public static A_zimbraACE: string;
   public static A_zimbraCreateTimestamp: string;
 
-  public static loadMethods: {[className: string]: Array<(by: string, val: string, withCos?: boolean) => void>};
-  public static initMethods: {[className: string]: Array<new (...args: any[]) => any/*className*/>};
-  public static modifyMethods: {[className: string]: Array<(mods: {}, tmpObj: {}) => void>};
-  public static modifyMethodsExt: {[className: string]: Array<new (...args: any[]) => any/*className*/>};
-  public static createMethods: {[className: string]: Array<(tmpObj: {}, account: ZaItem) => void>};
-  public static removeMethods: {[className: string]: Array<new (...args: any[]) => any/*className*/>};
-  public static modelExtensions: {[className: string]: Array<new (...args: any[]) => any/*className*/>};
-  public static getRelatedMethods: {[className: string]: Array<new (...args: any[]) => any/*className*/>};
-  public static ObjectModifiers: {[className: string]: Array<new (...args: any[]) => any/*className*/>};
+  public static loadMethods: {[className: string]: Array<(by: string, val: string) => void>};
+  public static initMethods: {[className: string]: Array<() => void>};
+  public static modifyMethods: {[className: string]: Array<(mods: {}, tmpObj: ZaItem) => void>};
+  public static modifyMethodsExt: {[className: string]: Array<() => void>};
+  public static createMethods: {[className: string]: Array<(tmpObj: {}, item: ZaItem) => void>};
+  public static removeMethods: {[className: string]: Array<() => void>};
+  public static modelExtensions: {[className: string]: Array<() => void>};
+  public static getRelatedMethods: {[className: string]: Array<(parentPath: string) => void>};
+  public static ObjectModifiers: {[className: string]: Array<() => void>};
 
   public rightsLoaded: boolean;
   public id: string; // TODO: Investigate
   public attrs: {}; // TODO: Investigate
-  public setAttrs: {}; // TODO: Investigate
   public type: string;
   private _iKeyName: string;
   private _uuid: string;

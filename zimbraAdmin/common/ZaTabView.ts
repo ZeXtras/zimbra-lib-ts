@@ -18,16 +18,38 @@
  * along with T4Z - TypeScript 4 Zimlet. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import {DwtComposite} from "../../ajax/dwt/widgets/DwtComposite";
-import {XForm} from "../../ajax/dwt/xforms/XForm";
+import {
+  DwtComposite,
+  DwtCompositeParams
+} from "../../ajax/dwt/widgets/DwtComposite";
 import {XFormObjectBase} from "../../ajax/dwt/xforms/XFormItem";
-import {XModel} from "../../ajax/dwt/xforms/XModel";
 import {ZaItem} from "./ZaItem";
+import {DwtShell} from "../../ajax/dwt/widgets/DwtShell";
+import {XModelParams} from "../../ajax/dwt/xforms/XModel";
 
 export class ZaTabView extends DwtComposite {
-  public static XFormModifiers: {[name: string]: Array<(xFormObject: XFormObjectBase, entry?: ZaItem) => void>};
+
+  public static XFormModifiers: {[name: string]: Array<(xFormObject: XFormObjectBase, entry?: any) => void>};
+
   public TAB_INDEX: number;
-  public _localXForm: XForm;
-  public _localXModel: XModel;
+
+  // Params for 6 and 7 (container: DwtShell, ikeyName: string, cssClassName: string, contextId: string),
+  // Params for 8 (params: DwtControlParams & {ikeyname: string, contextId: string})
+  constructor(
+    containerOrParams: DwtShell|ZaTabViewParams,
+    ikeyName?: string,
+    cssClassName?: string,
+    contextId?: string,
+  ) {
+    super(containerOrParams);
+  }
+
   public setObject(entry: ZaItem): void {}
+  public initForm(xModelMetaData: XModelParams, xFormMetaData: XFormObjectBase, defaultInstance?: any): void {}
+
+}
+
+export interface ZaTabViewParams extends DwtCompositeParams {
+  iKeyName: string;
+  contextId: string;
 }

@@ -29,7 +29,7 @@ export class AjxSoapDoc {
     soapURI?: string,
   ): AjxSoapDoc { return undefined; }
   public set(name: string, value: any, parent?: string, nmspace?: string): Element { return undefined; }
-
+  public getMethod(): Element { return undefined; }
 }
 
 export interface AjxSoapDocParams {
