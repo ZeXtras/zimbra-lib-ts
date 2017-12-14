@@ -20,8 +20,11 @@
 
 import {ZaController} from "./ZaController";
 import {ZaTabView} from "./ZaTabView";
+import {ZaItem} from "./ZaItem";
 
 export class ZaXFormViewController extends ZaController {
   public _view: ZaTabView; // FIXME: Should be private
   public deleteMsg: string;
+
+  public show(item: ZaItem):void {}
 }
