@@ -73,6 +73,6 @@ export class ZaController {
   public popupMsgDialog(msg: string, noExecReset?: boolean): void {}
   public popupWarningDialog(msg: string, noExecReset?: boolean): void {}
   public popupErrorDialog(msg: string, ex?: AjxException, style?: number): void {}
-  public switchToNextView(nextViewCtrlr: ZaController, func: (...args) => any, params: any): void {}
+  public switchToNextView(nextViewCtrlr: ZaController, func: (...args: any[]) => any, params: any): void {}
 
 }
