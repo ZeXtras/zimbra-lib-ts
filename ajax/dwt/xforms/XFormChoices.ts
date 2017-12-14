@@ -18,13 +18,6 @@
  * along with T4Z - TypeScript 4 Zimlet. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import {XFormChoices} from "./XFormChoices";
+export class XFormChoices {
 
-export interface XModelItemInt {
-  id: string;
-  type?: string;
-  ref?: string;
-  getter?: string;
-  setter?: string;
-  choices?: XFormChoices[];
 }

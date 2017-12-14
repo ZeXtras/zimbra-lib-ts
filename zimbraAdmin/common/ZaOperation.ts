@@ -102,7 +102,7 @@ export class ZaOperation {
     disImgId: string,
     lsnr: AjxListener,
     type?: number,
-    menuOpList?,
+    menuOpList?: any,
     className?: string,
     labelId?: string,
   ) {}
