@@ -29,4 +29,5 @@ export class ZaXFormViewController extends ZaController {
 
   public show(item: ZaItem):void {}
   public saveButtonListener(ev: DwtSelectionEvent): void {}
+  public closeButtonListener(ev: DwtSelectionEvent): void {}
 }

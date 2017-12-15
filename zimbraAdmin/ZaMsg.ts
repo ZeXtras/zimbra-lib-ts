@@ -32,4 +32,5 @@ export class ZaMsg {
   public static splashScreenLoading: string;
   public static ERROR_METADATA_NOT_DEFINED: string;
   public static TBB_Close: string;
+  public static ALTBB_Close_tt: string;
 }

@@ -60,6 +60,7 @@ export class ZaController {
   public static setViewMethods: {[controllerIKeyName: string]: Array<(entry: ZaItem, openInNewTab: boolean, skipRefresh: boolean) => void>};
 
   public _popupOperations: ZaOperation[];
+  public _popupOrder: number[];
   public _defaultType: string;
 
   /**
