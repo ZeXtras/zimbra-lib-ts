@@ -16,6 +16,8 @@ define(["require", "exports"], function (require, exports) {
   exports.Step_Choices_XFormItem = Step_Choices_XFormItem;
   exports.XFormItem = XFormItem;
 
+  exports._DWT_BUTTON_ = _DWT_BUTTON_;
+  exports._GROUP_ = _GROUP_;
   exports._OUTPUT_ = _OUTPUT_;
   exports._SEPARATOR_ = _SEPARATOR_;
   exports._SPACER_ = _SPACER_;
