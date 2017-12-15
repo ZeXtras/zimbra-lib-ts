@@ -20,8 +20,11 @@
 
 import {ZaController} from "./ZaController";
 import {ZaTabView} from "./ZaTabView";
+import {DwtSelectionEvent} from "../../ajax/dwt/events/DwtSelectionEvent";
 
 export class ZaXFormViewController extends ZaController {
   public _view: ZaTabView; // FIXME: Should be private
   public deleteMsg: string;
+
+  public saveButtonListener(ev: DwtSelectionEvent): void {}
 }

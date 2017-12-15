@@ -23,6 +23,7 @@ export class ZaMsg {
   public static NAD_ResetToCOS: string;
   public static No: string;
   public static TBB_Save: string;
+  public static ALTBB_Save_tt: string;
   public static NAD_Add: string;
   public static TBB_Edit: string;
   public static TBB_Delete: string;
