@@ -88,7 +88,8 @@ export type XformItemDescriptionClasses =
 
 export interface _OUTPUT_XformItemDescription extends Base_XFormItemDescription {
   type: "output";
-  ref: string;
+  id?: string;
+  ref?: string;
   value?: string;
   cssStyle?: string;
   align?: string;

@@ -18,22 +18,9 @@
  * along with T4Z - TypeScript 4 Zimlet. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import {XModelInt} from "../../../ajax/dwt/xforms/XModelInt";
 import {ZaItem} from "../../common/ZaItem";
 import {ZaItemList} from "../../common/ZaItemList";
 
-export class ZaServer extends ZaItem {
-
-  public static A_zimbraServiceEnabled: string;
-  public static myXModel: XModelInt;
-  public static getAll(): ZaItemList<ZaServer> { return undefined; }
-
-  public name: string;
-  public attrs: ZaServerAttrs;
-
-}
-
-export interface ZaServerAttrs {
-  zimbraServiceInstalled: string[];
-  zimbraServiceEnabled: string[];
+export class ZaZimlet extends ZaItem {
+  public static getAll(): ZaItemList<ZaZimlet> { return undefined;}
 }
