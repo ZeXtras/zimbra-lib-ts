@@ -31,5 +31,6 @@ export class ZaItemList<T extends ZaItem> extends ZaModel {
   public getArray(): T[] { return undefined; }
   public add(item: T, index?: number): void {}
   public size(): number { return undefined; }
+  public getItemById(id: string): T { return undefined; }
 
 }

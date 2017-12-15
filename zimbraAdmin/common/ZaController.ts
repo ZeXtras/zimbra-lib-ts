@@ -88,5 +88,5 @@ export class ZaController {
   public _setView(entry: ZaItem, openInNewTab: boolean, skipRefresh: boolean): void {}
   public getMainTab(): any { return undefined; }
   public getContentViewId(): string { return undefined; }
-  public _initPopupMenu(): void{}
+  public _initPopupMenu(): void {}
 }

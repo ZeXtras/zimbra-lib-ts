@@ -34,6 +34,6 @@ export class ZaServer extends ZaItem {
 }
 
 export interface ZaServerAttrs {
-  zimbraServiceInstalled: string[]
-  zimbraServiceEnabled: string[]
+  zimbraServiceInstalled: string[];
+  zimbraServiceEnabled: string[];
 }
