@@ -43,6 +43,7 @@ export class XForm extends DwtComposite {
     });
   }
 
+  public getInstance(): ZaItem{return void 0;}
   public setInstanceValue(val: any, refPath: string): void {}
   public getInstanceValue(refPath: string): any {}
   public setIsDirty(dirty: boolean, item?: XFormItem): void {}
