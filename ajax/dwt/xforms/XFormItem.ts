@@ -98,6 +98,9 @@ export class XFormItem {
   public getId(): string {
     return void 0;
   }
+  public getRefPath(): string {
+    return undefined;
+  }
   public _setAttributes(params): void {}
 }
 
