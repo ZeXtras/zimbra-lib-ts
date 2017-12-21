@@ -27,10 +27,10 @@ export class ZaListViewController extends ZaController {
     super(appCtxt, container, iKeyName);
   }
 
-  protected _list: ZaItemList | any;//should be ZaItemList
+  protected _list: any;//should be ZaItemList
   protected _UICreated: boolean;
 
-  public getList(): ZaItemList | any {
+  public getList(): any {
     return this._list;
   }
 }
