@@ -62,6 +62,7 @@ export class ZaController {
   public _popupOperations: ZaOperation[];
   public _popupOrder: number[];
   public _defaultType: string;
+  public _appCtxt: ZaAppCtxt;
 
   /**
    * @deprecated in zimbra 8+

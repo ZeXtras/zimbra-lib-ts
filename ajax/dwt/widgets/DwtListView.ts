@@ -18,7 +18,6 @@
  * along with T4Z - TypeScript 4 Zimlet. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import {ZaItem} from "../../../zimbraAdmin/common/ZaItem";
 import {ZmItem} from "../../../zimbraMail/share/model/ZmItem";
 import {AjxVector} from "../../util/AjxVector";
 import {DwtEvent} from "../events/DwtEvent";
@@ -26,6 +25,7 @@ import {DwtListViewActionEvent} from "../events/DwtListViewActionEvent";
 import {DwtMouseEvent} from "../events/DwtMouseEvent";
 import {DwtSelectionEvent} from "../events/DwtSelectionEvent";
 import {DwtComposite, DwtCompositeParams} from "./DwtComposite";
+import {AjxListener} from "../../events/AjxListener";
 
 export class DwtListView extends DwtComposite {
 
@@ -34,6 +34,9 @@ export class DwtListView extends DwtComposite {
   public static ITEM_DESELECTED: number;
   public static ROW_CLASS: string;
   public static HEADERITEM_HEIGHT: number;
+  public static _STYLE_CLASS: string;
+  public static _SELECTED_STYLE_CLASS: string;
+  public static TYPE_LIST_ITEM: string;
 
   public _rightSelItem: HTMLElement;
   public _kbAnchor: HTMLElement;
@@ -66,6 +69,7 @@ export class DwtListView extends DwtComposite {
     params: {now?: Date},
     classes?: string[],
   ): number { return undefined; }
+  public addSelectionListener(ajxListener: AjxListener): void{}
   public getSelectedItems(): AjxVector<ZmItem> { return undefined; }
   public deselectAll(): void {}
   public _markUnselectedViewedItem(on: boolean): void {}
@@ -106,6 +110,7 @@ export interface DwtListViewParams extends DwtCompositeParams {
 }
 
 export class DwtListHeaderItem {
+  public _width: any;
 
   public static sortCompare(a: any, b: any): number {
     return void 0;

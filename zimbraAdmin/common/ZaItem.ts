@@ -73,4 +73,8 @@ export class ZaItem extends ZaModel {
   public refresh(skipRights: boolean, expandDefaults: boolean): void {}
   public load(by: string, val: string, skipRights: boolean, expandDefaults?: boolean): void {}
   public modify(mods: {}, tmpObj?: ZaItem): void {}
+
+  public static getDescriptionValue(desp: any): any {
+
+  }
 }

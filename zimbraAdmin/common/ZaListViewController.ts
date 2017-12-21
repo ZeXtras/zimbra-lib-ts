@@ -19,7 +19,18 @@
  */
 
 import {ZaController} from "./ZaController";
+import {ZaItemList} from "./ZaItemList";
+import {ZaAppCtxt} from "./ZaAppCtxt";
 
 export class ZaListViewController extends ZaController {
+  constructor(appCtxt: ZaAppCtxt, container: any, iKeyName: any) {
+    super(appCtxt, container, iKeyName);
+  }
 
+  protected _list: ZaItemList | any;//should be ZaItemList
+  protected _UICreated: boolean;
+
+  public getList(): ZaItemList | any {
+    return this._list;
+  }
 }
