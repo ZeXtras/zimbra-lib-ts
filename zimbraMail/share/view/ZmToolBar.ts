@@ -18,8 +18,10 @@
  * along with T4Z - TypeScript 4 Zimlet. If not, see <http://www.gnu.org/licenses/>.
  */
 
+import {AjxCallback} from "../../../ajax/boot/AjxCallback";
 import {DwtButton} from "../../../ajax/dwt/widgets/DwtButton";
-import {DwtToolBar, DwtToolBarParams} from "../../../ajax/dwt/widgets/DwtToolBar";
+import {DwtMenu} from "../../../ajax/dwt/widgets/DwtMenu";
+import {DwtToolBar, DwtToolBarButton, DwtToolBarParams} from "../../../ajax/dwt/widgets/DwtToolBar";
 import {AjxListener} from "../../../ajax/events/AjxListener";
 import {ZmAppButton} from "./ZmAppButton";
 
@@ -34,8 +36,19 @@ export class ZmToolBar extends DwtToolBar {
   public enableAll(enabled: boolean): void {}
   public getButton(id: string): ZmAppButton { return undefined; }
   public addSelectionListener(buttonId: string, listener: AjxListener): void {}
+  public createButton(id: string, params: ZmToolBar_CreateButtonParams): DwtToolBarButton { return undefined; }
 }
 
 export interface ZmToolBarParams extends DwtToolBarParams {
 
+}
+
+export interface ZmToolBar_CreateButtonParams {
+  id?: string;
+  text?: string;
+  tooltip?: string;
+  enabled?: boolean;
+  image?: string;
+  disImage?: string;
+  menu?: DwtMenu | AjxCallback;
 }
