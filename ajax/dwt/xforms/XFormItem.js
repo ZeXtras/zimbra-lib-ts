@@ -30,4 +30,5 @@ define(["require", "exports"], function (require, exports) {
   exports._CHECKBOX_ = _CHECKBOX_;
   exports._GROUPER_ = _GROUPER_;
   exports._TEXTFIELD_ = _TEXTFIELD_;
+  exports._DWT_LIST_ = _DWT_LIST_;
 });

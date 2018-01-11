@@ -116,6 +116,7 @@ export let _TOP_GROUPER_: "top_grouper";
 export let _CHECKBOX_: "checkbox";
 export let _GROUPER_: string;
 export let _TEXTFIELD_: "textfield";
+export let _DWT_LIST_: "dwt_list";
 
 export interface XFormObjectBase {
   colSizes?: string[];
@@ -156,6 +157,7 @@ export class Dwt_Button_XFormItem extends Dwt_Adaptor_XFormItem {
 }
 
 export class Output_XFormItem extends XFormItem {
+  public updateElement(value: any) {}
 }
 
 export class Dwt_List_XFormItem extends Dwt_Adaptor_XFormItem {

@@ -20,7 +20,7 @@
 
 import {Case_XFormItem} from "../../ajax/dwt/xforms/XFormItem";
 
-export class ZATabCase_XFormItems extends Case_XFormItem {
+export class ZATabCase_XFormItem extends Case_XFormItem {
 }
 
 export let _ZAWIZ_TOP_GROUPER_: "zawiz_top_grouper";

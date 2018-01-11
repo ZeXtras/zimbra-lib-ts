@@ -23,7 +23,7 @@ import {ZaController} from "../../../zimbraAdmin/common/ZaController";
 import {ZaItem} from "../../../zimbraAdmin/common/ZaItem";
 import {DwtEvent} from "../events/DwtEvent";
 import {DwtComposite} from "../widgets/DwtComposite";
-import {Dwt_Adaptor_XFormItem, XFormItem, XFormObjectBase} from "./XFormItem";
+import {Dwt_Adaptor_XFormItem, Output_XFormItem, XFormItem, XFormObjectBase} from "./XFormItem";
 import {XModel} from "./XModel";
 
 export class XForm extends DwtComposite {
@@ -56,7 +56,7 @@ export class XForm extends DwtComposite {
   public getItemById(id: string): Dwt_Adaptor_XFormItem {
     return void 0;
   }
-  public getItemsById(id: string): Dwt_Adaptor_XFormItem[] {
+  public getItemsById(id: string): Dwt_Adaptor_XFormItem[] | Output_XFormItem[] {
     return void 0;
   }
   public getElement(id?: string): HTMLElement {

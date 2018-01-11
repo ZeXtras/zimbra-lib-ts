@@ -84,7 +84,8 @@ export type XformItemDescriptionClasses =
   _DWT_BUTTON_XformItemDescription |
   _DWT_ALERT_XformItemDescription |
   _SPACER_XformItemDescription |
-  _GROUPER_XformItemDescription;
+  _GROUPER_XformItemDescription |
+  _DWT_LIST_XformItemDescription;
 
 export interface _OUTPUT_XformItemDescription extends Base_XFormItemDescription {
   type: "output";
@@ -120,6 +121,10 @@ export interface _TOP_GROUPER_XformItemDescription extends GroupBase_XFormItemDe
   type: "top_grouper";
 }
 
+export interface _DWT_LIST_XformItemDescription {
+  type: "dwt_list";
+}
+
 export interface _ZAWIZ_TOP_GROUPER_XformItemDescription extends GroupBase_XFormItemDescription {
   type: "zawiz_top_grouper";
 }
@@ -129,7 +134,7 @@ export interface _DWT_BUTTON_XformItemDescription extends Base_XFormItemDescript
   label?: string;
   icon?: string;
   width?: string | number;
-  onActivate: () => void;
+  onActivate: (() => void) | ((ev) => void);
 }
 
 export interface _DWT_ALERT_XformItemDescription extends Base_XFormItemDescription {
