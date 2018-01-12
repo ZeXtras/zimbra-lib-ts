@@ -32,6 +32,7 @@ export class ZmAppViewMgr {
   public static CB_POST_SHOW: string;
   public static CB_PRE_SHOW: string;
   public static CB_POST_HIDE: string;
+  public static CB_POST_REMOVE: string;
   public static LEFT_NAV: string[];
   public static C_TREE: string;
   public static C_TREE_FOOTER: string;
