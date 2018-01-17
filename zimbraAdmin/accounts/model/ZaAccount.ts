@@ -23,6 +23,10 @@ import {ZaItem} from "../../common/ZaItem";
 
 export class ZaAccount extends ZaItem {
   public static myXModel: XModelInt;
+  public static A_name: string;
+  public static A_displayname: string;
+  public static A_mail: string;
+
   public id: string;
   public attrs: {
     zimbraIsAdminAccount?: string,

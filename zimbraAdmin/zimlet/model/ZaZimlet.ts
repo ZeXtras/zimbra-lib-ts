@@ -23,4 +23,5 @@ import {ZaItemList} from "../../common/ZaItemList";
 
 export class ZaZimlet extends ZaItem {
   public static getAll(): ZaItemList<ZaZimlet> { return undefined;}
+  public isEnabled(): boolean {return undefined;}
 }

@@ -19,7 +19,6 @@
  */
 
 import {BSelectorOption} from "../../../../graphic/descriptor/BSelectorOption";
-import {ZaItem} from "../../../zimbraAdmin/common/ZaItem";
 import {ZaXFormViewController} from "../../../zimbraAdmin/common/ZaXFormViewController";
 import {DwtEvent} from "../events/DwtEvent";
 import {DwtButton} from "../widgets/DwtButton";
@@ -92,7 +91,7 @@ export class XFormItem {
   public getWidget(): DwtComposite {
     return void 0;
   }
-  public setInstanceValue(value: any): any {
+  public setInstanceValue(value: any, path?: any): any {
     return void 0;
   }
   public getId(): string {

@@ -36,6 +36,7 @@ export class ZaXDialog extends DwtDialog {
   public _containedObject: any;
   public _localXForm: XForm;
   public _localXModel: XModel;
+  public static HELP_BUTTON: any;
 
   constructor(
     parent: DwtComposite,

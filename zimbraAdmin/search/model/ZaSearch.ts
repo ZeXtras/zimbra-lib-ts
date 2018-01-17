@@ -18,21 +18,10 @@
  * along with T4Z - TypeScript 4 Zimlet. If not, see <http://www.gnu.org/licenses/>.
  */
 
-export class ZaMsg {
-  public static Yes: string;
-  public static NAD_ResetToCOS: string;
-  public static No: string;
-  public static TBB_Save: string;
-  public static ALTBB_Save_tt: string;
-  public static NAD_Add: string;
-  public static TBB_Edit: string;
-  public static TBB_Delete: string;
-  public static OVP_home: string;
-  public static MSG_WorkingTask: string;
-  public static splashScreenLoading: string;
-  public static ERROR_METADATA_NOT_DEFINED: string;
-  public static TBB_Close: string;
-  public static ALTBB_Close_tt: string;
-  public static showDetails: string;
-  public static TBB_Help: string;
+export class ZaSearch {
+  /**
+   * @argument callArgs {value, event, callback}
+   */
+  public dynSelectSearch(callArgs){}
+  public static ACCOUNTS: string;
 }
