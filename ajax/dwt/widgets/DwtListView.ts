@@ -107,10 +107,16 @@ export class DwtListView extends DwtComposite {
 export interface DwtListViewParams extends DwtCompositeParams {
   headerList?: DwtListHeaderItem[];
   noMaximize?: boolean;
+  parent?: any;
+  className?: any;
+  posStyle?: any;
 }
 
 export class DwtListHeaderItem {
   public _width: any;
+  public _visible: boolean;
+  public icons;
+  public hintField;
 
   public static sortCompare(a: any, b: any): number {
     return void 0;

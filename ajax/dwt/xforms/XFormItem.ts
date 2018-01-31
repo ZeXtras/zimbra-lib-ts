@@ -35,72 +35,103 @@ export class XFormItemFactory {
   ): void {}
 }
 
-export class XFormItem {
+export class XFormItem {//TODO check all attribute hierarchy
   public static ERROR_STATE_ERROR: number;
   public static ERROR_STATE_VALID: number;
-  /* Private */ public __attributes: {[name: string]: any};
-  public writeElementDiv: boolean;
-  public id: string;
+  /* Private */ public __attributes?: {[name: string]: any};
+  public writeElementDiv?: boolean;
+  public id?: string;
 
-  public labelLocation: string;
-  public tableCssClass: string;
-  public tableCssStyle: string;
-  public containerCssClass: string;
-  public containerCssStyle: string;
-  public cssClass: string;
-  public labelCssClass: string;
-  public errorCssClass: string;
-  public nowrap: boolean;
-  public labelWrap: boolean;
-  public align: string;
-  public valign: string;
-  public focusable: boolean;
-  public bmolsnr: boolean; // Be My Own Listener
-  public forceUpdate: boolean;
-  public isBlockElement: boolean;
-  public visibilityChecks: Array<() => boolean>;
-  public enableDisableChecks: Array<() => boolean>;
-  public visibilityChangeEventSources: string[];
-  public enableDisableChangeEventSources: string[];
-  public valueChangeEventSources: string[];
-  public visibilityUpdaters: string[];
-  public enabledDisabledUpdaters: string[];
-  public elementChangeHandler: string;
-  public selection: string;
-  public openSelectionLabel: string;
-  public errorLocation: string;
-  public helpTooltip: boolean;
+  public labelLocation?: string;
+  public tableCssClass?: string;
+  public tableCssStyle?: string;
+  public containerCssClass?: string;
+  public containerCssStyle?: string;
+  public cssClass?: string;
+  public labelCssClass?: string;
+  public errorCssClass?: string;
+  public nowrap?: boolean;
+  public labelWrap?: boolean;
+  public align?: string;
+  public valign?: string;
+  public focusable?: boolean;
+  public bmolsnr?: boolean; // Be My Own Listener
+  public forceUpdate?: boolean;
+  public isBlockElement?: boolean;
+  public visibilityChecks?: Array<() => boolean>;
+  public enableDisableChecks?: Array<() => boolean>;
+  public visibilityChangeEventSources?: string[];
+  public enableDisableChangeEventSources?: string[];
+  public valueChangeEventSources?: string[];
+  public visibilityUpdaters?: string[];
+  public enabledDisabledUpdaters?: string[];
+  public elementChangeHandler?: string;
+  public selection?: string;
+  public openSelectionLabel?: string;
+  public errorLocation?: string;
+  public helpTooltip?: boolean;
+  public colSizes?;
 
   // Added to keep a basic compatibility.
-  public type: string;
-  public items: XFormItem[];
-  private _isXFormItem: boolean;
+  public editable?: boolean;
+  public type?: string;
+  public items?: XFormItem[];
+  public width?;
+  public cssStyle?;
+  public label?;
+  public value?;
+  public icon?;
+  public ref?;
+  public elementChanged?;
+  public choices?;
+  public onChange?;
+  public onActivate?;
+  public getDisplayValue?;
+  public _isXFormItem?: boolean;
 
-  public getInstance<T>(): T {
+  public getInstance?<T>(): T {
     return void 0;
   }
-  public getInstanceValue(path?: string): any {
+
+  public getItems?() {
+  }
+
+  public getForceUpdate?() {}
+
+  public getInheritedProperty?(prop): any {
     return void 0;
   }
-  public getForm<T extends XForm>(): T {
+
+  public initFormItem?() {
+
+  }
+
+  public updateElement?() {
+
+  }
+
+  public getInstanceValue?(path?: string): any {
     return void 0;
   }
-  public getParentItem(): XFormItem {
+  public getForm?<T extends XForm>(): T {
     return void 0;
   }
-  public getWidget(): DwtComposite {
+  public getParentItem?(): XFormItem {
     return void 0;
   }
-  public setInstanceValue(value: any, path?: any): any {
+  public getWidget?(): DwtComposite {
     return void 0;
   }
-  public getId(): string {
+  public setInstanceValue?(value: any, path?: any): any {
     return void 0;
   }
-  public getRefPath(): string {
+  public getId?(): string {
+    return void 0;
+  }
+  public getRefPath?(): string {
     return undefined;
   }
-  public _setAttributes(params): void {}
+  public _setAttributes?(params): void {}
 }
 
 export let _DWT_ALERT_: "dwt_alert";
@@ -111,6 +142,11 @@ export let _SEPARATOR_: string;
 export let _SPACER_: "spacer";
 export let _SWITCH_: string;
 export let _CELL_SPACER_: "cell_spacer";
+export let _CELLSPACER_: "cell_spacer";
+export let _INPUT_: "input";
+export let _CASE_: "case";
+export let _DWT_SELECT_: "dwt_select";
+export let _DWT_DATE_: "dwt_date";
 export let _TOP_GROUPER_: "top_grouper";
 export let _CHECKBOX_: "checkbox";
 export let _GROUPER_: string;
@@ -130,11 +166,22 @@ export class WidgetAdaptor_XFormItem extends XFormItem {}
 export class Dwt_Adaptor_XFormItem extends WidgetAdaptor_XFormItem {}
 
 export class Group_XFormItem extends XFormItem {
-  public items: XFormItem[];
-  public type: string;
+  public items?: XFormItem[];
+  public type?: string;
+  public numCols?: number;
+
+  public initFormItem?() {}
+
+  public getItems?() {}
+}
+
+export class Textfield_XFormItem extends XFormItem {
+  public visibilityChecks?;
+  public enableDisableChecks?;
 }
 
 export class Composite_XFormItem extends Group_XFormItem {
+  public useParentTable: boolean;
   public static onFieldChange(value: any, event: DwtEvent, form: ZaXFormViewController): any {
     return void 0;
   }
@@ -153,19 +200,37 @@ export class Dwt_Button_XFormItem extends Dwt_Adaptor_XFormItem {
   public getWidget(): DwtButton {
     return void 0;
   }
+
+  public icon;
+  public disIcon;
 }
 
 export class Output_XFormItem extends XFormItem {
-  public updateElement(value: any) {}
+  public updateElement(value?: any) {}
 }
 
 export class Dwt_List_XFormItem extends Dwt_Adaptor_XFormItem {
-  public getSelection(): any[] {
+  public multiselect?;
+  public headerList?;
+  public hideHeader?;
+  public onSelection?;
+  public widgetClass?;
+
+  public static isItemsChanged(itemArray, existingArr) {
+
+  }
+
+  public constructWidget?() {
+
+  }
+  public getSelection?(): any[] {
     return void 0;
   }
 }
 
-export class Spacer_XFormItem extends XFormItem {}
+export class Spacer_XFormItem extends XFormItem {
+  public height: number;
+}
 
 export class Cell_Spacer_XFormItem extends Spacer_XFormItem {}
 

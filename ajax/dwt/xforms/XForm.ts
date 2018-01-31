@@ -29,6 +29,7 @@ import {XModel} from "./XModel";
 export class XForm extends DwtComposite {
   public xmodel: XModel;
   public instance: ZaItem;
+  public _isDirty: boolean;
 
   constructor(
     attributes: XFormObjectBase,

@@ -60,7 +60,7 @@ export class ZaXDialog extends DwtDialog {
   public setObject(entry: any): void {}
   public getObject(): any {}
   public popup(loc?: DwtPoint): void {}
-  public getMyXForm(entry: any): XFormObjectBase {
+  public getMyXForm(entry?: any): XFormObjectBase {//TODO entry should not be optional
     return void 0;
   }
   public initForm(xModelMetaData: XModelParams, xFormMetaData: XFormObjectBase, defaultInstance?: any): void {}

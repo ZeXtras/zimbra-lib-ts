@@ -12,6 +12,7 @@ define(["require", "exports"], function (require, exports) {
   exports.Dwt_List_XFormItem = Dwt_List_XFormItem;
   exports.Dwt_TabBar_XFormItem = Dwt_TabBar_XFormItem;
   exports.Group_XFormItem = Group_XFormItem;
+  exports.Textfield_XFormItem = Textfield_XFormItem;
   exports.Output_XFormItem = Output_XFormItem;
   exports.Spacer_XFormItem = Spacer_XFormItem;
   exports.WidgetAdaptor_XFormItem = WidgetAdaptor_XFormItem;
@@ -26,9 +27,14 @@ define(["require", "exports"], function (require, exports) {
   exports._SPACER_ = _SPACER_;
   exports._SWITCH_ = _SWITCH_;
   exports._CELL_SPACER_ = _CELL_SPACER_;
+  exports._CELLSPACER_ = _CELLSPACER_;
   exports._TOP_GROUPER_ = _TOP_GROUPER_;
   exports._CHECKBOX_ = _CHECKBOX_;
   exports._GROUPER_ = _GROUPER_;
   exports._TEXTFIELD_ = _TEXTFIELD_;
   exports._DWT_LIST_ = _DWT_LIST_;
+  exports._CASE_ = _CASE_;
+  exports._DWT_SELECT_ = _DWT_SELECT_;
+  exports._DWT_DATE_ = _DWT_DATE_;
+  exports._INPUT_ = _INPUT_;
 });

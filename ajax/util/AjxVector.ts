@@ -26,5 +26,8 @@ export class AjxVector<T> {
   public contains(element: T): boolean { return undefined; }
   public add(element: T): void {}
   public remove(element: T): void {}
+  public static fromArray(list):AjxVector<any> {
+    return void 0;
+  }
 
 }

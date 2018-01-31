@@ -102,6 +102,7 @@ export interface _GROUP_XformItemDescription extends GroupBase_XFormItemDescript
   type: "group";
   bmolsnr?: boolean;
   width?: string|number;
+  numCols?: number;
 }
 
 export interface _CELL_SPACER_XformItemDescription extends Base_XFormItemDescription {

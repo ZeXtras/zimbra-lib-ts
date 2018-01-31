@@ -35,4 +35,9 @@ export class ZaMsg {
   public static ALTBB_Close_tt: string;
   public static showDetails: string;
   public static TBB_Help: string;
+  public static TBB_Disable: string;
+  public static TBB_Enable: string;
+  public static search_option_filter: string;
+  public static Previous: string;
+  public static Next: string;
 }

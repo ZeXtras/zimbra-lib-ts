@@ -20,10 +20,18 @@
 
 export class AjxImg {
 
+  public static getClassForImage(
+    imageName: string,
+    disabled: boolean
+  ): string {
+    return void 0;
+  }
+
   public static setImage(
     parentEl: HTMLElement,
     imageName?: string,
     useParenEl?: boolean,
+
     _disabled?: boolean,
     classes?: string[],
     altText?: string,

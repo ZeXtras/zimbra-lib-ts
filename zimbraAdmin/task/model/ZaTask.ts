@@ -1,4 +1,3 @@
-
 /*
  * T4Z - TypeScript 4 Zimlet
  * Copyright (C) 2017 ZeXtras S.r.l.
@@ -19,16 +18,24 @@
  * along with T4Z - TypeScript 4 Zimlet. If not, see <http://www.gnu.org/licenses/>.
  */
 
-export class DwtRectangle {
-  public x: number;
-  public y: number;
-  public width: number;
-  public height: number;
+import {ZaItem} from "../../common/ZaItem";
 
-  constructor(x?: number, y?: number, width?: number, height?: number) {
-    this.x = x;
-    this.y = y;
-    this.width = width;
-    this.height = height;
-  }
+export class ZaTask extends ZaItem {}
+
+export class ZaTaskItem {
+
+  constructor(
+    viewForPopup,
+    cacheName,
+    title,
+    data,
+    position,
+    type,
+    displayName,
+    finishCallback?,
+    cacheDialog?,
+    dialogType?,
+    editData?
+  ) {}
+
 }
