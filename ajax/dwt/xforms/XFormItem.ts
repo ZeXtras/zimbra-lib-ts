@@ -181,6 +181,7 @@ export class Textfield_XFormItem extends XFormItem {
 }
 
 export class Composite_XFormItem extends Group_XFormItem {
+  public initializeItems(){};
   public useParentTable: boolean;
   public static onFieldChange(value: any, event: DwtEvent, form: ZaXFormViewController): any {
     return void 0;
@@ -194,6 +195,7 @@ export class Dwt_TabBar_XFormItem extends Dwt_Adaptor_XFormItem {
 }
 
 export class Checkbox_XFormItem extends XFormItem {
+  public cbType;
 }
 
 export class Dwt_Button_XFormItem extends Dwt_Adaptor_XFormItem {

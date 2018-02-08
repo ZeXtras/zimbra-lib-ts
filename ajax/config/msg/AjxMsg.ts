@@ -23,4 +23,10 @@ export class AjxMsg {
   public static no: string;
   public static _close: string;
   public static formatWordyDate: string;
+  public static years;
+  public static months;
+  public static weeks;
+  public static days;
+  public static hours;
+  public static minutes;
 }

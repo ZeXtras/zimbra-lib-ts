@@ -63,6 +63,7 @@ export interface Base_XFormItemDescription {
   getDisplayValue?: (newValue?: string|boolean) => string|boolean;
   visibilityChecks?: Array<() => boolean>;
   visibilityChangeEventSources?: string[];
+  enableDisableChecks?;
 }
 
 export interface GroupBase_XFormItemDescription extends Base_XFormItemDescription {
@@ -103,6 +104,7 @@ export interface _GROUP_XformItemDescription extends GroupBase_XFormItemDescript
   bmolsnr?: boolean;
   width?: string|number;
   numCols?: number;
+  enableDisableChangeEventSources?;
 }
 
 export interface _CELL_SPACER_XformItemDescription extends Base_XFormItemDescription {

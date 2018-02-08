@@ -54,6 +54,7 @@ export class DwtListView extends DwtComposite {
   public _rowHeight: number;
   public _parentEl: HTMLDivElement;
   public _view: string;
+  public _list;
 
   // constructor(form: XForm, cssClass: string, unknown: any, headerList: DwtListHeaderItem[]);
   constructor(params: DwtListViewParams) {
@@ -69,6 +70,7 @@ export class DwtListView extends DwtComposite {
     params: {now?: Date},
     classes?: string[],
   ): number { return undefined; }
+  public getList(): AjxVector<any> { return undefined; }
   public addSelectionListener(ajxListener: AjxListener): void{}
   public getSelectedItems(): AjxVector<ZmItem> { return undefined; }
   public deselectAll(): void {}
