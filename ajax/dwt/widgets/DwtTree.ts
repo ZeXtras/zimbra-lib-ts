@@ -29,6 +29,7 @@ export class DwtTree extends DwtComposite {
   public static CHECKEDITEM_STYLE: number = 4;
   public static ITEM_SELECTED: number;
   public static ITEM_ACTIONED: number;
+  public static ITEM_CHECKED: number;
 
   constructor(params: DwtTreeParams) {
     super(params);
