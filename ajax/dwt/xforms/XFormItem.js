@@ -22,6 +22,9 @@ define(["require", "exports"], function (require, exports) {
   exports._DWT_ALERT_ = _DWT_ALERT_;
   exports._DWT_BUTTON_ = _DWT_BUTTON_;
   exports._GROUP_ = _GROUP_;
+  exports._ZA_TOP_GROUPER_ = _ZA_TOP_GROUPER_;
+  exports._TAB_BAR_ = _TAB_BAR_;
+  exports._ZATABCASE_ = _ZATABCASE_;
   exports._OUTPUT_ = _OUTPUT_;
   exports._SEPARATOR_ = _SEPARATOR_;
   exports._SPACER_ = _SPACER_;

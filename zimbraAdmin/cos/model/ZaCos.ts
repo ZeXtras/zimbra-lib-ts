@@ -25,4 +25,5 @@ export class ZaCos extends ZaItem {
   public static myXModel: XModelInt;
   public id: string;
   public attrs: {};
+  public static getCosByName(cosName){};
 }

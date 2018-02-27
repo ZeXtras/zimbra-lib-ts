@@ -64,6 +64,8 @@ export class ZaItem extends ZaModel {
   public getAttrs: {};
   public _defaultValues: {attrs: {}};
   private _uuid: string;
+  public show_volumes;
+  public zimbraServiceHostname;
 
   constructor(iKeyName: string) {
     super(true);

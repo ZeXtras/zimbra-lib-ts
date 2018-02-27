@@ -30,5 +30,6 @@ export class ZaAccount extends ZaItem {
   public id: string;
   public attrs: {
     zimbraIsAdminAccount?: string,
+    zimbraIsDelegatedAdminAccount?: string
   };
 }

@@ -40,4 +40,9 @@ export class ZaMsg {
   public static search_option_filter: string;
   public static Previous: string;
   public static Next: string;
+  public static bt_reset: string;
+  public static tt_StartTypingDomainName: string;
+  public static L_none: string;
+  public static ERROR_INVALID_VALUE: string;
+  public static tt_StartTypingCOSName: string;
 }

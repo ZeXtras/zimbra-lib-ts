@@ -29,4 +29,6 @@ export class AjxMsg {
   public static days;
   public static hours;
   public static minutes;
+  public static _next;
+  public static _prev;
 }

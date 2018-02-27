@@ -57,7 +57,7 @@ export class XForm extends DwtComposite {
   public getItemById(id: string): Dwt_Adaptor_XFormItem {
     return void 0;
   }
-  public getItemsById(id: string): Dwt_Adaptor_XFormItem[] | Output_XFormItem[] {
+  public getItemsById(id: string): XFormItem[] {
     return void 0;
   }
   public getElement(id?: string): HTMLElement {

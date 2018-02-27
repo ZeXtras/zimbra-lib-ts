@@ -64,6 +64,9 @@ export class ZaXDialog extends DwtDialog {
   public getMyXForm(entry?: any): XformItemDescriptionClasses {//TODO entry should not be optional
     return void 0;
   }
+
+  public _helpButtonListener(){}
+
   public initForm(xModelMetaData: XModelParams, xFormMetaData: XformItemDescriptionClasses, defaultInstance?: any): void {}
 
 }

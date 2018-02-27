@@ -23,5 +23,7 @@ export class ZaSearch {
    * @argument callArgs {value, event, callback}
    */
   public dynSelectSearch(callArgs){}
+  public dynSelectSearchDomains(){}
+  public dynSelectSearchCoses(){}
   public static ACCOUNTS: string;
 }
