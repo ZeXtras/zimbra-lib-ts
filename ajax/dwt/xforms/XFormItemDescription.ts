@@ -117,7 +117,7 @@ export interface _CHECKBOX_XformItemDescription extends Base_XFormItemDescriptio
   label?: string;
   bmolsnr?: boolean;
   labelLocation?: string;
-  onChange?: () => void;
+  onChange?: (value, ev, form) => void;
 }
 
 export interface _TOP_GROUPER_XformItemDescription extends GroupBase_XFormItemDescription {

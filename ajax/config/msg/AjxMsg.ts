@@ -31,4 +31,5 @@ export class AjxMsg {
   public static minutes;
   public static _next;
   public static _prev;
+  public static ago;
 }

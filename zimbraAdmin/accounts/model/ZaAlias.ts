@@ -18,19 +18,8 @@
  * along with T4Z - TypeScript 4 Zimlet. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import {XModelInt} from "../../../ajax/dwt/xforms/XModelInt";
 import {ZaItem} from "../../common/ZaItem";
 
-export class ZaAccount extends ZaItem {
-  public static A_uid;
-  public static myXModel: XModelInt;
-  public static A_name: string;
-  public static A_displayname: string;
-  public static A_mail: string;
-
-  public id: string;
-  public attrs: {
-    zimbraIsAdminAccount?: string,
-    zimbraIsDelegatedAdminAccount?: string
-  };
+export class ZaAlias extends ZaItem {
+  public static searchAttributes;
 }

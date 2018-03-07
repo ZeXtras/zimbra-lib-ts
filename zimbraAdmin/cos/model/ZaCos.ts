@@ -22,6 +22,7 @@ import {XModelInt} from "../../../ajax/dwt/xforms/XModelInt";
 import {ZaItem} from "../../common/ZaItem";
 
 export class ZaCos extends ZaItem {
+  public static A_uid;
   public static myXModel: XModelInt;
   public id: string;
   public attrs: {};

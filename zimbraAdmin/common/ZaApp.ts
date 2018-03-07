@@ -26,6 +26,7 @@ import {ZaController} from "./ZaController";
 import {ZaItem} from "./ZaItem";
 import {ZaItemList} from "./ZaItemList";
 import {ZaXDialog} from "./ZaXDialog";
+import {ZaSearchListController} from "../search/controller/ZaSearchListController";
 
 export class ZaApp {
 
@@ -43,4 +44,5 @@ export class ZaApp {
   public pushView(name: string|number, openInNewTab?: boolean, openInSearchTab?: boolean): void {}
   public getAppViewMgr(): ZaAppViewMgr { return undefined; }
   public createView(viewName, elements, tabParams): void{}
+  public getSearchListController():ZaSearchListController{return void 0;}
 }

@@ -20,4 +20,7 @@ define(["require", "exports"], function (require, exports) {
   exports._EMAIL_ADDRESS_ = _EMAIL_ADDRESS_;
   // exports._FULL_URL_ = _FULL_URL_;  // Starting from Z7+
   exports.XModelItemFactory = XModelItemFactory;
+  exports._SECRET_ = _SECRET_;
+  exports._COS_ENUM_ = _COS_ENUM_;
+  exports._COS_INT_ = _COS_INT_;
 });

@@ -26,6 +26,7 @@ import {DwtButton} from "./DwtButton";
 
 export class DwtDialog extends DwtBaseDialog {
 
+  public static LAST_BUTTON;
   public static CANCEL_BUTTON: number;
   public static OK_BUTTON: number;
   public static DISMISS_BUTTON: number;

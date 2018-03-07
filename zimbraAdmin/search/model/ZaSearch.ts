@@ -26,4 +26,14 @@ export class ZaSearch {
   public dynSelectSearchDomains(){}
   public dynSelectSearchCoses(){}
   public static ACCOUNTS: string;
+  public static COSES: string;
+  public static standardAttributes;
+  public static searchDirectory(params){}
+  public static search(query, types, pagenum, orderby, isascending, attrs, limit, domainName?, maxResults?): ISearchResult {
+    return void 0
+  }
+}
+
+export interface ISearchResult {
+  list;
 }

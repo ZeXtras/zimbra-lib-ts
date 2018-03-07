@@ -16,4 +16,5 @@ export class ZaDistributionList extends ZaItem {
   public static myXModel: XModelInt;
   public id: string;
   public attrs: {};
+  public static searchAttributes;
 }

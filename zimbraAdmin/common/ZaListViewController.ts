@@ -27,6 +27,9 @@ export class ZaListViewController extends ZaController {
     super(appCtxt, container, iKeyName);
   }
 
+  public _currentPageNum;
+  public RESULTSPERPAGE;
+  public searchCallback(params, resp){}
   protected _list: any;//should be ZaItemList
   protected _UICreated: boolean;
 

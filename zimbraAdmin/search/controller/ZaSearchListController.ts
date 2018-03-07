@@ -21,4 +21,8 @@
 import {ZaListViewController} from "../../common/ZaListViewController";
 
 export class ZaSearchListController extends ZaListViewController {
+  public _currentQuery;
+  public fetchAttrs;
+  public _currentDomain;
+  public setSearchTypes(searchTypes){}
 }

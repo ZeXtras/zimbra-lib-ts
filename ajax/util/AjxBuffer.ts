@@ -21,5 +21,6 @@
 export class AjxBuffer {
 
   public append(...args): void {}
+  public static concat(...args){}
 
 }

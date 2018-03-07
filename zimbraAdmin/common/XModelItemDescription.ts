@@ -31,4 +31,5 @@ export interface XModelItemDescription extends XModelItemInt {
   getterScope?: string;
   defaultValue?: any;
   managedByZeXtras?: boolean;
+  constraints?;
 }

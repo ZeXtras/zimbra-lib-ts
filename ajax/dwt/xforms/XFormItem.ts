@@ -155,6 +155,10 @@ export let _CHECKBOX_: "checkbox";
 export let _GROUPER_: string;
 export let _TEXTFIELD_: "textfield";
 export let _DWT_LIST_: "dwt_list";
+export let _SELECT1_: "select1";
+export let _SUPER_CHECKBOX_: "super_checkbox";
+export let _SUPER_TEXTFIELD_: "super_textfield";
+export let _SUPER_SELECT1_: "super_select1";
 
 export interface XFormObjectBase {
   colSizes?: string[];
@@ -243,4 +247,8 @@ export class Step_Choices_XFormItem extends Group_XFormItem {}
 
 export class Select1_XFormItem extends XFormItem {
   public setChoices(newChoices: BSelectorOption[]): void {}
+}
+
+export class Dwt_Alert_XFormItem extends Dwt_Adaptor_XFormItem{
+
 }

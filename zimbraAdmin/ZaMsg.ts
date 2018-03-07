@@ -45,4 +45,8 @@ export class ZaMsg {
   public static L_none: string;
   public static ERROR_INVALID_VALUE: string;
   public static tt_StartTypingCOSName: string;
+  public static ACL_D;
+  public static BUSY_SEARCHING;
+  public static LBL_HOmeStatusUnknown;
+  public static TBB_Refresh;
 }

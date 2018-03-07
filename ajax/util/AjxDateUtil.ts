@@ -26,6 +26,7 @@ export class AjxDateUtil {
   public static _wordyDate: AjxDateFormat;
 
   public static isLocale24Hour(): boolean { return null; }
+  public static computeDuration(deltaMSec, bo1, bo2){}
 
   public static simpleComputeDateStr(displayDate: Date): string {
     return undefined;
