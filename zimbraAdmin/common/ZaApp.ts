@@ -38,7 +38,7 @@ export class ZaApp {
 
   public getCurrentController(): ZaController { return undefined; }
   public getAppController(): ZaZimbraAdmin { return undefined;}
-  public getControllerById<T extends ZaController>(id: number): T { return undefined; }
+  public getControllerById<T extends ZaController>(id: string): T { return undefined; }
   public getAppCtxt(): ZaAppCtxt { return undefined; }
   public getMbsList(): ZaItemList<ZaItem> { return undefined; }
   public pushView(name: string|number, openInNewTab?: boolean, openInSearchTab?: boolean): void {}
