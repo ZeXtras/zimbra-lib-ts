@@ -66,6 +66,7 @@ export class ZmController {
     appContentView: DwtComposite,
     toolbar?: ZmButtonToolBar,
   ): {[name: string]: DwtControl} { return undefined; }
+  public getDefaultViewType(): string { return undefined; }
 
 }
 
