@@ -30,6 +30,7 @@ export class ZaServer extends ZaItem {
   public static A_ServiceHostname: string;
   public static A_description: string;
   public static getAll(): ZaItemList<ZaServer> { return undefined; }
+  public static getServerByName(name: string): ZaServer {return undefined;}
 
   public name: string;
   public attrs: ZaServerAttrs;
