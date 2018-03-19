@@ -27,7 +27,7 @@ export class ZaXFormViewController extends ZaController {
   public _view: ZaTabView; // FIXME: Should be private
   public deleteMsg: string;
 
-  public show(item: ZaItem): void {}
+  public show(item: ZaItem, ...args: any[]): void {}
   public saveButtonListener(ev: DwtSelectionEvent): void {}
   public closeButtonListener(ev: DwtSelectionEvent): void {}
 }

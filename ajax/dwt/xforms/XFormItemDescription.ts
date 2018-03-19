@@ -49,7 +49,7 @@ export interface XFormItemDescription {
   width?: string;
   caseKey?: number;
   tabGroupKey?: number;
-  colSpan?: number;
+  colSpan?: number | "*";
   choices?: ZaXWizardStepChoice[];
   cssClass?: string;
   valign?: string;
@@ -64,6 +64,9 @@ export interface Base_XFormItemDescription {
   visibilityChecks?: Array<() => boolean>;
   visibilityChangeEventSources?: string[];
   enableDisableChecks?;
+  cssStyle?: string;
+
+  onClick?: (ev: MouseEvent) => void;
 }
 
 export interface GroupBase_XFormItemDescription extends Base_XFormItemDescription {
