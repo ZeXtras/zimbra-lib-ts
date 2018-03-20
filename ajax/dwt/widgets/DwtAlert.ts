@@ -22,6 +22,8 @@ import {DwtControl} from "./DwtControl";
 
 export class DwtAlert extends DwtControl {
 
-  public static WARNING: string;
+  public static WARNING: number;
+  public static INFORMATION: number;
+  public static CRITICAL: number;
 
 }

@@ -21,6 +21,8 @@
 export class AjxUtil {
   public static FULL_URL_RE: RegExp;
 
+  public static isEmpty(hash){}
+  public static arrayAsHash(arg1){}
   public static toArray(obj: any|any[]): any[] { return undefined; }
   public static arraySize(arr: any[]|{[key: string]: any}): number { return undefined; }
   public static arrayContains(arr: any[], item: any): boolean { return undefined; }

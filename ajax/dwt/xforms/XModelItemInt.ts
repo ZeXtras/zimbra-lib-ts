@@ -26,5 +26,11 @@ export interface XModelItemInt {
   ref?: string;
   getter?: string;
   setter?: string;
+  choices?: (() => XModelItemInt_option[]) | XModelItemInt_option[];
+}
+
+export interface XModelItemInt_option {
+  value: any;
+  label: string;
   choices?: XFormChoices[];
 }

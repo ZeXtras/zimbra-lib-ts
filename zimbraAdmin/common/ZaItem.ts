@@ -55,14 +55,28 @@ export class ZaItem extends ZaModel {
 
   public rightsLoaded: boolean;
   public id: string; // TODO: Investigate
+  public name: string;
   public attrs: {}; // TODO: Investigate
   public type: string;
-  private _iKeyName: string;
+  public _iKeyName: string;
+  public rights: {};
+  public setAttrs: {};
+  public getAttrs: {};
+  public _defaultValues: {attrs: {}};
   private _uuid: string;
+  public show_volumes;
+  public zimbraServiceHostname;
 
   constructor(iKeyName: string) {
     super(true);
   }
 
   public _init(): void {} // Should be private...
+  public refresh(skipRights: boolean, expandDefaults: boolean): void {}
+  public load(by: string, val: string, skipRights: boolean, expandDefaults?: boolean): void {}
+  public modify(mods: {}, tmpObj?: ZaItem): void {}
+
+  public static getDescriptionValue(desp: any): any {
+
+  }
 }

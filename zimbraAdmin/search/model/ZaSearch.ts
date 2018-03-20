@@ -18,7 +18,22 @@
  * along with T4Z - TypeScript 4 Zimlet. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import {Case_XFormItem} from "../../ajax/dwt/xforms/XFormItem";
+export class ZaSearch {
+  /**
+   * @argument callArgs {value, event, callback}
+   */
+  public dynSelectSearch(callArgs){}
+  public dynSelectSearchDomains(){}
+  public dynSelectSearchCoses(){}
+  public static ACCOUNTS: string;
+  public static COSES: string;
+  public static standardAttributes;
+  public static searchDirectory(params){}
+  public static search(query, types, pagenum, orderby, isascending, attrs, limit, domainName?, maxResults?): ISearchResult {
+    return void 0
+  }
+}
 
-export class ZATabCase_XFormItem extends Case_XFormItem {
+export interface ISearchResult {
+  list;
 }

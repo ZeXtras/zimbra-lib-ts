@@ -18,11 +18,15 @@
  * along with T4Z - TypeScript 4 Zimlet. If not, see <http://www.gnu.org/licenses/>.
  */
 
+import {AjxDateFormat} from "./AjxText";
+
 export class AjxDateUtil {
 
   public static MSEC_PER_DAY: number;
+  public static _wordyDate: AjxDateFormat;
 
   public static isLocale24Hour(): boolean { return null; }
+  public static computeDuration(deltaMSec, bo1, bo2){}
 
   public static simpleComputeDateStr(displayDate: Date): string {
     return undefined;

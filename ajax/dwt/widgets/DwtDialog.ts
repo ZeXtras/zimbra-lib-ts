@@ -26,6 +26,7 @@ import {DwtButton} from "./DwtButton";
 
 export class DwtDialog extends DwtBaseDialog {
 
+  public static LAST_BUTTON;
   public static CANCEL_BUTTON: number;
   public static OK_BUTTON: number;
   public static DISMISS_BUTTON: number;
@@ -54,7 +55,8 @@ export class DwtDialog extends DwtBaseDialog {
 
   public registerCallback(buttonId: number, callback: AjxCallback|any, obj?: {}, ...args: any[]): void {}
 
-  public getButton(id: number): DwtButton { return void 0; }
+  public getButton(id: number|string): DwtButton { return void 0; }
+
   public setButtonEnabled(id: number, enabled: boolean): void {}
 }
 
@@ -64,5 +66,5 @@ export interface DwtDialogParams extends DwtBaseDialogParams {
 }
 
 export class DwtDialog_ButtonDescriptor {
-  constructor(id: string, label: string, align: number, callback: AjxCallback, cellTemplate?: string) {}
+  constructor(id: number|string, label: string, align: number, callback: AjxCallback, cellTemplate?: string) {}
 }

@@ -18,32 +18,31 @@
  * along with T4Z - TypeScript 4 Zimlet. If not, see <http://www.gnu.org/licenses/>.
  */
 
+import {DwtShell} from "../../ajax/dwt/widgets/DwtShell";
 import {ZaZimbraAdmin} from "../ZaZimbraAdmin";
 import {ZaAppCtxt} from "./ZaAppCtxt";
+import {ZaAppViewMgr} from "./ZaAppViewMgr";
 import {ZaController} from "./ZaController";
 import {ZaItem} from "./ZaItem";
 import {ZaItemList} from "./ZaItemList";
 import {ZaXDialog} from "./ZaXDialog";
+import {ZaSearchListController} from "../search/controller/ZaSearchListController";
 
 export class ZaApp {
 
-  public static getInstance(): ZaApp {
-    return void 0;
-  }
+  public static getInstance(): ZaApp { return undefined; }
 
   public dialogs: {[name: string]: ZaXDialog};
+  public _controllers: {[id: number]: ZaController};
+  public _container: DwtShell;
 
-  public getCurrentController(): ZaController {
-    return void 0;
-  }
-
-  public getAppController(): ZaZimbraAdmin {
-    return void 0;
-  }
-
-  public getAppCtxt(): ZaAppCtxt {
-    return void 0;
-  }
-
+  public getCurrentController(): ZaController { return undefined; }
+  public getAppController(): ZaZimbraAdmin { return undefined;}
+  public getControllerById<T extends ZaController>(id: string): T { return undefined; }
+  public getAppCtxt(): ZaAppCtxt { return undefined; }
   public getMbsList(): ZaItemList<ZaItem> { return undefined; }
+  public pushView(name: string|number, openInNewTab?: boolean, openInSearchTab?: boolean): void {}
+  public getAppViewMgr(): ZaAppViewMgr { return undefined; }
+  public createView(viewName, elements, tabParams): void{}
+  public getSearchListController():ZaSearchListController{return void 0;}
 }

@@ -19,5 +19,6 @@
  */
 
 export class XFormChoices {
-
+  public static OBJECT_REFERENCE_LIST: string;
+  constructor(choiceObject, type, valueProperty, labelProperty) {}
 }
