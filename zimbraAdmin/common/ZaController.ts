@@ -57,7 +57,9 @@ export class ZaController {
     ZaSearchListController: Array<() => void>;
   };
 
-  public static setViewMethods: {[controllerIKeyName: string]: Array<(entry: ZaItem, openInNewTab: boolean, skipRefresh: boolean) => void>};
+  public static setViewMethods: {
+    [controllerIKeyName: string]: Array<(entry: ZaItem, openInNewTab: boolean, skipRefresh: boolean) => void>,
+  };
 
   public _popupOperations: ZaOperation[];
   public _popupOrder: number[];
@@ -86,7 +88,7 @@ export class ZaController {
   public popupMsgDialog(msg: string, noExecReset?: boolean): void {}
   public popupWarningDialog(msg: string, noExecReset?: boolean): void {}
   public popupErrorDialog(msg: string, ex?: AjxException, style?: number): void {}
-  public switchToNextView(nextViewCtrlr: ZaController, func: (...args) => any, params?: any): void {}
+  public switchToNextView(nextViewCtrlr: ZaController, func: (...args: any[]) => any, params?: any): void {}
   public _setView(entry: ZaItem, openInNewTab: boolean, skipRefresh: boolean): void {}
   public getMainTab(): any { return undefined; }
   public getContentViewId(): string { return undefined; }

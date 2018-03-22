@@ -19,13 +19,13 @@
  */
 
 import {ZmItem} from "../../../zimbraMail/share/model/ZmItem";
+import {AjxListener} from "../../events/AjxListener";
 import {AjxVector} from "../../util/AjxVector";
 import {DwtEvent} from "../events/DwtEvent";
 import {DwtListViewActionEvent} from "../events/DwtListViewActionEvent";
 import {DwtMouseEvent} from "../events/DwtMouseEvent";
 import {DwtSelectionEvent} from "../events/DwtSelectionEvent";
 import {DwtComposite, DwtCompositeParams} from "./DwtComposite";
-import {AjxListener} from "../../events/AjxListener";
 
 export class DwtListView extends DwtComposite {
 
@@ -54,7 +54,7 @@ export class DwtListView extends DwtComposite {
   public _rowHeight: number;
   public _parentEl: HTMLDivElement;
   public _view: string;
-  public _list;
+  public _list: AjxVector<string[]>;
 
   // constructor(form: XForm, cssClass: string, unknown: any, headerList: DwtListHeaderItem[]);
   constructor(params: DwtListViewParams) {
@@ -71,7 +71,7 @@ export class DwtListView extends DwtComposite {
     classes?: string[],
   ): number { return undefined; }
   public getList(): AjxVector<any> { return undefined; }
-  public addSelectionListener(ajxListener: AjxListener): void{}
+  public addSelectionListener(ajxListener: AjxListener): void {}
   public getSelectedItems(): AjxVector<ZmItem> { return undefined; }
   public deselectAll(): void {}
   public _markUnselectedViewedItem(on: boolean): void {}
@@ -115,14 +115,20 @@ export interface DwtListViewParams extends DwtCompositeParams {
 }
 
 export class DwtListHeaderItem {
-  public _width: any;
-  public _visible: boolean;
-  public icons;
-  public hintField;
 
   public static sortCompare(a: any, b: any): number {
     return void 0;
   }
+
+  public _width: any;
+  public _visible: boolean;
+  public icons: {
+    trueIcon: string,
+    trueHint: string,
+    falseIcon: string,
+    falseHint: string,
+  };
+  public hintField: string;
 
   public _field: string;
 

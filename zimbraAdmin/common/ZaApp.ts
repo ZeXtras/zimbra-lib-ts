@@ -19,14 +19,15 @@
  */
 
 import {DwtShell} from "../../ajax/dwt/widgets/DwtShell";
+import {ZaSearchListController} from "../search/controller/ZaSearchListController";
 import {ZaZimbraAdmin} from "../ZaZimbraAdmin";
 import {ZaAppCtxt} from "./ZaAppCtxt";
 import {ZaAppViewMgr} from "./ZaAppViewMgr";
 import {ZaController} from "./ZaController";
 import {ZaItem} from "./ZaItem";
 import {ZaItemList} from "./ZaItemList";
+import {ZaTabView} from "./ZaTabView";
 import {ZaXDialog} from "./ZaXDialog";
-import {ZaSearchListController} from "../search/controller/ZaSearchListController";
 
 export class ZaApp {
 
@@ -37,12 +38,16 @@ export class ZaApp {
   public _container: DwtShell;
 
   public getCurrentController(): ZaController { return undefined; }
-  public getAppController(): ZaZimbraAdmin { return undefined;}
+  public getAppController(): ZaZimbraAdmin { return undefined; }
   public getControllerById<T extends ZaController>(id: string): T { return undefined; }
   public getAppCtxt(): ZaAppCtxt { return undefined; }
   public getMbsList(): ZaItemList<ZaItem> { return undefined; }
   public pushView(name: string|number, openInNewTab?: boolean, openInSearchTab?: boolean): void {}
   public getAppViewMgr(): ZaAppViewMgr { return undefined; }
-  public createView(viewName, elements, tabParams): void{}
-  public getSearchListController():ZaSearchListController{return void 0;}
+  public createView(
+    viewName: string,
+    elements: {[name: string]: ZaTabView},
+    tabParams: {[paramName: string]: any},
+  ): void {}
+  public getSearchListController(): ZaSearchListController { return undefined; }
 }

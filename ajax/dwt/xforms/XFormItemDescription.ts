@@ -19,6 +19,7 @@
  */
 
 import {ZaXWizardStepChoice} from "../../../zimbraAdmin/common/ZaXWizardDialog";
+import {XForm} from "./XForm";
 /**
  * This class is introduced to define the XFormItem JSON description.
  * Zimbra does not use this class, neither You should instantiate this class.
@@ -63,7 +64,7 @@ export interface Base_XFormItemDescription {
   getDisplayValue?: (newValue?: string|boolean) => string|boolean;
   visibilityChecks?: Array<() => boolean>;
   visibilityChangeEventSources?: string[];
-  enableDisableChecks?;
+  enableDisableChecks?: Array<(...args: any[]) => boolean>;
   cssStyle?: string;
 
   onClick?: (ev: MouseEvent) => void;
@@ -106,8 +107,7 @@ export interface _GROUP_XformItemDescription extends GroupBase_XFormItemDescript
   type: "group";
   bmolsnr?: boolean;
   width?: string|number;
-  numCols?: number;
-  enableDisableChangeEventSources?;
+  enableDisableChangeEventSources?: string[];
 }
 
 export interface _CELL_SPACER_XformItemDescription extends Base_XFormItemDescription {
@@ -120,7 +120,7 @@ export interface _CHECKBOX_XformItemDescription extends Base_XFormItemDescriptio
   label?: string;
   bmolsnr?: boolean;
   labelLocation?: string;
-  onChange?: (value, ev, form) => void;
+  onChange?: (value: any, ev: Event, form: XForm) => void;
 }
 
 export interface _TOP_GROUPER_XformItemDescription extends GroupBase_XFormItemDescription {
@@ -140,7 +140,7 @@ export interface _DWT_BUTTON_XformItemDescription extends Base_XFormItemDescript
   label?: string;
   icon?: string;
   width?: string | number;
-  onActivate: (() => void) | ((ev) => void);
+  onActivate: (() => void) | ((ev: Event) => void);
 }
 
 export interface _DWT_ALERT_XformItemDescription extends Base_XFormItemDescription {

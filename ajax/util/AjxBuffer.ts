@@ -20,7 +20,7 @@
 
 export class AjxBuffer {
 
-  public append(...args): void {}
-  public static concat(...args){}
+  public static concat(...args: any[]): any[] { return undefined; }
+  public append(...args: any[]): void {}
 
 }

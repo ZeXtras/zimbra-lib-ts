@@ -18,24 +18,27 @@
  * along with T4Z - TypeScript 4 Zimlet. If not, see <http://www.gnu.org/licenses/>.
  */
 
+import {DwtRectangle} from "../../../ajax/dwt/graphics/DwtRectangle";
+import {DwtControl} from "../../../ajax/dwt/widgets/DwtControl";
 import {ZaItem} from "../../common/ZaItem";
+import {ZaXDialog} from "../../common/ZaXDialog";
 
 export class ZaTask extends ZaItem {}
 
 export class ZaTaskItem {
 
   constructor(
-    viewForPopup,
-    cacheName,
-    title,
-    data,
-    position,
-    type,
-    displayName,
-    finishCallback?,
-    cacheDialog?,
-    dialogType?,
-    editData?
+    viewForPopup: ZaXDialog,
+    cacheName: string,
+    title: string,
+    data: any,
+    position: DwtRectangle,
+    type: number,
+    displayName: string,
+    finishCallback?: () => void,
+    cacheDialog?: DwtControl,
+    dialogType?: any,
+    editData?: any,
   ) {}
 
 }

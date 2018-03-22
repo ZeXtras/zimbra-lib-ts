@@ -21,5 +21,5 @@
 import {ZaItem} from "../../common/ZaItem";
 
 export class ZaAlias extends ZaItem {
-  public static searchAttributes;
+  public static searchAttributes: string;
 }

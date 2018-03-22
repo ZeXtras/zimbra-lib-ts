@@ -18,24 +18,25 @@
  * along with T4Z - TypeScript 4 Zimlet. If not, see <http://www.gnu.org/licenses/>.
  */
 
+import {ZaListHeaderItem} from "../../../zimbraAdmin/common/ZaListHeaderItem";
 import {ZaXFormViewController} from "../../../zimbraAdmin/common/ZaXFormViewController";
 import {DwtEvent} from "../events/DwtEvent";
 import {DwtButton} from "../widgets/DwtButton";
 import {DwtComposite} from "../widgets/DwtComposite";
 import {XForm} from "./XForm";
-import {XFormItemDescription, XformItemDescriptionClasses} from "./XFormItemDescription";
 import {XFormChoices} from "./XFormChoices";
+import {XFormItemDescription, XformItemDescriptionClasses} from "./XFormItemDescription";
 
 export class XFormItemFactory {
   public static createItemType(
     typeConstant: string,
     typeName: string,
     constructor: typeof XFormItem,
-    superClassConstructor: typeof XFormItem
+    superClassConstructor: typeof XFormItem,
   ): void {}
 }
 
-export class XFormItem {//TODO check all attribute hierarchy
+export class XFormItem {// TODO check all attribute hierarchy
   public static ERROR_STATE_ERROR: number;
   public static ERROR_STATE_VALID: number;
   /* Private */ public __attributes?: {[name: string]: any};
@@ -58,8 +59,8 @@ export class XFormItem {//TODO check all attribute hierarchy
   public bmolsnr?: boolean; // Be My Own Listener
   public forceUpdate?: boolean;
   public isBlockElement?: boolean;
-  public visibilityChecks?: Array<() => boolean>;
-  public enableDisableChecks?: Array<() => boolean>;
+  public visibilityChecks?: Array<(...args: any[]) => boolean>;
+  public enableDisableChecks?: Array<(...args: any[]) => boolean>;
   public visibilityChangeEventSources?: string[];
   public enableDisableChangeEventSources?: string[];
   public valueChangeEventSources?: string[];
@@ -70,23 +71,23 @@ export class XFormItem {//TODO check all attribute hierarchy
   public openSelectionLabel?: string;
   public errorLocation?: string;
   public helpTooltip?: boolean;
-  public colSizes?;
+  public colSizes?: string[];
 
   // Added to keep a basic compatibility.
   public editable?: boolean;
   public type?: string;
   public items?: XFormItem[];
-  public width?;
-  public cssStyle?;
-  public label?;
-  public value?;
-  public icon?;
-  public ref?;
-  public elementChanged?;
-  public choices?;
-  public onChange?;
-  public onActivate?;
-  public getDisplayValue?;
+  public width?: string;
+  public cssStyle?: string;
+  public label?: string;
+  public value?: any; // TODO check it, may not be found
+  public icon?: string;
+  public ref?: string;
+  public elementChanged?: (value: string, instanceValue: string, ev: Event) => void;
+  public choices?: Array<{value: string | number, label: string}>;
+  public onChange?: (...args: any[]) => void;
+  public onActivate?: (...args: any[]) => void;
+  public getDisplayValue?: (value: string) => string;
   public _isXFormItem?: boolean;
 
   public getInstance?<T>(): T {
@@ -98,7 +99,7 @@ export class XFormItem {//TODO check all attribute hierarchy
 
   public getForceUpdate?() {}
 
-  public getInheritedProperty?(prop): any {
+  public getInheritedProperty?(prop: string): any {
     return void 0;
   }
 
@@ -131,7 +132,7 @@ export class XFormItem {//TODO check all attribute hierarchy
   public getRefPath?(): string {
     return undefined;
   }
-  public _setAttributes?(params): void {}
+  public _setAttributes?(params: {[name: string]: any}): void {}
 }
 
 export let _DWT_ALERT_: "dwt_alert";
@@ -183,35 +184,31 @@ export class Group_XFormItem extends XFormItem {
 }
 
 export class Textfield_XFormItem extends XFormItem {
-  public visibilityChecks?;
-  public enableDisableChecks?;
 }
 
 export class Composite_XFormItem extends Group_XFormItem {
-  public initializeItems(){};
-  public useParentTable: boolean;
   public static onFieldChange(value: any, event: DwtEvent, form: ZaXFormViewController): any {
     return void 0;
   }
+  public useParentTable: boolean;
+  public initializeItems() {}
 }
 
 export class Case_XFormItem extends Group_XFormItem {}
 
 export class Dwt_TabBar_XFormItem extends Dwt_Adaptor_XFormItem {
-  public choices: Array<{value: number, label: string}>;
 }
 
 export class Checkbox_XFormItem extends XFormItem {
-  public cbType;
+  public cbType: number;
 }
 
 export class Dwt_Button_XFormItem extends Dwt_Adaptor_XFormItem {
+  public disIcon?: string;
+
   public getWidget(): DwtButton {
     return void 0;
   }
-
-  public icon;
-  public disIcon;
 }
 
 export class Output_XFormItem extends XFormItem {
@@ -219,15 +216,16 @@ export class Output_XFormItem extends XFormItem {
 }
 
 export class Dwt_List_XFormItem extends Dwt_Adaptor_XFormItem {
-  public multiselect?;
-  public headerList?;
-  public hideHeader?;
-  public onSelection?;
-  public widgetClass?;
+  public static isItemsChanged(
+    itemArray: Array<{[name: string]: any}>,
+    existingArr: Array<{[name: string]: any}>,
+  ): boolean { return undefined; }
 
-  public static isItemsChanged(itemArray, existingArr) {
-
-  }
+  public multiselect?: boolean;
+  public headerList?: ZaListHeaderItem[];
+  public hideHeader?: boolean;
+  public onSelection?: (ev: Event) => undefined;
+  public widgetClass?: typeof DwtComposite;
 
   public constructWidget?() {
 
@@ -249,6 +247,6 @@ export class Select1_XFormItem extends XFormItem {
   public setChoices(newChoices: XFormChoices[]): void {}
 }
 
-export class Dwt_Alert_XFormItem extends Dwt_Adaptor_XFormItem{
+export class Dwt_Alert_XFormItem extends Dwt_Adaptor_XFormItem {
 
 }

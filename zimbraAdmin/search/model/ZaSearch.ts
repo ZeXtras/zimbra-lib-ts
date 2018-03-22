@@ -18,22 +18,35 @@
  * along with T4Z - TypeScript 4 Zimlet. If not, see <http://www.gnu.org/licenses/>.
  */
 
+import {ZaItem} from "../../common/ZaItem";
+import {ZaItemList} from "../../common/ZaItemList";
+
 export class ZaSearch {
+  public static ACCOUNTS: string;
+  public static COSES: string;
+  public static standardAttributes: string;
+  public static searchDirectory(params: {[name: string]: any}): any {}
+  public static search(
+    query: string,
+    types: string[],
+    pagenum: number,
+    orderby: string,
+    isascending: boolean,
+    attrs: string,
+    limit: number,
+    domainName?: string,
+    maxResults?: number,
+  ): ISearchResult {
+    return void 0;
+  }
   /**
    * @argument callArgs {value, event, callback}
    */
-  public dynSelectSearch(callArgs){}
-  public dynSelectSearchDomains(){}
-  public dynSelectSearchCoses(){}
-  public static ACCOUNTS: string;
-  public static COSES: string;
-  public static standardAttributes;
-  public static searchDirectory(params){}
-  public static search(query, types, pagenum, orderby, isascending, attrs, limit, domainName?, maxResults?): ISearchResult {
-    return void 0
-  }
+  public dynSelectSearch(callArgs: any[]): any {}
+  public dynSelectSearchDomains(): any {}
+  public dynSelectSearchCoses(): any {}
 }
 
 export interface ISearchResult {
-  list;
+  list: ZaItemList<ZaItem>;
 }

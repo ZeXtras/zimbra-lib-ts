@@ -23,13 +23,13 @@ export class AjxMsg {
   public static no: string;
   public static _close: string;
   public static formatWordyDate: string;
-  public static years;
-  public static months;
-  public static weeks;
-  public static days;
-  public static hours;
-  public static minutes;
-  public static _next;
-  public static _prev;
-  public static ago;
+  public static years: string;
+  public static months: string;
+  public static weeks: string;
+  public static days: string;
+  public static hours: string;
+  public static minutes: string;
+  public static _next: string;
+  public static _prev: string;
+  public static ago: string;
 }

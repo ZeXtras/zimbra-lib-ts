@@ -32,9 +32,9 @@ export class ZaServer extends ZaItem {
   public static getAll(): ZaItemList<ZaServer> { return undefined; }
   public static getServerByName(name: string): ZaServer {return undefined;}
 
-  public name: string;
   public attrs: ZaServerAttrs;
-
+  public showVolumes: boolean;
+  public zimbraServiceHostname: string;
 }
 
 export interface ZaServerAttrs {
