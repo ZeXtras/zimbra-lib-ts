@@ -49,4 +49,5 @@ export class ZaMsg {
   public static BUSY_SEARCHING: string;
   public static LBL_HOmeStatusUnknown: string;
   public static TBB_Refresh: string;
+  public static Domain_AuthTestMessage;
 }

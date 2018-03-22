@@ -23,6 +23,7 @@ import {ZaAccount} from "./accounts/model/ZaAccount";
 import {ZaToast} from "./common/ZaActionStatusView";
 import {ZaController} from "./common/ZaController";
 import {ZaCurrentAppBar} from "./common/ZaCurrentAppBar";
+import {ZaTaskController} from "./task/controller/ZaTaskController";
 
 export class ZaZimbraAdmin extends ZaController {
   public static VIEW_INDEX: number;
@@ -40,6 +41,12 @@ export class ZaZimbraAdmin extends ZaController {
   public getCurrentAppBar(): ZaCurrentAppBar {
     return void 0;
   }
+
+  public getTaskController(): ZaTaskController {
+    return void 0;
+  }
+
+  public static isGlobalAdmin(){}
 }
 
 interface SetActionStatusMsgParams {

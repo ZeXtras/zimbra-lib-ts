@@ -21,5 +21,7 @@
 import {ZaController} from "../../common/ZaController";
 
 export class ZaTaskController extends ZaController{
+  public removeTask(taskItem){}
 
+  public addTask(taskItem) {}
 }
