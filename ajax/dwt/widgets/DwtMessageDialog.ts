@@ -25,6 +25,7 @@ export class DwtMessageDialog extends DwtDialog {
   public static WARNING_STYLE: number;
   public static INFO_STYLE: number;
   public static CRITICAL_STYLE: number;
+  public static ICON: {[style: number]: string};
 
   constructor(params: DwtMessageDialogParams) {
     super({parent: params.parent, standardButtons: params.buttons, id: params.id});

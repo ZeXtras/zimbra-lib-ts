@@ -22,4 +22,14 @@ export class AjxMsg {
   public static yes: string;
   public static no: string;
   public static _close: string;
+  public static formatWordyDate: string;
+  public static years: string;
+  public static months: string;
+  public static weeks: string;
+  public static days: string;
+  public static hours: string;
+  public static minutes: string;
+  public static _next: string;
+  public static _prev: string;
+  public static ago: string;
 }

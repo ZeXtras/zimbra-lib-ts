@@ -24,6 +24,7 @@ import {DwtDialog, DwtDialog_ButtonDescriptor} from "../../ajax/dwt/widgets/DwtD
 import {XForm} from "../../ajax/dwt/xforms/XForm";
 import {XFormObjectBase} from "../../ajax/dwt/xforms/XFormItem";
 import {XModel, XModelParams} from "../../ajax/dwt/xforms/XModel";
+import {XformItemDescriptionClasses} from "../../ajax/dwt/xforms/XFormItemDescription";
 
 export class ZaXDialog extends DwtDialog {
 
@@ -36,6 +37,7 @@ export class ZaXDialog extends DwtDialog {
   public _containedObject: any;
   public _localXForm: XForm;
   public _localXModel: XModel;
+  public static HELP_BUTTON: any;
 
   constructor(
     parent: DwtComposite,
@@ -59,9 +61,16 @@ export class ZaXDialog extends DwtDialog {
   public setObject(entry: any): void {}
   public getObject(): any {}
   public popup(loc?: DwtPoint): void {}
-  public getMyXForm(entry: any): XFormObjectBase {
+  public getMyXForm(entry?: any): XformItemDescriptionClasses {// TODO entry should not be optional
     return void 0;
   }
-  public initForm(xModelMetaData: XModelParams, xFormMetaData: XFormObjectBase, defaultInstance?: any): void {}
+
+  public _helpButtonListener(): void {}
+
+  public initForm(
+    xModelMetaData: XModelParams,
+    xFormMetaData: XformItemDescriptionClasses,
+    defaultInstance?: any,
+  ): void {}
 
 }

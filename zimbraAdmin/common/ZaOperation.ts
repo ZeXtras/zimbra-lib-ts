@@ -94,6 +94,7 @@ export class ZaOperation {
   public static LEFT_BRACKET: number;
   public static RIGHT_BRACKET: number;
 
+  public enabled: boolean;
   constructor(
     id: number,
     caption: string,

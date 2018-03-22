@@ -19,42 +19,48 @@
  */
 
 import {AjxException} from "../../ajax/core/AjxException";
-import {ZaAccountListController} from "../accounts/controller/ZaAccountListController";
-import {ZaAccountViewController} from "../accounts/controller/ZaAccountViewController";
-import {ZaResourceController} from "../resource/controller/ZaResourceController";
-import {ZaSearchListController} from "../search/controller/ZaSearchListController";
+import {DwtComposite} from "../../ajax/dwt/widgets/DwtComposite";
+import {DwtShell} from "../../ajax/dwt/widgets/DwtShell";
+import {ZaAppCtxt} from "./ZaAppCtxt";
 import {ZaItem} from "./ZaItem";
+import {ZaListView} from "./ZaListView";
 import {ZaOperation} from "./ZaOperation";
 import {ZaTabView} from "./ZaTabView";
 
 export class ZaController {
   public static initPopupMenuMethods: {
-    ZaAccountListController: Array<typeof ZaAccountListController>;
-    ZaAccountViewController: Array<typeof ZaAccountViewController>;
-    ZaResourceController: Array<typeof ZaResourceController>;
-    ZaSearchListController: Array<typeof ZaSearchListController>;
+    ZaAccountListController: Array<() => void>;
+    ZaAccountViewController: Array<() => void>;
+    ZaResourceController: Array<() => void>;
+    ZaSearchListController: Array<() => void>;
   };
 
   /**
    * @deprecated in zimbra 8+
    */
   public static initToolbarMethods: {
-    ZaResourceController: Array<typeof ZaResourceController>;
-    ZaSearchListController: Array<typeof ZaSearchListController>;
-    ZaAccountViewController: Array<typeof ZaAccountViewController>;
-    ZaAccountListController: Array<typeof ZaAccountListController>;
+    ZaResourceController: Array<() => void>;
+    ZaSearchListController: Array<() => void>;
+    ZaAccountViewController: Array<() => void>;
+    ZaAccountListController: Array<() => void>;
   };
 
   /**
    * @deprecated in zimbra 8+
    */
   public static changeActionsStateMethods: {
-    ZaAccountListController: Array<typeof ZaAccountListController>;
-    ZaSearchListController: Array<typeof ZaSearchListController>;
+    ZaAccountListController: Array<() => void>;
+    ZaSearchListController: Array<() => void>;
+  };
+
+  public static setViewMethods: {
+    [controllerIKeyName: string]: Array<(entry: ZaItem, openInNewTab: boolean, skipRefresh: boolean) => void>,
   };
 
   public _popupOperations: ZaOperation[];
+  public _popupOrder: number[];
   public _defaultType: string;
+  public _appCtxt: ZaAppCtxt;
 
   /**
    * @deprecated in zimbra 8+
@@ -67,12 +73,20 @@ export class ZaController {
   public _toolbarOrder: number[];
 
   public _currentObject?: ZaItem;
-  public _contentView?: ZaTabView;
+  public _contentView?: ZaTabView | ZaListView | DwtComposite;
   public _toolbar?: any;
+  public _container: DwtShell;
+  public _iKeyName: string;
+
+  constructor(appContext: ZaAppCtxt, container: DwtShell, ikeyName: string) {
+  }
 
   public popupMsgDialog(msg: string, noExecReset?: boolean): void {}
   public popupWarningDialog(msg: string, noExecReset?: boolean): void {}
   public popupErrorDialog(msg: string, ex?: AjxException, style?: number): void {}
-  public switchToNextView(nextViewCtrlr: ZaController, func: (...args: any[]) => any, params: any): void {}
-
+  public switchToNextView(nextViewCtrlr: ZaController, func: (...args: any[]) => any, params?: any): void {}
+  public _setView(entry: ZaItem, openInNewTab: boolean, skipRefresh: boolean): void {}
+  public getMainTab(): any { return undefined; }
+  public getContentViewId(): string { return undefined; }
+  public _initPopupMenu(): void {}
 }

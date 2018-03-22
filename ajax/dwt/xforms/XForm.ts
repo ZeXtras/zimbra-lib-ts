@@ -18,21 +18,23 @@
  * along with T4Z - TypeScript 4 Zimlet. If not, see <http://www.gnu.org/licenses/>.
  */
 
+import {ZaApp} from "../../../zimbraAdmin/common/ZaApp";
 import {ZaController} from "../../../zimbraAdmin/common/ZaController";
 import {ZaItem} from "../../../zimbraAdmin/common/ZaItem";
 import {DwtEvent} from "../events/DwtEvent";
 import {DwtComposite} from "../widgets/DwtComposite";
-import {Dwt_Adaptor_XFormItem, XFormItem, XFormObjectBase} from "./XFormItem";
+import {Dwt_Adaptor_XFormItem, Output_XFormItem, XFormItem, XFormObjectBase} from "./XFormItem";
 import {XModel} from "./XModel";
 
 export class XForm extends DwtComposite {
   public xmodel: XModel;
   public instance: ZaItem;
+  public _isDirty: boolean;
 
   constructor(
     attributes: XFormObjectBase,
     model: XModel,
-    instance: any,
+    instance: ZaItem,
     dwtContainer: DwtComposite,
     contextId: string,
   ) {
@@ -42,6 +44,7 @@ export class XForm extends DwtComposite {
     });
   }
 
+  public getInstance(): ZaItem{return void 0;}
   public setInstanceValue(val: any, refPath: string): void {}
   public getInstanceValue(refPath: string): any {}
   public setIsDirty(dirty: boolean, item?: XFormItem): void {}
@@ -54,20 +57,22 @@ export class XForm extends DwtComposite {
   public getItemById(id: string): Dwt_Adaptor_XFormItem {
     return void 0;
   }
-  public getItemsById(id: string): Dwt_Adaptor_XFormItem[] {
+  public getItemsById(id: string): XFormItem[] {
     return void 0;
   }
   public getElement(id?: string): HTMLElement {
     return void 0;
   }
 
-  public setController(controller?: ZaController): void {}
+  public setController(controller?: ZaController | ZaApp): void {}
 
   public hasErrors(): boolean {
     return void 0;
   }
 
   public setInstance(instance: any): void {}
+
+  public draw(parentElement?: HTMLElement): void {}
 }
 
 // possible values for "labelDirection", "align" and "valign"

@@ -1,3 +1,4 @@
+
 /*
  * T4Z - TypeScript 4 Zimlet
  * Copyright (C) 2017 ZeXtras S.r.l.
@@ -24,7 +25,7 @@ export class DwtRectangle {
   public width: number;
   public height: number;
 
-  constructor(x: number, y: number, width: number, height: number) {
+  constructor(x?: number, y?: number, width?: number, height?: number) {
     this.x = x;
     this.y = y;
     this.width = width;

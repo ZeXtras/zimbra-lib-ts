@@ -29,10 +29,17 @@ export class AjxMessageFormat {
 }
 
 export class AjxFormat {
+  constructor(pattern: string) {
+
+}
   public format(obj: any): any { return undefined; }
 }
 
 export class AjxDateFormat extends AjxFormat {
+  constructor(pattern: string) {
+    super(pattern);
+  }
+
   public static LONG: number;
   public static SHORT: number;
   public static _DATETIME_FORMATTERS: {[style: number]: AjxDateFormat};

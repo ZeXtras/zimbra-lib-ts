@@ -18,7 +18,27 @@
  * along with T4Z - TypeScript 4 Zimlet. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import {Case_XFormItem} from "../../ajax/dwt/xforms/XFormItem";
+import {DwtRectangle} from "../../../ajax/dwt/graphics/DwtRectangle";
+import {DwtControl} from "../../../ajax/dwt/widgets/DwtControl";
+import {ZaItem} from "../../common/ZaItem";
+import {ZaXDialog} from "../../common/ZaXDialog";
 
-export class ZATabCase_XFormItem extends Case_XFormItem {
+export class ZaTask extends ZaItem {}
+
+export class ZaTaskItem {
+
+  constructor(
+    viewForPopup: ZaXDialog,
+    cacheName: string,
+    title: string,
+    data: any,
+    position: DwtRectangle,
+    type: number,
+    displayName: string,
+    finishCallback?: () => void,
+    cacheDialog?: DwtControl,
+    dialogType?: any,
+    editData?: any,
+  ) {}
+
 }

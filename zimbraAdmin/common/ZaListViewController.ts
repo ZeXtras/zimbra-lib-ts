@@ -19,7 +19,27 @@
  */
 
 import {ZaController} from "./ZaController";
+import {ZaItem} from "./ZaItem";
+import {ZaItemList} from "./ZaItemList";
+import {ZaAppCtxt} from "./ZaAppCtxt";
 
 export class ZaListViewController extends ZaController {
 
+  public _currentPageNum: number;
+  public RESULTSPERPAGE: number;
+  protected _list: ZaItemList<ZaItem>;
+  protected _UICreated: boolean;
+
+  constructor(appCtxt: ZaAppCtxt, container: any, iKeyName: any) {
+    super(appCtxt, container, iKeyName);
+  }
+
+  public searchCallback(
+    params: {[name: string]: any},
+    resp: any,
+  ): void {}
+
+  public getList(): any {
+    return this._list;
+  }
 }
