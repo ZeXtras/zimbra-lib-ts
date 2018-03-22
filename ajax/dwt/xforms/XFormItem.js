@@ -18,6 +18,7 @@ define(["require", "exports"], function (require, exports) {
   exports.WidgetAdaptor_XFormItem = WidgetAdaptor_XFormItem;
   exports.Select1_XFormItem = Select1_XFormItem;
   exports.Step_Choices_XFormItem = Step_Choices_XFormItem;
+  exports.Dwt_Alert_XFormItem = Dwt_Alert_XFormItem;
 
   exports._DWT_ALERT_ = _DWT_ALERT_;
   exports._DWT_BUTTON_ = _DWT_BUTTON_;
