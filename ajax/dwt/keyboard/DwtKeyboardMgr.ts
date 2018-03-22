@@ -18,6 +18,7 @@
  * along with T4Z - TypeScript 4 Zimlet. If not, see <http://www.gnu.org/licenses/>.
  */
 
+import {AjxListener} from "../../events/AjxListener";
 import {DwtEvent} from "../events/DwtEvent";
 import {DwtControl} from "../widgets/DwtControl";
 import {DwtKeyMapMgr} from "./DwtKeyMapMgr";
@@ -27,6 +28,8 @@ export class DwtKeyboardMgr {
 
   public __keyMapMgr: DwtKeyMapMgr;
   public __currTabGroup: DwtTabGroup;
+  public __tabGrpStack: DwtTabGroup[];
+  public __tabGroupChangeListenerObj: AjxListener;
 
   public pushTabGroup(tabGroup: DwtTabGroup): void {}
   public pushDefaultHandler(handler: DwtKeyboardMgrHandler): void {}
