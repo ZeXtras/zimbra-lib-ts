@@ -140,7 +140,7 @@ export interface _DWT_BUTTON_XformItemDescription extends Base_XFormItemDescript
   label?: string;
   icon?: string;
   width?: string | number;
-  onActivate: (() => void) | ((ev: Event) => void);
+  onActivate: (() => void) | ((ev: any) => void);
 }
 
 export interface _DWT_ALERT_XformItemDescription extends Base_XFormItemDescription {
