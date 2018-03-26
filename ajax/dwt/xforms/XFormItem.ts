@@ -149,6 +149,7 @@ export let _SWITCH_: string;
 export let _CELL_SPACER_: "cell_spacer";
 export let _CELLSPACER_: "cell_spacer";
 export let _INPUT_: "input";
+export let _RADIO_: "radio";
 export let _CASE_: "case";
 export let _DWT_SELECT_: "dwt_select";
 export let _DWT_DATE_: "dwt_date";
