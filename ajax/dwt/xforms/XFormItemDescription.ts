@@ -75,7 +75,7 @@ export interface GroupBase_XFormItemDescription extends Base_XFormItemDescriptio
   id?: string;
   numCols?: number;
   label?: string;
-  items: XformItemDescriptionClasses[];
+  items?: XformItemDescriptionClasses[];
 }
 
 export type XformItemDescriptionClasses =
@@ -104,7 +104,7 @@ export interface _OUTPUT_XformItemDescription extends Base_XFormItemDescription 
 }
 
 export interface _GROUP_XformItemDescription extends GroupBase_XFormItemDescription {
-  type: "group";
+  type: "group" | string;
   bmolsnr?: boolean;
   width?: string|number;
   enableDisableChangeEventSources?: string[];
