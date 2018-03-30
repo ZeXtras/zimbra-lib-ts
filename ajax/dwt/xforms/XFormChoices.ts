@@ -20,8 +20,8 @@
 
 export class XFormChoices {
   public static OBJECT_REFERENCE_LIST: string;
-  public static OBJECT_LIST;
-  public static SIMPLE_LIST;
+  public static OBJECT_LIST: string;
+  public static SIMPLE_LIST: string;
   constructor(
     choiceObject: any[],
     type: string,

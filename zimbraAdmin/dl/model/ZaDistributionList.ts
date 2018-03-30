@@ -9,11 +9,11 @@
  * ***** END LICENSE BLOCK *****
  */
 
-import {ZaItem} from "../../common/ZaItem";
 import {XModelInt} from "../../../ajax/dwt/xforms/XModelInt";
+import {ZaItem} from "../../common/ZaItem";
 
 export class ZaDistributionList extends ZaItem {
   public static myXModel: XModelInt;
   public static searchAttributes: string;
-  public static A_isAdminGroup;
+  public static A_isAdminGroup: string;
 }

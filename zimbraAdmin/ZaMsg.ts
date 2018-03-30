@@ -20,7 +20,7 @@
 
 export class ZaMsg {
   public static Edit_perms_title: string;
-  public static DLV_Type_col;
+  public static DLV_Type_col: string;
   public static ERROR_EMPTY_RESPONSE_ARG: string;
   public static Yes: string;
   public static NAD_ResetToCOS: string;
@@ -52,5 +52,5 @@ export class ZaMsg {
   public static BUSY_SEARCHING: string;
   public static LBL_HOmeStatusUnknown: string;
   public static TBB_Refresh: string;
-  public static Domain_AuthTestMessage;
+  public static Domain_AuthTestMessage: string;
 }
