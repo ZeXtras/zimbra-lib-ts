@@ -44,7 +44,4 @@ export class ZaAccount extends ZaItem {
   public setAttrs: {
     [name: string]: boolean;
   };
-  public setAttrs: {
-    [name: string]: boolean;
-  };
 }
