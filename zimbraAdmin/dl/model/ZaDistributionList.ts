@@ -15,4 +15,5 @@ import {XModelInt} from "../../../ajax/dwt/xforms/XModelInt";
 export class ZaDistributionList extends ZaItem {
   public static myXModel: XModelInt;
   public static searchAttributes: string;
+  public static A_isAdminGroup;
 }

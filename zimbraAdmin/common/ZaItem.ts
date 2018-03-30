@@ -26,6 +26,7 @@ export class ZaItem extends ZaModel {
   public static DL: string;
   public static GROUP: string;
   public static ALIAS: string;
+  public static UC_SERVICE: string;
   public static RESOURCE: string;
   public static DOMAIN: string;
   public static COS: string;

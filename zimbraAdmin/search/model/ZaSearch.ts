@@ -22,10 +22,14 @@ import {ZaItem} from "../../common/ZaItem";
 import {ZaItemList} from "../../common/ZaItemList";
 
 export class ZaSearch {
+  public static DLS: string;
+  public static DOMAINS: string;
   public static ACCOUNTS: string;
   public static COSES: string;
   public static standardAttributes: string;
   public static searchDirectory(params: {[name: string]: any}): any {}
+  public static getSearchByNameQuery(value, types): string { return undefined; }
+  public static escapeLdapQuery(value) {}
   public static search(
     query: string,
     types: string[],
@@ -45,6 +49,8 @@ export class ZaSearch {
   public dynSelectSearch(callArgs: any[]): any {}
   public dynSelectSearchDomains(): any {}
   public dynSelectSearchCoses(): any {}
+  public dynSelectGrantees(callArgs): any {}
+  public dynSelectGranteeCallback(params, resp): any {}
 }
 
 export interface ISearchResult {

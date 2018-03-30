@@ -19,6 +19,9 @@
  */
 
 export class ZaMsg {
+  public static Edit_perms_title: string;
+  public static DLV_Type_col;
+  public static ERROR_EMPTY_RESPONSE_ARG: string;
   public static Yes: string;
   public static NAD_ResetToCOS: string;
   public static No: string;
