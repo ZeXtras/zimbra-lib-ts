@@ -20,10 +20,12 @@
 
 export class XFormChoices {
   public static OBJECT_REFERENCE_LIST: string;
+  public static OBJECT_LIST;
+  public static SIMPLE_LIST;
   constructor(
     choiceObject: any[],
     type: string,
-    valueProperty: string,
-    labelProperty: string,
+    valueProperty?: string,
+    labelProperty?: string,
   ) {}
 }

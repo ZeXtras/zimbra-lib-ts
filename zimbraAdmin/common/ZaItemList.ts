@@ -20,6 +20,7 @@
 
 import {ZaItem} from "./ZaItem";
 import {ZaModel} from "./ZaModel";
+import {ZaItemVector} from "./ZaItemVector";
 
 export class ZaItemList<T extends ZaItem> extends ZaModel {
 
@@ -32,5 +33,6 @@ export class ZaItemList<T extends ZaItem> extends ZaModel {
   public add(item: T, index?: number): void {}
   public size(): number { return undefined; }
   public getItemById(id: string): T { return undefined; }
+  public getVector(): ZaItemVector<T> { return undefined; }
 
 }

@@ -18,14 +18,9 @@
  * along with T4Z - TypeScript 4 Zimlet. If not, see <http://www.gnu.org/licenses/>.
  */
 
-export class AjxException {
-  public static UNKNOWN: string;
-  public static CANCELED: string;
-  public static NETWORK_ERROR: string;
-  public static INVALID_PARAM: string;
+import {AjxVector} from "../../ajax/util/AjxVector";
+import {ZaItem} from "./ZaItem";
 
-  public code: string;
-  public msg: string;
+export class ZaItemVector<T extends ZaItem> extends AjxVector<T> {
 
-  constructor(msg: string, code: string, method: string, detail?: string) {}
 }

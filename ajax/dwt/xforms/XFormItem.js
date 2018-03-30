@@ -43,6 +43,7 @@ define(["require", "exports"], function (require, exports) {
   exports._DWT_SELECT_ = _DWT_SELECT_;
   exports._DWT_DATE_ = _DWT_DATE_;
   exports._INPUT_ = _INPUT_;
+  exports._RADIO_ = _RADIO_;
   exports._SELECT1_ = _SELECT1_;
   exports._SUPER_CHECKBOX_ = _SUPER_CHECKBOX_;
   exports._SUPER_TEXTFIELD_ = _SUPER_TEXTFIELD_;

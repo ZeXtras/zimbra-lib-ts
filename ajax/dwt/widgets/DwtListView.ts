@@ -70,6 +70,9 @@ export class DwtListView extends DwtComposite {
     params: {now?: Date},
     classes?: string[],
   ): number { return undefined; }
+  public setMultiSelect(enabled): void {}
+  public _getCellWidth(colIdx, params) {}
+  public setUI(defaultColumnSort?, noResultsOk?) {}
   public getList(): AjxVector<any> { return undefined; }
   public addSelectionListener(ajxListener: AjxListener): void {}
   public getSelectedItems(): AjxVector<ZmItem> { return undefined; }

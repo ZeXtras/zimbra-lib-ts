@@ -71,23 +71,24 @@ export class XFormItem {// TODO check all attribute hierarchy
   public openSelectionLabel?: string;
   public errorLocation?: string;
   public helpTooltip?: boolean;
-  public colSizes?: string[];
+  public colSizes?: Array<string|number>;
 
   // Added to keep a basic compatibility.
   public editable?: boolean;
   public type?: string;
   public items?: XFormItem[];
-  public width?: string;
+  public width?: string | number;
   public cssStyle?: string;
   public label?: string;
   public value?: any; // TODO check it, may not be found
   public icon?: string;
   public ref?: string;
-  public elementChanged?: (value: string, instanceValue: string, ev: Event) => void;
-  public choices?: Array<{value: string | number, label: string}>;
+  public elementChanged?: (value: any, instanceValue: any, ev: Event) => void;
+  public choices?: any[];
+  // public choices?: Array<{value: string | number, label: string} | number>;
   public onChange?: (...args: any[]) => void;
   public onActivate?: (...args: any[]) => void;
-  public getDisplayValue?: (value: string) => string;
+  public getDisplayValue?: (value: any) => any;
   public _isXFormItem?: boolean;
 
   public getInstance?<T>(): T {
@@ -148,6 +149,7 @@ export let _SWITCH_: string;
 export let _CELL_SPACER_: "cell_spacer";
 export let _CELLSPACER_: "cell_spacer";
 export let _INPUT_: "input";
+export let _RADIO_: "radio";
 export let _CASE_: "case";
 export let _DWT_SELECT_: "dwt_select";
 export let _DWT_DATE_: "dwt_date";
@@ -224,8 +226,8 @@ export class Dwt_List_XFormItem extends Dwt_Adaptor_XFormItem {
   public multiselect?: boolean;
   public headerList?: ZaListHeaderItem[];
   public hideHeader?: boolean;
-  public onSelection?: (ev: Event) => undefined;
-  public widgetClass?: typeof DwtComposite;
+  public onSelection?: (ev: Event) => void;
+  public widgetClass?: any;
 
   public constructWidget?() {
 
@@ -244,7 +246,7 @@ export class Cell_Spacer_XFormItem extends Spacer_XFormItem {}
 export class Step_Choices_XFormItem extends Group_XFormItem {}
 
 export class Select1_XFormItem extends XFormItem {
-  public setChoices(newChoices: XFormChoices[]): void {}
+  public setChoices?(newChoices: XFormChoices[]): void {}
 }
 
 export class Dwt_Alert_XFormItem extends Dwt_Adaptor_XFormItem {

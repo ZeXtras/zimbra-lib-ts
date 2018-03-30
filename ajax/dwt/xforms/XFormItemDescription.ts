@@ -82,7 +82,7 @@ export interface GroupBase_XFormItemDescription extends Base_XFormItemDescriptio
   id?: string;
   numCols?: number;
   label?: string;
-  items: XformItemDescriptionClasses[];
+  items?: XformItemDescriptionClasses[];
 }
 
 export type XformItemDescriptionClasses =
@@ -111,7 +111,7 @@ export interface _OUTPUT_XformItemDescription extends Base_XFormItemDescription 
 }
 
 export interface _GROUP_XformItemDescription extends GroupBase_XFormItemDescription {
-  type: "group";
+  type: "group" | string;
   bmolsnr?: boolean;
   width?: string|number;
   enableDisableChangeEventSources?: string[];
@@ -147,7 +147,7 @@ export interface _DWT_BUTTON_XformItemDescription extends Base_XFormItemDescript
   label?: string;
   icon?: string;
   width?: string | number;
-  onActivate: (() => void) | ((ev: Event) => void);
+  onActivate: (() => void) | ((ev: any) => void);
 }
 
 export interface _DWT_ALERT_XformItemDescription extends Base_XFormItemDescription {

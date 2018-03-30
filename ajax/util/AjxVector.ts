@@ -24,6 +24,7 @@ export class AjxVector<T> {
     return void 0;
   }
   public get: any;
+  public sort(any) {}
   public getArray(): T[] { return undefined; }
   public size(): number { return undefined; }
   public contains(element: T): boolean { return undefined; }

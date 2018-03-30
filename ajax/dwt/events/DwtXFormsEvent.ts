@@ -20,9 +20,14 @@
 
 import {XForm} from "../xforms/XForm";
 import {XFormItem} from "../xforms/XFormItem";
+import {DwtEvent} from "./DwtEvent";
 
-export class DwtXFormsEvent {
+export class DwtXFormsEvent extends DwtEvent{
 
+  constructor(xform, xform1, value?) {
+    super();
+  }
+  public dwtObj;
   public form: XForm;
   public formItem: XFormItem;
   public details: boolean;
