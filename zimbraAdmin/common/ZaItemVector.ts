@@ -18,11 +18,9 @@
  * along with T4Z - TypeScript 4 Zimlet. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import {ZaListViewController} from "../../common/ZaListViewController";
+import {AjxVector} from "../../ajax/util/AjxVector";
+import {ZaItem} from "./ZaItem";
 
-export class ZaSearchListController extends ZaListViewController {
-  public _currentQuery: string;
-  public fetchAttrs: any[];
-  public _currentDomain: string;
-  public setSearchTypes(searchTypes: string[]): void {}
+export class ZaItemVector<T extends ZaItem> extends AjxVector<T> {
+
 }

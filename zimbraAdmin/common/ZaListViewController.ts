@@ -22,6 +22,7 @@ import {ZaController} from "./ZaController";
 import {ZaItem} from "./ZaItem";
 import {ZaItemList} from "./ZaItemList";
 import {ZaAppCtxt} from "./ZaAppCtxt";
+import {AjxVector} from "../../ajax/util/AjxVector";
 
 export class ZaListViewController extends ZaController {
 
