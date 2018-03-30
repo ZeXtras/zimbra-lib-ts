@@ -32,5 +32,5 @@ export class AjxMsg {
   public static _next: string;
   public static _prev: string;
   public static ago: string;
-  public static invalidEmailAddr;
+  public static invalidEmailAddr: string;
 }

@@ -19,9 +19,9 @@
  */
 
 import {ZaController} from "../../common/ZaController";
+import {ZaTask} from "../model/ZaTask";
 
-export class ZaTaskController extends ZaController{
-  public removeTask(taskItem){}
-
-  public addTask(taskItem) {}
+export class ZaTaskController extends ZaController {
+  public removeTask(taskItem: ZaTask): void {}
+  public addTask(taskItem: ZaTask): void {}
 }

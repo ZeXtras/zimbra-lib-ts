@@ -12,5 +12,5 @@
 import {ZaXFormViewController} from "../../common/ZaXFormViewController";
 
 export class ZaDLController extends ZaXFormViewController {
-  public granteeList;
+  public granteeList: any;
 }

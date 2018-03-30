@@ -23,8 +23,8 @@ import {ZaItem} from "../../common/ZaItem";
 
 export class ZaAccount extends ZaItem {
   public static A_zimbraMailAlias: string;
-  public static A_zimbraIsAdminAccount;
-  public static A_zimbraIsDelegatedAdminAccount;
+  public static A_zimbraIsAdminAccount: string;
+  public static A_zimbraIsDelegatedAdminAccount: string;
   public static A_zimbraIsSystemResource: string;
   public static A_zimbraIsSystemAccount: string;
   public static A_zimbraZimletAvailableZimlets: string;
@@ -38,7 +38,11 @@ export class ZaAccount extends ZaItem {
   public id: string;
   public attrs: {
     zimbraIsAdminAccount?: string,
-    zimbraIsDelegatedAdminAccount?: string
+    zimbraIsDelegatedAdminAccount?: string,
+  };
+
+  public setAttrs: {
+    [name: string]: boolean;
   };
   public setAttrs: {
     [name: string]: boolean;
