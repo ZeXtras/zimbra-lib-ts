@@ -68,7 +68,7 @@ export class ZaTabView extends DwtComposite {
   public setDirty(dirty: boolean): void {}
   public isDirty(): boolean { return undefined; }
   public handleXFormChange() {}
-  public swithTab(value): void {}
+  public swithTab(value: number): void {}
 }
 
 export interface ZaTabViewParams extends DwtCompositeParams {
