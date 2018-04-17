@@ -39,10 +39,22 @@ export class ZaXDialog extends DwtDialog {
   public _localXModel: XModel;
   public static HELP_BUTTON: any;
 
+  constructor();
+
   constructor(
-    parent: DwtComposite,
-    className: string,
-    title: string,
+      parent: DwtComposite,
+      className: string,
+      title: string,
+      w?: string,
+      h?: string,
+      iKeyName?: string,
+      contextId?: string,
+  );
+
+  constructor(
+    parent?: DwtComposite,
+    className?: string,
+    title?: string,
     w?: string,
     h?: string,
     iKeyName?: string,
