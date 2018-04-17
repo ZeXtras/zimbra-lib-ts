@@ -23,12 +23,12 @@ import {DwtComposite} from "../../ajax/dwt/widgets/DwtComposite";
 import {DwtDialog, DwtDialog_ButtonDescriptor} from "../../ajax/dwt/widgets/DwtDialog";
 import {XForm} from "../../ajax/dwt/xforms/XForm";
 import {XFormObjectBase} from "../../ajax/dwt/xforms/XFormItem";
-import {XModel, XModelParams} from "../../ajax/dwt/xforms/XModel";
 import {XformItemDescriptionClasses} from "../../ajax/dwt/xforms/XFormItemDescription";
+import {XModel, XModelParams} from "../../ajax/dwt/xforms/XModel";
 
 export class ZaXDialog extends DwtDialog {
-
   public static XFormModifiers: {[name: string]: Array<(xFormObject: XFormObjectBase, entry?: any) => void>};
+  public static HELP_BUTTON: any;
 
   public _standardButtons: number[];
   public _extraButtons: DwtDialog_ButtonDescriptor[];
@@ -37,12 +37,23 @@ export class ZaXDialog extends DwtDialog {
   public _containedObject: any;
   public _localXForm: XForm;
   public _localXModel: XModel;
-  public static HELP_BUTTON: any;
+
+  constructor();
 
   constructor(
-    parent: DwtComposite,
-    className: string,
-    title: string,
+      parent: DwtComposite,
+      className: string,
+      title: string,
+      w?: string,
+      h?: string,
+      iKeyName?: string,
+      contextId?: string,
+  );
+
+  constructor(
+    parent?: DwtComposite,
+    className?: string,
+    title?: string,
     w?: string,
     h?: string,
     iKeyName?: string,
