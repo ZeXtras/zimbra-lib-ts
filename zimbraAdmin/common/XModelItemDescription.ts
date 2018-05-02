@@ -24,9 +24,6 @@ import {XModelItemInt} from "../../ajax/dwt/xforms/XModelItemInt";
  * Zimbra does not use this class, neither You should instantiate this class.
  */
 export interface XModelItemDescription extends XModelItemInt {
-  id: string;
-  ref?: string;
-  type?: string;
   setterScope?: string;
   getterScope?: string;
   defaultValue?: any;
