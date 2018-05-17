@@ -18,21 +18,7 @@
  * along with T4Z - TypeScript 4 Zimlet. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import {XFormChoices} from "./XFormChoices";
+import {ZaTabView} from "../../common/ZaTabView";
 
-export interface XModelItemInt {
-  id: string;
-  type?: string;
-  ref?: string;
-  getter?: string;
-  setter?: string;
-  choices?: (() => XModelItemInt_option[]) | XModelItemInt_option[];
-  minLength?: number;
-  required?: boolean;
-}
-
-export interface XModelItemInt_option {
-  value: any;
-  label: string;
-  choices?: XFormChoices[];
+export class GlobalConfigXFormView extends ZaTabView {
 }

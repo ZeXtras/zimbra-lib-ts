@@ -49,7 +49,7 @@ export class ZaSearch {
   public dynSelectSearch(callArgs: any[]): any {}
   public dynSelectSearchDomains(): any {}
   public dynSelectSearchCoses(): any {}
-  public dynSelectGrantees(callArgs: any[]): any {}
+  public dynSelectGrantees?(callArgs: any): any {}
   public dynSelectGranteeCallback(params: any, resp: any): any {}
 }
 

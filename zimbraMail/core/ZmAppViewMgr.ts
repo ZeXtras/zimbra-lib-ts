@@ -29,6 +29,8 @@ export class ZmAppViewMgr {
   public static C_NEW_BUTTON: string;
   public static C_TOOLBAR_TOP: string;
   public static C_APP_CONTENT: string;
+  public static CB_PRE_HIDE: string;
+  public static CB_PRE_UNLOAD: string;
   public static CB_POST_SHOW: string;
   public static CB_PRE_SHOW: string;
   public static CB_POST_HIDE: string;

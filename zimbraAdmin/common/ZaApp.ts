@@ -28,6 +28,8 @@ import {ZaItem} from "./ZaItem";
 import {ZaItemList} from "./ZaItemList";
 import {ZaTabView} from "./ZaTabView";
 import {ZaXDialog} from "./ZaXDialog";
+import {ZaGlobalConfigViewController} from "../globalconfig/controller/ZaGlobalConfigViewController";
+import {ZaGlobalConfig} from "../globalconfig/model/ZaGlobalConfig";
 
 export class ZaApp {
 
@@ -37,6 +39,8 @@ export class ZaApp {
   public _controllers: {[id: number]: ZaController};
   public _container: DwtShell;
 
+  public getGlobalConfig(): ZaGlobalConfig { return undefined; }
+  public getGlobalConfigViewController(): ZaGlobalConfigViewController { return undefined; }
   public getCurrentController(): ZaController { return undefined; }
   public getAppController(): ZaZimbraAdmin { return undefined; }
   public getControllerById<T extends ZaController>(id: string): T { return undefined; }
