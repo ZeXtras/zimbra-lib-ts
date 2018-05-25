@@ -18,26 +18,41 @@
  * along with T4Z - TypeScript 4 Zimlet. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import {DwtComposite} from "./DwtComposite";
-import {DwtPropertyPage} from "./DwtPropertyPage";
-import {DwtButton} from "./DwtButton";
 import {AjxCallback} from "../../boot/AjxCallback";
+import {AjxListener} from "../../events/AjxListener";
 import {DwtTabGroup} from "../keyboard/DwtTabGroup";
+import {DwtButton} from "./DwtButton";
+import {DwtComposite, DwtCompositeParams} from "./DwtComposite";
+import {DwtPropertyPage} from "./DwtPropertyPage";
 
 export class DwtTabView extends DwtComposite {
 
-  public addTab(title: string, tabViewOrCallback: DwtTabViewPage, buttonId: string, index: number): string;
-  public addTab(title: string, tabViewOrCallback: AjxCallback, buttonId: string, index: number): string;
-  public addTab(title: string, tabViewOrCallback: any, buttonId: string, index: number): string {
+  constructor(params: DwtTabViewParams) {
+    super(params);
+  }
+  public addTab(
+    title: string,
+    tabViewOrCallback: DwtTabViewPage|AjxCallback|any,
+    buttonId?: string,
+    index?: number,
+  ): number {
     return undefined;
   }
-  public getTabButton(tabKey: string): DwtTabButton { return undefined; }
+  public getTabButton(tabKey: number): DwtTabButton { return undefined; }
   public getTabGroupMember(): DwtTabGroup { return undefined; }
+  public switchToTab(tabKey: number): void {}
+  public getCurrentTab(): number { return undefined; }
+  public addStateChangeListener(listener: AjxListener): void {}
 
 }
+
+export interface DwtTabViewParams extends DwtCompositeParams {}
 
 export class DwtTabButton extends DwtButton {
 }
 
 export class DwtTabViewPage extends DwtPropertyPage {
+
+  public _tabKey: number;
+
 }

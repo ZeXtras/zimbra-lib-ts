@@ -18,17 +18,28 @@
  * along with T4Z - TypeScript 4 Zimlet. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import {DwtShell} from "../../../ajax/dwt/widgets/DwtShell";
-import {ZmApp} from "../../core/ZmApp";
-import {ZmButtonToolBar} from "../view/ZmButtonToolBar";
+import {AjxCallback} from "../../../ajax/boot/AjxCallback";
 import {DwtComposite} from "../../../ajax/dwt/widgets/DwtComposite";
 import {DwtControl} from "../../../ajax/dwt/widgets/DwtControl";
-import {ZmSearchResultsController} from "./ZmSearchResultsController";
 import {DwtDialog} from "../../../ajax/dwt/widgets/DwtDialog";
-import {AjxCallback} from "../../../ajax/boot/AjxCallback";
+import {DwtShell} from "../../../ajax/dwt/widgets/DwtShell";
+import {ZmApp} from "../../core/ZmApp";
 import {ZmAccount} from "../model/ZmAccount";
+import {ZmButtonToolBar} from "../view/ZmButtonToolBar";
+import {ZmSearchResultsController} from "./ZmSearchResultsController";
 
 export class ZmController {
+
+  /**
+   * @Override
+   */
+  public static getDefaultViewType(): string { return undefined; }
+  public static showDialog(
+    renameDialog: DwtDialog,
+    _renameCb: AjxCallback,
+    params: any,
+    account?: ZmAccount,
+  ): void {}
 
   public tabId: string;
   public isHidden: boolean;
@@ -39,17 +50,22 @@ export class ZmController {
   public _container: DwtShell;
   public _currentViewType: string;
 
-  constructor(container: DwtControl, app?: ZmApp, type?: string, sessionId?: string, searchResultsController?: ZmSearchResultsController) {}
-
-  /**
-   * @Override
-   */
-  public static getDefaultViewType(): string { return undefined; }
+  constructor(
+    container: DwtControl,
+    app?: ZmApp,
+    type?: string,
+    sessionId?: string,
+    searchResultsController?: ZmSearchResultsController,
+  ) {}
+  public _preHideCallback(): void {}
   public getCurrentViewId(): string { return undefined; }
   public getSessionId(): string { return undefined; }
   public _clearDialog(dialog: DwtDialog): void {}
-  public getViewElements(view: string, appContentView: DwtComposite, toolbar?: ZmButtonToolBar): {[name: string]: DwtControl} { return undefined; }
-  public static showDialog(renameDialog: DwtDialog, _renameCb: AjxCallback, params: any, account?: ZmAccount): void {}
+  public getViewElements(
+    view: string,
+    appContentView: DwtComposite,
+    toolbar?: ZmButtonToolBar,
+  ): {[name: string]: DwtControl} { return undefined; }
 
 }
 

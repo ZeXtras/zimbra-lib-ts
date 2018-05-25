@@ -18,16 +18,23 @@
  * along with T4Z - TypeScript 4 Zimlet. If not, see <http://www.gnu.org/licenses/>.
  */
 
-export class ZmSearchToolBar {
+import {DwtButton} from "../../../ajax/dwt/widgets/DwtButton";
+import {DwtComposite} from "../../../ajax/dwt/widgets/DwtComposite";
+
+export class ZmSearchToolBar extends DwtComposite {
+  public static TYPES_BUTTON: string;
+
+  public static addMenuItem(id: string, param: ZmSearchToolbarAddMenuItemParam): void {}
 
   public setSearchFieldValue(value: string): void {}
-  public _handleEnterKeyPress(event: {type: string, code: string}): void {};
-
-  static addMenuItem(id: string, param: ZmSearchToolbarAddMenuItemParam): void {}
+  public _handleEnterKeyPress(event: {type: string, code: string}): void {}
+  public getButton(buttonId: string): DwtButton { return undefined; }
 
 }
 
 export class ZmMainSearchToolBar extends ZmSearchToolBar {
+  public static CUSTOM_ITEM_ID: string;
+
   public getSearchFieldValue(): string { return undefined; }
 }
 

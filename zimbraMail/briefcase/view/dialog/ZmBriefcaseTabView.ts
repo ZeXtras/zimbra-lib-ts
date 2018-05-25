@@ -19,13 +19,13 @@
  */
 
 import {DwtComposite} from "../../../../ajax/dwt/widgets/DwtComposite";
-import {ZmAttachDialog} from "../../../share/view/ZmAttachDialog";
+import {ZmAttachDialog} from "../../../share/view/dialog/ZmAttachDialog";
 import {ZmBriefcaseIconView} from "../ZmBriefcaseIconView";
 
 export class ZmBriefcaseTabView extends DwtComposite {
 
   public _listView: ZmBriefcaseIconView;
 
-  public uploadFiles(attachDialog: ZmAttachDialog, docIds: {id: string; ct: string; s: number}[]): void {}
+  public uploadFiles(attachDialog: ZmAttachDialog, docIds: Array<{id: string; ct: string; s: number}>): void {}
 
 }

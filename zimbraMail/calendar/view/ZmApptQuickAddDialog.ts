@@ -18,11 +18,11 @@
  * along with T4Z - TypeScript 4 Zimlet. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import {ZmQuickAddDialog} from "../../share/view/dialog/ZmQuickAddDialog";
-import {ZmAutocompleteMatch} from "../../share/model/ZmAutocomplete";
 import {DwtEvent} from "../../../ajax/dwt/events/DwtEvent";
-import {ZmAutocompleteListView} from "../../share/view/ZmAutocompleteListView";
 import {DwtInputField} from "../../../ajax/dwt/widgets/DwtInputField";
+import {ZmAutocompleteMatch} from "../../share/model/ZmAutocomplete";
+import {ZmQuickAddDialog} from "../../share/view/dialog/ZmQuickAddDialog";
+import {ZmAutocompleteListView} from "../../share/view/ZmAutocompleteListView";
 
 export class ZmApptQuickAddDialog extends ZmQuickAddDialog {
 

@@ -18,34 +18,38 @@
  * along with T4Z - TypeScript 4 Zimlet. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import {ZaOperation} from "./ZaOperation";
+import {ZaAccountListController} from "../accounts/controller/ZaAccountListController";
+import {ZaAccountViewController} from "../accounts/controller/ZaAccountViewController";
+import {ZaResourceController} from "../resource/controller/ZaResourceController";
+import {ZaSearchListController} from "../search/controller/ZaSearchListController";
 import {ZaItem} from "./ZaItem";
 import {ZaListView} from "./ZaListView";
+import {ZaOperation} from "./ZaOperation";
 
 export class ZaController {
-  static initPopupMenuMethods: {
-    ZaAccountListController: Function[];
-    ZaAccountViewController: Function[];
-    ZaResourceController: Function[];
-    ZaSearchListController: Function[];
+  public static initPopupMenuMethods: {
+    ZaAccountListController: Array<typeof ZaAccountListController>;
+    ZaAccountViewController: Array<typeof ZaAccountViewController>;
+    ZaResourceController: Array<typeof ZaResourceController>;
+    ZaSearchListController: Array<typeof ZaSearchListController>;
   };
 
   /**
    * @deprecated in zimbra 8+
    */
-  static initToolbarMethods: {
-    ZaResourceController: Function[];
-    ZaSearchListController: Function[];
-    ZaAccountViewController: Function[];
-    ZaAccountListController: Function[];
+  public static initToolbarMethods: {
+    ZaResourceController: Array<typeof ZaResourceController>;
+    ZaSearchListController: Array<typeof ZaSearchListController>;
+    ZaAccountViewController: Array<typeof ZaAccountViewController>;
+    ZaAccountListController: Array<typeof ZaAccountListController>;
   };
 
   /**
    * @deprecated in zimbra 8+
    */
-  static changeActionsStateMethods: {
-    ZaAccountListController: Function[];
-    ZaSearchListController: Function[];
+  public static changeActionsStateMethods: {
+    ZaAccountListController: Array<typeof ZaAccountListController>;
+    ZaSearchListController: Array<typeof ZaSearchListController>;
   };
 
   public _popupOperations: ZaOperation[];

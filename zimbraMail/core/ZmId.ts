@@ -33,6 +33,8 @@ export class ZmId {
   public static CMP_PRIORITY: string;
   public static CMP_ATT_BTN: string;
   public static SEARCH: string;
+  public static SEARCHRESULTS: string;
+  public static SEARCH_CUSTOM: string;
 
 
   // Advanced Docments for Zimbra operations

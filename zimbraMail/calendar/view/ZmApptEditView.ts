@@ -18,12 +18,12 @@
  * along with T4Z - TypeScript 4 Zimlet. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import {ZmCalItemEditView} from "./ZmCalItemEditView";
-import {ZmAutocompleteMatch} from "../../share/model/ZmAutocomplete";
-import {ZmContact} from "../../abook/model/ZmContact";
-import {ZmScheduleAssistantView} from "./ZmScheduleAssistantView";
-import {AjxVector} from "../../../ajax/util/AjxVector";
 import {DwtInputField} from "../../../ajax/dwt/widgets/DwtInputField";
+import {AjxVector} from "../../../ajax/util/AjxVector";
+import {ZmContact} from "../../abook/model/ZmContact";
+import {ZmAutocompleteMatch} from "../../share/model/ZmAutocomplete";
+import {ZmCalItemEditView} from "./ZmCalItemEditView";
+import {ZmScheduleAssistantView} from "./ZmScheduleAssistantView";
 
 export class ZmApptEditView extends ZmCalItemEditView {
 

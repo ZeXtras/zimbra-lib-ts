@@ -18,23 +18,34 @@
  * along with T4Z - TypeScript 4 Zimlet. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import {ZmMailMsgCapsuleView} from "../../mail/view/ZmConvView2";
-import {DwtComposite} from "../../../ajax/dwt/widgets/DwtComposite";
 import {AjxCallback} from "../../../ajax/boot/AjxCallback";
+import {DwtComposite} from "../../../ajax/dwt/widgets/DwtComposite";
+import {ZmMailMsgCapsuleView} from "../../mail/view/ZmConvView2";
+import {ZmObjectHandler} from "./ZmObjectHandler";
 
 export class ZmObjectManager {
   public static DATE: string;
   public static ATTR_CURRENT_DATE: string;
+  public static registerHandler(obj: {}, type: number, priority: number) {}
+
   public __hasSmileysHandler?: boolean;
   public _objectIdPrefix: string;
-
-  public static registerHandler(obj: Object, type: number, priority: number) {}
 
   constructor(view: DwtComposite, selectCallback?: AjxCallback, skipHandlers?: boolean) {}
 
   public getView(): ZmMailMsgCapsuleView { return undefined; }
-  /** @deprecated Soon will be deprecated, use @see{ZmObjectManager.prototype.findObjectsInNode} */ public processObjectsInNode(doc: Document, node: HTMLElement): HTMLElement { return undefined; }
-  public findObjectsInNode(node: HTMLElement, re_discard?: RegExp, re_allow?: RegExp, callbacks?: AjxCallback[]): HTMLElement { return undefined; }
+  /** @deprecated Soon will be deprecated, use @see{ZmObjectManager.prototype.findObjectsInNode} */
+  public processObjectsInNode(doc: Document, node: HTMLElement): HTMLElement { return undefined; }
+  public findObjectsInNode(
+    node: HTMLElement,
+    re_discard?: RegExp,
+    re_allow?: RegExp,
+    callbacks?: AjxCallback[],
+  ): HTMLElement { return undefined; }
   public setHandlerAttr(type: string, name: string, value: any): void {}
+  public addHandler(h: ZmObjectHandler, type?: string, priority?: number): void {}
+  public removeHandler(h: ZmObjectHandler, type?: string): void {}
+  public sortHandlers(): void {}
+  public getHandlers(): {[type: string]: ZmObjectHandler[]} { return undefined; }
 
 }

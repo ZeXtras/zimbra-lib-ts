@@ -18,16 +18,24 @@
  * along with T4Z - TypeScript 4 Zimlet. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import {DwtComposite} from "../../../ajax/dwt/widgets/DwtComposite";
-import {DwtSelect, DwtSelectOptionData} from "../../../ajax/dwt/widgets/DwtSelect";
-import {ZmRecipients} from "./ZmRecipients";
-import {ZmAutocompleteListView} from "../../share/view/ZmAutocompleteListView";
 import {DwtEvent} from "../../../ajax/dwt/events/DwtEvent";
-import {AjxListener} from "../../../ajax/events/AjxListener";
 import {DwtButton} from "../../../ajax/dwt/widgets/DwtButton";
+import {DwtComposite} from "../../../ajax/dwt/widgets/DwtComposite";
+import {DwtMenu} from "../../../ajax/dwt/widgets/DwtMenu";
+import {DwtMenuItem} from "../../../ajax/dwt/widgets/DwtMenuItem";
+import {DwtSelect, DwtSelectOptionData} from "../../../ajax/dwt/widgets/DwtSelect";
+import {AjxListener} from "../../../ajax/events/AjxListener";
+import {ZmAttachDialog} from "../../share/view/dialog/ZmAttachDialog";
+import {ZmHtmlEditor} from "../../share/view/htmlEditor/ZmHtmlEditor";
+import {ZmAutocompleteListView} from "../../share/view/ZmAutocompleteListView";
+import {ZmComposeController} from "../controller/ZmComposeController";
 import {ZmMailMsg} from "../model/ZmMailMsg";
+import {ZmRecipients} from "./ZmRecipients";
 
 export class ZmComposeView extends DwtComposite {
+
+  public static UPLOAD_BRIEFCASE: string;
+  public static UPLOAD_INLINE: string;
 
   public _view: string;
   public _identityDivId: string;
@@ -46,9 +54,21 @@ export class ZmComposeView extends DwtComposite {
   public _priorityButton: DwtButton;
   public _attButton: DwtButton;
   public _msg: ZmMailMsg;
+  public _controller: ZmComposeController;
+  public _disableAttachments: boolean;
+  public _attachDialog?: ZmAttachDialog;
+  public _composeMode: string;
+  public _bodyContent: {
+    "text/plain": string,
+  };
 
   public _addSendAsAndSendOboAddresses(menu: DwtSelect): void {}
-  public _addSendAsOrSendOboAddresses(menu: DwtSelect, emails: string|{addr: string}[], isObo: boolean, displayValueFunc: Function): void {}
+  public _addSendAsOrSendOboAddresses(
+    menu: DwtSelect,
+    emails: string|Array<{addr: string, displayName?: string}>,
+    isObo: boolean,
+    displayValueFunc: (addr: string, displayName?: string) => void,
+  ): void {}
   public _setEventHandler(id: string, event: string, addrType?: string): void {}
   public _getIdentityOptions(): DwtSelectOptionData[] { return undefined; }
   public _handleFromListener(ev: DwtEvent): void {}
@@ -61,5 +81,47 @@ export class ZmComposeView extends DwtComposite {
   public _restoreMultipartRelatedImages(idoc: HTMLIFrameElement): void {}
   public _generateCid(): string { return undefined; }
   public isDirty(incAddrs?: boolean, incSubject?: boolean): boolean { return undefined; }
+  public _submitMyComputerAttachments(files: FileList, node: HTMLInputElement, isInline: boolean): void {}
+  public _attsDoneCallback(isDraft: boolean, status: string, attId: string, docIds: string[], msgIds: string[]): void {}
+  public _createAttachMenuItem(
+    attachMenu: DwtMenu,
+    appName: string,
+    listener: AjxListener,
+  ): DwtMenuItem { return undefined; }
+  public removeOrigMsgAtt(): void {}
+  public getHtmlEditor(): ZmHtmlEditor { return undefined; }
+  public getUserText(): string { return undefined; }
+  public resetBody(params: ZmComposeView_resetBodyParams, noEditorUpdate?: boolean): void {}
+  public cleanupAttachments(all: boolean): void {}
+  public setDocAttachments(tempMsg: ZmMailMsg, docIds: string[]): void {}
+  public getMsg(
+    attId: string[],
+    isDraft: boolean,
+    tempMsg: ZmMailMsg,
+    isTimed: boolean,
+    contactId: string[],
+  ): ZmMailMsg { return undefined; }
+  public _getEditorContent(leaveMarkers?: boolean): string { return undefined; }
+}
 
+export interface ZmComposeView_resetBodyParams {
+  op: string;
+  action: string;
+  msg: ZmMailMsg;
+  extraBodyText: string;
+  incOptions?: ZmComposeView_IncOptions;
+  keepAttachments: boolean;
+  noEditorUpdate?: boolean;
+}
+
+export interface ZmComposeView_IncOptions {
+  prefix: boolean;
+  headers: boolean;
+  what: string;
+}
+
+export interface IncOptions {
+  prefix: true;
+  headers: true;
+  what: true;
 }

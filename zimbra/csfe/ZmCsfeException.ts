@@ -18,12 +18,13 @@
  * along with T4Z - TypeScript 4 Zimlet. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import {AjxCallback} from "../ajax/boot/AjxCallback";
-import {AjxSoapDoc} from "../ajax/soap/AjxSoapDoc";
-export class ZmBatchCommand {
-  public run(): void {}
+import {AjxException} from "../../ajax/core/AjxException";
 
-  addRequestParams(ajxSoapDoc: AjxSoapDoc, callback: AjxCallback, errorCallback: AjxCallback): void {}
+export class ZmCsfeException extends AjxException {
 
-  add(ajxCallback: AjxCallback): void {}
+  public static EMPTY_RESPONSE: string = "EMPTY_RESPONSE";
+  public static SVC_UNKNOWN_DOCUMENT: string = "service.UNKOWN_DOCUMENT";
+
+  public msg: string;
+
 }

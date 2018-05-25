@@ -18,10 +18,10 @@
  * along with T4Z - TypeScript 4 Zimlet. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import {DwtComposite, DwtCompositeParams} from "./DwtComposite";
-import {DwtUiEvent} from "../events/DwtUiEvent";
-import {DwtMenuItem} from "./DwtMenuItem";
 import {AjxListener} from "../../events/AjxListener";
+import {DwtUiEvent} from "../events/DwtUiEvent";
+import {DwtComposite, DwtCompositeParams} from "./DwtComposite";
+import {DwtMenuItem} from "./DwtMenuItem";
 
 export class DwtMenu extends DwtComposite {
   public static GENERIC_WIDGET_STYLE: string;
@@ -46,15 +46,17 @@ export class DwtMenu extends DwtComposite {
   }
 
   public getItemById(key: string, value: any): DwtMenuItem { return undefined; }
+  public getItems(): DwtMenuItem[] { return undefined; }
 
   public addPopupListener(ajxListener: AjxListener): void { return undefined; }
 
   public getItemCount(): number {
     return undefined;
   }
+  public setWidth(width: string|number): void {}
 
 }
 
 export interface DwtMenuParams extends DwtCompositeParams {
-  style: string|number;
+  style?: string|number;
 }

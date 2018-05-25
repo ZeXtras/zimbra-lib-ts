@@ -18,14 +18,14 @@
  * along with T4Z - TypeScript 4 Zimlet. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import {DwtComposite, DwtCompositeParams} from "./DwtComposite";
-import {AjxVector} from "../../util/AjxVector";
 import {ZaItem} from "../../../zimbraAdmin/common/ZaItem";
-import {DwtMouseEvent} from "../events/DwtMouseEvent";
 import {ZmItem} from "../../../zimbraMail/share/model/ZmItem";
-import {DwtSelectionEvent} from "../events/DwtSelectionEvent";
+import {AjxVector} from "../../util/AjxVector";
 import {DwtEvent} from "../events/DwtEvent";
 import {DwtListViewActionEvent} from "../events/DwtListViewActionEvent";
+import {DwtMouseEvent} from "../events/DwtMouseEvent";
+import {DwtSelectionEvent} from "../events/DwtSelectionEvent";
+import {DwtComposite, DwtCompositeParams} from "./DwtComposite";
 
 export class DwtListView extends DwtComposite {
 
@@ -57,7 +57,15 @@ export class DwtListView extends DwtComposite {
     super(params);
   }
 
-  public _getCellContents(htmlArr: string[], idx: number, item: any, field: string, colIdx: number, params: {now?: Date}, classes?: string[]): number { return undefined; }
+  public _getCellContents(
+    htmlArr: string[],
+    idx: number,
+    item: any,
+    field: string,
+    colIdx: number,
+    params: {now?: Date},
+    classes?: string[],
+  ): number { return undefined; }
   public getSelectedItems(): AjxVector<ZmItem> { return undefined; }
   public deselectAll(): void {}
   public _markUnselectedViewedItem(on: boolean): void {}
@@ -82,6 +90,13 @@ export class DwtListView extends DwtComposite {
   public getTargetItemDiv(ev: DwtEvent): any { return undefined; }
   public dragSelect(row: HTMLElement): void {}
   public dragDeselect(row: HTMLElement): void {}
+  public associateItemWithElement(
+    item: any, element: Element,
+    type?: string,
+    id?: string,
+    data?: {[id: string]: any},
+    ): void {}
+  public getDnDSelection(): any|AjxVector<any> { return undefined; }
 
 }
 
@@ -92,15 +107,15 @@ export interface DwtListViewParams extends DwtCompositeParams {
 
 export class DwtListHeaderItem {
 
+  public static sortCompare(a: any, b: any): number {
+    return void 0;
+  }
+
   public _field: string;
 
   constructor(params: DwtListHeaderItemParams) {}
 
   public isDwtListHeaderItem(): boolean {
-    return void 0;
-  }
-
-  public static sortCompare(a: any, b: any): number {
     return void 0;
   }
 

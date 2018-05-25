@@ -18,5 +18,4 @@
  * along with T4Z - TypeScript 4 Zimlet. If not, see <http://www.gnu.org/licenses/>.
  */
 
-
 export class ZmMailListGroup {}

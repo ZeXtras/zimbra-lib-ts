@@ -24,6 +24,8 @@ import {DwtControl} from "./DwtControl";
 export class DwtLabel extends DwtComposite {
   public static IMAGE_RIGHT: string;
 
+  public static ALIGN_LEFT: number;
+
   constructor(params: DwtLabelParams) {
     super(params);
   }
@@ -33,12 +35,15 @@ export class DwtLabel extends DwtComposite {
   }
 
   public setText(text: string): void {}
+  public getText(): string { return undefined; }
 
   public setImage(imageInfo: string): void {}
 
   public getImage(direction?: string): string {
     return undefined;
   }
+
+  public setAlign(alignStyle: number): void {}
 }
 
 export interface DwtLabelParams extends DwtCompositeParams {

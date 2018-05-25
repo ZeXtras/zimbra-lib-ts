@@ -18,14 +18,16 @@
  * along with T4Z - TypeScript 4 Zimlet. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import {DwtComposite, DwtCompositeParams} from "./DwtComposite";
 import {AjxListener} from "../../events/AjxListener";
+import {DwtComposite, DwtCompositeParams} from "./DwtComposite";
 import {DwtTreeItem} from "./DwtTreeItem";
 
 export class DwtTree extends DwtComposite {
 
-  protected static CHECKEDITEM_STYLE = 4;
-  public static SINGLE_STYLE: number;
+  public static SINGLE_STYLE: number = 1;
+  public static MULTI_STYLE: number = 2;
+  public static CHECKEDITEM_STYLE: number = 4;
+  public static ITEM_SELECTED: number;
   public static ITEM_ACTIONED: number;
 
   constructor(params: DwtTreeParams) {
@@ -40,4 +42,5 @@ export class DwtTree extends DwtComposite {
 }
 
 export interface DwtTreeParams extends DwtCompositeParams {
+  style?: number;
 }

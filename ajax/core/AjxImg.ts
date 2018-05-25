@@ -26,7 +26,7 @@ export class AjxImg {
     useParenEl?: boolean,
     _disabled?: boolean,
     classes?: string[],
-    altText?: string
+    altText?: string,
   ): void {}
 
   public static getImageHtml(
@@ -36,7 +36,7 @@ export class AjxImg {
     wrapInTable?: boolean,
     disabled?: boolean,
     classes?: string[],
-    altText?: string
+    altText?: string,
   ): string {
     return void 0;
   }

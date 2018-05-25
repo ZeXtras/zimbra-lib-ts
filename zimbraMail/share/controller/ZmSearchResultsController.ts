@@ -18,8 +18,14 @@
  * along with T4Z - TypeScript 4 Zimlet. If not, see <http://www.gnu.org/licenses/>.
  */
 
+import {ZmSearchResult} from "../model/ZmSearchResult";
+import {ZmSearchResultsFilterPanel} from "../view/ZmSearchResultsFilterPanel";
 import {ZmController} from "./ZmController";
 
 export class ZmSearchResultsController extends ZmController {
+
+  public _filterPanel: ZmSearchResultsFilterPanel;
+
+  public show(results: ZmSearchResult, resultsCtrl?: ZmController): void {}
 
 }

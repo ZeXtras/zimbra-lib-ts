@@ -18,15 +18,15 @@
  * along with T4Z - TypeScript 4 Zimlet. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import {ZmAttachDialog} from "../../zimbraMail/share/view/ZmAttachDialog";
 import {DwtComposite} from "../../ajax/dwt/widgets/DwtComposite";
 import {ZmMailMsg} from "../../zimbraMail/mail/model/ZmMailMsg";
+import {ZmAttachDialog} from "../../zimbraMail/share/view/dialog/ZmAttachDialog";
 
 export class AttachMailTabView extends DwtComposite {
 
   public attachDialog: ZmAttachDialog;
 
-  public uploadFiles(attachmentDlg: ZmAttachDialog, msgIds: string[]): void {};
+  public uploadFiles(attachmentDlg: ZmAttachDialog, msgIds: string[]): void {}
   public getSelectedMsgs(): ZmMailMsg[] { return undefined; }
 
 }

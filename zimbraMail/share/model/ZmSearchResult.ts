@@ -19,9 +19,16 @@
  */
 
 import {ZmList} from "./ZmList";
+import {ZmSearch} from "./ZmSearch";
 
 export class ZmSearchResult {
 
-  public getResults(type?: string): ZmList { return undefined; }
+  public search: ZmSearch;
 
+  constructor(search: ZmSearch) {}
+
+  public getResults(type?: string): ZmList { return undefined; }
+  public getAttribute(name: string): any { return undefined; }
+
+  public set(_respEl: any): void|string { return undefined; }
 }

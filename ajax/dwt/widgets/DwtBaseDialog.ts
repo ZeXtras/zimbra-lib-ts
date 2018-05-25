@@ -18,11 +18,11 @@
  * along with T4Z - TypeScript 4 Zimlet. If not, see <http://www.gnu.org/licenses/>.
  */
 
+import {DwtPoint} from "../graphics/DwtPoint";
+import {DwtTabGroup} from "../keyboard/DwtTabGroup";
 import {DwtComposite, DwtCompositeParams} from "./DwtComposite";
 import {DwtControl} from "./DwtControl";
 import {DwtShell} from "./DwtShell";
-import {DwtTabGroup} from "../keyboard/DwtTabGroup";
-import {DwtPoint} from "../graphics/DwtPoint";
 
 export class DwtBaseDialog extends DwtComposite {
 
@@ -53,11 +53,7 @@ export class DwtBaseDialog extends DwtComposite {
 
   public setView(newView: DwtControl): void {}
 
-  protected _getContentHtml(): string {
-    return void 0;
-  }
-
-  public _initializeDragging(dragHandleId?: number): void {}
+  public _initializeDragging(dragHandleId?: string): void {}
 
   public _createHtmlFromTemplate(templateId: string, data?: {[name: string]: any}): void {}
 
@@ -67,15 +63,25 @@ export class DwtBaseDialog extends DwtComposite {
 
   public cleanup(bPoppedUp: boolean): void {}
 
+  public popup(loc?: DwtPoint): void {}
+
+  public setTitle(title: string): void {}
+
+  protected _getContentHtml(): string {
+    return void 0;
+  }
+
   protected _resetTabFocus(): void {}
 
   protected _setModalEffect(thisZ?: number): number {
     return void 0;
   }
 
-  public popup(loc?: DwtPoint): void {}
+  protected _getContentDiv(): HTMLElement { return undefined; }
 
-  public setTitle(title: string): void {}
+  protected _dragStart(point: number[]): void {}
+  protected _duringDrag(point: number[]): void {}
+  protected _dragEnd(point: number[]): void {}
 
 }
 

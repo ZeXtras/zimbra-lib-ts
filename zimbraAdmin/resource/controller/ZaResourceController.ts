@@ -18,14 +18,7 @@
  * along with T4Z - TypeScript 4 Zimlet. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import {DwtDialog} from "../../../ajax/dwt/widgets/DwtDialog";
-import {AjxCallback} from "../../../ajax/boot/AjxCallback";
+import {ZaXFormViewController} from "../../common/ZaXFormViewController";
 
-export class ZmAttachDialog extends DwtDialog {
-
-  public _uploadCallback: AjxCallback;
-
-  public getUploadCallback(): AjxCallback { return undefined; }
-  public setFooter(html: string): void {}
-
+export class ZaResourceController extends ZaXFormViewController {
 }

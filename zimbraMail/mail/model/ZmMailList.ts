@@ -18,10 +18,10 @@
  * along with T4Z - TypeScript 4 Zimlet. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import {ZmList} from "../../share/model/ZmList";
-import {ZmItem} from "../../share/model/ZmItem";
-import {ZmMailItem} from "../../share/model/ZmMailItem";
 import {AjxCallback} from "../../../ajax/boot/AjxCallback";
+import {ZmItem} from "../../share/model/ZmItem";
+import {ZmList} from "../../share/model/ZmList";
+import {ZmMailItem} from "./ZmMailItem";
 
 export class ZmMailList extends ZmList {
 

@@ -18,9 +18,9 @@
  * along with T4Z - TypeScript 4 Zimlet. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import {ZmZimbraAccount} from "./ZmZimbraAccount";
-import {ZmTree} from "./ZmTree";
 import {AjxVector} from "../../../ajax/util/AjxVector";
+import {ZmTree} from "./ZmTree";
+import {ZmZimbraAccount} from "./ZmZimbraAccount";
 
 export class ZmOrganizer {
 
@@ -35,8 +35,15 @@ export class ZmOrganizer {
   public static TREE_TYPE: {[type: string]: string};
   public static LABEL: {[type: string]: string};
   public static ID_ROOT: string;
+  public static APP: { [id: string]: string };
+  public static ID_CHATS: number;
 
   public static normalizeId(id: string|number, type?: string): string|number { return undefined; }
+
+  /** @since 8.7.7 */ public static parseId(
+    id: string,
+    result?: {},
+  ): {acctId: string, id: string, account: ZmZimbraAccount} { return undefined; }
 
   public id: string;
   public name: string;
@@ -47,6 +54,9 @@ export class ZmOrganizer {
   public parent?: ZmOrganizer;
   public tree?: ZmTree;
   public children: AjxVector<ZmOrganizer>;
+  public type: string;
+  public url?: string;
+  /** @since 8.7.7 */ public isMountpoint: boolean;
 
   constructor(params: ZmOrganizerParams) {}
   public getAccount(): ZmZimbraAccount { return undefined; }
@@ -59,8 +69,29 @@ export class ZmOrganizer {
   public getIcon(): string { return undefined; }
   public getIconWithColor(): string { return undefined; }
   public getOwner(): string { return undefined; }
-  public getName(showUnread?: boolean, maxLength?: number, noMarkup?: boolean, useSystemName?: boolean, useOwnerName?: boolean, defaultRootType?: string): string { return undefined; }
+  public getName(
+    showUnread?: boolean,
+    maxLength?: number,
+    noMarkup?: boolean,
+    useSystemName?: boolean,
+    useOwnerName?: boolean,
+    defaultRootType?: string,
+  ): string { return undefined; }
   public getChildByPath(path: string): ZmOrganizer { return undefined; }
+  public hasChild(name: string): boolean { return undefined; }
+  public getChild(name: string): ZmOrganizer { return undefined; }
+  public getById(id: string): ZmOrganizer { return undefined; }
+  public _notify(evType: string, details?: any): void {}
+  public notifyModify(details?: any): void {}
+  public getPath(
+    includeRoot?: boolean,
+    showUnread?: boolean,
+    maxLength?: number,
+    noMarkup?: boolean,
+    useSystemName?: boolean,
+  ): string { return undefined; }
+  public reparent(newParent?: ZmOrganizer): void {}
+  public deleteLocal(): void {}
 
 }
 
@@ -68,6 +99,6 @@ interface ZmOrganizerItemOrganizer {
   [name: string]: string;
 }
 
-interface ZmOrganizerParams {
+export interface ZmOrganizerParams {
   type: string;
 }

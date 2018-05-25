@@ -18,21 +18,21 @@
  * along with T4Z - TypeScript 4 Zimlet. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import {ZmBaseController} from "./ZmBaseController";
-import {ZmListView} from "../view/ZmListView";
-import {DwtControl} from "../../../ajax/dwt/widgets/DwtControl";
-import {ZmApp} from "../../core/ZmApp";
-import {ZmSearchResultsController} from "./ZmSearchResultsController";
+import {AjxCallback} from "../../../ajax/boot/AjxCallback";
+import {DwtDragEvent} from "../../../ajax/dwt/dnd/DwtDragEvent";
+import {DwtDropEvent} from "../../../ajax/dwt/dnd/DwtDropEvent";
+import {DwtDropTarget} from "../../../ajax/dwt/dnd/DwtDropTarget";
+import {DwtListViewActionEvent} from "../../../ajax/dwt/events/DwtListViewActionEvent";
 import {DwtSelectionEvent} from "../../../ajax/dwt/events/DwtSelectionEvent";
+import {DwtControl} from "../../../ajax/dwt/widgets/DwtControl";
+import {DwtMenu} from "../../../ajax/dwt/widgets/DwtMenu";
+import {ZmApp} from "../../core/ZmApp";
+import {ZmMailMsg} from "../../mail/model/ZmMailMsg";
 import {ZmList} from "../model/ZmList";
 import {ZmSearchResult} from "../model/ZmSearchResult";
-import {AjxCallback} from "../../../ajax/boot/AjxCallback";
-import {ZmMailMsg} from "../../mail/model/ZmMailMsg";
-import {DwtDropTarget} from "../../../ajax/dwt/dnd/DwtDropTarget";
-import {DwtDragEvent} from "../../../ajax/dwt/dnd/DwtDragEvent";
-import {DwtListViewActionEvent} from "../../../ajax/dwt/events/DwtListViewActionEvent";
-import {DwtMenu} from "../../../ajax/dwt/widgets/DwtMenu";
-import {DwtDropEvent} from "../../../ajax/dwt/dnd/DwtDropEvent";
+import {ZmListView} from "../view/ZmListView";
+import {ZmBaseController} from "./ZmBaseController";
+import {ZmSearchResultsController} from "./ZmSearchResultsController";
 
 export class ZmListController extends ZmBaseController {
 
@@ -40,8 +40,20 @@ export class ZmListController extends ZmBaseController {
   public _listView: {[name: string]: ZmListView};
   public _dropTgt?: DwtDropTarget;
 
-  constructor(container: DwtControl, app: ZmApp, type: string, sessionId: string, searchResultsController: ZmSearchResultsController) {
-    super(container, app, type, sessionId, searchResultsController);
+  constructor(
+    container: DwtControl,
+    app: ZmApp,
+    type: string,
+    sessionId: string,
+    searchResultsController: ZmSearchResultsController,
+  ) {
+    super(
+      container,
+      app,
+      type,
+      sessionId,
+      searchResultsController,
+    );
   }
 
   public getListView(): ZmListView { return null; }
@@ -54,9 +66,15 @@ export class ZmListController extends ZmBaseController {
   public _resetNavToolBarButtons(view?: string): void {}
   public getActionMenu(): DwtMenu { return undefined; }
 
-  public show(msg: ZmSearchResult): void;
-  /** Visible in ZmMsgController */ public show(msg: ZmMailMsg, parentController: ZmListController, callback: AjxCallback, markRead: boolean, hidePagination: boolean, forceLoad: boolean, noTruncate: boolean): void;
-  public show(msg: any, parentController?: ZmListController, callback?: AjxCallback, markRead?: boolean, hidePagination?: boolean, forceLoad?: boolean, noTruncate?: boolean): void {}
+  public show(
+    msg: any,
+    parentController?: ZmListController|string,
+    callback?: AjxCallback,
+    markRead?: boolean,
+    hidePagination?: boolean,
+    forceLoad?: boolean,
+    noTruncate?: boolean,
+  ): void {}
 
   public _initializeToolBar(view: string): void {}
 

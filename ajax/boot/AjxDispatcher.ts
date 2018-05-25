@@ -21,13 +21,15 @@
 import {AjxCallback} from "./AjxCallback";
 
 export class AjxDispatcher {
-  public static require(pkg: string[], async?: boolean, callback?: AjxCallback, args?: any[], preLoadOk?: boolean): void
-  public static require(pkg: string, async?: boolean, callback?: AjxCallback, args?: any[], preLoadOk?: boolean): void
-  public static require(pkg: any, async?: boolean, callback?: AjxCallback, args?: any[], preLoadOk?: boolean): void {}
+  public static require(
+    pkg: string[]|string|any,
+    async?: boolean,
+    callback?: AjxCallback,
+    args?: any[],
+    preLoadOk?: boolean,
+  ): void {}
 
   public static run(pkg: string, ...args: any[]): any {}
 
-  public static registerMethod(method: string, pkg: string, ajxCallback: AjxCallback): void;
-  public static registerMethod(method: string, pkg: string[], ajxCallback: AjxCallback): void;
-  public static registerMethod(method: string, pkg: any, ajxCallback: AjxCallback): void {}
+  public static registerMethod(method: string, pkg: string|string[]|any, ajxCallback: AjxCallback): void {}
 }

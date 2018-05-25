@@ -18,9 +18,9 @@
  * along with T4Z - TypeScript 4 Zimlet. If not, see <http://www.gnu.org/licenses/>.
  */
 
+import {DwtTabGroup} from "../../../../ajax/dwt/keyboard/DwtTabGroup";
 import {DwtControl} from "../../../../ajax/dwt/widgets/DwtControl";
 import {AjxStringUtilConvertHtml2TextConvertor} from "../../../../ajax/util/AjxStringUtil";
-import {DwtTabGroup} from "../../../../ajax/dwt/keyboard/DwtTabGroup";
 
 export class ZmHtmlEditor extends DwtControl {
   public static TINY_MCE_PATH: string;
@@ -40,6 +40,7 @@ export class ZmHtmlEditor extends DwtControl {
   public initEditorManager(id: string, autoFocus?: boolean): void {}
   public getEditor(): TinyMCE|null { return undefined; }
   public onInit(ev: ZmHtmlEditorOnInitEv): void {}
+  public moveCaretToTop(num?: number): void {}
   public _setupTabGroup(mainTabGroup?: DwtTabGroup): void {}
   public _resetSize(): void {}
   public _convertHtml2Text(convertor: AjxStringUtilConvertHtml2TextConvertor): string { return undefined; }
@@ -63,12 +64,12 @@ export interface TinyMCE {
 export type ZmHtmlEditorMode = "text/plain" | "text/html";
 
 export interface ZmHtmlEditorOnInitEv {
-  isDefaultPrevented: Function;
-  isImmediatePropagationStopped: Function;
-  isPropagationStopped: Function;
-  preventDefault: Function;
-  stopImmediatePropagation: Function;
-  stopPropagation: Function;
+  isDefaultPrevented: () => boolean;
+  isImmediatePropagationStopped: () => boolean;
+  isPropagationStopped: () => boolean;
+  preventDefault: () => void;
+  stopImmediatePropagation: () => void;
+  stopPropagation: () => void;
   target: TinyMCE;
   type: "init";
 }

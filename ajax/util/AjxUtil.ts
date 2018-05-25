@@ -19,10 +19,11 @@
  */
 
 export class AjxUtil {
+  public static FULL_URL_RE: RegExp;
 
   public static toArray(obj: any|any[]): any[] { return undefined; }
   public static arraySize(arr: any[]|{[key: string]: any}): number { return undefined; }
-  static arrayContains(arr: any[], item: any): boolean { return undefined; }
+  public static arrayContains(arr: any[], item: any): boolean { return undefined; }
 
   public static formatSize(size: number|(() => number)|string): string {
     return undefined;

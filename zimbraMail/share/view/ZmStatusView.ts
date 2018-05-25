@@ -21,8 +21,8 @@
 import {DwtControl} from "../../../ajax/dwt/widgets/DwtControl";
 
 export class ZmStatusView extends DwtControl {
-  public static LEVEL_INFO:     number = 1;
-  public static LEVEL_WARNING:  number = 2;
+  public static LEVEL_INFO: number = 1;
+  public static LEVEL_WARNING: number = 2;
   public static LEVEL_CRITICAL: number = 3;
 }
 

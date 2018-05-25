@@ -18,18 +18,16 @@
  * along with T4Z - TypeScript 4 Zimlet. If not, see <http://www.gnu.org/licenses/>.
  */
 
-
 import {DwtUiEvent} from "./DwtUiEvent";
 
 export class DwtSelectionEvent extends DwtUiEvent {
   public kbNavEvent: boolean;
-
-  public reset(): void {};
-
   public detail: number;
   public button: number;
   public item: any;
   public docX: number;
   public docY: number;
+
+  public reset(): void {}
 
 }

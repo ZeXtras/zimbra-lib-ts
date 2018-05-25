@@ -18,13 +18,13 @@
  * along with T4Z - TypeScript 4 Zimlet. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import {ZmMailListController} from "./ZmMailListController";
-import {DwtEvent} from "../../../ajax/dwt/events/DwtEvent";
-import {ZmMailMsg} from "../model/ZmMailMsg";
-import {ZmConv} from "../model/ZmConv";
-import {ZmListController} from "../../share/controller/ZmListController";
 import {AjxCallback} from "../../../ajax/boot/AjxCallback";
-import {ZmCsfeResult} from "../../../csfe/ZmCsfeResult";
+import {DwtEvent} from "../../../ajax/dwt/events/DwtEvent";
+import {ZmCsfeResult} from "../../../zimbra/csfe/ZmCsfeResult";
+import {ZmListController} from "../../share/controller/ZmListController";
+import {ZmConv} from "../model/ZmConv";
+import {ZmMailMsg} from "../model/ZmMailMsg";
+import {ZmMailListController} from "./ZmMailListController";
 
 export class ZmMsgController extends ZmMailListController {
 
@@ -34,5 +34,6 @@ export class ZmMsgController extends ZmMailListController {
   public _printListener(ev: DwtEvent): void {}
   public setMsg(msg: ZmMailMsg): void {}
   public _handleResponseShow(callback: AjxCallback, hidePagination: boolean, result?: ZmCsfeResult): void {}
+  public _backListener(ev: DwtEvent): void {}
 
 }

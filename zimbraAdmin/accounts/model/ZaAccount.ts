@@ -18,13 +18,13 @@
  * along with T4Z - TypeScript 4 Zimlet. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import {ZaItem} from "../../common/ZaItem";
 import {XModelInt} from "../../../ajax/dwt/xforms/XModelInt";
+import {ZaItem} from "../../common/ZaItem";
 
 export class ZaAccount extends ZaItem {
+  public static myXModel: XModelInt;
   public id: string;
   public attrs: {
-    zimbraIsAdminAccount?: string
+    zimbraIsAdminAccount?: string,
   };
-  public static myXModel: XModelInt;
 }

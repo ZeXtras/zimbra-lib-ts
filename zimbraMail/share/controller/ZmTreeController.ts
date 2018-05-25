@@ -18,17 +18,18 @@
  * along with T4Z - TypeScript 4 Zimlet. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import {ZmController} from "./ZmController";
-import {ZmTreeViewParams, ZmTreeView} from "../view/ZmTreeView";
-import {ZmTree} from "../model/ZmTree";
-import {DwtUiEvent} from "../../../ajax/dwt/events/DwtUiEvent";
-import {AjxListener} from "../../../ajax/events/AjxListener";
-import {DwtMenu} from "../../../ajax/dwt/widgets/DwtMenu";
-import {DwtEvent} from "../../../ajax/dwt/events/DwtEvent";
-import {ZmOrganizer} from "../model/ZmOrganizer";
-import {ZmFolder} from "../model/ZmFolder";
-import {ZmChooseFolderDialog} from "../view/dialog/ZmChooseFolderDialog";
 import {AjxCallback} from "../../../ajax/boot/AjxCallback";
+import {DwtEvent} from "../../../ajax/dwt/events/DwtEvent";
+import {DwtUiEvent} from "../../../ajax/dwt/events/DwtUiEvent";
+import {DwtMenu} from "../../../ajax/dwt/widgets/DwtMenu";
+import {AjxListener} from "../../../ajax/events/AjxListener";
+import {ZmFolder} from "../model/ZmFolder";
+import {ZmOrganizer} from "../model/ZmOrganizer";
+import {ZmTree} from "../model/ZmTree";
+import {ZmZimbraAccount} from "../model/ZmZimbraAccount";
+import {ZmChooseFolderDialog} from "../view/dialog/ZmChooseFolderDialog";
+import {ZmTreeView, ZmTreeViewParams} from "../view/ZmTreeView";
+import {ZmController} from "./ZmController";
 
 export class ZmTreeController extends ZmController {
 
@@ -36,6 +37,8 @@ export class ZmTreeController extends ZmController {
   public _listeners: {[id: string]: AjxListener};
   public _treeView: {[id: string]: ZmTreeView};
   public _actionedOrganizer: ZmFolder;
+  public _actionedOverviewId: string;
+  public _actionMenu: AjxCallback;
 
   constructor(type: string) {
     super(null);
@@ -44,7 +47,8 @@ export class ZmTreeController extends ZmController {
   public _createTreeView(params: ZmTreeViewParams): ZmTreeView { return undefined; }
   public show(params: ZmTreeControllerShowParams): ZmTreeView { return undefined; }
 
-  public getDataTree(): ZmTree { return undefined; }
+  public getTreeView(overviewId: string, force?: boolean): ZmTreeView { return undefined; }
+  public getDataTree(account?: ZmZimbraAccount): ZmTree { return undefined; }
   public _treeViewListener(ev: DwtUiEvent): void {}
   public _renameListener(ev: DwtUiEvent): void {}
   public _getActionedOrganizer(ev: DwtUiEvent): ZmOrganizer { return undefined; }
@@ -52,6 +56,7 @@ export class ZmTreeController extends ZmController {
   public _moveCallback(): void {}
   public _getMoveParams(dialog: ZmChooseFolderDialog): any { return undefined; }
   public _setupOptButton(params: ZmTreeControllerShowParams): void {}
+  public _initializeActionMenus(): void {}
 }
 
 export interface ZmTreeControllerShowParams {

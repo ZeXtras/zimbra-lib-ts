@@ -23,9 +23,9 @@ import {ZaTreeItemData} from "./ZaTreeItem";
 
 export class ZaTree extends DwtTree {
 
-  public addTreeItemData(treeItemData: ZaTreeItemData): void {}
-
-  static getPathByArray(path: string[]): string {
+  public static getPathByArray(path: string[]): string {
     return void 0;
   }
+
+  public addTreeItemData(treeItemData: ZaTreeItemData): void {}
 }

@@ -18,9 +18,9 @@
  * along with T4Z - TypeScript 4 Zimlet. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import {ZmMailItemView} from "./ZmMailItemView";
-import {ZmMailMsg} from "../model/ZmMailMsg";
 import {DwtTabGroup} from "../../../ajax/dwt/keyboard/DwtTabGroup";
+import {ZmMailMsg} from "../model/ZmMailMsg";
+import {ZmMailItemView} from "./ZmMailItemView";
 
 export class ZmMailMsgView extends ZmMailItemView {
 
@@ -37,4 +37,3 @@ export interface ZmMailMsgViewGetAttachmentLinkHtmlParams {
   href:	string;
   text: string;
 }
-

@@ -18,9 +18,9 @@
  * along with T4Z - TypeScript 4 Zimlet. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import {ZmController} from "./ZmController";
-import {ZmOverview} from "../view/ZmOverview";
+import {ZmOverview, ZmOverviewParams} from "../view/ZmOverview";
 import {ZmTreeView} from "../view/ZmTreeView";
+import {ZmController} from "./ZmController";
 import {ZmTreeController} from "./ZmTreeController";
 
 export class ZmOverviewController extends ZmController {
@@ -33,4 +33,6 @@ export class ZmOverviewController extends ZmController {
   public getTreeView(overviewId: string, treeId: string): ZmTreeView { return undefined; }
 
   public getTreeController(id: string): ZmTreeController { return undefined; }
+
+  public createOverview(ovParams: ZmOverviewParams): ZmOverview { return undefined; }
 }

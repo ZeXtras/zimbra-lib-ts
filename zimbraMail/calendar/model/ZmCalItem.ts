@@ -18,8 +18,8 @@
  * along with T4Z - TypeScript 4 Zimlet. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import {ZmCalBaseItem} from "./ZmCalBaseItem";
 import {ZmFolder} from "../../share/model/ZmFolder";
+import {ZmCalBaseItem} from "./ZmCalBaseItem";
 
 export class ZmCalItem extends ZmCalBaseItem {
 

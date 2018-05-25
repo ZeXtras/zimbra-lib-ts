@@ -18,11 +18,11 @@
  * along with T4Z - TypeScript 4 Zimlet. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import {DwtRectangle} from "../graphics/DwtRectangle";
+import {DwtEvent} from "../events/DwtEvent";
 import {DwtPoint} from "../graphics/DwtPoint";
+import {DwtRectangle} from "../graphics/DwtRectangle";
 
 export class Dwt {
-
   public static DISPLAY_BLOCK: string = "block";
   public static DISPLAY_NONE: string = "none";
   public static DISPLAY_INLINE: string = "inline";
@@ -35,19 +35,33 @@ export class Dwt {
   public static KEY_ID: string;
   public static KEY_OBJECT: string;
   public static Z_VIEW: number;
+  public static SCROLL_Y: number;
+  public static STATIC_STYLE: string;
+  public static RELATIVE_STYLE: string;
+  public static moveCursorToEnd: (input: HTMLInputElement) => void;
+  public static Z_HIDDEN: number;
+  public static Z_DIALOG: number;
+  public static LOC_NOWHERE: number;
+  public static CLEAR: number;
 
-  public static setSize(el: HTMLDivElement, newWidth: number, height: number): void {}
+  public static setSize(el: HTMLElement, newWidth: number|string, height: number|string): void {}
   public static getSize(el: HTMLElement): DwtPoint { return undefined; }
 
   public static setVisible(el: HTMLElement, visible: boolean): void {}
   public static delClass(el: HTMLElement, del: string|RegExp, add?: string): void {}
   public static addClass(el: HTMLElement, _kbFocusClass: string): void {}
   public static setDisplay(htmlElement: HTMLElement, value: string): void {}
-  public static setHandler(htmlElement: HTMLElement, event: string, func: Function): void {}
+  public static setHandler(
+    htmlElement: HTMLElement,
+    event: string,
+    func: (ev: DwtEvent, evType?: string, obj?: {}) => void,
+  ): void {}
   public static getNextId(): string { return undefined; }
   public static setLoadedTime(id: string, time?: Date): void {}
   public static getBounds(htmlElement: HTMLElement, rect?: DwtRectangle): DwtRectangle { return undefined; }
   public static getWindowSize(point?: DwtPoint): DwtPoint { return undefined; }
   public static getVisible(textarea: HTMLElement): boolean { return undefined; }
-
+  public static setPosition(div: HTMLElement, style: string): void {}
+  public static getElement(el: string|HTMLElement): HTMLElement { return undefined; }
+  public static setVisibility(el: string|HTMLElement, visible: boolean): void {}
 }

@@ -18,10 +18,13 @@
  * along with T4Z - TypeScript 4 Zimlet. If not, see <http://www.gnu.org/licenses/>.
  */
 
+import {DwtControl} from "../widgets/DwtControl";
+
 export class DwtDragEvent {
+  public static SET_DATA: string;
+
   public action: string;
   public srcData: any;
-  public srcControl: any;
-
-  public static SET_DATA: string;
+  public srcControl: DwtControl;
+  public doIt: boolean;
 }

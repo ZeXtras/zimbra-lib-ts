@@ -21,4 +21,7 @@
 import {DwtEvent} from "./DwtEvent";
 
 export class DwtFocusEvent extends DwtEvent {
+  public static BLUR: number;
+  public static FOCUS: number;
+  public state: number;
 }

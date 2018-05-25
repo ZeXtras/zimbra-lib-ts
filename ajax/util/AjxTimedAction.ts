@@ -22,7 +22,7 @@ import {AjxCallback} from "../boot/AjxCallback";
 
 export class AjxTimedAction extends AjxCallback {
 
-  static cancelAction(actionId: number): void {}
-  static scheduleAction(action: AjxTimedAction, delay: number): number { return undefined; }
+  public static cancelAction(actionId: number): void {}
+  public static scheduleAction(action: AjxTimedAction, delay: number): number { return undefined; }
 
 }

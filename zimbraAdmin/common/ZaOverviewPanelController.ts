@@ -19,11 +19,12 @@
  */
 
 import {ZaController} from "./ZaController";
+import {ZaTree} from "./ZaTree";
 
 export class ZaOverviewPanelController extends ZaController {
 
   public static overviewTreeListeners: {};
-  public static treeModifiers: Function[];
+  public static treeModifiers: Array<(tree?: ZaTree) => void>;
   public static _TID: string;
   public static _OBJ_ID: string;
 

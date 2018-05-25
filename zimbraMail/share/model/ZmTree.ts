@@ -19,6 +19,10 @@
  */
 
 import {ZmModel} from "./ZmModel";
+import {ZmOrganizer} from "./ZmOrganizer";
 
 export class ZmTree extends ZmModel {
+
+  public root: ZmOrganizer;
+
 }

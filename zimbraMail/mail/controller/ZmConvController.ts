@@ -18,27 +18,11 @@
  * along with T4Z - TypeScript 4 Zimlet. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import {ZmItem} from "./ZmItem";
-import {AjxVector} from "../../../ajax/util/AjxVector";
-import {AjxEmailAddress} from "../../../ajax/util/AjxEmailAddress";
+import {DwtEvent} from "../../../ajax/dwt/events/DwtEvent";
+import {ZmConvListController} from "./ZmConvListController";
 
-export class ZmMailItem extends ZmItem {
+export class ZmConvController extends ZmConvListController {
 
-  public readReceiptRequested?: boolean;
-  public _loaded: boolean;
-  public isUnread: boolean;
-  /** @deprecated Injected by @see ZmMailListController, ZmDoublePaneController*/ public _loadPending?: boolean;
-  public participants: AjxVector<AjxEmailAddress>;
+  public _backListener(ev: DwtEvent): void {}
 
-  public _parseParticipantNode(node: ZmMailItemPartecipantNode): void {}
-
-}
-
-export interface ZmMailItemPartecipantNode {
-  a: string;
-  d: string;
-  p: string;
-  t: "b"|"c"|"f"|"n"|"r"|"rf"|"s"|"t";
-  isGroup?: boolean;
-  exp?: boolean;
 }

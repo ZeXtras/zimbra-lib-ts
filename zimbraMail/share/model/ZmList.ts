@@ -19,24 +19,25 @@
  */
 
 import {ZmListController} from "../controller/ZmListController";
+import {ZmItem} from "./ZmItem";
 import {ZmModel} from "./ZmModel";
 import {ZmSearch} from "./ZmSearch";
-import {ZmItem} from "./ZmItem";
 
 export class ZmList  extends ZmModel {
-
-  public get(index: number): ZmItem {return undefined; };
-  public getArray(): ZmItem[] { return undefined; }
-  public size(): number { return undefined; }
-  public contains(element: ZmItem): boolean { return undefined; }
-  public add(element: ZmItem, index?: number): void {}
-  public remove(element: ZmItem): void {}
 
   public controller: ZmListController;
 
   constructor(type: string, search?: ZmSearch) {
     super(type);
   }
+
+  public get(index: number): ZmItem {return undefined; }
+  public getArray(): ZmItem[] { return undefined; }
+  public size(): number { return undefined; }
+  public contains(element: ZmItem): boolean { return undefined; }
+  public add(element: ZmItem, index?: number): void {}
+  public remove(element: ZmItem): void {}
+  public getById(id: string): ZmItem { return undefined; }
 
   public setHasMore(more: boolean): void {}
 

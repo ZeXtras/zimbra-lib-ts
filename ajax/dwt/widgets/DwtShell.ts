@@ -18,19 +18,28 @@
  * along with T4Z - TypeScript 4 Zimlet. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import {DwtComposite} from "./DwtComposite";
+import {DwtControlEvent} from "../events/DwtControlEvent";
+import {DwtFocusEvent} from "../events/DwtFocusEvent";
+import {DwtMouseEvent} from "../events/DwtMouseEvent";
+import {DwtSelectionEvent} from "../events/DwtSelectionEvent";
 import {DwtPoint} from "../graphics/DwtPoint";
 import {DwtKeyboardMgr} from "../keyboard/DwtKeyboardMgr";
 import {DwtBaseDialog} from "./DwtBaseDialog";
-import {DwtControlEvent} from "../events/DwtControlEvent";
-import {DwtSelectionEvent} from "../events/DwtSelectionEvent";
+import {DwtComposite} from "./DwtComposite";
 
 export class DwtShell extends DwtComposite {
 
-  public _veilOverlay: VeilOverlay;
-  public _currWinSize: DwtPoint;
   public static controlEvent: DwtControlEvent;
   public static selectionEvent: DwtSelectionEvent;
+  public static focusEvent: DwtFocusEvent;
+  public static mouseEvent: DwtMouseEvent;
+
+  public static getShell(win?: Window): DwtShell {
+    return null;
+  }
+
+  public _veilOverlay: VeilOverlay;
+  public _currWinSize: DwtPoint;
 
   public getSize(incScroll?: boolean): DwtPoint {
     return new DwtPoint(0, 0);
@@ -40,9 +49,6 @@ export class DwtShell extends DwtComposite {
     return null;
   }
 
-  public static getShell(win?: Window): DwtShell {
-    return null;
-  }
 }
 
 interface VeilOverlay extends HTMLDivElement {

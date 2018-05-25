@@ -18,8 +18,8 @@
  * along with T4Z - TypeScript 4 Zimlet. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import {ZmModel} from "./ZmModel";
 import {ZmList} from "./ZmList";
+import {ZmModel} from "./ZmModel";
 import {ZmZimbraAccount} from "./ZmZimbraAccount";
 
 export class ZmItem extends ZmModel {
@@ -34,20 +34,23 @@ export class ZmItem extends ZmModel {
   public static F_NAME: string;
   public static F_SORTED_BY: string;
 
+  public static registerItem(type: string, params: ZmItemRegisterItemParams): void {}
+
   public id: string;
   public type: string;
   public list: ZmList;
+  public isMountpoint: boolean;
 
-  public static registerItem(type: string, params: ZmItemRegisterItemParams): void {}
-
-  constructor(params: any, id?: string, list?: ZmList, noCache?: boolean) {
-    super((<ZmItemParam>params).type);
+  constructor(params?: any, id?: string, list?: ZmList, noCache?: boolean) {
+    super((params as ZmItemParam).type);
   }
 
   public getAccount?(): ZmZimbraAccount { return undefined; }
   public _parseTagNames?(str: string): void {}
   public _parseFlags?(str: string): void {}
   public getRestUrl(): string {return undefined; }
+  public _notify(event: string, details?: any): void {}
+  public getFolderId(): string { return undefined; }
 
 }
 
@@ -71,5 +74,5 @@ export interface ZmItemRegisterItemParams {
   organizer: string;
   dropTargets: string[];
   searchType: string;
-  resultsList: Function;
+  resultsList: () => ZmList;
 }

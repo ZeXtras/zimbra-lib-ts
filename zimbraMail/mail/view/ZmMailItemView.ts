@@ -25,5 +25,6 @@ export class ZmMailItemView extends DwtComposite {
 
   public getItem(): any {}
   public getInviteMsgView(): ZmInviteMsgView { return undefined; }
+  public _lazyCreateObjectManager(view?: ZmMailItemView): void {}
 
 }

@@ -18,8 +18,8 @@
  * along with T4Z - TypeScript 4 Zimlet. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import {DwtComposite} from "../../ajax/dwt/widgets/DwtComposite";
 import {AjxCallback} from "../../ajax/boot/AjxCallback";
+import {DwtComposite} from "../../ajax/dwt/widgets/DwtComposite";
 
 export class ZmOperation {
   public static NEW_MENU: string;
@@ -56,10 +56,33 @@ export class ZmOperation {
   public static SETUP: {[id: string]: ZmRegisterOperationParams};
   public static DELETE_WITHOUT_SHORTCUT: string;
   public static MOVE: string;
+  public static SEND_FILE_AS_ATT: string;
+  public static FORWARD_INLINE: string;
+  public static FORWARD_ATT: string;
 
-  public static addOperation(parent: DwtComposite, id: string, opHash: ZmAddOperationParams, index?: number, htmlElId?: string): void {}
-  public static setOperation(parent: DwtComposite, oldOp: string, newOp: string, text?: string, image?: string, disImage?: string): void {}
-  public static registerOp(op: string, params: ZmRegisterOperationParams, setting?: string, callback?: AjxCallback): void {}
+  public static addOperation(
+    parent: DwtComposite,
+    id: string,
+    opHash: ZmAddOperationParams,
+    index?: number,
+    htmlElId?: string,
+  ): void {}
+
+  public static setOperation(
+    parent: DwtComposite,
+    oldOp: string,
+    newOp: string,
+    text?: string,
+    image?: string,
+    disImage?: string,
+  ): void {}
+
+  public static registerOp(
+    op: string,
+    params: ZmRegisterOperationParams,
+    setting?: string,
+    callback?: AjxCallback,
+  ): void {}
 
   public static getToolTip(id: string, keyMap: string, tooltip: string): string {
     return undefined;

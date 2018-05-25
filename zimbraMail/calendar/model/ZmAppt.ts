@@ -18,8 +18,8 @@
  * along with T4Z - TypeScript 4 Zimlet. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import {ZmCalItem} from "./ZmCalItem";
 import {ZmMimePart} from "../../mail/model/ZmMimePart";
+import {ZmCalItem} from "./ZmCalItem";
 
 export class ZmAppt extends ZmCalItem {
 

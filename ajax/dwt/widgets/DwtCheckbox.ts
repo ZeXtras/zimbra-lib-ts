@@ -18,10 +18,14 @@
  * along with T4Z - TypeScript 4 Zimlet. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import {DwtControl} from "./DwtControl";
 import {AjxListener} from "../../events/AjxListener";
+import {DwtControl, DwtControlParams} from "./DwtControl";
 
 export class DwtCheckbox extends DwtControl {
+
+  public constructor(params: DwtCheckboxParams) {
+    super(params);
+  }
 
   public isSelected(): boolean {
     return null;
@@ -33,4 +37,9 @@ export class DwtCheckbox extends DwtControl {
 
   public addSelectionListener(listener: AjxListener): void {}
 
+}
+
+export interface DwtCheckboxParams extends DwtControlParams {
+  name: string;
+  checked: boolean;
 }

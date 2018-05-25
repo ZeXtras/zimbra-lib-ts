@@ -1,4 +1,4 @@
 define(["require", "exports"], function (require, exports) {
   "use strict";
-  exports.ZmAttachDialog = ZmAttachDialog;
+  exports.ZmSearchResultsToolBar = ZmSearchResultsToolBar;
 });

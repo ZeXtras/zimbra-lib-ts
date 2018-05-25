@@ -18,16 +18,17 @@
  * along with T4Z - TypeScript 4 Zimlet. If not, see <http://www.gnu.org/licenses/>.
  */
 
+import {AjxCallback} from "../../ajax/boot/AjxCallback";
+import {DwtControl} from "../../ajax/dwt/widgets/DwtControl";
+import {DwtShell} from "../../ajax/dwt/widgets/DwtShell";
 import {ZmController} from "../share/controller/ZmController";
 import {ZmSearchResultsController} from "../share/controller/ZmSearchResultsController";
-import {DwtControl} from "../../ajax/dwt/widgets/DwtControl";
-import {AjxCallback} from "../../ajax/boot/AjxCallback";
-import {SetNewButtonPropsParams} from "./ZmZimbraMail";
-import {ZmOverview, ZmOverviewParams} from "../share/view/ZmOverview";
-import {DwtShell} from "../../ajax/dwt/widgets/DwtShell";
+import {ZmSearch} from "../share/model/ZmSearch";
 import {ZmSearchResult} from "../share/model/ZmSearchResult";
-import {ZmAppViewMgrCreateViewParams, ZmAppViewMgrCreatedViewDescriptor} from "./ZmAppViewMgr";
 import {ZmSettings} from "../share/model/ZmSettings";
+import {ZmOverview, ZmOverviewParams} from "../share/view/ZmOverview";
+import {ZmAppViewMgrCreatedViewDescriptor, ZmAppViewMgrCreateViewParams} from "./ZmAppViewMgr";
+import {SetNewButtonPropsParams} from "./ZmZimbraMail";
 
 export class ZmApp {
 
@@ -46,11 +47,16 @@ export class ZmApp {
   public static MAIL: string = "Mail";
   public static ENABLED_APPS: {[name: string]: boolean} = {};
   public static APPS: string[];
+  public static SEARCH: string;
+  public static DEFAULT_SEARCH: { [appName: string]: string };
+  public static HIDE_ZIMLETS: { [appName: string]: boolean };
 
   public static registerApp(name: string, params: ZmAppRegisterAppParams): void {}
 
+  public _active: boolean;
   public _container: DwtShell;
   public _overviewPanelContent: ZmOverview;
+  public currentSearch: ZmSearch;
 
   constructor(name: string, container: DwtControl, parentController?: ZmController) {}
 
@@ -67,28 +73,29 @@ export class ZmApp {
   public getName(): string { return undefined; }
   public _setLaunchTime(appName: string, date: Date): void {}
   public _setLoadedTime(appName: string, date: Date): void {}
-  public setOverviewPanelContent(reset: boolean): void {}
+  public setOverviewPanelContent(reset?: boolean): void {}
   public isActive(): boolean { return undefined; }
+  public popView(force?: boolean, viewId?: number, skipHistory?: boolean): void {}
 
   // Functions called during construction
-  // public _defineAPI(): void {};
-  // public _registerSettings(): void {};
-  // public _registerOperations(): void {};
-  // public _registerItems(): void {};
-  public _registerOrganizers(): void {};
-  // public _setupSearchToolbar(): void {};
-  public _registerApp(): void {};
-  public _registerSettings(settings?: ZmSettings): void {};
-  public _registerPrefs(): void {}; // called when Preferences pkg is loaded
+  // public _defineAPI(): void {}
+  // public _registerSettings(): void {}
+  // public _registerOperations(): void {}
+  // public _registerItems(): void {}
+  public _registerOrganizers(): void {}
+  // public _setupSearchToolbar(): void {}
+  public _registerApp(): void {}
+  public _registerSettings(settings?: ZmSettings): void {}
+  public _registerPrefs(): void {} // called when Preferences pkg is loaded
 
   // Functions that apps can override in response to certain events
-  // public startup(result) {}; // run during startup
-  // public preNotify(notify) {}; // run before handling notifications
-  // public deleteNotify(ids) {}; // run on delete notifications
-  // public createNotify(list) {}; // run on create notifications
-  // public modifyNotify(list) {}; // run on modify notifications
-  // public postNotify(notify) {}; // run after handling notifications
-  // public refresh(refresh) {};	// run when a <refresh> block arrives
+  // public startup(result) {} // run during startup
+  // public preNotify(notify) {} // run before handling notifications
+  // public deleteNotify(ids) {} // run on delete notifications
+  // public createNotify(list) {} // run on create notifications
+  // public modifyNotify(list) {} // run on modify notifications
+  // public postNotify(notify) {} // run after handling notifications
+  // public refresh(refresh) {} // run when a <refresh> block arrives
   public handleOp(op: string): void {}  // handle an operation
 
 }
@@ -110,11 +117,19 @@ export interface RegisterItemsApp {
 }
 
 export interface ShowSearchResultsApp {
-  showSearchResults(results: ZmSearchResult, loadCallback: AjxCallback, searchResultsController?: ZmSearchResultsController): void;
+  showSearchResults(
+    results: ZmSearchResult,
+    loadCallback: AjxCallback,
+    searchResultsController?: ZmSearchResultsController,
+  ): void;
 }
 
 export interface SearchToolbarApp {
   _setupSearchToolbar(): void;
+}
+
+export interface GetInitialSearchTypeApp {
+  getInitialSearchType(): string;
 }
 
 export interface GetSessionControllerParams {
@@ -156,7 +171,7 @@ export interface ZmAppRegisterAppParams {
   // trashViewOp?;
   // upsellUrl?;
   // // quickCommandType
-  // searchResultsTab;
+  searchResultsTab?: boolean;
 
   searchTypes?: string[];
   gotoActionCode?: string;

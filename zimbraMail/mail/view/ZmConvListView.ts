@@ -18,8 +18,8 @@
  * along with T4Z - TypeScript 4 Zimlet. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import {ZmMailListView} from "./ZmMailListView";
 import {ZmConv} from "../model/ZmConv";
+import {ZmMailListView} from "./ZmMailListView";
 
 export class ZmConvListView extends ZmMailListView {
 
