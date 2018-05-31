@@ -92,6 +92,7 @@ export class DwtControl {
   public setVisibility(visibility: boolean): void {}
   public setSelected(selected: boolean): void {}
   public getClassName(): string { return undefined; }
+  public setClassName(className: string): void { return; }
   public removeAllListeners(type?: string): boolean { return undefined; }
   public replaceElement(
     oel: HTMLElement|string,
