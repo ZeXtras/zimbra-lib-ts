@@ -27,6 +27,7 @@ export class XModel {
   public items: XModelItemDescription[];
 
   constructor(attributes?: XModelParams) {}
+  public setInstanceValue(value: string, path?: string){}
 }
 
 export interface XModelParams extends XModelInt {
