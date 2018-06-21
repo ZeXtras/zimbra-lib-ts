@@ -108,7 +108,7 @@ export class XFormItem {// TODO check all attribute hierarchy
 
   }
 
-  public updateElement?() {
+  public updateElement?(value) {
 
   }
 
