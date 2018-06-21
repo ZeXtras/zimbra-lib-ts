@@ -24,5 +24,6 @@ export class ZmZimletAppView extends DwtComposite {
 
   public setContent(html: string): void {}
   public setView(view: DwtComposite): void {}
+  public getTitle?(): string;
 
 }
