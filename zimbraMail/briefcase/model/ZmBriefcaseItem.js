@@ -8,4 +8,5 @@ define(["require", "exports", "../../../ajax/boot/AjxPackage"], function (requir
 
   exports.ZmBriefcaseBaseItem = ZmBriefcaseBaseItem;
   exports.ZmBriefcaseItem = ZmBriefcaseItem;
+  exports.ZmRevisionItem = ZmRevisionItem;
 });
