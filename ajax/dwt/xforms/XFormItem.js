@@ -25,6 +25,7 @@ define(["require", "exports"], function (require, exports) {
   exports._GROUP_ = _GROUP_;
   exports._ZA_TOP_GROUPER_ = _ZA_TOP_GROUPER_;
   exports._TAB_BAR_ = _TAB_BAR_;
+  exports._SUPER_TABCASE_ = _SUPER_TABCASE_;
   exports._ZATABCASE_ = _ZATABCASE_;
   exports._DWT_BUTTON_ = _DWT_BUTTON_;
   exports._GROUP_ = _GROUP_;

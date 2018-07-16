@@ -141,6 +141,7 @@ export let _DWT_BUTTON_: "dwt_button";
 export let _GROUP_: "group";
 export let _ZA_TOP_GROUPER_: "za_top_grouper";
 export let _TAB_BAR_: "tab_bar";
+export let _SUPER_TABCASE_: "super_tabcase";
 export let _ZATABCASE_: string;
 export let _OUTPUT_: "output";
 export let _SEPARATOR_: string;
