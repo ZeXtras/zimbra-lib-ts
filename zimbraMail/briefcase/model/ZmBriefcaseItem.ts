@@ -49,3 +49,12 @@ export class ZmBriefcaseItem extends ZmBriefcaseBaseItem {
   }
 
 }
+
+export class ZmRevisionItem extends ZmBriefcaseBaseItem {
+
+    public isRevision?: boolean;
+
+    constructor(id: string, parent: ZmItem) {
+        super(id, null, false, ZmItem.BRIEFCASE_ITEM);
+    }
+}

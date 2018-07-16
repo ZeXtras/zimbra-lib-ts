@@ -26,6 +26,7 @@ import {DwtComposite} from "../widgets/DwtComposite";
 import {XForm} from "./XForm";
 import {XFormChoices} from "./XFormChoices";
 import {XFormItemDescription, XformItemDescriptionClasses} from "./XFormItemDescription";
+import {XModel} from "./XModel";
 
 export class XFormItemFactory {
   public static createItemType(
@@ -134,6 +135,10 @@ export class XFormItem {// TODO check all attribute hierarchy
     return undefined;
   }
   public _setAttributes?(params: {[name: string]: any}): void {}
+
+  public getModel?(): XModel {
+   return void 0;
+  }
 }
 
 export let _DWT_ALERT_: "dwt_alert";
