@@ -48,6 +48,8 @@ import {ZmZimletApp} from "../share/view/ZmZimletApp";
 import {ZmUploadManager} from "../share/ZmUploadManager";
 import {ZmApp} from "./ZmApp";
 import {ZmAppViewMgr} from "./ZmAppViewMgr";
+import {ZmBriefcaseApp} from "../briefcase/ZmBriefcaseApp";
+import {ZmContactsApp} from "../abook/ZmContactsApp";
 
 export class ZmAppCtxt {
 
@@ -81,7 +83,9 @@ export class ZmAppCtxt {
   public getAutocompleter(): ZmAutocomplete { return undefined; }
   public getCalManager(): ZmCalMgr { return undefined; }
   public getViewTypeFromId(viewId: string): string { return undefined; }
+
   public getCurrentView(): DwtComposite { return undefined; }
+  public getCurrentApp(): ZmApp|ZmBriefcaseApp|ZmContactsApp|any { return undefined; }
   public getIdentityCollection(account?: ZmZimbraAccount): ZmIdentityCollection { return undefined; }
   public getAttachDialog(): ZmAttachDialog { return undefined; }
   public getById(id: string|number): ZmItem|ZmOrganizer { return undefined; }

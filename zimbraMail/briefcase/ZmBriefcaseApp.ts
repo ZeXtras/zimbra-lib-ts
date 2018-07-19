@@ -26,6 +26,8 @@ import {ZmBriefcaseController} from "./controller/ZmBriefcaseController";
 
 export class ZmBriefcaseApp extends ZmApp {
 
+  public currentSearch : any;
+
   constructor(container: DwtControl, parentController: ZmController) {
     super(ZmApp.BRIEFCASE, container, parentController);
   }
@@ -36,6 +38,8 @@ export class ZmBriefcaseApp extends ZmApp {
   ): ZmBriefcaseController {
     return undefined;
   }
+
+  public search(query: any): void {}
 
   public handleOp(op: string): void {}
 
