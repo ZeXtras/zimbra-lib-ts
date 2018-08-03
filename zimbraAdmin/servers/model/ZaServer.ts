@@ -31,6 +31,7 @@ export class ZaServer extends ZaItem {
   public static A_description: string;
   public static getAll(): ZaItemList<ZaServer> { return undefined; }
   public static getServerByName(name: string): ZaServer {return undefined;}
+  public initFromJS(server: ZaServer): void{}
 
   public attrs: ZaServerAttrs;
   public showVolumes: boolean;

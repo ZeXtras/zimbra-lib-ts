@@ -30,6 +30,7 @@ export class AjxSoapDoc {
   ): AjxSoapDoc { return undefined; }
   public set(name: string, value: any, parent?: string, nmspace?: string): Element { return undefined; }
   public getMethod(): Element { return undefined; }
+  public setMethodAttribute(name: string, value: string): void {}
 }
 
 export interface AjxSoapDocParams {
