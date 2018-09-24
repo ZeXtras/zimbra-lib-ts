@@ -34,7 +34,7 @@ export class DwtShell extends DwtComposite {
   public static focusEvent: DwtFocusEvent;
   public static mouseEvent: DwtMouseEvent;
 
-  public static getShell(win?: Window): DwtShell {
+  public static getShell(win: Window): DwtShell {
     return null;
   }
 
