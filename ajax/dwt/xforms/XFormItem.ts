@@ -139,6 +139,9 @@ export class XFormItem {// TODO check all attribute hierarchy
   public getModel?(): XModel {
    return void 0;
   }
+
+  public show?(): void {}
+  public hide?(isBlock: boolean): void {}
 }
 
 export let _DWT_ALERT_: "dwt_alert";
