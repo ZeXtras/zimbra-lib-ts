@@ -55,6 +55,9 @@ export class DwtListView extends DwtComposite {
   public _parentEl: HTMLDivElement;
   public _view: string;
   public _list: AjxVector<string[]>;
+  public _listColDiv: HTMLElement;
+  public _listDiv: HTMLElement;
+  public _clickDiv: HTMLElement;
 
   // constructor(form: XForm, cssClass: string, unknown: any, headerList: DwtListHeaderItem[]);
   constructor(params: DwtListViewParams) {
