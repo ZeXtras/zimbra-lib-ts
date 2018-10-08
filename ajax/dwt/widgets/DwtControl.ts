@@ -49,6 +49,7 @@ export class DwtControl {
   public _evtMgr: AjxEventMgr;
   public _propagateEvent: {[eventType: string]: boolean};
   public shell: DwtShell;
+  public _className: string;
 
   public constructor(params: DwtControlParams) {}
   public addListener(eventType: string, listener: AjxListener, index?: number): boolean { return undefined; }
