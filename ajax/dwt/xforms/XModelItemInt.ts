@@ -30,6 +30,7 @@ export interface XModelItemInt {
   minLength?: number;
   required?: boolean;
   items?: XModelItemInt[];
+  pattern?: string | RegExp | string[] | RegExp[];
 }
 
 export interface XModelItemInt_option {
