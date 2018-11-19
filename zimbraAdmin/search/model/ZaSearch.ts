@@ -18,6 +18,7 @@
  * along with T4Z - TypeScript 4 Zimlet. If not, see <http://www.gnu.org/licenses/>.
  */
 
+import {AjxCallback} from "../../../ajax/boot/AjxCallback";
 import {ZaItem} from "../../common/ZaItem";
 import {ZaItemList} from "../../common/ZaItemList";
 
@@ -46,7 +47,12 @@ export class ZaSearch {
   /**
    * @argument callArgs {value, event, callback}
    */
-  public dynSelectSearch(callArgs: any[]): any {}
+  public dynSelectSearch(callArgs: {
+    attrs: string[],
+    value: string,
+    callback: AjxCallback,
+    types: string[],
+  }): any {}
   public dynSelectSearchDomains(): any {}
   public dynSelectSearchCoses(): any {}
   public dynSelectGrantees?(callArgs: any): any {}
