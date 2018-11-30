@@ -36,10 +36,6 @@ export class AjxFormat {
 }
 
 export class AjxDateFormat extends AjxFormat {
-  constructor(pattern: string) {
-    super(pattern);
-  }
-
   public static LONG: number;
   public static SHORT: number;
   public static _DATETIME_FORMATTERS: {[style: number]: AjxDateFormat};
@@ -49,5 +45,9 @@ export class AjxDateFormat extends AjxFormat {
   public static getDateTimeInstance(dateStyle: number, timeStyle: number): AjxDateFormat {
     const style: number = dateStyle * 10 + timeStyle;
     return AjxDateFormat._DATETIME_FORMATTERS[style];
+  }
+
+  constructor(pattern: string) {
+    super(pattern);
   }
 }

@@ -29,6 +29,8 @@ export interface XModelItemInt {
   choices?: (() => XModelItemInt_option[]) | XModelItemInt_option[];
   minLength?: number;
   required?: boolean;
+  items?: XModelItemInt[];
+  pattern?: string | RegExp | string[] | RegExp[];
 }
 
 export interface XModelItemInt_option {
