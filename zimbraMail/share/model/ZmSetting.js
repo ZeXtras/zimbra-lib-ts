@@ -1,4 +1,4 @@
 define(["require", "exports"], function (require, exports) {
   "use strict";
-  exports.ZmSetting = ZmSetting;
+  exports.ZmSetting = typeof ZmSetting !== "undefined" ? ZmSetting : void 0;
 });
