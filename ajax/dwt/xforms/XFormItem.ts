@@ -26,6 +26,7 @@ import {DwtComposite} from "../widgets/DwtComposite";
 import {XForm} from "./XForm";
 import {XFormChoices} from "./XFormChoices";
 import {XFormItemDescription, XformItemDescriptionClasses} from "./XFormItemDescription";
+import {XModel} from "./XModel";
 
 export class XFormItemFactory {
   public static createItemType(
@@ -108,8 +109,7 @@ export class XFormItem {// TODO check all attribute hierarchy
 
   }
 
-  public updateElement?() {
-
+  public updateElement?(newValue?: any): void {
   }
 
   public getInstanceValue?(path?: string): any {
@@ -134,6 +134,13 @@ export class XFormItem {// TODO check all attribute hierarchy
     return undefined;
   }
   public _setAttributes?(params: {[name: string]: any}): void {}
+
+  public getModel?(): XModel {
+   return void 0;
+  }
+
+  public show?(): void {}
+  public hide?(isBlock: boolean): void {}
 }
 
 export let _DWT_ALERT_: "dwt_alert";
@@ -141,6 +148,7 @@ export let _DWT_BUTTON_: "dwt_button";
 export let _GROUP_: "group";
 export let _ZA_TOP_GROUPER_: "za_top_grouper";
 export let _TAB_BAR_: "tab_bar";
+export let _SUPER_TABCASE_: "super_tabcase";
 export let _ZATABCASE_: string;
 export let _OUTPUT_: "output";
 export let _SEPARATOR_: string;
