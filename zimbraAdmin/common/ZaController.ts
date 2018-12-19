@@ -71,6 +71,8 @@ export class ZaController {
    */
   public _toolbarOperations: ZaOperation[];
 
+  public _appbarOperation: ZaOperation[];
+
   /**
    * @deprecated in zimbra 8+
    */
@@ -93,4 +95,5 @@ export class ZaController {
   public getMainTab(): any { return undefined; }
   public getContentViewId(): string { return undefined; }
   public _initPopupMenu(): void {}
+  public getAppBarAction(): ZaOperation[] { return undefined; }
 }
