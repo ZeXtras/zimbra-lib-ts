@@ -27,6 +27,7 @@ import {ZmApp} from "../../core/ZmApp";
 import {ZmAccount} from "../model/ZmAccount";
 import {ZmButtonToolBar} from "../view/ZmButtonToolBar";
 import {ZmSearchResultsController} from "./ZmSearchResultsController";
+import {ZmAppChooser} from "../view/ZmAppChooser";
 
 export class ZmController {
 
@@ -59,6 +60,7 @@ export class ZmController {
   ) {}
   public _preHideCallback(): void {}
   public getCurrentViewId(): string { return undefined; }
+  public getAppChooser(): ZmAppChooser { return undefined; }
   public getSessionId(): string { return undefined; }
   public _clearDialog(dialog: DwtDialog): void {}
   public getViewElements(
