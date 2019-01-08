@@ -75,6 +75,7 @@ export class ZmZimletBase extends ZmObjectHandler {
   public createPropertyEditor(callback: AjxCallback): void {}
   public  _createDialog(dialog_args: {title: string; view: DwtComposite}): ZmDialog { return undefined; }
   public menuItemSelected(itemId: string): void {}
+  public createApp(label: string, image: string, tooltip: string, index?: number, style?: string): string { return undefined; }
   public clicked(
     spanElement: HTMLSpanElement,
     contentObjText: string,
