@@ -32,7 +32,8 @@ export class ZmAutocompleteListView extends DwtComposite {
 
   public handle(inputElement: HTMLInputElement, addrInputId?: string): void {}
   public addCallback(type: string, callback: AjxCallback, inputId?: string): void {}
-
+  public setWaiting(isWaiting: boolean, str?: string): void {}
+  public reset(el?: HTMLElement): void {}
 }
 
 export interface ZmAutocompleteListViewParams extends DwtCompositeParams {

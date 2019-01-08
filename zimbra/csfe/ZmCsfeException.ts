@@ -24,7 +24,6 @@ export class ZmCsfeException extends AjxException {
 
   public static EMPTY_RESPONSE: string = "EMPTY_RESPONSE";
   public static SVC_UNKNOWN_DOCUMENT: string = "service.UNKOWN_DOCUMENT";
-
-  public msg: string;
+  public static TOO_MANY_SEARCH_RESULTS: string = "account.TOO_MANY_SEARCH_RESULTS";
 
 }

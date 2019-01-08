@@ -27,11 +27,12 @@ import {ZmApp} from "../../core/ZmApp";
 import {ZmAccount} from "../model/ZmAccount";
 import {ZmButtonToolBar} from "../view/ZmButtonToolBar";
 import {ZmSearchResultsController} from "./ZmSearchResultsController";
+import {ZmAppChooser} from "../view/ZmAppChooser";
 
-export class ZmController {
+export abstract class ZmController {
 
   /**
-   * @Override
+   * @Override me!
    */
   public static getDefaultViewType(): string { return undefined; }
   public static showDialog(
@@ -49,6 +50,7 @@ export class ZmController {
   public _currentViewId: string;
   public _container: DwtShell;
   public _currentViewType: string;
+  public _elementsToHide: string[];
 
   constructor(
     container: DwtControl,
@@ -57,8 +59,8 @@ export class ZmController {
     sessionId?: string,
     searchResultsController?: ZmSearchResultsController,
   ) {}
-  public _preHideCallback(): void {}
   public getCurrentViewId(): string { return undefined; }
+  public getAppChooser(): ZmAppChooser { return undefined; }
   public getSessionId(): string { return undefined; }
   public _clearDialog(dialog: DwtDialog): void {}
   public getViewElements(
@@ -66,6 +68,16 @@ export class ZmController {
     appContentView: DwtComposite,
     toolbar?: ZmButtonToolBar,
   ): {[name: string]: DwtControl} { return undefined; }
+
+  public getDefaultViewType(): string { return undefined; }
+  public _setView(...params: any[]): void {}
+
+  protected _preUnloadCallback(): boolean { return undefined; }
+  protected _preHideCallback(): boolean { return undefined; }
+  protected _postHideCallback(): boolean { return undefined; }
+  protected _postRemoveCallback(): boolean { return undefined; }
+  protected _preShowCallback(): boolean { return undefined; }
+  protected _postShowCallback(): boolean { return undefined; }
 
 }
 

@@ -75,6 +75,7 @@ export class ZmZimletBase extends ZmObjectHandler {
   public createPropertyEditor(callback: AjxCallback): void {}
   public  _createDialog(dialog_args: {title: string; view: DwtComposite}): ZmDialog { return undefined; }
   public menuItemSelected(itemId: string): void {}
+  public createApp(label: string, image: string, tooltip: string, index?: number, style?: string): string { return undefined; }
   public clicked(
     spanElement: HTMLSpanElement,
     contentObjText: string,
@@ -97,17 +98,17 @@ export class ZmZimletBase extends ZmObjectHandler {
   public getMessage(msg: string): string { return undefined; }
 
   // App Related functions
-  // public createApp(
-  //   label: string,
-  //   image: string,
-  //   tooltip: string,
-  //   index?: number,
-  //   style?: string,
-  // ): string { return undefined; }
-  // public appActive(appName: string, active: boolean): void {}
-  // public appLaunch(appName: string): void {}
-  // public onSelectApp(id: string): void {}
-  // public onAction(id: string, action: string, currentViewId: string, lastViewId: string): void {}
+  public createApp(
+    label: string,
+    image: string,
+    tooltip: string,
+    index?: number,
+    style?: string,
+  ): string { return undefined; }
+  public appActive(appName: string, active: boolean): void {}
+  public appLaunch(appName: string): void {}
+  public onSelectApp(id: string): void {}
+  public onAction(id: string, action: string, currentViewId: string, lastViewId: string): void {}
 
   public sendRequest(
     requestStr: string|AjxSoapDoc,

@@ -22,6 +22,8 @@ import {DwtControl, DwtControlParams} from "./DwtControl";
 
 export class DwtComposite extends DwtControl {
 
+  public __internalId: string;
+
   public constructor(params: DwtCompositeParams) {
     super(params);
   }

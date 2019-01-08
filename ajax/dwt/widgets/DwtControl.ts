@@ -27,6 +27,7 @@ import {DwtEvent} from "../events/DwtEvent";
 import {DwtFocusEvent} from "../events/DwtFocusEvent";
 import {DwtPoint} from "../graphics/DwtPoint";
 import {DwtComposite} from "./DwtComposite";
+import {DwtShell} from "./DwtShell";
 
 export class DwtControl {
 
@@ -47,6 +48,8 @@ export class DwtControl {
   public TEMPLATE: string;
   public _evtMgr: AjxEventMgr;
   public _propagateEvent: {[eventType: string]: boolean};
+  public shell: DwtShell;
+  public _className: string;
 
   public constructor(params: DwtControlParams) {}
   public addListener(eventType: string, listener: AjxListener, index?: number): boolean { return undefined; }
@@ -90,6 +93,7 @@ export class DwtControl {
   public setVisibility(visibility: boolean): void {}
   public setSelected(selected: boolean): void {}
   public getClassName(): string { return undefined; }
+  public setClassName(className: string): void { return; }
   public removeAllListeners(type?: string): boolean { return undefined; }
   public replaceElement(
     oel: HTMLElement|string,

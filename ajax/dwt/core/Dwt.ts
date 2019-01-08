@@ -64,4 +64,5 @@ export class Dwt {
   public static setPosition(div: HTMLElement, style: string): void {}
   public static getElement(el: string|HTMLElement): HTMLElement { return undefined; }
   public static setVisibility(el: string|HTMLElement, visible: boolean): void {}
+  public static setTitle(text: string): void {}
 }

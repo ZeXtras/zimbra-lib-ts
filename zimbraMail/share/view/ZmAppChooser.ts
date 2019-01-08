@@ -24,5 +24,5 @@ import {ZmToolBar} from "./ZmToolBar";
 export class ZmAppChooser extends ZmToolBar {
 
   public addButton(id: string, params: ZmAppButtonParams): ZmAppButton { return undefined; }
-
+  public removeButton(id: string): void {}
 }

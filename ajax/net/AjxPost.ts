@@ -23,6 +23,8 @@ import {AjxCallback} from "../boot/AjxCallback";
 export class AjxPost {
   public static SC_OK: string;
 
+  public constructor(frameId: string) {};
+
   public execute(callback: AjxCallback, context: any): void {}
   public _addHiddenField(element: Element, field: string, value: string): void {}
 

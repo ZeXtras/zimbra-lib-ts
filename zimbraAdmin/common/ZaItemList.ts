@@ -20,15 +20,19 @@
 
 import {ZaItem} from "./ZaItem";
 import {ZaModel} from "./ZaModel";
+import {ZaItemVector} from "./ZaItemVector";
 
-export class ZaItemList extends ZaModel {
+export class ZaItemList<T extends ZaItem> extends ZaModel {
 
-  constructor(itemClass: typeof ZaItem) {
+  constructor(itemClass?: typeof ZaItem) {
     super(true);
   }
 
-  public getArray(): ZaItem[] {
-    return void 0;
-  }
+  public loadFromJS(resp: {}): void {}
+  public getArray(): T[] { return undefined; }
+  public add(item: T, index?: number): void {}
+  public size(): number { return undefined; }
+  public getItemById(id: string): T { return undefined; }
+  public getVector(): ZaItemVector<T> { return undefined; }
 
 }

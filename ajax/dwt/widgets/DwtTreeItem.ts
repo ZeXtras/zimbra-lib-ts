@@ -56,6 +56,7 @@ export class DwtTreeItem extends DwtComposite {
   public _expand(expand: boolean, ev: DwtEvent, skipNotify: boolean): void {}
   public sort(compareFunction: (a: any, b: any) => number): void {}
   public showCheckBox(show: boolean): void {}
+  public setOpacity(opacity: number): void {} // 0-100
   public getChecked(): boolean { return undefined; }
   public setChecked(check: boolean, force?: boolean): void {}
   public _handleCheckboxOnclick(ev: DwtMouseEvent): void {}
@@ -69,4 +70,5 @@ export interface DwtTreeItemParams extends DwtCompositeParams {
   dndScrollId?: string;
   arrowDisabled?: boolean;
   imageInfo?: string;
+  mappingId?: number;
 }

@@ -19,16 +19,37 @@
  */
 
 import {ZmContact} from "../../abook/model/ZmContact";
+import {ZmAutocompleteListView} from "../view/ZmAutocompleteListView";
+import {ZmZimbraAccount} from "./ZmZimbraAccount";
 
 export class ZmAutocomplete {
   public static AC_VALUE_NAME: string;
-  public static AC_TYPE_LOCATION: string;
   public static AC_VALUE_FULL: string;
   public static AC_VALUE_EMAIL: string;
+
+  public static AC_TYPE_CONTACT = "contact";
+  public static AC_TYPE_EQUIPMENT = "Equipment";
+  public static AC_TYPE_GAL = "gal";
+  public static AC_TYPE_LOCATION = "Location";
+  public static AC_TYPE_TABLE = "rankingTable";
+  public static AC_TYPE_UNKNOWN = "unknown";
+
+  public autocompleteMatch(
+    str: string,
+    callback: (res: ZmAutocompleteMatch[]) => void,
+    aclv: ZmAutocompleteListView,
+    options: {
+      type?: "contact" | "Equipment" | "gal" | "Location" | "rankingTable" | "unknown",
+    },
+    account?: ZmZimbraAccount,
+    autocompleteType?: string,
+  ): void {}
 }
 
 export class ZmAutocompleteMatch {
   public item?: ZmContact;
   public email?: string;
   public name?: string;
+  public isDL?: boolean;
+  public isGroup?: boolean;
 }

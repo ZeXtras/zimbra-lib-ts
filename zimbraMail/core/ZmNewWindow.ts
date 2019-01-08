@@ -29,4 +29,5 @@ export class ZmNewWindow extends ZmController {
   public _apps: {[appName: string]: ZmApp};
 
   public getApp(appName: string): ZmApp { return undefined; }
+
 }

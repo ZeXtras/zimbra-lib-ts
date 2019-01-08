@@ -25,6 +25,8 @@ export class ZaId {
   public static PANEL_HOME: string;
 
   public static getTreeItemId(overviewId: string, organizerId: string, type: string, indexNo: string): string {
-    return void 0;
+    return undefined;
   }
+
+  public static getTabViewId(context: string, tabName?: string): string { return undefined; }
 }

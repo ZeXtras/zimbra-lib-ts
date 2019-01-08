@@ -20,7 +20,7 @@
 
 export class AjxCallback {
 
-  public static simpleClosure(fcn: (...args: any[]) => void, obj: {}, ...args: any[]): (...args: any[]) => void {
+  public static simpleClosure(fcn: (...args: any[]) => void, obj: any, ...args: any[]): (...args: any[]) => void {
     return void 0;
   }
 
@@ -30,7 +30,7 @@ export class AjxCallback {
   private func: (...args: any[]) => void;
   private args: any[];
 
-  constructor(obj: {}, func: (...args: any[]) => void, args: any[] = []) {
+  constructor(obj: any, func: (...args: any[]) => void, args: any[] = []) {
     if (arguments.length === 0) { return; }
 
     this.obj = obj;

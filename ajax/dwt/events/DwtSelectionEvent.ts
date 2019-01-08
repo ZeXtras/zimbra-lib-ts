@@ -21,6 +21,10 @@
 import {DwtUiEvent} from "./DwtUiEvent";
 
 export class DwtSelectionEvent extends DwtUiEvent {
+  constructor(init: boolean) {
+    super();
+  }
+
   public kbNavEvent: boolean;
   public detail: number;
   public button: number;

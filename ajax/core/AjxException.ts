@@ -19,5 +19,13 @@
  */
 
 export class AjxException {
+  public static UNKNOWN: string;
   public static CANCELED: string;
+  public static NETWORK_ERROR: string;
+  public static INVALID_PARAM: string;
+
+  public code: string;
+  public msg: string;
+
+  constructor(msg: string, code: string, method: string, detail?: string) {}
 }
