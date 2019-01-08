@@ -20,7 +20,11 @@
 
 export class AjxVector<T> {
 
+  public static fromArray(list: any[]): AjxVector<any> {
+    return void 0;
+  }
   public get: any;
+  public sort(sortFunc: (a: T, b: T) => number) {}
   public getArray(): T[] { return undefined; }
   public size(): number { return undefined; }
   public contains(element: T): boolean { return undefined; }

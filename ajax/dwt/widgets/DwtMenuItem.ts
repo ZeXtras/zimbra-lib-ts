@@ -28,6 +28,8 @@ export class DwtMenuItem extends DwtButton {
   public static SEPARATOR_STYLE: number;
   public static IMAGE_LEFT: number;
 
+  public static create(params: DwtMenuItem_CreateParams): DwtMenuItem { return undefined; }
+
   constructor(params: DwtMenuItemParams) {
     super(params);
   }
@@ -41,4 +43,10 @@ export class DwtMenuItem extends DwtButton {
 
 export interface DwtMenuItemParams extends DwtButtonParams {
   style?: number;
+}
+
+export interface DwtMenuItem_CreateParams extends DwtMenuItemParams {
+  enabled?: boolean;
+  imageInfo?: string;
+  text?: string;
 }

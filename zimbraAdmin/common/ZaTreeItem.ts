@@ -20,6 +20,8 @@
 
 export class ZaTreeItemData {
 
+  public id: string;
+
   constructor(params: ZaTreeItemDataParams) {}
 
   public setData(key: string, value: any): void {}

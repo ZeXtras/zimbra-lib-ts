@@ -21,4 +21,5 @@
 import {DwtMessageDialog} from "../../ajax/dwt/widgets/DwtMessageDialog";
 
 export class ZaErrorDialog extends DwtMessageDialog {
+  public static DETAIL_BUTTON: string;
 }

@@ -53,6 +53,9 @@ export class ZmSetting extends ZmModel {
   public static POP_ACCOUNTS_ENABLED: string;
   public static IMAP_ACCOUNTS_ENABLED: string;
   public static IDENTITIES_ENABLED: string;
+  public static FOLDERS_EXPANDED: string;
+  public static FONT_SIZE: string;
+  public static SKIN_NAME: string;
 
   public setValue(value: any, key?: string, setDefault?: boolean, skipNotify?: boolean, skipImplicit?: boolean): void {}
   public getValue(key?: string, serialize?: boolean): any { return undefined; }

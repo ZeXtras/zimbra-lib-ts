@@ -23,12 +23,15 @@ import {ZaAccount} from "./accounts/model/ZaAccount";
 import {ZaToast} from "./common/ZaActionStatusView";
 import {ZaController} from "./common/ZaController";
 import {ZaCurrentAppBar} from "./common/ZaCurrentAppBar";
+import {ZaTaskController} from "./task/controller/ZaTaskController";
 
 export class ZaZimbraAdmin extends ZaController {
+  public static VIEW_INDEX: number;
   public static URN: string;
   public static currentAdminAccount: ZaAccount;
+  public static currentUserLogin: string;
   public static _ZEXTRAS_GROUP_VIEW: number;
-  public static _ZEXTRAS_GROUP_LIST: string;
+  public static _ZEXTRAS_GROUP_LIST: number;
   public static getInstance(): ZaZimbraAdmin {
     return void 0;
   }
@@ -38,6 +41,12 @@ export class ZaZimbraAdmin extends ZaController {
   public getCurrentAppBar(): ZaCurrentAppBar {
     return void 0;
   }
+
+  public getTaskController(): ZaTaskController {
+    return void 0;
+  }
+
+  public static isGlobalAdmin(){}
 }
 
 interface SetActionStatusMsgParams {

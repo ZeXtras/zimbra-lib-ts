@@ -18,8 +18,23 @@
  * along with T4Z - TypeScript 4 Zimlet. If not, see <http://www.gnu.org/licenses/>.
  */
 
+import {XFormChoices} from "./XFormChoices";
+
 export interface XModelItemInt {
   id: string;
   type?: string;
   ref?: string;
+  getter?: string;
+  setter?: string;
+  choices?: (() => XModelItemInt_option[]) | XModelItemInt_option[];
+  minLength?: number;
+  required?: boolean;
+  items?: XModelItemInt[];
+  pattern?: string | RegExp | string[] | RegExp[];
+}
+
+export interface XModelItemInt_option {
+  value: any;
+  label: string;
+  choices?: XFormChoices[];
 }

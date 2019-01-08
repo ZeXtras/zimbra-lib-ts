@@ -19,6 +19,7 @@
  */
 
 import {ZaXWizardStepChoice} from "../../../zimbraAdmin/common/ZaXWizardDialog";
+import {XForm} from "./XForm";
 /**
  * This class is introduced to define the XFormItem JSON description.
  * Zimbra does not use this class, neither You should instantiate this class.
@@ -49,6 +50,133 @@ export interface XFormItemDescription {
   width?: string;
   caseKey?: number;
   tabGroupKey?: number;
-  colSpan?: number;
+  colSpan?: number | "*";
   choices?: ZaXWizardStepChoice[];
+  cssClass?: string;
+  valign?: string;
+  toolTipContent?: string;
+}
+
+export interface Base_XFormItemDescription {
+  cssClass?: string;
+  colSpan?: "*" | number;
+  valueChangeEventSources?: string[];
+  getDisplayValue?: (newValue?: string|boolean) => string|boolean;
+  visibilityChecks?: Array<() => boolean>;
+  visibilityChangeEventSources?: string[];
+  enableDisableChecks?: Array<(...args: any[]) => boolean>;
+  cssStyle?: string;
+
+  onClick?: (ev: MouseEvent) => void;
+}
+
+export interface GroupBase_XFormItemDescription extends Base_XFormItemDescription {
+  colSizes?: Array<string|number>;
+  id?: string;
+  numCols?: number;
+  label?: string;
+  items?: XformItemDescriptionClasses[];
+}
+
+export type XformItemDescriptionClasses =
+  Base_XFormItemDescription |
+  _OUTPUT_XformItemDescription |
+  _GROUP_XformItemDescription |
+  _CELL_SPACER_XformItemDescription |
+  _CHECKBOX_XformItemDescription |
+  _TOP_GROUPER_XformItemDescription |
+  _ZAWIZ_TOP_GROUPER_XformItemDescription |
+  _DWT_BUTTON_XformItemDescription |
+  _DWT_ALERT_XformItemDescription |
+  _SPACER_XformItemDescription |
+  _GROUPER_XformItemDescription |
+  _DWT_LIST_XformItemDescription;
+
+export interface _OUTPUT_XformItemDescription extends Base_XFormItemDescription {
+  type: "output";
+  id?: string;
+  ref?: string;
+  value?: string;
+  cssStyle?: string;
+  align?: string;
+  valign?: string;
+  labelLocation?: string;
+}
+
+export interface _GROUP_XformItemDescription extends GroupBase_XFormItemDescription {
+  type: "group" | string;
+  bmolsnr?: boolean;
+  width?: string|number;
+  enableDisableChangeEventSources?: string[];
+}
+
+export interface _CELL_SPACER_XformItemDescription extends Base_XFormItemDescription {
+  type: "cell_spacer";
+}
+
+export interface _CHECKBOX_XformItemDescription extends Base_XFormItemDescription {
+  type: "checkbox";
+  ref: string;
+  label?: string;
+  bmolsnr?: boolean;
+  labelLocation?: string;
+  onChange?: (value: any, ev: Event, form: XForm) => void;
+}
+
+export interface _TOP_GROUPER_XformItemDescription extends GroupBase_XFormItemDescription {
+  type: "top_grouper";
+}
+
+export interface _DWT_LIST_XformItemDescription {
+  type: "dwt_list";
+}
+
+export interface _ZAWIZ_TOP_GROUPER_XformItemDescription extends GroupBase_XFormItemDescription {
+  type: "zawiz_top_grouper";
+}
+
+export interface _DWT_BUTTON_XformItemDescription extends Base_XFormItemDescription {
+  type: "dwt_button";
+  label?: string;
+  icon?: string;
+  width?: string | number;
+  onActivate: (() => void) | ((ev: any) => void);
+}
+
+export interface _DWT_ALERT_XformItemDescription extends Base_XFormItemDescription {
+  type: "dwt_alert";
+  containerCssStyle?: string;
+  style?: number;
+  iconVisible?: boolean;
+}
+
+export interface _SPACER_XformItemDescription extends Base_XFormItemDescription {
+  type: "spacer";
+  height?: string|number;
+}
+
+export interface _GROUPER_XformItemDescription extends GroupBase_XFormItemDescription {
+  type: "grouper";
+  cssStyle?: string;
+  width?: string|number;
+}
+
+export interface _TEXTFIELD_XformItemDescription extends Base_XFormItemDescription {
+  type: "textfield";
+  ref: string;
+  align?: string;
+  labelLocation?: string;
+  width?: string|number;
+  label?: string;
+  bmolsnr?: boolean;
+}
+
+export interface _OSELECT1_XformItemDescription extends Base_XFormItemDescription {
+  type: "oselect1";
+  ref: string;
+  align?: string;
+  labelLocation?: string;
+  width?: string|number;
+  label?: string;
+  bmolsnr?: boolean;
 }

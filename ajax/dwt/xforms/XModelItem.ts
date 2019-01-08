@@ -41,6 +41,9 @@ export let _SHORT_URL_: string;
 export let _PORT_: string;
 export let _PERCENT_: string;
 export let _EMAIL_ADDRESS_: string;
+export let _SECRET_: string;
+export let _COS_ENUM_: string;
+export let _COS_INT_: string;
 // export let _FULL_URL_: string; Starting from Z7+
 
 export interface XModelItemEnumChoice {

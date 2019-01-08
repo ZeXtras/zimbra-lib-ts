@@ -22,9 +22,28 @@ import {XModelInt} from "../../../ajax/dwt/xforms/XModelInt";
 import {ZaItem} from "../../common/ZaItem";
 
 export class ZaAccount extends ZaItem {
+  public static A_zimbraMailAlias: string;
+  public static A_zimbraIsAdminAccount: string;
+  public static A_zimbraIsDelegatedAdminAccount: string;
+  public static A_zimbraIsSystemResource: string;
+  public static A_zimbraIsSystemAccount: string;
+  public static A_zimbraZimletAvailableZimlets: string;
+  public static A_uid: string;
+  public static A_mailHost: string;
   public static myXModel: XModelInt;
+  public static A_name: string;
+  public static A_displayname: string;
+  public static A_mail: string;
+
   public id: string;
   public attrs: {
     zimbraIsAdminAccount?: string,
+    zimbraIsDelegatedAdminAccount?: string,
+    zimbraIsSystemAccount?: string,
+    zimbraIsSystemResource?: string,
+  };
+
+  public setAttrs: {
+    [name: string]: boolean;
   };
 }

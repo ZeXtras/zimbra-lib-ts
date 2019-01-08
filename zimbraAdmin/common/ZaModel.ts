@@ -20,8 +20,12 @@
 
 export class ZaModel {
 
+  public static currentTab: "currentTab";
   public static currentStep: string;
   public static BOOLEAN_CHOICES: () => Array<{value: string|null, label: string}>;
+  public static BOOLEAN_CHOICES1: () => Array<{value: string|null, label: string}>;
+  public static BOOLEAN_CHOICES2: () => Array<{value: string|null, label: string}>;
+  public static ALLOW_CHOICES: () => Array<{value: string|null, label: string}>;
 
   constructor(init: boolean) {}
 }

@@ -49,3 +49,6 @@ If you need help We are happy to give You an hand in [ZeXtras IRC Channel][4]
 ## Wall of fame
 - [Michele Olivo](https://github.com/bud-mo)
 - [Stefano Grasselli](https://github.com/StefanoGrasselli)
+- [Cataldo Mazzilli](https://github.com/CMazzilli)
+- [Ugo Padoan](https://github.com/ZxUgoPadoan)
+- [Davide Baldo](https://github.com/ZeXtrasJay)

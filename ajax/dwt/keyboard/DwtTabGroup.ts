@@ -18,10 +18,12 @@
  * along with T4Z - TypeScript 4 Zimlet. If not, see <http://www.gnu.org/licenses/>.
  */
 
+import {AjxListener} from "../../events/AjxListener";
 import {DwtControl} from "../widgets/DwtControl";
 
 export class DwtTabGroup {
 
   public addMember(member: DwtControl|DwtTabGroup|HTMLElement, index?: number): void {}
   public __showFocusedItem(focusObj: HTMLElement|DwtControl, caller: string): void {}
+  public removeFocusChangeListener(listener: AjxListener): void {}
 }

@@ -23,6 +23,7 @@ import {ZaZimbraAdmin} from "../ZaZimbraAdmin";
 import {ZaMsgDialog} from "./ZaMsgDialog";
 
 export class ZaAppCtxt {
+  public static LABEL: string = "appCtxt";
   public getAppController(): ZaZimbraAdmin {
     return void 0;
   }

@@ -22,7 +22,14 @@ import {XModelInt} from "../../../ajax/dwt/xforms/XModelInt";
 import {ZaItem} from "../../common/ZaItem";
 
 export class ZaCos extends ZaItem {
+  public static A_zimbraPrefIMBuddyListSort: string;
+  public static A_zimbraPrefIMSoundsEnabled: string;
+  public static A_zimbraPrefIMFlashTitle: string;
+  public static A_zimbraPrefIMToasterEnabled: string;
+  public static A_zimbraPrefIMReportIdle: string;
+  public static A_zimbraPrefIMIdleTimeout: string;
+  public static A_zimbraZimletAvailableZimlets: string;
+  public static A_uid: string;
   public static myXModel: XModelInt;
-  public id: string;
-  public attrs: {};
+  public static getCosByName(cosName: string): ZaCos { return undefined; }
 }

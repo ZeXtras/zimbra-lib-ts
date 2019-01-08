@@ -109,6 +109,7 @@ export class ZmMsg {
   public static sendAsEmail: string;
   public static download: string;
   public static reset: string;
+  public static newFolder: string;
   /** @deprecated
    * public static name: string;
    * Please use @see ZmMsg._name

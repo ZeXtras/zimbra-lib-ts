@@ -23,11 +23,12 @@ import {DwtComposite} from "../../ajax/dwt/widgets/DwtComposite";
 import {DwtDialog, DwtDialog_ButtonDescriptor} from "../../ajax/dwt/widgets/DwtDialog";
 import {XForm} from "../../ajax/dwt/xforms/XForm";
 import {XFormObjectBase} from "../../ajax/dwt/xforms/XFormItem";
+import {XformItemDescriptionClasses} from "../../ajax/dwt/xforms/XFormItemDescription";
 import {XModel, XModelParams} from "../../ajax/dwt/xforms/XModel";
 
 export class ZaXDialog extends DwtDialog {
-
   public static XFormModifiers: {[name: string]: Array<(xFormObject: XFormObjectBase, entry?: any) => void>};
+  public static HELP_BUTTON: any;
 
   public _standardButtons: number[];
   public _extraButtons: DwtDialog_ButtonDescriptor[];
@@ -37,10 +38,22 @@ export class ZaXDialog extends DwtDialog {
   public _localXForm: XForm;
   public _localXModel: XModel;
 
+  constructor();
+
   constructor(
-    parent: DwtComposite,
-    className: string,
-    title: string,
+      parent: DwtComposite,
+      className: string,
+      title: string,
+      w?: string,
+      h?: string,
+      iKeyName?: string,
+      contextId?: string,
+  );
+
+  constructor(
+    parent?: DwtComposite,
+    className?: string,
+    title?: string,
     w?: string,
     h?: string,
     iKeyName?: string,
@@ -59,9 +72,16 @@ export class ZaXDialog extends DwtDialog {
   public setObject(entry: any): void {}
   public getObject(): any {}
   public popup(loc?: DwtPoint): void {}
-  public getMyXForm(entry: any): XFormObjectBase {
+  public getMyXForm(entry?: any): XformItemDescriptionClasses {// TODO entry should not be optional
     return void 0;
   }
-  public initForm(xModelMetaData: XModelParams, xFormMetaData: XFormObjectBase, defaultInstance?: any): void {}
+
+  public _helpButtonListener(): void {}
+
+  public initForm(
+    xModelMetaData: XModelParams,
+    xFormMetaData: XformItemDescriptionClasses,
+    defaultInstance?: any,
+  ): void {}
 
 }

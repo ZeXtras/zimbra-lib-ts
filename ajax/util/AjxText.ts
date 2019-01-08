@@ -29,6 +29,9 @@ export class AjxMessageFormat {
 }
 
 export class AjxFormat {
+  constructor(pattern: string) {
+
+}
   public format(obj: any): any { return undefined; }
 }
 
@@ -42,5 +45,9 @@ export class AjxDateFormat extends AjxFormat {
   public static getDateTimeInstance(dateStyle: number, timeStyle: number): AjxDateFormat {
     const style: number = dateStyle * 10 + timeStyle;
     return AjxDateFormat._DATETIME_FORMATTERS[style];
+  }
+
+  constructor(pattern: string) {
+    super(pattern);
   }
 }
