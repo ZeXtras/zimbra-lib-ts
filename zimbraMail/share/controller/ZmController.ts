@@ -61,6 +61,7 @@ export abstract class ZmController {
   ) {}
   public getCurrentViewId(): string { return undefined; }
   public getAppChooser(): ZmAppChooser { return undefined; }
+  public addApp(app: ZmApp): void {}
   public getSessionId(): string { return undefined; }
   public _clearDialog(dialog: DwtDialog): void {}
   public getViewElements(
@@ -70,7 +71,7 @@ export abstract class ZmController {
   ): {[name: string]: DwtControl} { return undefined; }
 
   public getDefaultViewType(): string { return undefined; }
-  public _setView(...params: any[]): void {}
+  protected _setView(...params: any[]): void {}
 
   protected _preUnloadCallback(): boolean { return undefined; }
   protected _preHideCallback(): boolean { return undefined; }
