@@ -102,7 +102,7 @@ export class ZmZimletBase extends ZmObjectHandler {
     image: string,
     tooltip: string,
     index?: number,
-    style?: string,
+    style?: number,
   ): string { return undefined; }
   public appActive(appName: string, active: boolean): void {}
   public appLaunch(appName: string): void {}
