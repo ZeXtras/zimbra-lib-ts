@@ -54,4 +54,5 @@ export class ZaMsg {
   public static TBB_Refresh: string;
   public static Domain_AuthTestMessage: string;
   public static BUSY_GET_SERVER: string;
+  public static BUSY_UNDEPLOY_ZIMLET: string;
 }
