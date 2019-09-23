@@ -23,6 +23,7 @@ import {ZmAccount} from "./ZmAccount";
 export class ZmZimbraAccount extends ZmAccount {
   public name: string;
   public isMain?: boolean;
+  public settings: any;
 
   public getDisplayName(): string { return undefined; }
   public isCalDavBased(): boolean { return undefined; }
