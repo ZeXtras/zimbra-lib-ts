@@ -155,7 +155,7 @@ export interface ZmAppRegisterAppParams {
   // chooserTooltipKey?;
   // viewTooltipKey?;
   // defaultSearch?;
-  // organizer?;
+  organizer?: any;
   // overviewTrees?;
   // hideZimlets?;
   // searchTypes?;
