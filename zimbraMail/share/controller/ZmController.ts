@@ -51,6 +51,7 @@ export abstract class ZmController {
   public _container: DwtShell;
   public _currentViewType: string;
   public _elementsToHide: string[];
+  public _components: any;
 
   constructor(
     container: DwtControl,
